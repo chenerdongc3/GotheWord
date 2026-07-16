@@ -1,4 +1,4 @@
-import { access, cp, mkdir, rm } from "node:fs/promises";
+import { access, cp, mkdir, readdir, rm } from "node:fs/promises";
 import { resolve } from "node:path";
 import type { Plugin } from "vite";
 
@@ -12,6 +12,21 @@ async function exists(path: string): Promise<boolean> {
     }
     throw error;
   }
+}
+
+async function removeServerStaticAssets(directory: string) {
+  if (!(await exists(directory))) return;
+  const entries = await readdir(directory, { withFileTypes: true });
+  await Promise.all(
+    entries.map(async (entry) => {
+      const path = resolve(directory, entry.name);
+      if (entry.isDirectory()) {
+        await removeServerStaticAssets(path);
+      } else if (!entry.name.endsWith(".js") && !entry.name.endsWith(".json")) {
+        await rm(path, { force: true });
+      }
+    }),
+  );
 }
 
 // Packages Sites metadata and migrations after Vite finishes compiling.
@@ -40,6 +55,11 @@ export function sites(): Plugin {
           recursive: true,
         });
       }
+
+      // Static assets are served from dist/client. Keeping Vite's duplicate
+      // copies under dist/server makes Workers treat images as JS modules.
+      await removeServerStaticAssets(resolve(root, "dist", "server", "assets"));
+      await removeServerStaticAssets(resolve(root, "dist", "server", "ssr", "assets"));
     },
   };
 }

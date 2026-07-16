@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const templateRoot = new URL("../", import.meta.url);
@@ -74,4 +74,16 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.equal((words.match(/\{ de: "/g) ?? []).length, 72);
 
   await assert.rejects(access(new URL("../app/_sites-preview", templateRoot)));
+
+  const serverAssetRoots = [
+    new URL("../dist/server/assets/", import.meta.url),
+    new URL("../dist/server/ssr/assets/", import.meta.url),
+  ];
+  for (const assetRoot of serverAssetRoots) {
+    const files = await readdir(assetRoot);
+    assert.equal(
+      files.filter((file) => /\.(?:svg|png|webp|woff2|css)$/i.test(file)).length,
+      0,
+    );
+  }
 });
