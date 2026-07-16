@@ -1,0 +1,363 @@
+export type Example = {
+  de: string;
+  zh: string;
+};
+
+export type Word = {
+  id: string;
+  german: string;
+  translation: string;
+  kind: "noun" | "verb";
+  article?: "der" | "die" | "das";
+  plural?: string;
+  topic: string;
+  distractors: string[];
+  examples: Example[];
+};
+
+export const WORDS: Word[] = [
+  {
+    id: "tisch",
+    german: "Tisch",
+    article: "der",
+    plural: "die Tische",
+    kind: "noun",
+    translation: "桌子",
+    topic: "家居",
+    distractors: ["椅子", "窗户", "房间"],
+    examples: [
+      { de: "Der Tisch ist aus Holz.", zh: "这张桌子是木制的。" },
+      { de: "Das Buch liegt auf dem Tisch.", zh: "书放在桌子上。" },
+      { de: "Wir sitzen am Tisch.", zh: "我们坐在桌边。" },
+    ],
+  },
+  {
+    id: "stuhl",
+    german: "Stuhl",
+    article: "der",
+    plural: "die Stühle",
+    kind: "noun",
+    translation: "椅子",
+    topic: "家居",
+    distractors: ["桌子", "床", "柜子"],
+    examples: [
+      { de: "Der Stuhl ist bequem.", zh: "这把椅子很舒服。" },
+      { de: "Bitte nimm einen Stuhl.", zh: "请拿一把椅子。" },
+      { de: "Die Katze sitzt auf dem Stuhl.", zh: "猫坐在椅子上。" },
+    ],
+  },
+  {
+    id: "fenster",
+    german: "Fenster",
+    article: "das",
+    plural: "die Fenster",
+    kind: "noun",
+    translation: "窗户",
+    topic: "家居",
+    distractors: ["门", "墙", "屋顶"],
+    examples: [
+      { de: "Das Fenster ist offen.", zh: "窗户开着。" },
+      { de: "Ich sehe durch das Fenster.", zh: "我透过窗户看。" },
+      { de: "Mach bitte das Fenster zu.", zh: "请把窗户关上。" },
+    ],
+  },
+  {
+    id: "tuer",
+    german: "Tür",
+    article: "die",
+    plural: "die Türen",
+    kind: "noun",
+    translation: "门",
+    topic: "家居",
+    distractors: ["窗户", "楼梯", "厨房"],
+    examples: [
+      { de: "Die Tür ist geschlossen.", zh: "门关着。" },
+      { de: "Jemand steht vor der Tür.", zh: "有人站在门前。" },
+      { de: "Öffne bitte die Tür.", zh: "请把门打开。" },
+    ],
+  },
+  {
+    id: "kueche",
+    german: "Küche",
+    article: "die",
+    plural: "die Küchen",
+    kind: "noun",
+    translation: "厨房",
+    topic: "家居",
+    distractors: ["卧室", "浴室", "客厅"],
+    examples: [
+      { de: "Die Küche ist klein.", zh: "厨房很小。" },
+      { de: "Wir kochen in der Küche.", zh: "我们在厨房做饭。" },
+      { de: "In der Küche riecht es gut.", zh: "厨房里闻起来很香。" },
+    ],
+  },
+  {
+    id: "brot",
+    german: "Brot",
+    article: "das",
+    plural: "die Brote",
+    kind: "noun",
+    translation: "面包",
+    topic: "食物",
+    distractors: ["奶酪", "米饭", "蛋糕"],
+    examples: [
+      { de: "Das Brot ist frisch.", zh: "面包很新鲜。" },
+      { de: "Ich esse Brot zum Frühstück.", zh: "我早餐吃面包。" },
+      { de: "Wir kaufen ein Brot.", zh: "我们买一个面包。" },
+    ],
+  },
+  {
+    id: "apfel",
+    german: "Apfel",
+    article: "der",
+    plural: "die Äpfel",
+    kind: "noun",
+    translation: "苹果",
+    topic: "食物",
+    distractors: ["梨", "橙子", "葡萄"],
+    examples: [
+      { de: "Der Apfel ist rot.", zh: "苹果是红色的。" },
+      { de: "Sie isst einen Apfel.", zh: "她吃一个苹果。" },
+      { de: "Äpfel sind gesund.", zh: "苹果很健康。" },
+    ],
+  },
+  {
+    id: "wasser",
+    german: "Wasser",
+    article: "das",
+    kind: "noun",
+    translation: "水",
+    topic: "食物",
+    distractors: ["牛奶", "咖啡", "果汁"],
+    examples: [
+      { de: "Das Wasser ist kalt.", zh: "水是凉的。" },
+      { de: "Ich trinke viel Wasser.", zh: "我喝很多水。" },
+      { de: "Ein Glas Wasser, bitte.", zh: "请给我一杯水。" },
+    ],
+  },
+  {
+    id: "kaffee",
+    german: "Kaffee",
+    article: "der",
+    kind: "noun",
+    translation: "咖啡",
+    topic: "食物",
+    distractors: ["茶", "牛奶", "热巧克力"],
+    examples: [
+      { de: "Der Kaffee ist heiß.", zh: "咖啡很烫。" },
+      { de: "Möchtest du einen Kaffee?", zh: "你想喝杯咖啡吗？" },
+      { de: "Ich trinke Kaffee ohne Zucker.", zh: "我喝不加糖的咖啡。" },
+    ],
+  },
+  {
+    id: "familie",
+    german: "Familie",
+    article: "die",
+    plural: "die Familien",
+    kind: "noun",
+    translation: "家庭",
+    topic: "人物",
+    distractors: ["朋友", "邻居", "同事"],
+    examples: [
+      { de: "Meine Familie lebt in Berlin.", zh: "我的家人住在柏林。" },
+      { de: "Die Familie isst zusammen.", zh: "这家人一起吃饭。" },
+      { de: "Wir besuchen unsere Familie.", zh: "我们去看望家人。" },
+    ],
+  },
+  {
+    id: "freund",
+    german: "Freund",
+    article: "der",
+    plural: "die Freunde",
+    kind: "noun",
+    translation: "朋友（男）",
+    topic: "人物",
+    distractors: ["哥哥", "同事", "邻居"],
+    examples: [
+      { de: "Paul ist mein Freund.", zh: "保罗是我的朋友。" },
+      { de: "Ich treffe einen Freund.", zh: "我要见一位朋友。" },
+      { de: "Gute Freunde helfen einander.", zh: "好朋友互相帮助。" },
+    ],
+  },
+  {
+    id: "schule",
+    german: "Schule",
+    article: "die",
+    plural: "die Schulen",
+    kind: "noun",
+    translation: "学校",
+    topic: "学习",
+    distractors: ["大学", "图书馆", "办公室"],
+    examples: [
+      { de: "Die Schule beginnt um acht.", zh: "学校八点开始上课。" },
+      { de: "Mein Sohn geht zur Schule.", zh: "我的儿子去上学。" },
+      { de: "Die Schule ist heute geschlossen.", zh: "学校今天关门。" },
+    ],
+  },
+  {
+    id: "buch",
+    german: "Buch",
+    article: "das",
+    plural: "die Bücher",
+    kind: "noun",
+    translation: "书",
+    topic: "学习",
+    distractors: ["杂志", "报纸", "笔记本"],
+    examples: [
+      { de: "Das Buch ist interessant.", zh: "这本书很有趣。" },
+      { de: "Ich lese ein deutsches Buch.", zh: "我读一本德语书。" },
+      { de: "Das Buch liegt im Regal.", zh: "书放在书架上。" },
+    ],
+  },
+  {
+    id: "stadt",
+    german: "Stadt",
+    article: "die",
+    plural: "die Städte",
+    kind: "noun",
+    translation: "城市",
+    topic: "地点",
+    distractors: ["村庄", "国家", "街道"],
+    examples: [
+      { de: "Die Stadt ist sehr alt.", zh: "这座城市很古老。" },
+      { de: "Wir fahren in die Stadt.", zh: "我们开车进城。" },
+      { de: "In der Stadt gibt es viel zu sehen.", zh: "城里有很多可看的。" },
+    ],
+  },
+  {
+    id: "bahnhof",
+    german: "Bahnhof",
+    article: "der",
+    plural: "die Bahnhöfe",
+    kind: "noun",
+    translation: "火车站",
+    topic: "地点",
+    distractors: ["机场", "公交站", "停车场"],
+    examples: [
+      { de: "Der Bahnhof ist nicht weit.", zh: "火车站不远。" },
+      { de: "Wir treffen uns am Bahnhof.", zh: "我们在火车站见面。" },
+      { de: "Der Zug wartet im Bahnhof.", zh: "火车在车站等候。" },
+    ],
+  },
+  {
+    id: "lernen",
+    german: "lernen",
+    kind: "verb",
+    translation: "学习",
+    topic: "日常",
+    distractors: ["教学", "阅读", "书写"],
+    examples: [
+      { de: "Ich lerne Deutsch.", zh: "我学习德语。" },
+      { de: "Wir lernen zusammen.", zh: "我们一起学习。" },
+      { de: "Er lernt jeden Abend.", zh: "他每天晚上学习。" },
+    ],
+  },
+  {
+    id: "arbeiten",
+    german: "arbeiten",
+    kind: "verb",
+    translation: "工作",
+    topic: "日常",
+    distractors: ["休息", "学习", "等待"],
+    examples: [
+      { de: "Ich arbeite in Hamburg.", zh: "我在汉堡工作。" },
+      { de: "Sie arbeitet heute zu Hause.", zh: "她今天在家工作。" },
+      { de: "Wir arbeiten bis fünf Uhr.", zh: "我们工作到五点。" },
+    ],
+  },
+  {
+    id: "wohnen",
+    german: "wohnen",
+    kind: "verb",
+    translation: "居住",
+    topic: "日常",
+    distractors: ["旅行", "搬家", "拜访"],
+    examples: [
+      { de: "Ich wohne in München.", zh: "我住在慕尼黑。" },
+      { de: "Wo wohnst du?", zh: "你住在哪里？" },
+      { de: "Meine Eltern wohnen auf dem Land.", zh: "我的父母住在乡下。" },
+    ],
+  },
+  {
+    id: "essen",
+    german: "essen",
+    kind: "verb",
+    translation: "吃",
+    topic: "日常",
+    distractors: ["喝", "烹饪", "购买"],
+    examples: [
+      { de: "Wir essen um sieben Uhr.", zh: "我们七点吃饭。" },
+      { de: "Er isst gern Gemüse.", zh: "他喜欢吃蔬菜。" },
+      { de: "Was möchtest du essen?", zh: "你想吃什么？" },
+    ],
+  },
+  {
+    id: "trinken",
+    german: "trinken",
+    kind: "verb",
+    translation: "喝",
+    topic: "日常",
+    distractors: ["吃", "倒入", "品尝"],
+    examples: [
+      { de: "Ich trinke Tee.", zh: "我喝茶。" },
+      { de: "Trinkst du genug Wasser?", zh: "你喝足够的水吗？" },
+      { de: "Wir trinken zusammen Kaffee.", zh: "我们一起喝咖啡。" },
+    ],
+  },
+  {
+    id: "gehen",
+    german: "gehen",
+    kind: "verb",
+    translation: "走；去",
+    topic: "出行",
+    distractors: ["跑", "停留", "到达"],
+    examples: [
+      { de: "Ich gehe nach Hause.", zh: "我回家。" },
+      { de: "Wir gehen zu Fuß.", zh: "我们步行去。" },
+      { de: "Gehst du heute zur Arbeit?", zh: "你今天去上班吗？" },
+    ],
+  },
+  {
+    id: "fahren",
+    german: "fahren",
+    kind: "verb",
+    translation: "乘车；驾驶",
+    topic: "出行",
+    distractors: ["步行", "飞行", "停靠"],
+    examples: [
+      { de: "Ich fahre mit dem Bus.", zh: "我乘公交车。" },
+      { de: "Sie fährt gern Fahrrad.", zh: "她喜欢骑自行车。" },
+      { de: "Wir fahren morgen nach Köln.", zh: "我们明天去科隆。" },
+    ],
+  },
+  {
+    id: "sprechen",
+    german: "sprechen",
+    kind: "verb",
+    translation: "说；交谈",
+    topic: "交流",
+    distractors: ["听", "询问", "回答"],
+    examples: [
+      { de: "Sprechen Sie Deutsch?", zh: "您会说德语吗？" },
+      { de: "Wir sprechen über die Reise.", zh: "我们谈论这次旅行。" },
+      { de: "Bitte sprich langsam.", zh: "请说慢一点。" },
+    ],
+  },
+  {
+    id: "verstehen",
+    german: "verstehen",
+    kind: "verb",
+    translation: "理解；听懂",
+    topic: "交流",
+    distractors: ["解释", "重复", "忘记"],
+    examples: [
+      { de: "Ich verstehe die Frage.", zh: "我理解这个问题。" },
+      { de: "Verstehst du mich?", zh: "你听懂我了吗？" },
+      { de: "Er versteht nur ein bisschen Deutsch.", zh: "他只懂一点德语。" },
+    ],
+  },
+];
+
+export function getDisplayWord(word: Word) {
+  return word.article ? `${word.article} ${word.german}` : word.german;
+}
