@@ -30,7 +30,16 @@ npm run dev
 npm run lint
 npx tsc --noEmit
 npm test
+npm run test:pages
 ```
+
+## GitHub Pages
+
+推送到 `main` 后，GitHub Actions 会构建静态版本并发布到：
+
+<https://chenerdongc3.github.io/GotheWord/>
+
+本地可通过 `npm run test:pages` 验证 Pages 子路径、静态资源和站点元数据。
 
 ## UI 与许可
 
