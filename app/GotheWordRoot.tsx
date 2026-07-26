@@ -77,25 +77,25 @@ function AuthScreen() {
 
   return (
     <Cursor>
-      <main className="mx-auto grid min-h-[calc(100vh-80px)] w-[min(1060px,calc(100%-40px))] items-center gap-10 py-12 md:grid-cols-[1.08fr_0.92fr]">
-        <section aria-labelledby="auth-title">
+      <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1060px] min-w-0 items-center gap-8 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-12 md:grid-cols-[1.08fr_0.92fr] md:gap-10">
+        <section className="min-w-0" aria-labelledby="auth-title">
           <Tag color="app-teal" variant="outlined">德语 · A1 起步</Tag>
           <h1
             id="auth-title"
-            className="mt-5 max-w-2xl text-[clamp(2.5rem,6vw,5rem)] font-black leading-[1.05]"
+            className="mt-5 max-w-2xl text-[clamp(2.25rem,10vw,5rem)] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere]"
           >
             记住单词，也记住你的每一步。
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-[#8f7b63]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#8f7b63] sm:text-lg">
             一个用户名、一段密码，就能把学习进度安全地保留下来。
           </p>
         </section>
-        <Card color="default" className="grid gap-5">
-          <div>
-            <Title size="large" color="app-yellow">
-              {mode === "login" ? "欢迎回来" : "创建学习账号"}
+        <Card color="default" className="grid min-w-0 gap-5">
+          <div className="grid min-w-0 gap-4">
+            <Title size="middle" color="app-yellow">
+              {mode === "login" ? "欢迎回来" : "创建账号"}
             </Title>
-            <p className="mb-0 text-[#8f7b63]">
+            <p className="m-0 leading-7 text-[#8f7b63]">
               {mode === "login"
                 ? "输入用户名和密码，继续今天的学习。"
                 : "没有邮箱步骤，注册后立即进入应用。"}
@@ -134,7 +134,7 @@ function AuthScreen() {
               />
             </FormItem>
             {error && (
-              <p className="mb-4 text-sm font-bold text-[#b44747]" role="alert">
+              <p className="mb-4 text-sm leading-6 font-bold text-[#b44747]" role="alert">
                 {error}
               </p>
             )}
@@ -162,12 +162,13 @@ function AuthScreen() {
 function ConfigurationScreen() {
   return (
     <Cursor>
-      <main className="mx-auto grid min-h-[calc(100vh-80px)] w-[min(720px,calc(100%-40px))] place-items-center py-12">
-        <Card color="default" className="grid gap-4">
-          <Title size="large" color="app-yellow">还差一步 Supabase 配置</Title>
-          <p className="mb-0 text-[#8f7b63]">
-            请配置 NEXT_PUBLIC_SUPABASE_URL 和
-            NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY 后重新启动应用。
+      <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[720px] min-w-0 place-items-center px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-12">
+        <Card color="default" className="grid min-w-0 gap-4">
+          <Title size="middle" color="app-yellow">配置 Supabase</Title>
+          <p className="m-0 leading-7 text-[#8f7b63] [overflow-wrap:anywhere]">
+            还差一步：请配置{" "}
+            <code>NEXT_PUBLIC_SUPABASE_URL</code> 和{" "}
+            <code>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY</code> 后重新启动应用。
           </p>
         </Card>
       </main>
@@ -205,8 +206,8 @@ export default function GotheWordRoot() {
   if (!isSupabaseConfigured) return <ConfigurationScreen />;
   if (!ready) {
     return (
-      <main className="grid min-h-screen place-items-center">
-        <p className="font-bold text-[#8f7b63]">正在读取账号…</p>
+      <main className="grid min-h-svh place-items-center px-4 pb-[env(safe-area-inset-bottom)]">
+        <p className="font-bold text-[#8f7b63]" role="status">正在读取账号…</p>
       </main>
     );
   }
@@ -218,14 +219,10 @@ export default function GotheWordRoot() {
       : "学习者";
 
   return (
-    <>
-      <div className="mx-auto flex w-[min(1180px,calc(100%-40px))] items-center justify-end gap-3 pt-4">
-        <Tag color="app-teal">{username}</Tag>
-        <Button type="text" size="small" onClick={() => void supabase?.auth.signOut()}>
-          退出登录
-        </Button>
-      </div>
-      <GotheWordApp userId={session.user.id} />
-    </>
+    <GotheWordApp
+      userId={session.user.id}
+      username={username}
+      onSignOut={() => void supabase?.auth.signOut()}
+    />
   );
 }

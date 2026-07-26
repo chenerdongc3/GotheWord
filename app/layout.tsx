@@ -15,6 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase,
     title: "GotheWord · 德语记忆花园",
     description: "用短测试与间隔复习，轻松建立你的德语词汇记忆。",
+    icons: {
+      icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    },
     openGraph: {
       title: "GotheWord · 德语记忆花园",
       description: "每天几分钟，让单词真正留下来。",
