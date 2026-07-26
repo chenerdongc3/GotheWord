@@ -32,7 +32,7 @@ test("server-renders the Supabase entry guard", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>GotheWord · 德语记忆花园<\/title>/i);
-  assert.match(html, /还差一步 Supabase 配置|正在读取账号/);
+  assert.match(html, /还差一步：请配置|正在读取账号/);
   assert.match(html, /property="og:image"/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
