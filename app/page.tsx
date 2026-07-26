@@ -1,5 +1,5 @@
-import GotheWordApp from "./GotheWordApp";
+import GotheWordRoot from "./GotheWordRoot";
 
 export default function Home() {
-  return <GotheWordApp />;
+  return <GotheWordRoot />;
 }

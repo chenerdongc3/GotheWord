@@ -25,16 +25,14 @@ async function render() {
   );
 }
 
-test("server-renders the GotheWord onboarding experience", async () => {
+test("server-renders the Supabase entry guard", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
   assert.match(html, /<title>GotheWord · 德语记忆花园<\/title>/i);
-  assert.match(html, /把德语，慢慢种进记忆里/);
-  assert.match(html, /每天 10 个 · 推荐/);
-  assert.match(html, /开始我的德语旅程/);
+  assert.match(html, /还差一步 Supabase 配置|正在读取账号/);
   assert.match(html, /property="og:image"/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
@@ -54,7 +52,7 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(layout, /import "animal-island-ui\/style"/);
   assert.match(layout, /lang="zh-CN"/);
-  assert.match(page, /<GotheWordApp \/>/);
+  assert.match(page, /<GotheWordRoot \/>/);
   assert.doesNotMatch(app, /<(?:button|input|select|progress)\b/);
 
   assert.match(learning, /1:\s*3/);
@@ -62,11 +60,15 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.match(learning, /3:\s*14/);
   assert.match(learning, /4:\s*30/);
   assert.match(learning, /5:\s*60/);
-  assert.match(learning, /const offset = 3 \+ Math\.floor\(Math\.random\(\) \* 3\)/);
-  assert.match(app, /session\.mode === "review" \? 2 : 3/);
-  assert.match(app, /previous\.reviewMistakes \+ 1/);
-  assert.match(app, /totalAnswers: previous\.totalAnswers \+ 1/);
-  assert.match(app, /nextReviewAt: addLocalDays\(now, 1\)/);
+  assert.match(learning, /DEFAULT_REVIEW_BATCH_SIZE = 20/);
+  assert.match(learning, /rng: RandomSource = Math\.random/);
+  assert.match(learning, /version: 2/);
+  assert.match(learning, /session\.mode === "review" \? 2 : 3/);
+  assert.match(learning, /session\.reviewMistakes\[wordId\]/);
+  assert.match(learning, /totalAnswers: previous\.totalAnswers \+ 1/);
+  assert.match(learning, /nextReviewAt: addLocalDays\(now, 1\)/);
+  assert.match(app, /继续本次学习/);
+  assert.match(app, /结束本次学习/);
   assert.match(app, /Date\.now\(\) - lastActivityRef\.current >= 30_000/);
 
   assert.equal((words.match(/\n    id: "/g) ?? []).length, 24);

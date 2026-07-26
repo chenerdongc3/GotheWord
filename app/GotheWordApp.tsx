@@ -16,50 +16,30 @@ import {
 } from "animal-island-ui";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  addLocalDays,
+  ActiveSession,
+  answerActiveSession,
   AppState,
+  createActiveSession,
   DailyStats,
+  DEFAULT_REVIEW_BATCH_SIZE,
   EMPTY_DAILY_STATS,
   EMPTY_PROGRESS,
   EMPTY_STATE,
   formatDuration,
   getLastDays,
-  insertThreeToFiveLater,
   isDue,
   localDayKey,
-  REVIEW_INTERVALS,
-  WordProgress,
+  migrateAppState,
+  RandomSource,
+  SessionMode,
+  settleActiveSession,
+  takeReviewBatch,
 } from "./learning";
+import { loadLearningState, saveLearningState } from "./supabase";
 import { getDisplayWord, Word, WORDS } from "./words";
 
-const STORAGE_KEY = "gotheword-state-v1";
-
-type SessionMode = "new" | "review" | "free";
-
-type Feedback = {
-  wordId: string;
-  correct: boolean;
-  selected: string;
-  streak: number;
-  target: number;
-  completed: boolean;
-};
-
-type StudySession = {
-  mode: SessionMode;
-  phase: "memory" | "quiz";
-  memoryIndex: number;
-  wordIds: string[];
-  queue: string[];
-  completed: string[];
-  weakIds: string[];
-  answers: number;
-  correct: number;
-  elapsedSeconds: number;
-  paused: boolean;
-  inactive: boolean;
-  feedback?: Feedback;
-};
+const STORAGE_KEY = "gotheword-state-v2";
+const LEGACY_STORAGE_KEY = "gotheword-state-v1";
 
 type SessionReport = {
   mode: SessionMode;
@@ -69,6 +49,7 @@ type SessionReport = {
   correct: number;
   seconds: number;
   weakIds: string[];
+  remainingReviewCount: number;
 };
 
 function stableShuffle(items: string[], seed: string) {
@@ -111,61 +92,114 @@ function calculateStreak(stats: Record<string, DailyStats>) {
   return streak;
 }
 
-export default function GotheWordApp() {
+type GotheWordAppProps = {
+  userId: string;
+  reviewBatchSize?: number;
+  rng?: RandomSource;
+};
+
+export default function GotheWordApp({
+  userId,
+  reviewBatchSize = DEFAULT_REVIEW_BATCH_SIZE,
+  rng = Math.random,
+}: GotheWordAppProps) {
   const [state, setState] = useState<AppState>(EMPTY_STATE);
   const [hydrated, setHydrated] = useState(false);
   const [goalChoice, setGoalChoice] = useState<5 | 10 | 20>(10);
   const [activeTab, setActiveTab] = useState("today");
-  const [session, setSession] = useState<StudySession | null>(null);
+  const [sessionResumed, setSessionResumed] = useState(false);
+  const [sessionInactive, setSessionInactive] = useState(true);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const [report, setReport] = useState<SessionReport | null>(null);
   const [resetOpen, setResetOpen] = useState(false);
+  const [syncError, setSyncError] = useState("");
   const lastActivityRef = useRef(0);
+  const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
-  const sessionPaused = session?.paused ?? true;
-  const sessionInactive = session?.inactive ?? true;
+  const sessionPaused = Boolean(session?.pausedAt);
 
   useEffect(() => {
-    const hydrationTimer = window.setTimeout(() => {
+    let active = true;
+    const hydrate = async () => {
+      const userStorageKey = `${STORAGE_KEY}:${userId}`;
+      const legacyUserStorageKey = `${LEGACY_STORAGE_KEY}:${userId}`;
+      let localState: AppState | null = null;
       try {
-        const raw = window.localStorage.getItem(STORAGE_KEY);
+        const raw =
+          window.localStorage.getItem(userStorageKey) ??
+          window.localStorage.getItem(legacyUserStorageKey) ??
+          window.localStorage.getItem(LEGACY_STORAGE_KEY);
         if (raw) {
-          const saved = JSON.parse(raw) as AppState;
-          if (saved.version === 1) {
-            setState(saved);
-            if (saved.dailyGoal) setGoalChoice(saved.dailyGoal);
-          }
+          const saved = JSON.parse(raw) as unknown;
+          localState = migrateAppState(saved);
         }
       } catch {
-        window.localStorage.removeItem(STORAGE_KEY);
-      } finally {
-        setHydrated(true);
+        window.localStorage.removeItem(userStorageKey);
       }
-    }, 0);
-    return () => window.clearTimeout(hydrationTimer);
-  }, []);
+
+      try {
+        const remoteState = await loadLearningState(userId);
+        const migratedRemoteState = migrateAppState(remoteState);
+        const nextState = migratedRemoteState ?? localState ?? EMPTY_STATE;
+        if (!migratedRemoteState && localState) {
+          await saveLearningState(userId, localState);
+        }
+        if (active) {
+          setState(nextState);
+          setSessionResumed(false);
+          setResumeOpen(Boolean(nextState.activeSession));
+          if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
+        }
+      } catch {
+        if (active) {
+          const nextState = localState ?? EMPTY_STATE;
+          setState(nextState);
+          setSessionResumed(false);
+          setResumeOpen(Boolean(nextState.activeSession));
+          if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
+          setSyncError("云端同步暂时不可用，学习记录仍保存在本设备");
+        }
+      } finally {
+        if (active) setHydrated(true);
+      }
+    };
+
+    void hydrate();
+    return () => {
+      active = false;
+    };
+  }, [userId]);
 
   useEffect(() => {
-    if (hydrated) window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [hydrated, state]);
+    if (!hydrated) return;
+
+    const userStorageKey = `${STORAGE_KEY}:${userId}`;
+    window.localStorage.setItem(userStorageKey, JSON.stringify(state));
+    const syncTimer = window.setTimeout(() => {
+      void saveLearningState(userId, state)
+        .then(() => setSyncError(""))
+        .catch(() => {
+          setSyncError("云端同步暂时不可用，学习记录仍保存在本设备");
+        });
+    }, 500);
+
+    return () => window.clearTimeout(syncTimer);
+  }, [hydrated, state, userId]);
 
   useEffect(() => {
     if (!sessionActive) return;
 
     const markActive = () => {
       lastActivityRef.current = Date.now();
-      setSession((current) =>
-        current?.inactive ? { ...current, inactive: false } : current,
-      );
+      setSessionInactive(false);
     };
     const handleVisibility = () => {
       if (document.visibilityState === "visible") markActive();
-      else setSession((current) => (current ? { ...current, inactive: true } : current));
+      else setSessionInactive(true);
     };
     const inactivityTimer = window.setInterval(() => {
       if (Date.now() - lastActivityRef.current >= 30_000) {
-        setSession((current) =>
-          current && !current.inactive ? { ...current, inactive: true } : current,
-        );
+        setSessionInactive(true);
       }
     }, 1_000);
 
@@ -183,8 +217,17 @@ export default function GotheWordApp() {
   useEffect(() => {
     if (!sessionActive || sessionPaused || sessionInactive) return;
     const timer = window.setInterval(() => {
-      setSession((current) =>
-        current ? { ...current, elapsedSeconds: current.elapsedSeconds + 1 } : current,
+      setState((current) =>
+        current.activeSession
+          ? {
+              ...current,
+              activeSession: {
+                ...current.activeSession,
+                elapsedSeconds: current.activeSession.elapsedSeconds + 1,
+                updatedAt: new Date().toISOString(),
+              },
+            }
+          : current,
       );
     }, 1_000);
     return () => window.clearInterval(timer);
@@ -213,6 +256,7 @@ export default function GotheWordApp() {
         new Date(rightProgress.nextReviewAt ?? 0).getTime();
     },
   );
+  const reviewBatch = takeReviewBatch(dueWords, reviewBatchSize);
   const masteredCount = Object.values(state.progress).filter(
     (progress) => progress.state === "mastered",
   ).length;
@@ -253,63 +297,59 @@ export default function GotheWordApp() {
     ...chartDays.map(({ key }) => Math.ceil((state.stats[key]?.seconds ?? 0) / 60)),
   );
 
-  const updateToday = (update: Partial<DailyStats>) => {
-    setState((current) => {
-      const existing = current.stats[todayKey] ?? EMPTY_DAILY_STATS;
-      const next = Object.fromEntries(
-        Object.entries(update).map(([key, value]) => [
-          key,
-          (existing[key as keyof DailyStats] as number) + (value ?? 0),
-        ]),
-      ) as Partial<DailyStats>;
-      return {
-        ...current,
-        stats: { ...current.stats, [todayKey]: { ...existing, ...next } },
-      };
-    });
-  };
-
   const beginSession = (mode: SessionMode) => {
-    const selected =
-      mode === "review"
-        ? dueWords
-        : availableNewWords.slice(0, mode === "new" ? remainingGoal : 5);
+    const reviewSelection = takeReviewBatch(dueWords, reviewBatchSize);
+    const selected = mode === "review"
+      ? reviewSelection.batch
+      : availableNewWords.slice(0, mode === "new" ? remainingGoal : 5);
     if (selected.length === 0) return;
     const wordIds = selected.map((word) => word.id);
-    if (mode !== "review") {
-      setState((current) => ({
-        ...current,
-        progress: {
-          ...current.progress,
-          ...Object.fromEntries(
-            wordIds.map((wordId) => [
-              wordId,
-              { ...(current.progress[wordId] ?? EMPTY_PROGRESS), state: "learning" },
-            ]),
-          ),
-        },
-      }));
-    }
-    lastActivityRef.current = Date.now();
-    setReport(null);
-    setSession({
+    const now = new Date();
+    const nextSession = createActiveSession({
+      id: window.crypto.randomUUID(),
       mode,
-      phase: mode === "review" ? "quiz" : "memory",
-      memoryIndex: 0,
       wordIds,
-      queue: wordIds,
-      completed: [],
-      weakIds: [],
-      answers: 0,
-      correct: 0,
-      elapsedSeconds: 0,
-      paused: false,
-      inactive: false,
+      remainingReviewCount: reviewSelection.remainingCount,
+      now,
     });
+
+    setState((current) => ({
+      ...current,
+      progress:
+        mode === "review"
+          ? current.progress
+          : {
+              ...current.progress,
+              ...Object.fromEntries(
+                wordIds.map((wordId) => [
+                  wordId,
+                  { ...(current.progress[wordId] ?? EMPTY_PROGRESS), state: "learning" },
+                ]),
+              ),
+            },
+      activeSession: nextSession,
+    }));
+    lastActivityRef.current = Date.now();
+    setSessionInactive(false);
+    setSessionResumed(true);
+    setResumeOpen(false);
+    setReport(null);
   };
 
-  const finishSession = (current: StudySession) => {
-    updateToday({ seconds: current.elapsedSeconds });
+  const updateSession = (
+    update: (current: ActiveSession) => ActiveSession,
+  ) => {
+    setState((current) =>
+      current.activeSession
+        ? {
+            ...current,
+            activeSession: update(current.activeSession),
+          }
+        : current,
+    );
+  };
+
+  const finishSession = (current: ActiveSession) => {
     setReport({
       mode: current.mode,
       total: current.wordIds.length,
@@ -318,122 +358,54 @@ export default function GotheWordApp() {
       correct: current.correct,
       seconds: current.elapsedSeconds,
       weakIds: current.weakIds,
+      remainingReviewCount: current.remainingReviewCount,
     });
-    setSession(null);
+    setState((latest) =>
+      latest.activeSession?.id === current.id
+        ? settleActiveSession(latest)
+        : latest,
+    );
+    setSessionResumed(false);
+    setSessionInactive(true);
   };
 
   const leaveSession = () => {
     if (!session) return;
-    updateToday({ seconds: session.elapsedSeconds });
-    setSession(null);
+    setState((current) =>
+      current.activeSession?.id === session.id
+        ? settleActiveSession(current)
+        : current,
+    );
+    setSessionResumed(false);
+    setSessionInactive(true);
     setActiveTab("today");
   };
 
   const answerWord = (selected: string | null) => {
     if (!session || !currentWord || session.feedback) return;
     const correct = selected === currentWord.translation;
-    const target = session.mode === "review" ? 2 : 3;
-    const previous = state.progress[currentWord.id] ?? EMPTY_PROGRESS;
-    const streak = correct ? previous.streak + 1 : 0;
-    const reviewMistakes =
-      session.mode === "review" && !correct
-        ? previous.reviewMistakes + 1
-        : previous.reviewMistakes;
-    const weakThisRound = reviewMistakes >= 2;
-    const weak = previous.weak || weakThisRound;
-    const completed = streak >= target;
-    const now = new Date();
-
-    let nextProgress: WordProgress = {
-      ...previous,
-      state: session.mode === "review" ? (weak ? "weak" : "scheduled") : "learning",
-      streak,
-      totalAnswers: previous.totalAnswers + 1,
-      correctAnswers: previous.correctAnswers + (correct ? 1 : 0),
-      reviewMistakes,
-      weak,
-    };
-
-    if (completed && session.mode !== "review") {
-      nextProgress = {
-        ...nextProgress,
-        state: "scheduled",
-        stage: 1,
-        streak: 0,
-        reviewMistakes: 0,
-        weak: false,
-        firstLearnedAt: previous.firstLearnedAt ?? now.toISOString(),
-        nextReviewAt: addLocalDays(now, 1),
-      };
-    }
-
-    if (completed && session.mode === "review") {
-      if (previous.stage >= 6) {
-        nextProgress = {
-          ...nextProgress,
-          state: "mastered",
-          stage: 7,
-          streak: 0,
-          reviewMistakes: 0,
-          weak: false,
-          nextReviewAt: undefined,
-        };
-      } else {
-        const nextStage = Math.max(2, previous.stage + 1);
-        const interval = weakThisRound ? 1 : (REVIEW_INTERVALS[previous.stage] ?? 3);
-        nextProgress = {
-          ...nextProgress,
-          state: weakThisRound ? "weak" : "scheduled",
-          stage: nextStage,
-          streak: 0,
-          reviewMistakes: 0,
-          weak: weakThisRound,
-          nextReviewAt: addLocalDays(now, interval),
-        };
-      }
-    }
-
-    setState((current) => ({
-      ...current,
-      progress: { ...current.progress, [currentWord.id]: nextProgress },
-    }));
-    updateToday({
-      answers: 1,
-      correct: correct ? 1 : 0,
-      newLearned: completed && session.mode !== "review" ? 1 : 0,
-      goalNewLearned: completed && session.mode === "new" ? 1 : 0,
-      reviewed: completed && session.mode === "review" ? 1 : 0,
-    });
-
-    const remainingQueue = session.queue.slice(1);
-    const nextQueue = completed
-      ? remainingQueue
-      : insertThreeToFiveLater(remainingQueue, currentWord.id);
-    setSession({
-      ...session,
-      queue: nextQueue,
-      completed: completed ? [...session.completed, currentWord.id] : session.completed,
-      weakIds:
-        weakThisRound && !session.weakIds.includes(currentWord.id)
-          ? [...session.weakIds, currentWord.id]
-          : session.weakIds,
-      answers: session.answers + 1,
-      correct: session.correct + (correct ? 1 : 0),
-      feedback: {
+    setState((current) =>
+      answerActiveSession({
+        state: current,
         wordId: currentWord.id,
         correct,
         selected: selected ?? "忘记了",
-        streak,
-        target,
-        completed,
-      },
-    });
+        rng,
+      }),
+    );
   };
 
   const continueAfterFeedback = () => {
     if (!session) return;
-    if (session.queue.length === 0) finishSession(session);
-    else setSession({ ...session, feedback: undefined });
+    if (session.queue.length === 0) {
+      finishSession(session);
+    } else {
+      updateSession((current) => ({
+        ...current,
+        feedback: undefined,
+        updatedAt: new Date().toISOString(),
+      }));
+    }
   };
 
   if (!state.dailyGoal) {
@@ -474,6 +446,7 @@ export default function GotheWordApp() {
               开始我的德语旅程
             </Button>
             {!hydrated && <p className="hydration-note">正在读取你的学习记录…</p>}
+            {syncError && <p className="hydration-note" role="status">{syncError}</p>}
           </Card>
         </main>
         <Footer type="sea" />
@@ -498,18 +471,28 @@ export default function GotheWordApp() {
                 {session.phase === "memory"
                   ? `${session.memoryIndex + 1} / ${session.wordIds.length}`
                   : `${session.completed.length} / ${session.wordIds.length}`}
+                {session.mode === "review" && session.remainingReviewCount > 0
+                  ? ` · 后续还有 ${session.remainingReviewCount} 个`
+                  : ""}
               </span>
               <Progress percent={progressValue} showInfo={false} size="small" />
             </div>
             <div className="study-clock" aria-live="polite">
-              <span>{session.inactive ? "已因无操作暂停" : session.paused ? "已暂停" : "本次学习"}</span>
+              <span>{sessionInactive ? "已因无操作暂停" : sessionPaused ? "已暂停" : "本次学习"}</span>
               <strong>{formatDuration(session.elapsedSeconds)}</strong>
               <Button
                 size="small"
                 type="default"
-                onClick={() => setSession({ ...session, paused: !session.paused })}
+                onClick={() => {
+                  const now = new Date().toISOString();
+                  updateSession((current) => ({
+                    ...current,
+                    pausedAt: current.pausedAt ? undefined : now,
+                    updatedAt: now,
+                  }));
+                }}
               >
-                {session.paused ? "继续" : "暂停"}
+                {sessionPaused ? "继续" : "暂停"}
               </Button>
             </div>
           </header>
@@ -617,11 +600,12 @@ export default function GotheWordApp() {
                   block
                   onClick={() => {
                     const nextIndex = session.memoryIndex + 1;
-                    setSession({
-                      ...session,
+                    updateSession((current) => ({
+                      ...current,
                       memoryIndex: nextIndex,
-                      phase: nextIndex >= session.wordIds.length ? "quiz" : "memory",
-                    });
+                      phase: nextIndex >= current.wordIds.length ? "quiz" : "memory",
+                      updatedAt: new Date().toISOString(),
+                    }));
                   }}
                 >
                   {session.memoryIndex + 1 >= session.wordIds.length
@@ -677,10 +661,18 @@ export default function GotheWordApp() {
       <Cursor>
         <main className="report-shell">
           <Tag color="app-green" variant="outlined">本轮完成</Tag>
-          <h1>{report.mode === "review" ? "今日复习完成" : "今天的单词种下啦"}</h1>
+          <h1>
+            {report.mode === "review"
+              ? report.remainingReviewCount > 0
+                ? "本批复习完成"
+                : "今日复习完成"
+              : "今天的单词种下啦"}
+          </h1>
           <p>
             {report.mode === "review"
-              ? "每一次重新想起，都在让记忆变得更牢。"
+              ? report.remainingReviewCount > 0
+                ? `已完成本批，仍有 ${report.remainingReviewCount} 个到期词等待下一批。`
+                : "每一次重新想起，都在让记忆变得更牢。"
               : "这些单词已经进入你的复习计划，明天会在合适的时候再见。"}
           </p>
           <div className="report-grid">
@@ -699,8 +691,21 @@ export default function GotheWordApp() {
             </Card>
           )}
           <div className="report-actions">
+            {report.mode === "review" && report.remainingReviewCount > 0 && (
+              <Button
+                type="primary"
+                size="large"
+                onClick={() => beginSession("review")}
+              >
+                继续下一批复习
+              </Button>
+            )}
             <Button
-              type="primary"
+              type={
+                report.mode === "review" && report.remainingReviewCount > 0
+                  ? "default"
+                  : "primary"
+              }
               size="large"
               onClick={() => {
                 setReport(null);
@@ -740,7 +745,13 @@ export default function GotheWordApp() {
             <Tag color={dueWords.length > 0 ? "app-orange" : "app-green"} variant="outlined">优先任务</Tag>
             <span className="eyebrow">今日待复习</span>
             <strong className="hero-number">{dueWords.length}</strong>
-            <p>{dueWords.length > 0 ? "个单词在等你重新想起" : "今天的记忆花园已经打理好"}</p>
+            <p>
+              {dueWords.length === 0
+                ? "今天的记忆花园已经打理好"
+                : reviewBatch.remainingCount > 0
+                  ? `本批处理 ${reviewBatch.batch.length} 个，后续还有 ${reviewBatch.remainingCount} 个`
+                  : "个单词在等你重新想起"}
+            </p>
           </div>
           <Button
             type="primary"
@@ -748,7 +759,11 @@ export default function GotheWordApp() {
             disabled={dueWords.length === 0}
             onClick={() => beginSession("review")}
           >
-            {dueWords.length > 0 ? "开始今日复习" : "暂无到期复习"}
+            {dueWords.length > 0
+              ? reviewBatch.remainingCount > 0
+                ? `开始本批复习（${reviewBatch.batch.length} 个）`
+                : "开始今日复习"
+              : "暂无到期复习"}
           </Button>
         </Card>
 
@@ -905,7 +920,7 @@ export default function GotheWordApp() {
       <Card type="dashed" className="settings-card danger-zone">
         <div>
           <h2>重新开始</h2>
-          <p>清除本设备上的学习进度、复习计划和统计数据。</p>
+          <p>清除当前账号的学习进度、复习计划和统计数据。</p>
         </div>
         <Button danger onClick={() => setResetOpen(true)}>清除学习记录</Button>
       </Card>
@@ -939,6 +954,55 @@ export default function GotheWordApp() {
         <Footer type="sea" />
       </div>
       <Modal
+        open={resumeOpen}
+        title="继续上次的学习吗？"
+        typewriter={false}
+        maskClosable={false}
+        onClose={() => undefined}
+        footer={
+          <>
+            <Button
+              danger
+              onClick={() => {
+                setState((current) => settleActiveSession(current));
+                setResumeOpen(false);
+                setSessionResumed(false);
+                setSessionInactive(true);
+                setActiveTab("today");
+              }}
+            >
+              结束本次学习
+            </Button>
+            <Button
+              type="primary"
+              onClick={() => {
+                const now = new Date().toISOString();
+                setState((current) =>
+                  current.activeSession
+                    ? {
+                        ...current,
+                        activeSession: {
+                          ...current.activeSession,
+                          pausedAt: undefined,
+                          updatedAt: now,
+                        },
+                      }
+                    : current,
+                );
+                lastActivityRef.current = Date.now();
+                setSessionInactive(false);
+                setSessionResumed(true);
+                setResumeOpen(false);
+              }}
+            >
+              继续本次学习
+            </Button>
+          </>
+        }
+      >
+        当前单词、队列、完成数和有效学习时长都已保存。你可以从中断处继续，也可以结算并结束本次学习。
+      </Modal>
+      <Modal
         open={resetOpen}
         title="确认清除学习记录？"
         typewriter={false}
@@ -950,8 +1014,12 @@ export default function GotheWordApp() {
               type="primary"
               danger
               onClick={() => {
-                window.localStorage.removeItem(STORAGE_KEY);
-                setState(EMPTY_STATE);
+                window.localStorage.removeItem(`${STORAGE_KEY}:${userId}`);
+                window.localStorage.removeItem(`${LEGACY_STORAGE_KEY}:${userId}`);
+                setState({ ...EMPTY_STATE });
+                setSessionResumed(false);
+                setSessionInactive(true);
+                setResumeOpen(false);
                 setGoalChoice(10);
                 setResetOpen(false);
               }}
@@ -961,7 +1029,7 @@ export default function GotheWordApp() {
           </>
         }
       >
-        此操作会删除本设备上的单词进度、复习安排和学习统计，且无法恢复。
+        此操作会删除当前账号在云端和本设备上的单词进度、复习安排与学习统计，且无法恢复。
       </Modal>
     </Cursor>
   );
