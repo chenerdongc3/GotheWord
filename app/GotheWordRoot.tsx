@@ -12,8 +12,22 @@ import {
   Title,
 } from "animal-island-ui";
 import type { Session } from "@supabase/supabase-js";
-import { useEffect, useState } from "react";
-import GotheWordApp from "./GotheWordApp";
+import {
+  Component,
+  lazy,
+  Suspense,
+  useEffect,
+  useState,
+  type ErrorInfo,
+  type ReactNode,
+} from "react";
+import {
+  captureAnalyticsEvent,
+  captureSanitizedException,
+  identifyAnalyticsUser,
+  normalizeAnalyticsError,
+  resetAnalyticsUser,
+} from "./analytics";
 import {
   getAuthCredentials,
   isSupabaseConfigured,
@@ -27,6 +41,9 @@ type AuthValues = {
   password: string;
 };
 
+const loadAuthenticatedApp = () => import("./GotheWordApp");
+const LazyAuthenticatedApp = lazy(loadAuthenticatedApp);
+
 function AuthScreen() {
   const [mode, setMode] = useState<AuthMode>("login");
   const [loading, setLoading] = useState(false);
@@ -35,32 +52,60 @@ function AuthScreen() {
   const authenticate = async ({ username, password }: AuthValues) => {
     if (!supabase) return;
 
+    void loadAuthenticatedApp().catch(() => undefined);
     setLoading(true);
     setError("");
+    let failureStage: "register" | "fallback_login" | "login" =
+      mode === "register" ? "register" : "login";
 
     try {
       const credentials = await getAuthCredentials(username, password);
       if (mode === "register") {
+        failureStage = "register";
         const { error: registerError } = await supabase.functions.invoke("register", {
           body: credentials,
         });
         if (registerError) {
-          const { error: existingUserError } =
+          failureStage = "fallback_login";
+          const { data, error: existingUserError } =
             await supabase.auth.signInWithPassword({
               email: credentials.email,
               password: credentials.password,
             });
-          if (!existingUserError) return;
-          throw new Error("这个用户名已经注册，请直接登录");
+          if (!existingUserError && data.user) {
+            identifyAnalyticsUser(data.user.id);
+            captureAnalyticsEvent("login_completed", {
+              auth_method: "username_password",
+            });
+            return;
+          }
+          throw existingUserError ?? registerError;
         }
       }
 
-      const { error: authError } = await supabase.auth.signInWithPassword({
+      failureStage = "login";
+      const { data, error: authError } = await supabase.auth.signInWithPassword({
         email: credentials.email,
         password: credentials.password,
       });
       if (authError) throw authError;
+      if (data.user) identifyAnalyticsUser(data.user.id);
+      if (mode === "login") {
+        captureAnalyticsEvent("login_completed", {
+          auth_method: "username_password",
+        });
+      }
     } catch (authError) {
+      const errorCode = normalizeAnalyticsError(authError);
+      captureAnalyticsEvent("authentication_failed", {
+        auth_flow: mode === "register" ? "sign_up" : "login",
+        failure_stage: failureStage,
+        error_code: errorCode,
+      });
+      captureSanitizedException("authentication", errorCode, {
+        auth_flow: mode === "register" ? "sign_up" : "login",
+        failure_stage: failureStage,
+      });
       const message =
         authError instanceof Error ? authError.message : "操作失败，请稍后重试";
       if (message === "Invalid login credentials") {
@@ -177,6 +222,90 @@ function ConfigurationScreen() {
   );
 }
 
+function AuthenticatedAppLoading() {
+  return (
+    <Cursor>
+      <main className="grid min-h-svh place-items-center px-4 pb-[env(safe-area-inset-bottom)]">
+        <Card color="default" className="grid gap-3 text-center">
+          <Title size="middle" color="app-yellow">正在准备完整 A1 词库</Title>
+          <p className="m-0 font-bold text-[#8f7b63]" role="status">
+            正在读取学习记录和教学内容…
+          </p>
+        </Card>
+      </main>
+      <Footer type="sea" />
+    </Cursor>
+  );
+}
+
+type AuthenticatedAppErrorBoundaryProps = {
+  children: ReactNode;
+  onRetry: () => void;
+};
+
+class AuthenticatedAppErrorBoundary extends Component<
+  AuthenticatedAppErrorBoundaryProps,
+  { failed: boolean }
+> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    captureSanitizedException(
+      "authenticated_app_loading",
+      normalizeAnalyticsError(error),
+      { component_stack_present: Boolean(info.componentStack) },
+    );
+  }
+
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return (
+      <Cursor>
+        <main className="grid min-h-svh place-items-center px-4 pb-[env(safe-area-inset-bottom)]">
+          <Card color="app-red" className="grid max-w-[560px] gap-4 text-center">
+            <Title size="middle" color="app-yellow">学习内容加载失败</Title>
+            <p className="m-0 leading-7">
+              请检查网络后重试。你的本地学习记录不会因此被清除。
+            </p>
+            <Button type="primary" size="large" onClick={this.props.onRetry}>
+              重新加载
+            </Button>
+          </Card>
+        </main>
+        <Footer type="sea" />
+      </Cursor>
+    );
+  }
+}
+
+function AuthenticatedApp({
+  userId,
+  username,
+  onSignOut,
+}: {
+  userId: string;
+  username: string;
+  onSignOut: () => void;
+}) {
+  return (
+    <AuthenticatedAppErrorBoundary
+      onRetry={() => window.location.reload()}
+    >
+      <Suspense fallback={<AuthenticatedAppLoading />}>
+        <LazyAuthenticatedApp
+          userId={userId}
+          username={username}
+          onSignOut={onSignOut}
+        />
+      </Suspense>
+    </AuthenticatedAppErrorBoundary>
+  );
+}
+
 export default function GotheWordRoot() {
   const [session, setSession] = useState<Session | null>(null);
   const [ready, setReady] = useState(!isSupabaseConfigured);
@@ -188,12 +317,18 @@ export default function GotheWordRoot() {
     void supabase.auth.getSession().then(({ data }) => {
       if (active) {
         setSession(data.session);
+        if (data.session) {
+          identifyAnalyticsUser(data.session.user.id);
+          void loadAuthenticatedApp().catch(() => undefined);
+        }
         setReady(true);
       }
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+    const { data: listener } = supabase.auth.onAuthStateChange((event, nextSession) => {
       setSession(nextSession);
+      if (event === "SIGNED_OUT") resetAnalyticsUser();
+      else if (nextSession) identifyAnalyticsUser(nextSession.user.id);
       setReady(true);
     });
 
@@ -217,12 +352,20 @@ export default function GotheWordRoot() {
     typeof session.user.user_metadata.username === "string"
       ? session.user.user_metadata.username
       : "学习者";
+  const signOut = async () => {
+    try {
+      await supabase?.auth.signOut();
+    } finally {
+      resetAnalyticsUser();
+    }
+  };
 
   return (
-    <GotheWordApp
+    <AuthenticatedApp
+      key={session.user.id}
       userId={session.user.id}
       username={username}
-      onSignOut={() => void supabase?.auth.signOut()}
+      onSignOut={() => void signOut()}
     />
   );
 }

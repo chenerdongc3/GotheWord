@@ -1,0 +1,30 @@
+export const LEGACY_STABLE_IDS = [
+  "tisch",
+  "stuhl",
+  "fenster",
+  "tuer",
+  "kueche",
+  "brot",
+  "apfel",
+  "wasser",
+  "kaffee",
+  "familie",
+  "freund",
+  "schule",
+  "buch",
+  "stadt",
+  "bahnhof",
+  "lernen",
+  "arbeiten",
+  "wohnen",
+  "essen",
+  "trinken",
+  "gehen",
+  "fahren",
+  "sprechen",
+  "verstehen",
+] as const;
+
+export const LEGACY_ID_MAP = Object.fromEntries(
+  LEGACY_STABLE_IDS.map((id) => [id, id]),
+) as Readonly<Record<string, string>>;

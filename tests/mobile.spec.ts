@@ -20,6 +20,13 @@ type LearningState = {
   activeSession: Record<string, unknown> | null;
 };
 
+type RemoteState = {
+  state: LearningState;
+  schemaVersion: number;
+  revision: number;
+  updatedAt: string;
+};
+
 function createAccessToken() {
   const encode = (value: unknown) =>
     Buffer.from(JSON.stringify(value)).toString("base64url");
@@ -35,11 +42,42 @@ function createAccessToken() {
   ].join(".");
 }
 
-async function openAuthenticated(page: Page, state: LearningState) {
+async function openAuthenticated(
+  page: Page,
+  state: LearningState,
+  options: {
+    envelope?: {
+      revision: number;
+      dirty: boolean;
+      savedAt: string;
+    };
+    remote?: RemoteState;
+    globalLegacyState?: LearningState;
+    skipUserState?: boolean;
+  } = {},
+) {
   const accessToken = createAccessToken();
   const now = new Date().toISOString();
 
   await page.route("**/rest/v1/**", async (route) => {
+    if (
+      options.remote &&
+      route.request().method() === "GET" &&
+      route.request().url().includes("/rest/v1/learning_states")
+    ) {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          state: options.remote.state,
+          schema_version: options.remote.schemaVersion,
+          revision: options.remote.revision,
+          updated_at: options.remote.updatedAt,
+        }),
+      });
+      return;
+    }
+
     await route.fulfill({
       status: 401,
       contentType: "application/json",
@@ -47,7 +85,17 @@ async function openAuthenticated(page: Page, state: LearningState) {
     });
   });
   await page.addInitScript(
-    ({ key, token, stateKey, learningState, userId, createdAt }) => {
+    ({
+      key,
+      token,
+      stateKey,
+      learningState,
+      userId,
+      createdAt,
+      envelope,
+      globalLegacyState,
+      skipUserState,
+    }) => {
       window.localStorage.setItem(
         key,
         JSON.stringify({
@@ -68,7 +116,28 @@ async function openAuthenticated(page: Page, state: LearningState) {
           },
         }),
       );
-      window.localStorage.setItem(stateKey, JSON.stringify(learningState));
+      if (!skipUserState) {
+        window.localStorage.setItem(
+          stateKey,
+          JSON.stringify(
+            envelope
+              ? {
+                  userId,
+                  revision: envelope.revision,
+                  state: learningState,
+                  dirty: envelope.dirty,
+                  savedAt: envelope.savedAt,
+                }
+              : learningState,
+          ),
+        );
+      }
+      if (globalLegacyState) {
+        window.localStorage.setItem(
+          "gotheword-state-v1",
+          JSON.stringify(globalLegacyState),
+        );
+      }
     },
     {
       key: AUTH_KEY,
@@ -77,6 +146,9 @@ async function openAuthenticated(page: Page, state: LearningState) {
       learningState: state,
       userId: USER_ID,
       createdAt: now,
+      envelope: options.envelope,
+      globalLegacyState: options.globalLegacyState,
+      skipUserState: options.skipUserState,
     },
   );
   await page.goto("/");
@@ -272,4 +344,88 @@ test("学习、反馈与报告流程在移动视口保持可见", async ({ page 
     await expectNoHorizontalOverflow(page);
   }
   await capture(page, testInfo, "feedback-report");
+});
+
+test("并发 revision 冲突必须由用户选择本设备或云端", async ({ page }) => {
+  const savedAt = "2026-07-26T09:00:00.000Z";
+  const updatedAt = "2026-07-26T10:00:00.000Z";
+  await openAuthenticated(
+    page,
+    {
+      version: 2,
+      dailyGoal: 20,
+      progress: {},
+      stats: {},
+      activeSession: null,
+    },
+    {
+      envelope: {
+        revision: 1,
+        dirty: true,
+        savedAt,
+      },
+      remote: {
+        state: {
+          version: 2,
+          dailyGoal: 5,
+          progress: {},
+          stats: {},
+          activeSession: null,
+        },
+        schemaVersion: 2,
+        revision: 2,
+        updatedAt,
+      },
+    },
+  );
+
+  await expect(
+    page.getByText("本设备与云端进度冲突", { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText("同步冲突", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "使用云端进度" }).click();
+  await expect(
+    page.getByText("本设备与云端进度冲突", { exact: true }),
+  ).toBeHidden();
+  await expect(page.getByText("已同步", { exact: true })).toBeVisible();
+
+  await page.getByRole("tab", { name: "设置" }).click();
+  await expect(page.getByRole("radio", { name: /每天 5 个/ })).toBeChecked();
+});
+
+test("无归属旧缓存只有确认后才导入且失败时不会删除", async ({ page }) => {
+  await openAuthenticated(
+    page,
+    {
+      version: 2,
+      progress: {},
+      stats: {},
+      activeSession: null,
+    },
+    {
+      skipUserState: true,
+      globalLegacyState: {
+        version: 2,
+        dailyGoal: 5,
+        progress: {},
+        stats: {},
+        activeSession: null,
+      },
+    },
+  );
+
+  await expect(
+    page.getByText("发现未归属账号的旧学习记录", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "把德语，慢慢种进记忆里。" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "导入当前账号" }).click();
+  await expect(page.getByText("移动端验收", { exact: true })).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(() => window.localStorage.getItem("gotheword-state-v1")),
+    )
+    .not.toBeNull();
 });

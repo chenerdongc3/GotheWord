@@ -70,10 +70,9 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.match(app, /继续本次学习/);
   assert.match(app, /结束本次学习/);
   assert.match(app, /Date\.now\(\) - lastActivityRef\.current >= 30_000/);
-
-  assert.equal((words.match(/\n    id: "/g) ?? []).length, 24);
-  assert.equal((words.match(/\n    examples: \[/g) ?? []).length, 24);
-  assert.equal((words.match(/\{ de: "/g) ?? []).length, 72);
+  assert.match(app, /content\/a1\/generated\/a1-runtime\.ts/);
+  assert.match(words, /Compatibility exports for non-page consumers/);
+  assert.match(words, /A1_WORDS as WORDS/);
 
   await assert.rejects(access(new URL("../app/_sites-preview", templateRoot)));
 
