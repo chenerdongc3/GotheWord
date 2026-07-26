@@ -13,7 +13,7 @@
       "bytes": 712341
     },
     "rights": {
-      "sourceList": "pending",
+      "sourceList": "approved",
       "examples": "editorial-only"
     }
   },
@@ -86,15 +86,15 @@
     "resolvedIds": 24
   },
   "artifact": {
-    "generatedRuntimeBytes": 466931,
+    "generatedRuntimeBytes": 466932,
     "gzipBytes": 37169,
-    "brotliBytes": 26187,
+    "brotliBytes": 26125,
     "chunks": [
       {
-        "file": "assets/GotheWordApp-D8QDaKDO.js",
+        "file": "assets/GotheWordApp-4XqFqPVf.js",
         "bytes": 377380,
-        "gzipBytes": 57721,
-        "brotliBytes": 45568
+        "gzipBytes": 57720,
+        "brotliBytes": 45553
       }
     ],
     "initialHtmlIncludesRuntime": false

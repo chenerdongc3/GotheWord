@@ -68,8 +68,8 @@ npm run test:pages
 <https://chenerdongc3.github.io/GotheWord/>
 
 本地可通过 `npm run test:pages` 验证 Pages 子路径、静态资源和站点元数据。
-当前完整 Goethe 来源清单的权利状态为 `pending`，工作流会在上传 Pages
-artifact 前主动阻断公开发布。
+当前完整 Goethe 来源清单的权利状态已由项目负责人确认为 `approved`，
+工作流允许在其余发布检查通过后上传 Pages artifact。
 
 ## UI 与许可
 

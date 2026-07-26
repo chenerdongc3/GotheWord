@@ -12,7 +12,7 @@ export const A1_MANIFEST = {
     "bytes": 712341
   },
   "rights": {
-    "sourceList": "pending",
+    "sourceList": "approved",
     "examples": "editorial-only"
   }
 } as const satisfies A1RuntimeManifest;
