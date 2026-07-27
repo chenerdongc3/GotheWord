@@ -2,6 +2,10 @@
 
 关联工单：POR-12。适用于 preview 和 production。
 
+当前 MVP 入口采用 **public、免费、非商业测试**。GitHub Pages environment 必须保持
+public；若改为白名单测试，必须在发布记录中写明获准账号与访问策略（不得记录密码），
+并先验证目标测试用户而非仅站点所有者可以访问。任何商业用途都必须先完成许可评估。
+
 ## 1. 发布记录
 
 每次发布前在发布记录或 Linear 评论中保存以下不可变值：
@@ -41,12 +45,22 @@ npm run test:pages
 - 数据库 migration 先在隔离环境执行 `supabase/tests/learning_state_revision.sql`。
 - PostHog project、区域、token/host 与环境隔离已确认。
 - 保存当前 production Sites version ID，且目标 source commit 与将保存的 Sites version 一致。
+- 在 Sites/Pages 后台配置 `NEXT_PUBLIC_SUPABASE_URL` 与
+  `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`；只记录配置 revision/version，绝不把值写入
+  Git、发布记录或日志。运行 `npm run release:verify` 会校验两项存在且格式正确。
+- `NEXT_PUBLIC_RELEASE_SHA` 必须等于 `git rev-parse HEAD`；GitHub Pages 门禁还会确认
+  该 SHA 已存在于触发部署的远端分支。Codex Sites 只允许保存版本后再部署，并在记录中
+  关联保存版本 ID 与 Git SHA。
+- 核对 `NEXT_PUBLIC_SUPABASE_MIGRATION` 对应已执行并通过 SQL 验证的 migration，记录
+  Sites env revision、Git SHA、目标 Sites version 与 Previous Sites version 后再发布。
 
 ## 3. 发布 smoke
 
 用独立 smoke 账号执行，禁止使用真实用户状态：
 
 1. 打开站点，确认静态资源、Supabase 和 PostHog ingestion 没有配置错误。
+   `/` 必须显示“欢迎回来”认证页，不得显示“配置 Supabase”；随后读取 `/release.json`，
+   逐项比对发布记录中的 Git SHA、Sites version 和 migration。
 2. 注册 → 选择目标 5 → 开始并完成一个 new 会话。
 3. 退出再登录，确认用户 UUID 一致且没有额外 `login_completed`。
 4. 刷新一个进行中会话，分别验证“继续”和“结束”。

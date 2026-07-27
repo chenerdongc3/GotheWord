@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import test from "node:test";
 import {
   buildReleaseManifest,
@@ -7,12 +8,16 @@ import {
 
 const completeEnvironment = {
   NEXT_PUBLIC_APP_VERSION: "0.1.0",
-  NEXT_PUBLIC_RELEASE_SHA: "a".repeat(40),
+  NEXT_PUBLIC_RELEASE_SHA: execFileSync("git", ["rev-parse", "HEAD"], {
+    encoding: "utf8",
+  }).trim(),
   NEXT_PUBLIC_DEPLOYMENT_ENV: "production",
   NEXT_PUBLIC_SITES_VERSION: "v6",
   NEXT_PUBLIC_SUPABASE_MIGRATION: "20260726100000",
   NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: "phc_test_only",
   NEXT_PUBLIC_POSTHOG_HOST: "https://us.i.posthog.com",
+  NEXT_PUBLIC_SUPABASE_URL: "https://test-project.supabase.co",
+  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_test_only",
 };
 
 test("builds a public release manifest without credentials", async () => {
@@ -47,6 +52,8 @@ test("rejects placeholder or untraceable production metadata", async () => {
     NEXT_PUBLIC_SUPABASE_MIGRATION: "missing",
     NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: "",
     NEXT_PUBLIC_POSTHOG_HOST: "http://example.com",
+    NEXT_PUBLIC_SUPABASE_URL: "not-a-url",
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "legacy-or-secret-key",
   };
   const manifest = await buildReleaseManifest(environment);
 
@@ -58,7 +65,21 @@ test("rejects placeholder or untraceable production metadata", async () => {
       assert.match(error.message, /14-digit migration/);
       assert.match(error.message, /POSTHOG_PROJECT_TOKEN/);
       assert.match(error.message, /HTTPS PostHog ingestion host/);
+      assert.match(error.message, /SUPABASE_URL/);
+      assert.match(error.message, /SUPABASE_PUBLISHABLE_KEY/);
       return true;
     },
+  );
+});
+
+test("rejects metadata for a commit other than the checked-out source", async () => {
+  const manifest = await buildReleaseManifest({
+    ...completeEnvironment,
+    NEXT_PUBLIC_RELEASE_SHA: "a".repeat(40),
+  });
+
+  await assert.rejects(
+    validateProductionReleaseMetadata(manifest, completeEnvironment),
+    /must equal the checked-out source commit/,
   );
 });

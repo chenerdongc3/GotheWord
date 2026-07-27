@@ -68,6 +68,11 @@ jobs:
       - name: Verify A1 source-list publication rights
         run: npm run content:a1:check-rights
 
+      - name: Require a pushed, traceable source commit
+        run: |
+          test "$GITHUB_SHA" = "$(git rev-parse HEAD)"
+          git merge-base --is-ancestor "$GITHUB_SHA" "origin/$GITHUB_REF_NAME"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

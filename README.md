@@ -71,6 +71,11 @@ npm run test:pages
 当前完整 Goethe 来源清单的权利状态已由项目负责人确认为 `approved`，
 工作流允许在其余发布检查通过后上传 Pages artifact。
 
+该入口是 public、免费、非商业的 MVP 测试入口。生产 Supabase URL 与 Publishable
+Key 仅通过 GitHub environment secrets 配置，不进入仓库；发布门禁会核对配置格式、
+当前 Git SHA、migration 与可追溯的 Pages run version。详细发布证据、认证页 smoke 和
+回滚步骤见 [`docs/release-runbook.md`](docs/release-runbook.md)。
+
 ## UI 与许可
 
 界面组件统一使用 [`animal-island-ui`](https://github.com/guokaigdg/animal-island-ui)。
