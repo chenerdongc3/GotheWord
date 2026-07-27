@@ -34,6 +34,7 @@ Sites 使用用户可见版本号（例如 `v6`）；GitHub Pages 使用
 npm run lint
 npx tsc --noEmit
 npm run release:verify
+npm run content:check-rights
 npm run test:unit
 npm run test:analytics
 npm test
@@ -41,6 +42,8 @@ npm run test:pages
 ```
 
 - 确认 Git status/diff 中没有无关文件。
+- 确认 A1 与 A2 manifest 的来源清单公开再分发状态均为 `approved`；任一词书为
+  `pending` 时不得绕过 `npm run content:check-rights`。
 - 确认 `@gotheword/pencil-pup-ui` 仍使用 MIT 许可，依赖树中不存在
   `animal-island-ui`，且新增视觉没有第三方角色或商标元素。
 - 数据库 migration 先在隔离环境执行 `supabase/tests/learning_state_revision.sql`。

@@ -42,12 +42,14 @@ import {
   type SyncStatus,
 } from "./useLearningStateSync";
 import {
-  A1_BY_ID,
-  A1_WORDS as WORDS,
+  ALL_WORDS_BY_ID,
+  countLearnedWords,
   getDisplayWord,
   PART_OF_SPEECH_LABELS,
+  WORD_BOOKS,
+  type WordBookId,
   type Word,
-} from "./content/a1/generated/a1-runtime.ts";
+} from "./content/word-books.ts";
 
 const SYNC_STATUS_META = {
   loading: { label: "读取中", color: "default" },
@@ -112,7 +114,20 @@ function speakGerman(text: string) {
 }
 
 function getWord(wordId?: string) {
-  return wordId ? A1_BY_ID.get(wordId) : undefined;
+  return wordId ? ALL_WORDS_BY_ID.get(wordId) : undefined;
+}
+
+function formatPlural(plural: string) {
+  const normalized = plural.replace("-¨", "¨-");
+  if (normalized === "-") return "词形不变（-）";
+  if (normalized === "¨-") return "词干元音变音，词尾不变（¨-）";
+  if (normalized.startsWith("¨-")) {
+    return `词干元音变音，词尾 +${normalized.slice(2)}（${plural}）`;
+  }
+  if (normalized.startsWith("-")) {
+    return `词尾 +${normalized.slice(1)}（${plural}）`;
+  }
+  return plural;
 }
 
 function formatSyncTime(value: string) {
@@ -266,6 +281,9 @@ export default function GotheWordApp({
   const todayKey = localDayKey();
   const todayStats = state.stats[todayKey] ?? EMPTY_DAILY_STATS;
   const dailyGoal = state.dailyGoal ?? goalChoice;
+  const wordBookId = state.wordBookId ?? "a1";
+  const wordBook = WORD_BOOKS[wordBookId];
+  const WORDS = wordBook.words;
   const remainingGoal = Math.max(0, dailyGoal - todayStats.goalNewLearned);
   const availableNewWords = WORDS.filter((word) => {
     const progress = state.progress[word.id];
@@ -297,18 +315,32 @@ export default function GotheWordApp({
   const weakDueCount = dueWords.filter(
     (word) => state.progress[word.id]?.weak,
   ).length;
-  const masteredCount = Object.values(state.progress).filter(
+  const currentBookProgress = WORDS
+    .map((word) => state.progress[word.id])
+    .filter(
+      (
+        progress,
+      ): progress is NonNullable<(typeof state.progress)[string]> =>
+        Boolean(progress),
+    );
+  const masteredCount = currentBookProgress.filter(
     (progress) => progress.state === "mastered",
   ).length;
-  const weakCount = Object.values(state.progress).filter((progress) => progress.weak).length;
-  const totalAnswers = Object.values(state.progress).reduce(
+  const weakCount = currentBookProgress.filter((progress) => progress.weak).length;
+  const totalAnswers = currentBookProgress.reduce(
     (sum, progress) => sum + progress.totalAnswers,
     0,
   );
-  const totalCorrect = Object.values(state.progress).reduce(
+  const totalCorrect = currentBookProgress.reduce(
     (sum, progress) => sum + progress.correctAnswers,
     0,
   );
+  const learnedCounts = Object.fromEntries(
+    (Object.keys(WORD_BOOKS) as WordBookId[]).map((bookId) => [
+      bookId,
+      countLearnedWords(WORD_BOOKS[bookId].words, state.progress),
+    ]),
+  ) as Record<WordBookId, number>;
   const currentWord = session
     ? getWord(
         session.feedback?.wordId ??
@@ -890,7 +922,7 @@ export default function GotheWordApp({
                   <p className="m-0 flex flex-wrap gap-x-2 gap-y-1 text-sm leading-6 opacity-85">
                     <span>单数：{displayWord}</span>
                     <span aria-hidden="true">·</span>
-                    <span>复数：{currentWord.plural}</span>
+                    <span>复数：{formatPlural(currentWord.plural)}</span>
                   </p>
                 )}
               </Card>
@@ -1232,6 +1264,55 @@ export default function GotheWordApp({
         <h1 className="my-4 max-w-[780px] text-[clamp(1.875rem,8vw,3rem)] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere]">让计划适合你，而不是反过来。</h1>
         <p className="m-0 leading-7 text-[#8f7b63]">目标修改只影响之后的新词计划，已经进入复习流程的单词不会变化。</p>
       </section>
+      <Card className="grid min-w-0 gap-[1.375rem]">
+        <div className="flex min-w-0 flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0">
+            <Title size="middle" color="app-teal">当前词书</Title>
+            <p className="mt-2 mb-0 leading-7 text-[#8f7b63]">
+              切换后只学习和复习该词书，另一册的学习记录会保留。
+            </p>
+          </div>
+          <Tag color="app-teal" variant="outlined">
+            共 {wordBook.words.length} 词 · 已学 {learnedCounts[wordBookId]} 词
+          </Tag>
+        </div>
+        <Radio
+          direction="vertical"
+          size="large"
+          value={wordBookId}
+          onChange={(value) =>
+            setState((current) => ({
+              ...current,
+              wordBookId: value as WordBookId,
+            }))
+          }
+          options={(Object.keys(WORD_BOOKS) as WordBookId[]).map((bookId) => {
+            const book = WORD_BOOKS[bookId];
+            return {
+              value: bookId,
+              label: (
+                <span className="flex min-w-0 flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <strong>{book.name}</strong>
+                  <small className="font-bold text-[#8f7b63]">
+                    共 {book.words.length} 词 · 已学 {learnedCounts[bookId]} 词
+                  </small>
+                </span>
+              ),
+            };
+          })}
+        />
+        <Progress
+          percent={
+            wordBook.words.length
+              ? (learnedCounts[wordBookId] / wordBook.words.length) * 100
+              : 0
+          }
+          infoPosition="top"
+          infoFormat={() =>
+            `已学 ${learnedCounts[wordBookId]} / ${wordBook.words.length}`
+          }
+        />
+      </Card>
       <Card className="grid min-w-0 gap-[1.375rem]">
         <Title size="middle" color="app-yellow">每日新词目标</Title>
         <Radio

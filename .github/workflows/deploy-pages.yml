@@ -65,8 +65,8 @@ jobs:
       - name: Build and test GitHub Pages export
         run: npm run test:pages
 
-      - name: Verify A1 source-list publication rights
-        run: npm run content:a1:check-rights
+      - name: Verify vocabulary source-list publication rights
+        run: npm run content:check-rights
 
       - name: Require a pushed, traceable source commit
         run: |

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026.07.28-a2.1",
+  "manifest": {
+    "schemaVersion": 1,
+    "contentVersion": "2026.07.28-a2.1",
+    "source": {
+      "sourceId": "goethe-zertifikat-a2",
+      "url": "https://www.goethe.de/resources/files/pdf329/goethe-zertifikat_a2_wortliste.pdf",
+      "retrievedAt": "2026-07-28",
+      "sha256": "76cebc5fa7356fb1fb0f0bf964ad204e59a3e79753e7bad8cf3e4f0b38c352b7",
+      "pages": 32,
+      "bytes": 411290,
+      "approximateLexicalUnits": 1300
+    },
+    "rights": {
+      "sourceList": "pending",
+      "examples": "editorial-only"
+    },
+    "editorial": {
+      "chineseSenses": "machine-draft",
+      "examples": "project-authored-template"
+    }
+  },
+  "source": {
+    "totalRows": 1038,
+    "main": 764,
+    "derived": 0,
+    "wordGroupMembers": 274
+  },
+  "learning": {
+    "total": 1038,
+    "runtimeActive": 1038,
+    "reviewed": 0,
+    "machineDraft": 1038
+  },
+  "distributions": {
+    "partOfSpeech": {
+      "noun": 567,
+      "adjective": 20,
+      "other": 169,
+      "verb": 222,
+      "adverb": 23,
+      "numeral": 37
+    },
+    "topic": {
+      "education": 773,
+      "work": 62,
+      "person": 39,
+      "travel": 42,
+      "shopping": 74,
+      "environment": 6,
+      "services": 7,
+      "food": 10,
+      "housing": 19,
+      "leisure": 6
+    },
+    "entryType": {
+      "word-group-member": 274,
+      "main": 764
+    }
+  },
+  "artifact": {
+    "generatedRuntimeBytes": 552913,
+    "gzipBytes": 31777,
+    "brotliBytes": 21863,
+    "chunks": [
+      {
+        "file": "assets/GotheWordApp-CUJ5ucx3.js",
+        "bytes": 706682,
+        "gzipBytes": 76906,
+        "brotliBytes": 57517
+      }
+    ],
+    "initialHtmlIncludesRuntime": false
+  }
+}

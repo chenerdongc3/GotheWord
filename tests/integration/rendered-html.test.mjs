@@ -79,7 +79,8 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.match(app, /继续本次学习/);
   assert.match(app, /结束本次学习/);
   assert.match(app, /Date\.now\(\) - lastActivityRef\.current >= 30_000/);
-  assert.match(app, /content\/a1\/generated\/a1-runtime\.ts/);
+  assert.match(app, /content\/word-books\.ts/);
+  assert.match(app, /共 \{book\.words\.length\} 词/);
   assert.match(words, /Compatibility exports for non-page consumers/);
   assert.match(words, /A1_WORDS as WORDS/);
 

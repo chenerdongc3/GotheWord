@@ -86,15 +86,15 @@
     "resolvedIds": 24
   },
   "artifact": {
-    "generatedRuntimeBytes": 466932,
-    "gzipBytes": 37169,
-    "brotliBytes": 26125,
+    "generatedRuntimeBytes": 466938,
+    "gzipBytes": 37171,
+    "brotliBytes": 26117,
     "chunks": [
       {
-        "file": "assets/GotheWordApp-Cx8zfsSg.js",
-        "bytes": 360400,
-        "gzipBytes": 48011,
-        "brotliBytes": 38137
+        "file": "assets/GotheWordApp-CUJ5ucx3.js",
+        "bytes": 706682,
+        "gzipBytes": 76906,
+        "brotliBytes": 57517
       }
     ],
     "initialHtmlIncludesRuntime": false

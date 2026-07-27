@@ -227,7 +227,7 @@ function AuthenticatedAppLoading() {
     <Cursor>
       <main className="grid min-h-svh place-items-center px-4 pb-[env(safe-area-inset-bottom)]">
         <Card color="default" className="grid gap-3 text-center">
-          <Title size="middle" color="app-yellow">正在准备完整 A1 词库</Title>
+          <Title size="middle" color="app-yellow">正在准备德语词库</Title>
           <p className="m-0 font-bold text-[#8f7b63]" role="status">
             正在读取学习记录和教学内容…
           </p>

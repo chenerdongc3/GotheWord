@@ -16,13 +16,16 @@
 - 用户名与密码注册、登录（注册后立即登录）
 - 学习目标、进度和统计按用户同步到 Supabase，并保留本地副本
 
-## Goethe A1 内容
+## Goethe A1 / A2 内容
 
 - 冻结来源为 `Goethe-Zertifikat A1: Start Deutsch 1` 成人版官方 PDF；URL、获取日期、SHA-256 与内容版本记录在 `app/content/a1/manifest.ts`。
 - 作者层分离来源词条、中文教学内容、taxonomy 与 legacy ID；页面只消费构建期生成的 `app/content/a1/generated/a1-runtime.ts`。
 - 当前基线覆盖 687 个字母词表来源行、13 类词组的 130 个成员/模式，并保留原有 24 个学习 ID。
 - `app/content/a1/coverage-report.json` 记录来源覆盖、quiz-eligible/reviewed、词类/主题、legacy 解析、运行时体积和实际 chunk 归属。
 - 官方来源例句不会进入公开运行时；运行时仅包含 GotheWord 教学例句。
+- A2 沿用相同的来源层、教学层和生成运行时结构，当前提供 1038 个可学习词条；来源版本与校验信息记录在 `app/content/a2/manifest.ts`。
+- A1 与 A2 使用独立稳定 ID。设置页可切换词书，并分别显示总词数和已学词数；切换不会清空另一册进度。
+- A2 中文释义当前标记为机器生成初稿，发布前仍需人工校对；A2 来源清单的公开再分发状态保持 `pending`。
 
 内容维护命令：
 
@@ -31,6 +34,11 @@ npm run content:a1:generate
 npm run content:a1:validate
 npm run content:a1:report
 npm run content:a1:check
+npm run content:a2:generate
+npm run content:a2:validate
+npm run content:a2:report
+npm run content:a2:check
+npm run content:check
 ```
 
 ## 本地运行
@@ -75,13 +83,14 @@ npm run test:pages
 ## GitHub Pages
 
 推送到 `main` 后，GitHub Actions 会构建并验证静态版本。只有
-`A1_MANIFEST.rights.sourceList` 明确为 `approved` 时才允许发布到：
+`A1_MANIFEST.rights.sourceList` 与 `A2_MANIFEST.rights.sourceList` 均明确为
+`approved` 时才允许发布到：
 
 <https://chenerdongc3.github.io/GotheWord/>
 
 本地可通过 `npm run test:pages` 验证 Pages 子路径、静态资源和站点元数据。
-当前完整 Goethe 来源清单的权利状态已由项目负责人确认为 `approved`，
-工作流允许在其余发布检查通过后上传 Pages artifact。
+当前 A1 来源清单已确认为 `approved`；A2 仍为 `pending`，因此 Pages 工作流会在
+A2 权利状态获得项目负责人明确确认前停止上传 artifact。
 
 该入口是 public、免费、非商业的 MVP 测试入口。生产 Supabase URL 与 Publishable
 Key 仅通过 GitHub environment secrets 配置，不进入仓库；发布门禁会核对配置格式、

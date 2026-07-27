@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import {
+  buildA2Runtime,
+  validateA2Content,
+} from "../app/content/a2/build-runtime.ts";
+import { A2_MANIFEST } from "../app/content/a2/manifest.ts";
+import { A2_SOURCE_ENTRIES } from "../app/content/a2/source-entries.ts";
+
+test("matches the frozen A2 source baseline and content gates", () => {
+  assert.equal(A2_SOURCE_ENTRIES.length, 1038);
+  assert.equal(A2_MANIFEST.source.pages, 32);
+  assert.equal(A2_MANIFEST.source.sha256.length, 64);
+  assert.deepEqual(validateA2Content(), []);
+});
+
+test("builds an isolated A2 runtime with stable ids and quiz options", () => {
+  const runtime = buildA2Runtime();
+
+  assert.equal(runtime.words.length, 1038);
+  assert.equal(runtime.validIds.size, runtime.words.length);
+  assert.ok(runtime.words.every((word) => word.id.startsWith("a2-")));
+  assert.ok(runtime.words.every((word) => word.distractors.length === 3));
+  assert.ok(runtime.words.every((word) => word.examples.length >= 1));
+});

@@ -1,4 +1,7 @@
-import { resolveRuntimeWordId } from "./content/a1/generated/a1-runtime.ts";
+import {
+  resolveRuntimeWordId,
+  type WordBookId,
+} from "./content/word-books.ts";
 import { localDayKey } from "./date.ts";
 
 export { localDayKey } from "./date.ts";
@@ -59,6 +62,7 @@ export type ActiveSession = {
 export type AppState = {
   version: 2;
   dailyGoal?: 5 | 10 | 20;
+  wordBookId?: WordBookId;
   progress: Record<string, WordProgress>;
   stats: Record<string, DailyStats>;
   activeSession: ActiveSession | null;
@@ -77,6 +81,7 @@ export const DEFAULT_REVIEW_BATCH_SIZE = 20;
 
 export const EMPTY_STATE: AppState = {
   version: 2,
+  wordBookId: "a1",
   progress: {},
   stats: {},
   activeSession: null,
@@ -299,6 +304,7 @@ export function migrateAppState(value: unknown): AppState | null {
     return {
       version: 2,
       dailyGoal: legacy.dailyGoal,
+      wordBookId: "a1",
       progress: migrateProgress(legacy.progress, true),
       stats: legacy.stats,
       activeSession: null,
@@ -310,6 +316,10 @@ export function migrateAppState(value: unknown): AppState | null {
   return {
     version: 2,
     dailyGoal: current.dailyGoal,
+    wordBookId:
+      current.wordBookId === "a2"
+        ? "a2"
+        : "a1",
     progress: migrateProgress(current.progress, false),
     stats: current.stats,
     activeSession: migrateActiveSession(current.activeSession),
