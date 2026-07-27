@@ -205,6 +205,7 @@ export default function GotheWordApp({
   const [report, setReport] = useState<SessionReport | null>(null);
   const [resetOpen, setResetOpen] = useState(false);
   const lastActivityRef = useRef(0);
+  const autoPronouncedAppearanceRef = useRef<string | null>(null);
   const resumePromptTrackedRef = useRef(new Set<string>());
   const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
@@ -316,6 +317,12 @@ export default function GotheWordApp({
             : session.queue[0]),
       )
     : undefined;
+  const pronunciationAppearanceKey =
+    session && currentWord && !session.feedback
+      ? session.phase === "memory"
+        ? `${session.id}:memory:${session.memoryIndex}:${currentWord.id}`
+        : `${session.id}:quiz:${session.answers}:${currentWord.id}`
+      : null;
   const quizOptions = useMemo(() => {
     if (!currentWord) return [];
     return stableShuffle(
@@ -323,6 +330,20 @@ export default function GotheWordApp({
       `${currentWord.id}-${session?.answers ?? 0}`,
     );
   }, [currentWord, session?.answers]);
+
+  useEffect(() => {
+    if (
+      !pronunciationAppearanceKey ||
+      !currentWord ||
+      autoPronouncedAppearanceRef.current === pronunciationAppearanceKey
+    ) {
+      return;
+    }
+
+    autoPronouncedAppearanceRef.current = pronunciationAppearanceKey;
+    speakGerman(getDisplayWord(currentWord));
+  }, [currentWord, pronunciationAppearanceKey]);
+
   const chartDays = getLastDays(7);
   const maxWords = Math.max(
     1,
