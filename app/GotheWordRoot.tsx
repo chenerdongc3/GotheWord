@@ -10,7 +10,7 @@ import {
   Input,
   Tag,
   Title,
-} from "animal-island-ui";
+} from "@gotheword/pencil-pup-ui";
 import type { Session } from "@supabase/supabase-js";
 import {
   Component,

@@ -90,31 +90,22 @@ Key 仅通过 GitHub environment secrets 配置，不进入仓库；发布门禁
 
 ## UI 与许可
 
-界面组件统一使用 [`animal-island-ui`](https://github.com/guokaigdg/animal-island-ui)。
+界面组件统一使用仓库内的
+[`@gotheword/pencil-pup-ui`](packages/pencil-pup-ui)。该库采用 MIT 许可，
+以原创的暖白纸张、手绘墨线、错位阴影和报纸漫画节奏构建设计语言。
 
-### POR-8：公开发布边界
+### 原创与第三方 IP 边界
 
-- [x] 当前用途已确认为**非商业测试项目**，可用于个人学习、评估、测试和非商业展示。
-- [x] 用途负责人陈erdong已于 2026-07-26 在 [POR-8](https://linear.app/codexnoumi/issue/POR-8/p0-完成-animal-island-ui-许可与公开发布边界评估) 中确认该发布边界。
-- [x] 当前 GitHub Pages 公开版本仅作为免费、非商业的产品测试，不提供收费服务、付费模板或企业商业用途。
-
-### 第三方组件署名
-
-GotheWord 使用由 [guokaigdg](https://github.com/guokaigdg) 创建的
-[`animal-island-ui@1.2.3`](https://github.com/guokaigdg/animal-island-ui)，
-该组件库采用
-[Creative Commons Attribution-NonCommercial 4.0 International（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/)
-许可。组件库源码、版权与免责声明以其
-[仓库说明](https://github.com/guokaigdg/animal-island-ui#copyright-and-disclaimer)
-和 [LICENSE](https://github.com/guokaigdg/animal-island-ui/blob/main/LICENSE) 为准。
-本项目从 npm 包入口直接使用该组件库，未复制或修改其源码。
+Pencil Pup UI 不隶属于 Peanuts Worldwide、Snoopy 或 Charles M. Schulz
+Creative Associates，也未获其背书。组件库中不得加入受保护角色名称、角色轮廓、
+临摹素材、品牌标识或标志性台词。`packages/pencil-pup-ui/LICENSE` 只授权本仓库的
+原创代码，不授予任何第三方角色或品牌权利。
 
 ### Release checklist
 
-每次公开发布前必须确认：
+每次公开发布前确认：
 
-- [ ] 本次发布仍属于免费、非商业的测试、学习或展示用途。
-- [ ] README 中保留组件库作者、源码地址和 CC BY-NC 4.0 许可声明。
-- [ ] 升级或替换 `animal-island-ui` 时重新核对当前版本的许可证和署名要求。
-- [ ] 若计划用于商业产品、企业项目、对外收费服务或付费模板，先停止公开部署；取得商业授权或由负责人确认替代方案后方可恢复。
-- [ ] 组件不满足需求时不得在本仓库仿制；应调整设计、等待上游能力或向上游提出组件需求。
+- [ ] `package-lock.json` 中不存在 `animal-island-ui`。
+- [ ] 应用 UI 只从 `@gotheword/pencil-pup-ui` 导入通用组件。
+- [ ] 新增视觉素材与文案不包含第三方角色、商标、临摹轮廓或标志性元素。
+- [ ] 组件缺失时在 `packages/pencil-pup-ui` 中实现可复用能力，不在业务页面复制组件。

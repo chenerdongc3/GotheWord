@@ -13,7 +13,7 @@ import {
   Tag,
   Time,
   Title,
-} from "animal-island-ui";
+} from "@gotheword/pencil-pup-ui";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   captureAnalyticsEvent,

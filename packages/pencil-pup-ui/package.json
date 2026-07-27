@@ -1,0 +1,26 @@
+{
+  "name": "@gotheword/pencil-pup-ui",
+  "version": "0.1.0",
+  "description": "An original, hand-drawn newspaper-comic React component library.",
+  "type": "module",
+  "sideEffects": [
+    "./src/style.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "import": "./src/index.tsx"
+    },
+    "./style": "./src/style.css"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  },
+  "license": "MIT"
+}

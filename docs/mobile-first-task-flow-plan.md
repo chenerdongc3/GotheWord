@@ -15,7 +15,7 @@
 - 页面通过同一路由切换首页、学习、反馈和报告，没有明确的滚动恢复策略；从较深位置开始学习时可能继承旧 `scrollY`。
 - 现有移动端测试只证明“无横向溢出、元素存在、触控尺寸合格”，不能证明主任务无需滚动即可完成。
 
-本轮不改后端、Supabase API、数据库、学习状态类型或复习算法。适配只重排现有数据和现有交互，所有通用 UI 继续直接使用 `animal-island-ui`。
+本轮不改后端、Supabase API、数据库、学习状态类型或复习算法。适配只重排现有数据和现有交互。本文最初基于旧 UI 依赖编写；当前通用 UI 已迁移到仓库内的 `@gotheword/pencil-pup-ui`。
 
 ## 2. 现场审计
 
@@ -99,7 +99,7 @@
 
 不新增接口，不增加仅供移动端使用的字段，不复制学习状态。
 
-### 4.2 `animal-island-ui`
+### 4.2 `@gotheword/pencil-pup-ui`
 
 已核对当前安装版本 1.2.3 的 README、`AI_USAGE.md` 和导出类型，可直接复用：
 
@@ -154,8 +154,8 @@
 
 - 上部：词性 Tag、单词、发音、中文释义、冠词/复数。
 - 中部：始终展示第一个德中例句和发音。
-- 次要例句：使用 `animal-island-ui` 的 `Collapse` 收纳另外两个例句，标题为“更多例句（2）”。
-- 底部：继续使用 `animal-island-ui` `Button` 作为“我记住了”主操作。
+- 次要例句：若需要收纳另外两个例句，应先在 `pencil-pup-ui` 增加可复用的折叠组件，标题为“更多例句（2）”。
+- 底部：继续使用 `pencil-pup-ui` `Button` 作为“我记住了”主操作。
 
 移动端主操作区使用页面级 `sticky bottom-0` 布局，并预留 `env(safe-area-inset-bottom)`；Button 本身不复制、不封装、不覆盖内部样式。内容区增加等量底部空间，避免主操作遮挡例句。
 
@@ -231,7 +231,7 @@ report:<mode>
 - 不通过 `window.innerWidth` 分叉两套业务渲染。
 - 不使用 `position: fixed` 覆盖页面内容；优先使用可参与文档流的 sticky 区域。
 - 不隐藏单词释义、复数、核心例句或报告核心指标。
-- 不对 `animal-island-ui` 内部 DOM、哈希 class、padding 或颜色写覆盖规则。
+- 不对 `pencil-pup-ui` 内部 DOM、class、padding 或颜色写页面级覆盖规则。
 - 不新增本地通用 UI 组件。
 
 ## 7. 自动化验收
@@ -286,7 +286,7 @@ npm run test:mobile
 - 320×720 下完成报告的标题、四项核心指标和“返回首页”同时可见。
 - 首页进入学习、单词切换、反馈进入报告时不会继承旧滚动位置。
 - 统计和设置页首屏展示有效信息，但允许为详细内容继续滚动。
-- 所有通用 UI 继续来自 `animal-island-ui`；未新增本地通用 UI 或第三方 UI 库。
+- 所有通用 UI 继续来自 `@gotheword/pencil-pup-ui`；未在业务目录新增本地通用 UI 或第三方 UI 库。
 - 后端 API、Supabase schema、学习状态和复习算法无变更。
 - Chromium 与 WebKit 移动端门禁通过。
 

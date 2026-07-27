@@ -54,9 +54,10 @@ test("keeps the learning rules and UI ownership explicit", async () => {
     readFile(new URL("../../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.match(packageJson, /"animal-island-ui"/);
+  assert.match(packageJson, /"@gotheword\/pencil-pup-ui"/);
+  assert.doesNotMatch(packageJson, /"animal-island-ui"/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
-  assert.match(layout, /import "animal-island-ui\/style"/);
+  assert.match(layout, /import "@gotheword\/pencil-pup-ui\/style"/);
   assert.match(layout, /import \{ Analytics \} from "@vercel\/analytics\/next"/);
   assert.match(layout, /<Analytics \/>/);
   assert.match(layout, /lang="zh-CN"/);
