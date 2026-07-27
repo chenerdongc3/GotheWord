@@ -35,7 +35,7 @@ test("adds release correlation and schema properties without PII", () => {
   });
 
   assert.equal(payload.analytics_schema_version, 1);
-  assert.equal(payload.state_schema_version, 2);
+  assert.equal(payload.state_schema_version, 3);
   assert.equal(payload.$geoip_disable, true);
   assert.equal(typeof payload.app_version, "string");
   assert.equal(typeof payload.release_sha, "string");

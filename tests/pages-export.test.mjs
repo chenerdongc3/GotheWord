@@ -29,6 +29,6 @@ test("exports a GitHub Pages-ready static site", async () => {
   const releaseMetadata = JSON.parse(release);
   assert.equal(releaseMetadata.app_version, "0.1.0");
   assert.equal(releaseMetadata.analytics_schema_version, 1);
-  assert.equal(releaseMetadata.state_schema_version, 2);
+  assert.equal(releaseMetadata.state_schema_version, 3);
   assert.doesNotMatch(release, /phc_|token|password|secret/i);
 });

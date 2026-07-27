@@ -4,6 +4,7 @@ import posthog from "posthog-js";
 import type { PartOfSpeech } from "./content/a1/types.ts";
 import { localDayKey } from "./date.ts";
 import { APP_STATE_SCHEMA_VERSION } from "./learning-state-schema.ts";
+import type { LevelId } from "./content/levels.ts";
 
 export const ANALYTICS_SCHEMA_VERSION = 1;
 
@@ -27,6 +28,9 @@ type LearningEventProperties = {
   learning_session_id: string;
   session_mode: "new" | "review" | "free";
   daily_goal: 5 | 10 | 20;
+  level_id: LevelId;
+  content_version: string;
+  source_kind: "official-word-list";
 };
 
 export type AnalyticsEventPropertiesMap = {

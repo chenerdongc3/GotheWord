@@ -43,6 +43,7 @@ import {
 } from "./useLearningStateSync";
 import {
   A1_BY_ID,
+  A1_MANIFEST,
   A1_WORDS as WORDS,
   getDisplayWord,
   PART_OF_SPEECH_LABELS,
@@ -148,6 +149,9 @@ function sessionAnalyticsProperties(
     learning_session_id: session.id,
     session_mode: session.mode,
     daily_goal: dailyGoal,
+    level_id: session.levelId,
+    content_version: A1_MANIFEST.contentVersion,
+    source_kind: "official-word-list",
   } as const;
 }
 
@@ -422,6 +426,7 @@ export default function GotheWordApp({
     const wordIds = selected.map((word) => word.id);
     const now = new Date();
     const nextSession = createActiveSession({
+      levelId: state.activeLevel,
       id: window.crypto.randomUUID(),
       mode,
       wordIds,

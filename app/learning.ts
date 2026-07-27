@@ -1,5 +1,6 @@
 import { resolveRuntimeWordId } from "./content/a1/generated/a1-runtime.ts";
 import { localDayKey } from "./date.ts";
+import { isLevelId, type LevelId } from "./content/levels.ts";
 
 export { localDayKey } from "./date.ts";
 
@@ -23,6 +24,8 @@ export type DailyStats = {
   seconds: number;
   answers: number;
   correct: number;
+  /** Absent on historical days because v2 did not record level attribution. */
+  levelBreakdown?: Partial<Record<LevelId, Omit<DailyStats, "levelBreakdown">>>;
 };
 
 export type SessionMode = "new" | "review" | "free";
@@ -38,6 +41,7 @@ export type SessionFeedback = {
 
 export type ActiveSession = {
   id: string;
+  levelId: LevelId;
   mode: SessionMode;
   phase: "memory" | "quiz";
   memoryIndex: number;
@@ -57,7 +61,8 @@ export type ActiveSession = {
 };
 
 export type AppState = {
-  version: 2;
+  version: 3;
+  activeLevel: LevelId;
   dailyGoal?: 5 | 10 | 20;
   progress: Record<string, WordProgress>;
   stats: Record<string, DailyStats>;
@@ -76,7 +81,8 @@ export type RandomSource = () => number;
 export const DEFAULT_REVIEW_BATCH_SIZE = 20;
 
 export const EMPTY_STATE: AppState = {
-  version: 2,
+  version: 3,
+  activeLevel: "A1",
   progress: {},
   stats: {},
   activeSession: null,
@@ -213,7 +219,10 @@ function migrateSessionRecord(value: unknown) {
   return migrated;
 }
 
-function migrateActiveSession(value: unknown): ActiveSession | null {
+function migrateActiveSession(
+  value: unknown,
+  fallbackLevel: LevelId,
+): ActiveSession | null {
   if (!isRecord(value)) return null;
   const mode = value.mode;
   const phase = value.phase;
@@ -267,6 +276,7 @@ function migrateActiveSession(value: unknown): ActiveSession | null {
 
   return {
     id: value.id,
+    levelId: isLevelId(value.levelId) ? value.levelId : fallbackLevel,
     mode,
     phase,
     memoryIndex: Math.max(0, Math.floor(value.memoryIndex)),
@@ -297,7 +307,8 @@ export function migrateAppState(value: unknown): AppState | null {
   if (value.version === 1) {
     const legacy = value as AppStateV1;
     return {
-      version: 2,
+      version: 3,
+      activeLevel: "A1",
       dailyGoal: legacy.dailyGoal,
       progress: migrateProgress(legacy.progress, true),
       stats: legacy.stats,
@@ -305,14 +316,19 @@ export function migrateAppState(value: unknown): AppState | null {
     };
   }
 
-  if (value.version !== 2) return null;
+  if (value.version !== 2 && value.version !== 3) return null;
   const current = value as unknown as AppState;
+  const activeLevel = isLevelId(current.activeLevel) ? current.activeLevel : "A1";
   return {
-    version: 2,
+    version: 3,
+    activeLevel,
     dailyGoal: current.dailyGoal,
     progress: migrateProgress(current.progress, false),
     stats: current.stats,
-    activeSession: migrateActiveSession(current.activeSession),
+    activeSession: migrateActiveSession(
+      current.activeSession,
+      value.version === 2 ? "A1" : activeLevel,
+    ),
   };
 }
 
@@ -356,12 +372,14 @@ export function takeReviewBatch<T>(
 
 export function createActiveSession({
   id,
+  levelId = "A1",
   mode,
   wordIds,
   remainingReviewCount = 0,
   now = new Date(),
 }: {
   id: string;
+  levelId?: LevelId;
   mode: SessionMode;
   wordIds: string[];
   remainingReviewCount?: number;
@@ -369,6 +387,7 @@ export function createActiveSession({
 }): ActiveSession {
   return {
     id,
+    levelId,
     mode,
     phase: mode === "review" ? "quiz" : "memory",
     memoryIndex: 0,
@@ -390,15 +409,38 @@ function addDailyStats(
   stats: Record<string, DailyStats>,
   dayKey: string,
   update: Partial<DailyStats>,
+  levelId: LevelId,
 ) {
   const existing = stats[dayKey] ?? EMPTY_DAILY_STATS;
   const next = Object.fromEntries(
-    Object.entries(update).map(([key, value]) => [
-      key,
-      (existing[key as keyof DailyStats] as number) + (value ?? 0),
-    ]),
+    Object.entries(update)
+      .filter(([, value]) => typeof value === "number")
+      .map(([key, value]) => [
+        key,
+        (existing[key as keyof DailyStats] as number) + Number(value),
+      ]),
   ) as Partial<DailyStats>;
-  return { ...stats, [dayKey]: { ...existing, ...next } };
+  const existingLevel = existing.levelBreakdown?.[levelId] ?? EMPTY_DAILY_STATS;
+  const nextLevel = Object.fromEntries(
+    Object.entries(update)
+      .filter(([, value]) => typeof value === "number")
+      .map(([key, value]) => [
+        key,
+        (existingLevel[key as keyof typeof existingLevel] as number) +
+          Number(value),
+      ]),
+  );
+  return {
+    ...stats,
+    [dayKey]: {
+      ...existing,
+      ...next,
+      levelBreakdown: {
+        ...existing.levelBreakdown,
+        [levelId]: { ...existingLevel, ...nextLevel, levelBreakdown: undefined },
+      },
+    },
+  };
 }
 
 export function answerActiveSession({
@@ -522,13 +564,18 @@ export function answerActiveSession({
   return {
     ...state,
     progress: { ...state.progress, [wordId]: nextProgress },
-    stats: addDailyStats(state.stats, localDayKey(now), {
-      answers: 1,
-      correct: correct ? 1 : 0,
-      newLearned: completed && session.mode !== "review" ? 1 : 0,
-      goalNewLearned: completed && session.mode === "new" ? 1 : 0,
-      reviewed: completed && session.mode === "review" ? 1 : 0,
-    }),
+    stats: addDailyStats(
+      state.stats,
+      localDayKey(now),
+      {
+        answers: 1,
+        correct: correct ? 1 : 0,
+        newLearned: completed && session.mode !== "review" ? 1 : 0,
+        goalNewLearned: completed && session.mode === "new" ? 1 : 0,
+        reviewed: completed && session.mode === "review" ? 1 : 0,
+      },
+      session.levelId,
+    ),
     activeSession: nextSession,
   };
 }
@@ -540,9 +587,12 @@ export function settleActiveSession(
   if (!state.activeSession) return state;
   return {
     ...state,
-    stats: addDailyStats(state.stats, localDayKey(now), {
-      seconds: state.activeSession.elapsedSeconds,
-    }),
+    stats: addDailyStats(
+      state.stats,
+      localDayKey(now),
+      { seconds: state.activeSession.elapsedSeconds },
+      state.activeSession.levelId,
+    ),
     activeSession: null,
   };
 }
