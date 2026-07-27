@@ -36,6 +36,12 @@ import {
   takeReviewBatch,
 } from "./learning";
 import { loadLearningState, saveLearningState } from "./supabase";
+import {
+  commitLegacyMigration,
+  markLegacyMigrationDecision,
+  readLegacyMigration,
+} from "./legacyMigration";
+import type { LegacyMigrationStatus } from "./legacyMigration";
 import { getDisplayWord, Word, WORDS } from "./words";
 
 const STORAGE_KEY = "gotheword-state-v2";
@@ -108,7 +114,7 @@ export default function GotheWordApp({
   rng = Math.random,
 }: GotheWordAppProps) {
   const [state, setState] = useState<AppState>(EMPTY_STATE);
-  const [hydrated, setHydrated] = useState(false);
+  const [hydratedUserId, setHydratedUserId] = useState<string | null>(null);
   const [goalChoice, setGoalChoice] = useState<5 | 10 | 20>(10);
   const [activeTab, setActiveTab] = useState("today");
   const [sessionResumed, setSessionResumed] = useState(false);
@@ -117,7 +123,14 @@ export default function GotheWordApp({
   const [report, setReport] = useState<SessionReport | null>(null);
   const [resetOpen, setResetOpen] = useState(false);
   const [syncError, setSyncError] = useState("");
+  const [syncReady, setSyncReady] = useState(false);
+  const [legacyState, setLegacyState] = useState<AppState | null>(null);
+  const [legacyImportOpen, setLegacyImportOpen] = useState(false);
+  const [legacyHasRemote, setLegacyHasRemote] = useState(false);
+  const [legacyImporting, setLegacyImporting] = useState(false);
+  const [legacyImportError, setLegacyImportError] = useState("");
   const lastActivityRef = useRef(0);
+  const persistedStateRef = useRef<string | null>(null);
   const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
   const sessionPaused = Boolean(session?.pausedAt);
@@ -131,8 +144,7 @@ export default function GotheWordApp({
       try {
         const raw =
           window.localStorage.getItem(userStorageKey) ??
-          window.localStorage.getItem(legacyUserStorageKey) ??
-          window.localStorage.getItem(LEGACY_STORAGE_KEY);
+          window.localStorage.getItem(legacyUserStorageKey);
         if (raw) {
           const saved = JSON.parse(raw) as unknown;
           localState = migrateAppState(saved);
@@ -145,26 +157,34 @@ export default function GotheWordApp({
         const remoteState = await loadLearningState(userId);
         const migratedRemoteState = migrateAppState(remoteState);
         const nextState = migratedRemoteState ?? localState ?? EMPTY_STATE;
-        if (!migratedRemoteState && localState) {
+        if (remoteState === null && localState) {
           await saveLearningState(userId, localState);
         }
         if (active) {
+          persistedStateRef.current = JSON.stringify(nextState);
           setState(nextState);
           setSessionResumed(false);
           setResumeOpen(Boolean(nextState.activeSession));
           if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
+          const candidate = readLegacyMigration(window.localStorage, userId);
+          setLegacyState(candidate);
+          setLegacyHasRemote(remoteState !== null);
+          setLegacyImportOpen(Boolean(candidate));
+          setSyncReady(!candidate);
         }
       } catch {
         if (active) {
           const nextState = localState ?? EMPTY_STATE;
+          persistedStateRef.current = JSON.stringify(nextState);
           setState(nextState);
           setSessionResumed(false);
           setResumeOpen(Boolean(nextState.activeSession));
           if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
           setSyncError("云端同步暂时不可用，学习记录仍保存在本设备");
+          setSyncReady(true);
         }
       } finally {
-        if (active) setHydrated(true);
+        if (active) setHydratedUserId(userId);
       }
     };
 
@@ -175,10 +195,14 @@ export default function GotheWordApp({
   }, [userId]);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (hydratedUserId !== userId || !syncReady) return;
+
+    const serializedState = JSON.stringify(state);
+    if (persistedStateRef.current === serializedState) return;
 
     const userStorageKey = `${STORAGE_KEY}:${userId}`;
-    window.localStorage.setItem(userStorageKey, JSON.stringify(state));
+    window.localStorage.setItem(userStorageKey, serializedState);
+    persistedStateRef.current = serializedState;
     const syncTimer = window.setTimeout(() => {
       void saveLearningState(userId, state)
         .then(() => setSyncError(""))
@@ -188,7 +212,46 @@ export default function GotheWordApp({
     }, 500);
 
     return () => window.clearTimeout(syncTimer);
-  }, [hydrated, state, userId]);
+  }, [hydratedUserId, state, syncReady, userId]);
+
+  const finishLegacyMigration = (status: LegacyMigrationStatus) => {
+    markLegacyMigrationDecision(window.localStorage, userId, status);
+    setLegacyState(null);
+    setLegacyImportOpen(false);
+    setLegacyImportError("");
+    setSyncReady(true);
+  };
+
+  const dismissLegacyMigration = () => {
+    finishLegacyMigration("dismissed");
+  };
+
+  const importLegacyState = async () => {
+    if (!legacyState) return;
+    setLegacyImporting(true);
+    setLegacyImportError("");
+    try {
+      await commitLegacyMigration({
+        storage: window.localStorage,
+        userId,
+        userStorageKey: `${STORAGE_KEY}:${userId}`,
+        state: legacyState,
+        save: () => saveLearningState(userId, legacyState),
+      });
+      persistedStateRef.current = JSON.stringify(legacyState);
+      setState(legacyState);
+      setSessionResumed(false);
+      setResumeOpen(Boolean(legacyState.activeSession));
+      if (legacyState.dailyGoal) setGoalChoice(legacyState.dailyGoal);
+      setLegacyState(null);
+      setLegacyImportOpen(false);
+      setSyncReady(true);
+    } catch {
+      setLegacyImportError("导入失败，旧进度仍完整保留。请检查网络后重试。");
+    } finally {
+      setLegacyImporting(false);
+    }
+  };
 
   useEffect(() => {
     if (!sessionActive) return;
@@ -985,6 +1048,45 @@ export default function GotheWordApp({
         </main>
         <Footer type="sea" />
       </div>
+      <Modal
+        open={legacyImportOpen}
+        title={legacyHasRemote ? "发现两份学习进度" : "导入这台设备上的旧进度？"}
+        typewriter={false}
+        maskClosable={false}
+        onClose={() => undefined}
+        footer={
+          <>
+            <Button disabled={legacyImporting} onClick={dismissLegacyMigration}>
+              {legacyHasRemote ? "保留云端进度" : "暂不导入"}
+            </Button>
+            <Button
+              type="primary"
+              danger={legacyHasRemote}
+              loading={legacyImporting}
+              onClick={() => void importLegacyState()}
+            >
+              {legacyHasRemote ? "用旧进度覆盖云端" : "导入到此账号"}
+            </Button>
+          </>
+        }
+      >
+        <div className="grid gap-3">
+          <p className="m-0 leading-7">
+            发现来源为“此设备旧版 / 匿名使用”的学习进度，目标账号为“{username}”。
+            未经确认不会读取、显示或上传这份进度。
+          </p>
+          {legacyHasRemote && (
+            <p className="m-0 leading-7 font-bold">
+              此账号已有云端进度。默认保留云端；只有明确选择覆盖才会导入旧进度。
+            </p>
+          )}
+          {legacyImportError && (
+            <p className="m-0 text-sm leading-6 font-bold text-[#b44747]" role="alert">
+              {legacyImportError}
+            </p>
+          )}
+        </div>
+      </Modal>
       <Modal
         open={resumeOpen}
         title="继续上次的学习吗？"

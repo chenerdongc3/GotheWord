@@ -220,6 +220,7 @@ export default function GotheWordRoot() {
 
   return (
     <GotheWordApp
+      key={session.user.id}
       userId={session.user.id}
       username={username}
       onSignOut={() => void supabase?.auth.signOut()}
