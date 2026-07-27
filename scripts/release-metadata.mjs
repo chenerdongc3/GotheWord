@@ -1,10 +1,13 @@
 import { access, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
 const repositoryRoot = fileURLToPath(new URL("../", import.meta.url));
 const outputPath = resolve(repositoryRoot, "public/release.json");
 const unavailableValues = new Set(["", "local", "unavailable", "unknown"]);
+const execFileAsync = promisify(execFile);
 
 function requiredValue(environment, key) {
   return typeof environment[key] === "string" ? environment[key].trim() : "";
@@ -60,6 +63,16 @@ export async function validateProductionReleaseMetadata(
 
   if (!/^[0-9a-f]{40}$/i.test(manifest.release_sha)) {
     failures.push("NEXT_PUBLIC_RELEASE_SHA must be a full 40-character Git SHA.");
+  } else {
+    const { stdout } = await execFileAsync("git", ["rev-parse", "HEAD"], {
+      cwd: repositoryRoot,
+    });
+    const sourceSha = stdout.trim();
+    if (manifest.release_sha !== sourceSha) {
+      failures.push(
+        `NEXT_PUBLIC_RELEASE_SHA must equal the checked-out source commit ${sourceSha}.`,
+      );
+    }
   }
   if (!["preview", "production"].includes(manifest.deployment_env)) {
     failures.push(
@@ -99,6 +112,28 @@ export async function validateProductionReleaseMetadata(
   if (manifest.app_version !== packageJson.version) {
     failures.push(
       `NEXT_PUBLIC_APP_VERSION must equal package.json version ${packageJson.version}.`,
+    );
+  }
+
+  const supabaseUrl = requiredValue(environment, "NEXT_PUBLIC_SUPABASE_URL");
+  try {
+    const url = new URL(supabaseUrl);
+    if (url.protocol !== "https:" || url.username || url.password) {
+      failures.push(
+        "NEXT_PUBLIC_SUPABASE_URL must be a credential-free HTTPS URL.",
+      );
+    }
+  } catch {
+    failures.push("NEXT_PUBLIC_SUPABASE_URL is missing or invalid.");
+  }
+
+  const supabasePublishableKey = requiredValue(
+    environment,
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+  );
+  if (!/^sb_publishable_[A-Za-z0-9_-]+$/.test(supabasePublishableKey)) {
+    failures.push(
+      "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is missing or is not a Supabase publishable key.",
     );
   }
 
