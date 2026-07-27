@@ -16,6 +16,7 @@ import {
 } from "./analytics";
 import { EMPTY_STATE, type AppState } from "./learning";
 import {
+  APP_STATE_SCHEMA_VERSION,
   acceptRemoteState,
   createCachedState,
   LEGACY_STORAGE_KEY,
@@ -579,7 +580,7 @@ export function useLearningStateSync(userId: string) {
             local: currentCache(true),
             remote: {
               state: incoming.cache.state,
-              schemaVersion: 2,
+              schemaVersion: APP_STATE_SCHEMA_VERSION,
               revision: incoming.cache.revision,
               updatedAt: incoming.cache.savedAt,
             },

@@ -91,10 +91,10 @@
     "brotliBytes": 26125,
     "chunks": [
       {
-        "file": "assets/GotheWordApp-yLSV0DgC.js",
-        "bytes": 378025,
-        "gzipBytes": 57877,
-        "brotliBytes": 45705
+        "file": "assets/GotheWordApp-Bb1Bg7WP.js",
+        "bytes": 379001,
+        "gzipBytes": 58317,
+        "brotliBytes": 46144
       }
     ],
     "initialHtmlIncludesRuntime": false
