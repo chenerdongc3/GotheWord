@@ -9,7 +9,7 @@ import {
   settleActiveSession,
   takeReviewBatch,
   insertThreeToFiveLater,
-} from "../app/learning.ts";
+} from "../../app/learning.ts";
 
 const NOW = new Date("2026-07-26T08:00:00.000Z");
 

@@ -2,10 +2,10 @@ import assert from "node:assert/strict";
 import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
-const templateRoot = new URL("../", import.meta.url);
+const templateRoot = new URL("../../", import.meta.url);
 
 async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  const workerUrl = new URL("../../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
@@ -25,14 +25,20 @@ async function render() {
   );
 }
 
-test("server-renders the Supabase entry guard", async () => {
+test("server-renders the explicit Supabase configuration mode", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
   assert.match(html, /<title>GotheWord · 德语记忆花园<\/title>/i);
-  assert.match(html, /还差一步 Supabase 配置|正在读取账号/);
+  if (process.env.TEST_EXPECT_SUPABASE === "configured") {
+    assert.match(html, /正在读取账号/);
+    assert.doesNotMatch(html, /还差一步 Supabase 配置/);
+  } else {
+    assert.match(html, /还差一步 Supabase 配置/);
+    assert.doesNotMatch(html, /正在读取账号/);
+  }
   assert.match(html, /property="og:image"/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
@@ -40,12 +46,12 @@ test("server-renders the Supabase entry guard", async () => {
 
 test("keeps the learning rules and UI ownership explicit", async () => {
   const [app, learning, words, page, layout, packageJson] = await Promise.all([
-    readFile(new URL("../app/GotheWordApp.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/learning.ts", import.meta.url), "utf8"),
-    readFile(new URL("../app/words.ts", import.meta.url), "utf8"),
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../package.json", import.meta.url), "utf8"),
+    readFile(new URL("../../app/GotheWordApp.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../../app/learning.ts", import.meta.url), "utf8"),
+    readFile(new URL("../../app/words.ts", import.meta.url), "utf8"),
+    readFile(new URL("../../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../../package.json", import.meta.url), "utf8"),
   ]);
 
   assert.match(packageJson, /"animal-island-ui"/);
@@ -75,11 +81,11 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.equal((words.match(/\n    examples: \[/g) ?? []).length, 24);
   assert.equal((words.match(/\{ de: "/g) ?? []).length, 72);
 
-  await assert.rejects(access(new URL("../app/_sites-preview", templateRoot)));
+  await assert.rejects(access(new URL("app/_sites-preview", templateRoot)));
 
   const serverAssetRoots = [
-    new URL("../dist/server/assets/", import.meta.url),
-    new URL("../dist/server/ssr/assets/", import.meta.url),
+    new URL("../../dist/server/assets/", import.meta.url),
+    new URL("../../dist/server/ssr/assets/", import.meta.url),
   ];
   for (const assetRoot of serverAssetRoots) {
     const files = await readdir(assetRoot);

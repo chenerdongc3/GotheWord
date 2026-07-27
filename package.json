@@ -7,13 +7,19 @@
   },
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
-    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "build:pages": "GITHUB_PAGES=true NEXT_PUBLIC_SITE_URL=https://chenerdongc3.github.io/GotheWord WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "build": "node scripts/verified-build.mjs",
+    "build:pages": "GITHUB_PAGES=true NEXT_PUBLIC_SITE_URL=https://chenerdongc3.github.io/GotheWord node scripts/verified-build.mjs",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/learning.test.mjs",
-    "test:mobile": "playwright test tests/mobile.spec.ts",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:mobile": "npm run test:e2e -- tests/e2e/mobile.spec.ts",
     "test:pages": "npm run build:pages && node --test tests/pages-export.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .vercel --ignore-pattern .wrangler"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --experimental-strip-types --test tests/unit/*.test.mjs",
+    "test:integration": "npm run test:ssr:unconfigured && npm run test:ssr:configured && node --test tests/integration/supabase-contract.test.mjs",
+    "test:ssr:unconfigured": "NEXT_PUBLIC_SUPABASE_URL='' NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY='' npm run build && TEST_EXPECT_SUPABASE=unconfigured node --test tests/integration/rendered-html.test.mjs",
+    "test:ssr:configured": "NEXT_PUBLIC_SUPABASE_URL='https://integration-test.supabase.co' NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY='integration-test-publishable-key' npm run build && TEST_EXPECT_SUPABASE=configured node --test tests/integration/rendered-html.test.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.8",

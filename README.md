@@ -34,10 +34,22 @@ npm run dev
 
 ```bash
 npm run lint
-npx tsc --noEmit
+npm run typecheck
+npm run test:unit
+npm run test:integration
+npm run test:e2e
 npm test
 npm run test:pages
 ```
+
+测试不会读取开发机的隐式 Supabase 配置：SSR 集成测试分别用显式空值和测试专用假配置构建，覆盖配置提示页与账号加载页。单元测试通过注入固定时间和确定性 RNG 验证学习调度；E2E 使用隔离的浏览器存储和网络桩，不接触生产用户数据。所有构建命令都会在出现 `FILE_NAME_CONFLICT` 时失败，CI 不会静默放过资产覆盖警告。
+
+## 发布与回滚
+
+1. 发布前确认 Quality gate 的 lint、typecheck、unit、integration、E2E 和 Pages build 全部通过，并检查构建日志中没有 `FILE_NAME_CONFLICT`。
+2. 在预发布环境注册测试账号，设置目标，完成一轮学习和报告；重新打开 Chromium 与 WebKit，确认进度恢复，再执行到期复习和重置。
+3. 发布后访问首页，确认静态资源、Supabase 登录和一次学习状态保存正常；测试数据只能写入 Supabase 测试项目或开发分支。
+4. 若 smoke 失败，立即停止推广，在 GitHub Pages 中重新运行上一个成功提交的部署 workflow（或将失败提交 revert 后推送），随后重复 smoke，并记录失败提交与数据迁移影响。
 
 ## GitHub Pages
 
