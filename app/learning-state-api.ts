@@ -29,7 +29,7 @@ function toRemoteLearningState(value: unknown): RemoteLearningState {
   return {
     state,
     schemaVersion:
-      schemaVersion === 2 && stateVersion === 2 ? schemaVersion : 1,
+      schemaVersion === stateVersion ? schemaVersion : 1,
     revision,
     updatedAt: value.updated_at,
   };

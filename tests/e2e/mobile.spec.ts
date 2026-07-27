@@ -13,7 +13,8 @@ const VIEWPORTS = [
 ];
 
 type LearningState = {
-  version: 2;
+  version: 2 | 3;
+  activeLevel?: "A1" | "A2" | "B1";
   dailyGoal?: 5 | 10 | 20;
   wordBookId?: "a1" | "a2";
   progress: Record<string, unknown>;
@@ -379,13 +380,14 @@ test("并发 revision 冲突必须由用户选择本设备或云端", async ({ p
       },
       remote: {
         state: {
-          version: 2,
+          version: 3,
+          activeLevel: "A1",
           dailyGoal: 5,
           progress: {},
           stats: {},
           activeSession: null,
         },
-        schemaVersion: 2,
+        schemaVersion: 3,
         revision: 2,
         updatedAt,
       },

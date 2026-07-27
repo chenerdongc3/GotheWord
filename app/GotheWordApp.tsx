@@ -50,6 +50,7 @@ import {
   type WordBookId,
   type Word,
 } from "./content/word-books.ts";
+import { getLevelCatalogEntry } from "./content/levels.ts";
 
 const SYNC_STATUS_META = {
   loading: { label: "读取中", color: "default" },
@@ -159,10 +160,14 @@ function sessionAnalyticsProperties(
   session: ActiveSession,
   dailyGoal: 5 | 10 | 20,
 ) {
+  const level = getLevelCatalogEntry(session.levelId);
   return {
     learning_session_id: session.id,
     session_mode: session.mode,
     daily_goal: dailyGoal,
+    level_id: session.levelId,
+    content_version: level.contentVersion ?? "unavailable",
+    source_kind: level.sourceKind,
   } as const;
 }
 
@@ -281,7 +286,7 @@ export default function GotheWordApp({
   const todayKey = localDayKey();
   const todayStats = state.stats[todayKey] ?? EMPTY_DAILY_STATS;
   const dailyGoal = state.dailyGoal ?? goalChoice;
-  const wordBookId = state.wordBookId ?? "a1";
+  const wordBookId: WordBookId = state.activeLevel === "A2" ? "a2" : "a1";
   const wordBook = WORD_BOOKS[wordBookId];
   const WORDS = wordBook.words;
   const remainingGoal = Math.max(0, dailyGoal - todayStats.goalNewLearned);
@@ -454,6 +459,7 @@ export default function GotheWordApp({
     const wordIds = selected.map((word) => word.id);
     const now = new Date();
     const nextSession = createActiveSession({
+      levelId: state.activeLevel,
       id: window.crypto.randomUUID(),
       mode,
       wordIds,
@@ -1283,7 +1289,7 @@ export default function GotheWordApp({
           onChange={(value) =>
             setState((current) => ({
               ...current,
-              wordBookId: value as WordBookId,
+              activeLevel: WORD_BOOKS[value as WordBookId].level,
             }))
           }
           options={(Object.keys(WORD_BOOKS) as WordBookId[]).map((bookId) => {

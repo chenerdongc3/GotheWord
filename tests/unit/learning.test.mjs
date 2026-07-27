@@ -20,7 +20,8 @@ const NOW = new Date("2026-07-26T08:00:00.000Z");
 
 function stateWithSession(session) {
   return {
-    version: 2,
+    version: 3,
+    activeLevel: "A1",
     dailyGoal: 10,
     progress: {
       tisch: {
@@ -35,7 +36,7 @@ function stateWithSession(session) {
   };
 }
 
-test("migrates v1 state to v2 and drops cross-session mistake counters", () => {
+test("migrates v1 state to v3 and drops cross-session mistake counters", () => {
   const migrated = migrateAppState({
     version: 1,
     dailyGoal: 10,
@@ -50,13 +51,14 @@ test("migrates v1 state to v2 and drops cross-session mistake counters", () => {
     stats: {},
   });
 
-  assert.equal(migrated?.version, 2);
+  assert.equal(migrated?.version, 3);
+  assert.equal(migrated?.activeLevel, "A1");
   assert.equal(migrated?.activeSession, null);
   assert.equal(migrated?.progress.haus.streak, 0);
   assert.equal("reviewMistakes" in migrated.progress.haus, false);
 });
 
-test("keeps AppState v2 migration idempotent", () => {
+test("migrates AppState v2 to v3 idempotently", () => {
   const state = {
     version: 2,
     dailyGoal: 10,
@@ -75,7 +77,28 @@ test("keeps AppState v2 migration idempotent", () => {
   const twice = migrateAppState(once);
 
   assert.deepEqual(twice, once);
-  assert.equal(once?.wordBookId, "a1");
+  assert.equal(once?.activeSession, null);
+  assert.equal(once?.activeLevel, "A1");
+});
+
+test("preserves v3 level and attributes sessions and new statistics", () => {
+  const session = createActiveSession({
+    id: "b1-session",
+    levelId: "B1",
+    mode: "new",
+    wordIds: ["tisch"],
+    now: NOW,
+  });
+  const migrated = migrateAppState({
+    version: 3,
+    activeLevel: "B1",
+    progress: {},
+    stats: {},
+    activeSession: session,
+  });
+
+  assert.equal(migrated?.activeLevel, "B1");
+  assert.equal(migrated?.activeSession?.levelId, "B1");
 });
 
 test("keeps A1 and A2 selection and learned counts isolated", () => {
@@ -99,7 +122,7 @@ test("keeps A1 and A2 selection and learned counts isolated", () => {
     activeSession: null,
   });
 
-  assert.equal(state?.wordBookId, "a2");
+  assert.equal(state?.activeLevel, "A2");
   assert.equal(
     countLearnedWords(WORD_BOOKS.a1.words, state?.progress ?? {}),
     1,
@@ -164,6 +187,7 @@ test("settles elapsed time only once when a session is ended repeatedly", () => 
   const dayKey = Object.keys(first.stats)[0];
 
   assert.equal(first.stats[dayKey].seconds, 42);
+  assert.equal(first.stats[dayKey].levelBreakdown.A1.seconds, 42);
   assert.equal(second.stats[dayKey].seconds, 42);
   assert.equal(second.activeSession, null);
 });

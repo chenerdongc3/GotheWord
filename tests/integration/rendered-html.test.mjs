@@ -71,7 +71,7 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.match(learning, /5:\s*60/);
   assert.match(learning, /DEFAULT_REVIEW_BATCH_SIZE = 20/);
   assert.match(learning, /rng: RandomSource = Math\.random/);
-  assert.match(learning, /version: 2/);
+  assert.match(learning, /version: 3/);
   assert.match(learning, /session\.mode === "review" \? 2 : 3/);
   assert.match(learning, /session\.reviewMistakes\[wordId\]/);
   assert.match(learning, /totalAnswers: previous\.totalAnswers \+ 1/);

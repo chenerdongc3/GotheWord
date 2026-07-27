@@ -1,1 +1,1 @@
-export const APP_STATE_SCHEMA_VERSION = 2;
+export const APP_STATE_SCHEMA_VERSION = 3;

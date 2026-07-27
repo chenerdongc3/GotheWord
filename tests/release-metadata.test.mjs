@@ -33,7 +33,7 @@ test("builds a public release manifest without credentials", async () => {
     "state_schema_version",
   ]);
   assert.equal(manifest.analytics_schema_version, 1);
-  assert.equal(manifest.state_schema_version, 2);
+  assert.equal(manifest.state_schema_version, 3);
   assert.doesNotMatch(JSON.stringify(manifest), /phc_|posthog_host|token/i);
 });
 

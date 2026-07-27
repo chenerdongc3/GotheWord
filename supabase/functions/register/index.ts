@@ -39,7 +39,7 @@ async function captureSignUpCompleted(userId: string) {
           app_version: Deno.env.get("APP_VERSION") || "unavailable",
           release_sha: Deno.env.get("RELEASE_SHA") || "unavailable",
           deployment_env: deploymentEnvironment(),
-          state_schema_version: 2,
+          state_schema_version: 3,
           local_day: now.toISOString().slice(0, 10),
           sites_version: Deno.env.get("SITES_VERSION") || "unavailable",
           supabase_migration:

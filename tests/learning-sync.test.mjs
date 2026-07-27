@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { EMPTY_STATE } from "../app/learning.ts";
 import {
+  APP_STATE_SCHEMA_VERSION,
   acceptRemoteState,
   createCachedState,
   parseCachedState,
@@ -26,7 +27,7 @@ function state(dailyGoal = 10) {
 function remote({
   value = state(),
   revision = 3,
-  schemaVersion = 2,
+  schemaVersion = APP_STATE_SCHEMA_VERSION,
 } = {}) {
   return {
     state: value,
@@ -50,7 +51,8 @@ test("upgrades a user-scoped bare v1 cache without assigning a global owner", ()
 
   assert.equal(parsed?.format, "legacy-state");
   assert.equal(parsed?.cache.userId, USER_ID);
-  assert.equal(parsed?.cache.state.version, 2);
+  assert.equal(parsed?.cache.state.version, APP_STATE_SCHEMA_VERSION);
+  assert.equal(parsed?.cache.state.activeLevel, "A1");
   assert.equal(parsed?.cache.state.activeSession, null);
   assert.equal(parsed?.cache.dirty, true);
   assert.equal(parsed?.cache.revision, 0);
@@ -79,7 +81,8 @@ test("compares JSONB state semantically instead of relying on key order", () => 
     stats: {},
     progress: {},
     dailyGoal: 10,
-    version: 2,
+    activeLevel: "A1",
+    version: APP_STATE_SCHEMA_VERSION,
   };
 
   assert.equal(statesEqual(left, right), true);
