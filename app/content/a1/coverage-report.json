@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026.07.26-por9.1",
+  "manifest": {
+    "schemaVersion": 1,
+    "contentVersion": "2026.07.26-por9.1",
+    "source": {
+      "sourceId": "goethe-a1-start-deutsch-1",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "retrievedAt": "2026-07-26",
+      "sha256": "45fb648bc0ac02338f7898cae065953e320ab72ed0c14e13e0deffe6f1c5d64e",
+      "pages": 29,
+      "bytes": 712341
+    },
+    "rights": {
+      "sourceList": "approved",
+      "examples": "editorial-only"
+    }
+  },
+  "source": {
+    "alphabetical": {
+      "total": 687,
+      "main": 628,
+      "derived": 59,
+      "covered": 687
+    },
+    "wordGroups": {
+      "taxonomy": 13,
+      "expectedTaxonomy": 13,
+      "totalRows": 130,
+      "members": 98,
+      "patterns": 32,
+      "covered": 130
+    },
+    "totalRows": 817,
+    "coveredRows": 817
+  },
+  "learning": {
+    "total": 820,
+    "quizEligible": 817,
+    "reviewed": 817,
+    "nonQuiz": 3,
+    "runtimeActive": 817,
+    "projectExtensions": 3
+  },
+  "distributions": {
+    "partOfSpeech": {
+      "noun": 381,
+      "verb": 164,
+      "preposition": 21,
+      "conjunction": 5,
+      "adjective": 83,
+      "phrase": 41,
+      "determiner": 12,
+      "adverb": 46,
+      "numeral": 40,
+      "other": 2,
+      "particle": 4,
+      "pronoun": 18
+    },
+    "topic": {
+      "housing": 25,
+      "food": 30,
+      "person": 46,
+      "education": 579,
+      "travel": 44,
+      "work": 11,
+      "shopping": 39,
+      "services": 16,
+      "environment": 13,
+      "leisure": 17
+    },
+    "entryType": {
+      "main": 628,
+      "derived": 59,
+      "word-group-member": 98,
+      "word-group-pattern": 32
+    },
+    "nonQuizReason": {
+      "alias-of-parent": 3
+    }
+  },
+  "legacy": {
+    "stableIds": 24,
+    "mappedIds": 24,
+    "resolvedIds": 24
+  },
+  "artifact": {
+    "generatedRuntimeBytes": 466932,
+    "gzipBytes": 37169,
+    "brotliBytes": 26125,
+    "chunks": [
+      {
+        "file": "assets/GotheWordApp-4XqFqPVf.js",
+        "bytes": 377380,
+        "gzipBytes": 57720,
+        "brotliBytes": 45553
+      }
+    ],
+    "initialHtmlIncludesRuntime": false
+  }
+}

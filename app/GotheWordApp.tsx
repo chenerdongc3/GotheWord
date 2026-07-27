@@ -16,9 +16,12 @@ import {
 } from "animal-island-ui";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  captureAnalyticsEvent,
+  captureAnalyticsEventOnce,
+} from "./analytics";
+import {
   ActiveSession,
   answerActiveSession,
-  AppState,
   createActiveSession,
   DailyStats,
   DEFAULT_REVIEW_BATCH_SIZE,
@@ -29,17 +32,44 @@ import {
   getLastDays,
   isDue,
   localDayKey,
-  migrateAppState,
   RandomSource,
   SessionMode,
   settleActiveSession,
   takeReviewBatch,
 } from "./learning";
-import { loadLearningState, saveLearningState } from "./supabase";
-import { getDisplayWord, Word, WORDS } from "./words";
+import {
+  useLearningStateSync,
+  type SyncStatus,
+} from "./useLearningStateSync";
+import {
+  A1_BY_ID,
+  A1_WORDS as WORDS,
+  getDisplayWord,
+  PART_OF_SPEECH_LABELS,
+  type Word,
+} from "./content/a1/generated/a1-runtime.ts";
 
-const STORAGE_KEY = "gotheword-state-v2";
-const LEGACY_STORAGE_KEY = "gotheword-state-v1";
+const SYNC_STATUS_META = {
+  loading: { label: "读取中", color: "default" },
+  synced: { label: "已同步", color: "app-green" },
+  pending: { label: "待同步", color: "app-yellow" },
+  syncing: { label: "同步中", color: "app-blue" },
+  offline: { label: "仅本设备", color: "app-orange" },
+  error: { label: "同步失败", color: "app-red" },
+  conflict: { label: "同步冲突", color: "app-red" },
+} as const satisfies Record<
+  SyncStatus,
+  {
+    label: string;
+    color:
+      | "default"
+      | "app-green"
+      | "app-yellow"
+      | "app-blue"
+      | "app-orange"
+      | "app-red";
+  }
+>;
 
 type SessionReport = {
   mode: SessionMode;
@@ -51,6 +81,14 @@ type SessionReport = {
   weakIds: string[];
   remainingReviewCount: number;
 };
+
+function ModalInitialFocus({ label }: { label: string }) {
+  return (
+    <span className="sr-only" tabIndex={0}>
+      {label}
+    </span>
+  );
+}
 
 function stableShuffle(items: string[], seed: string) {
   let value = 0;
@@ -74,7 +112,17 @@ function speakGerman(text: string) {
 }
 
 function getWord(wordId?: string) {
-  return WORDS.find((word) => word.id === wordId);
+  return wordId ? A1_BY_ID.get(wordId) : undefined;
+}
+
+function formatSyncTime(value: string) {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime())
+    ? "时间未知"
+    : date.toLocaleString("zh-CN", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      });
 }
 
 function hasActivity(stats?: DailyStats) {
@@ -92,6 +140,34 @@ function calculateStreak(stats: Record<string, DailyStats>) {
   return streak;
 }
 
+function sessionAnalyticsProperties(
+  session: ActiveSession,
+  dailyGoal: 5 | 10 | 20,
+) {
+  return {
+    learning_session_id: session.id,
+    session_mode: session.mode,
+    daily_goal: dailyGoal,
+  } as const;
+}
+
+function sessionResumeProperties(
+  session: ActiveSession,
+  dailyGoal: 5 | 10 | 20,
+) {
+  const updatedAt = new Date(session.updatedAt).getTime();
+  return {
+    ...sessionAnalyticsProperties(session, dailyGoal),
+    phase: session.phase,
+    completed_word_count: session.completed.length,
+    queue_word_count: session.queue.length,
+    elapsed_seconds: session.elapsedSeconds,
+    resume_age_seconds: Number.isFinite(updatedAt)
+      ? Math.max(0, Math.round((Date.now() - updatedAt) / 1_000))
+      : 0,
+  } as const;
+}
+
 type GotheWordAppProps = {
   userId: string;
   username: string;
@@ -107,88 +183,37 @@ export default function GotheWordApp({
   reviewBatchSize = DEFAULT_REVIEW_BATCH_SIZE,
   rng = Math.random,
 }: GotheWordAppProps) {
-  const [state, setState] = useState<AppState>(EMPTY_STATE);
-  const [hydrated, setHydrated] = useState(false);
+  const {
+    state,
+    setState,
+    hydrated,
+    syncStatus,
+    syncError,
+    conflict,
+    resolvingConflict,
+    legacyImportState,
+    useRemoteState,
+    keepLocalState,
+    importLegacyState,
+    dismissLegacyImport,
+  } = useLearningStateSync(userId);
   const [goalChoice, setGoalChoice] = useState<5 | 10 | 20>(10);
   const [activeTab, setActiveTab] = useState("today");
   const [sessionResumed, setSessionResumed] = useState(false);
   const [sessionInactive, setSessionInactive] = useState(true);
-  const [resumeOpen, setResumeOpen] = useState(false);
+  const [resumeHandled, setResumeHandled] = useState(false);
   const [report, setReport] = useState<SessionReport | null>(null);
   const [resetOpen, setResetOpen] = useState(false);
-  const [syncError, setSyncError] = useState("");
   const lastActivityRef = useRef(0);
+  const resumePromptTrackedRef = useRef(new Set<string>());
   const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
   const sessionPaused = Boolean(session?.pausedAt);
-
-  useEffect(() => {
-    let active = true;
-    const hydrate = async () => {
-      const userStorageKey = `${STORAGE_KEY}:${userId}`;
-      const legacyUserStorageKey = `${LEGACY_STORAGE_KEY}:${userId}`;
-      let localState: AppState | null = null;
-      try {
-        const raw =
-          window.localStorage.getItem(userStorageKey) ??
-          window.localStorage.getItem(legacyUserStorageKey) ??
-          window.localStorage.getItem(LEGACY_STORAGE_KEY);
-        if (raw) {
-          const saved = JSON.parse(raw) as unknown;
-          localState = migrateAppState(saved);
-        }
-      } catch {
-        window.localStorage.removeItem(userStorageKey);
-      }
-
-      try {
-        const remoteState = await loadLearningState(userId);
-        const migratedRemoteState = migrateAppState(remoteState);
-        const nextState = migratedRemoteState ?? localState ?? EMPTY_STATE;
-        if (!migratedRemoteState && localState) {
-          await saveLearningState(userId, localState);
-        }
-        if (active) {
-          setState(nextState);
-          setSessionResumed(false);
-          setResumeOpen(Boolean(nextState.activeSession));
-          if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
-        }
-      } catch {
-        if (active) {
-          const nextState = localState ?? EMPTY_STATE;
-          setState(nextState);
-          setSessionResumed(false);
-          setResumeOpen(Boolean(nextState.activeSession));
-          if (nextState.dailyGoal) setGoalChoice(nextState.dailyGoal);
-          setSyncError("云端同步暂时不可用，学习记录仍保存在本设备");
-        }
-      } finally {
-        if (active) setHydrated(true);
-      }
-    };
-
-    void hydrate();
-    return () => {
-      active = false;
-    };
-  }, [userId]);
-
-  useEffect(() => {
-    if (!hydrated) return;
-
-    const userStorageKey = `${STORAGE_KEY}:${userId}`;
-    window.localStorage.setItem(userStorageKey, JSON.stringify(state));
-    const syncTimer = window.setTimeout(() => {
-      void saveLearningState(userId, state)
-        .then(() => setSyncError(""))
-        .catch(() => {
-          setSyncError("云端同步暂时不可用，学习记录仍保存在本设备");
-        });
-    }, 500);
-
-    return () => window.clearTimeout(syncTimer);
-  }, [hydrated, state, userId]);
+  const resumeOpen =
+    hydrated &&
+    !sessionResumed &&
+    !resumeHandled &&
+    Boolean(state.activeSession);
 
   useEffect(() => {
     if (!sessionActive) return;
@@ -235,7 +260,7 @@ export default function GotheWordApp({
       );
     }, 1_000);
     return () => window.clearInterval(timer);
-  }, [sessionActive, sessionPaused, sessionInactive]);
+  }, [sessionActive, sessionPaused, sessionInactive, setState]);
 
   const todayKey = localDayKey();
   const todayStats = state.stats[todayKey] ?? EMPTY_DAILY_STATS;
@@ -261,6 +286,16 @@ export default function GotheWordApp({
     },
   );
   const reviewBatch = takeReviewBatch(dueWords, reviewBatchSize);
+  const startOfToday = new Date();
+  startOfToday.setHours(0, 0, 0, 0);
+  const overdueWordCount = dueWords.filter(
+    (word) =>
+      new Date(state.progress[word.id]?.nextReviewAt ?? 0).getTime() <
+      startOfToday.getTime(),
+  ).length;
+  const weakDueCount = dueWords.filter(
+    (word) => state.progress[word.id]?.weak,
+  ).length;
   const masteredCount = Object.values(state.progress).filter(
     (progress) => progress.state === "mastered",
   ).length;
@@ -301,6 +336,62 @@ export default function GotheWordApp({
     ...chartDays.map(({ key }) => Math.ceil((state.stats[key]?.seconds ?? 0) / 60)),
   );
 
+  useEffect(() => {
+    const persistedSession = state.activeSession;
+    if (
+      !resumeOpen ||
+      !persistedSession ||
+      resumePromptTrackedRef.current.has(persistedSession.id)
+    ) {
+      return;
+    }
+    resumePromptTrackedRef.current.add(persistedSession.id);
+    captureAnalyticsEvent(
+      "learning_session_resume_prompt_viewed",
+      sessionResumeProperties(persistedSession, dailyGoal),
+    );
+  }, [dailyGoal, resumeOpen, state.activeSession]);
+
+  useEffect(() => {
+    if (
+      !hydrated ||
+      activeTab !== "today" ||
+      sessionActive ||
+      report ||
+      resumeOpen ||
+      dueWords.length === 0
+    ) {
+      return;
+    }
+    captureAnalyticsEventOnce(
+      "due_review_prompt_viewed",
+      {
+        due_word_count: dueWords.length,
+        review_batch_size: reviewBatch.batch.length,
+        remaining_review_count: reviewBatch.remainingCount,
+        overdue_word_count: overdueWordCount,
+        weak_due_count: weakDueCount,
+      },
+      {
+        dedupeKey: `${userId}:due_review_prompt:${todayKey}`,
+        storage: "session",
+      },
+    );
+  }, [
+    activeTab,
+    dueWords.length,
+    hydrated,
+    overdueWordCount,
+    report,
+    resumeOpen,
+    reviewBatch.batch.length,
+    reviewBatch.remainingCount,
+    sessionActive,
+    todayKey,
+    userId,
+    weakDueCount,
+  ]);
+
   const beginSession = (mode: SessionMode) => {
     const reviewSelection = takeReviewBatch(dueWords, reviewBatchSize);
     const selected = mode === "review"
@@ -333,10 +424,17 @@ export default function GotheWordApp({
             },
       activeSession: nextSession,
     }));
+    captureAnalyticsEvent("learning_session_started", {
+      ...sessionAnalyticsProperties(nextSession, dailyGoal),
+      planned_word_count: wordIds.length,
+      due_word_count_before: dueWords.length,
+      remaining_goal_before: remainingGoal,
+      remaining_review_count: nextSession.remainingReviewCount,
+    });
     lastActivityRef.current = Date.now();
     setSessionInactive(false);
     setSessionResumed(true);
-    setResumeOpen(false);
+    setResumeHandled(true);
     setReport(null);
   };
 
@@ -354,6 +452,42 @@ export default function GotheWordApp({
   };
 
   const finishSession = (current: ActiveSession) => {
+    const accuracy = current.answers
+      ? Number((current.correct / current.answers).toFixed(4))
+      : 0;
+    captureAnalyticsEvent(
+      "learning_session_completed",
+      {
+        ...sessionAnalyticsProperties(current, dailyGoal),
+        planned_word_count: current.wordIds.length,
+        completed_word_count: current.completed.length,
+        answer_count: current.answers,
+        correct_count: current.correct,
+        accuracy,
+        elapsed_seconds: current.elapsedSeconds,
+        weak_word_count: current.weakIds.length,
+        remaining_review_count: current.remainingReviewCount,
+      },
+      { insertId: `${current.id}:completed` },
+    );
+    if (current.mode === "review" && current.remainingReviewCount === 0) {
+      captureAnalyticsEventOnce(
+        "due_review_completed",
+        {
+          ...sessionAnalyticsProperties(current, dailyGoal),
+          reviewed_word_count_in_session: current.completed.length,
+          answer_count: current.answers,
+          accuracy,
+          elapsed_seconds: current.elapsedSeconds,
+          weak_word_count: current.weakIds.length,
+        },
+        {
+          dedupeKey: `${userId}:due_review_completed:${todayKey}`,
+          storage: "local",
+          insertId: `${userId}:${todayKey}:due_review_completed`,
+        },
+      );
+    }
     setReport({
       mode: current.mode,
       total: current.wordIds.length,
@@ -375,6 +509,19 @@ export default function GotheWordApp({
 
   const leaveSession = () => {
     if (!session) return;
+    captureAnalyticsEvent(
+      "learning_session_abandoned",
+      {
+        ...sessionAnalyticsProperties(session, dailyGoal),
+        abandon_reason: "return_home",
+        phase: session.phase,
+        completed_word_count: session.completed.length,
+        queue_word_count: session.queue.length,
+        answer_count: session.answers,
+        elapsed_seconds: session.elapsedSeconds,
+      },
+      { insertId: `${session.id}:abandoned:return_home` },
+    );
     setState((current) =>
       current.activeSession?.id === session.id
         ? settleActiveSession(current)
@@ -388,15 +535,56 @@ export default function GotheWordApp({
   const answerWord = (selected: string | null) => {
     if (!session || !currentWord || session.feedback) return;
     const correct = selected === currentWord.translation;
-    setState((current) =>
-      answerActiveSession({
+    setState((current) => {
+      const previousProgress = current.progress[currentWord.id] ?? EMPTY_PROGRESS;
+      const previousGoalCount =
+        current.stats[todayKey]?.goalNewLearned ?? 0;
+      const next = answerActiveSession({
         state: current,
         wordId: currentWord.id,
         correct,
         selected: selected ?? "忘记了",
         rng,
-      }),
-    );
+      });
+      const feedback = next.activeSession?.feedback;
+      if (next === current || !next.activeSession || !feedback) return current;
+
+      const nextSession = next.activeSession;
+      captureAnalyticsEvent("learning_answer_submitted", {
+        ...sessionAnalyticsProperties(nextSession, dailyGoal),
+        word_id: currentWord.id,
+        word_kind: currentWord.kind,
+        phase: "quiz",
+        correct,
+        answer_method: selected === null ? "forgot" : "option",
+        review_stage_before: previousProgress.stage,
+        streak_after: feedback.streak,
+        target_streak: feedback.target,
+        word_completed: feedback.completed,
+        weak_marked:
+          nextSession.weakIds.includes(currentWord.id) &&
+          !current.activeSession?.weakIds.includes(currentWord.id),
+        answer_index_in_session: nextSession.answers,
+      });
+
+      const nextGoalCount =
+        next.stats[todayKey]?.goalNewLearned ?? previousGoalCount;
+      if (previousGoalCount < dailyGoal && nextGoalCount >= dailyGoal) {
+        captureAnalyticsEventOnce(
+          "daily_goal_completed",
+          {
+            ...sessionAnalyticsProperties(nextSession, dailyGoal),
+            new_words_completed_today: nextGoalCount,
+          },
+          {
+            dedupeKey: `${userId}:daily_goal_completed:${todayKey}`,
+            storage: "local",
+            insertId: `${userId}:${todayKey}:daily_goal_completed`,
+          },
+        );
+      }
+      return next;
+    });
   };
 
   const continueAfterFeedback = () => {
@@ -411,6 +599,83 @@ export default function GotheWordApp({
       }));
     }
   };
+
+  const syncMeta = SYNC_STATUS_META[syncStatus];
+  const syncTag = (
+    <span aria-live="polite">
+      <Tag size="small" color={syncMeta.color} variant="outlined">
+        {syncMeta.label}
+      </Tag>
+    </span>
+  );
+  const syncModals = (
+    <>
+      <Modal
+        open={Boolean(conflict)}
+        title="本设备与云端进度冲突"
+        typewriter={false}
+        maskClosable={false}
+        onClose={() => undefined}
+        footer={
+          <>
+            <Button
+              disabled={resolvingConflict}
+              onClick={useRemoteState}
+            >
+              使用云端进度
+            </Button>
+            <Button
+              type="primary"
+              loading={resolvingConflict}
+              onClick={keepLocalState}
+            >
+              保留本设备进度
+            </Button>
+          </>
+        }
+      >
+        <div className="grid gap-3 leading-7">
+          <ModalInitialFocus label="请选择要保留的学习进度版本。" />
+          <p className="m-0">
+            两处进度都发生过变化，系统已停止自动覆盖。请选择要继续使用的版本。
+          </p>
+          <p className="m-0 text-sm text-[#8f7b63]">
+            本设备保存：{conflict ? formatSyncTime(conflict.local.savedAt) : "—"}
+            <br />
+            云端更新：{conflict ? formatSyncTime(conflict.remote.updatedAt) : "—"}
+          </p>
+          <p className="m-0 text-sm font-bold">
+            保留本设备会基于最新云端 revision 再次安全保存；若期间又有设备更新，会继续提示冲突。
+          </p>
+        </div>
+      </Modal>
+      <Modal
+        open={Boolean(legacyImportState)}
+        title="发现未归属账号的旧学习记录"
+        typewriter={false}
+        maskClosable={false}
+        onClose={dismissLegacyImport}
+        footer={
+          <>
+            <Button onClick={dismissLegacyImport}>暂不导入</Button>
+            <Button type="primary" onClick={importLegacyState}>
+              导入当前账号
+            </Button>
+          </>
+        }
+      >
+        <div className="grid gap-3 leading-7">
+          <ModalInitialFocus label="请选择是否导入旧学习记录。" />
+          <p className="m-0">
+            这份旧记录没有账号标识，因此不会被自动上传。只有确认后，它才会替换当前设备上的进度并尝试同步。
+          </p>
+          <p className="m-0 text-sm font-bold">
+            旧记录会在云端保存成功后删除；同步失败时仍会保留。
+          </p>
+        </div>
+      </Modal>
+    </>
+  );
 
   if (!state.dailyGoal) {
     return (
@@ -454,15 +719,28 @@ export default function GotheWordApp({
               type="primary"
               size="large"
               block
-              onClick={() => setState({ ...EMPTY_STATE, dailyGoal: goalChoice })}
+              onClick={() => {
+                captureAnalyticsEventOnce(
+                  "onboarding_completed",
+                  { selected_daily_goal: goalChoice },
+                  {
+                    dedupeKey: `${userId}:onboarding_completed`,
+                    storage: "local",
+                    insertId: `${userId}:onboarding_completed`,
+                  },
+                );
+                setState({ ...EMPTY_STATE, dailyGoal: goalChoice });
+              }}
             >
               开始我的德语旅程
             </Button>
             {!hydrated && <p className="m-0 text-center text-[13px]" role="status">正在读取你的学习记录…</p>}
             {syncError && <p className="m-0 text-center text-[13px]" role="status">{syncError}</p>}
+            {syncTag}
           </Card>
         </main>
         <Footer type="sea" />
+        {syncModals}
       </Cursor>
     );
   }
@@ -491,6 +769,7 @@ export default function GotheWordApp({
               <Progress percent={progressValue} showInfo={false} size="small" />
             </div>
             <div className="col-start-2 row-start-1 flex min-w-0 flex-wrap items-center justify-end gap-2 lg:col-start-3">
+              {syncTag}
               <span className="hidden text-xs text-[#8f7b63] sm:inline" aria-live="polite">
                 {sessionInactive ? "已因无操作暂停" : sessionPaused ? "已暂停" : "本次学习"}
               </span>
@@ -573,7 +852,7 @@ export default function GotheWordApp({
             <article className="grid min-w-0 items-start gap-[1.375rem] lg:grid-cols-[0.86fr_1.14fr]">
               <Card color="app-teal" pattern="app-yellow" className="flex min-h-[320px] min-w-0 flex-col justify-center gap-[1.125rem] lg:sticky lg:top-5 lg:min-h-[410px]">
                 <Tag color="app-yellow" variant="solid">
-                  {currentWord.kind === "noun" ? "名词 · 连同冠词记忆" : "动词 · 不定式"}
+                  {PART_OF_SPEECH_LABELS[currentWord.kind]}
                 </Tag>
                 <div className="flex min-w-0 flex-col items-start gap-3.5 sm:flex-row sm:items-center sm:justify-between">
                   <h1 className="m-0 min-w-0 text-[clamp(2.375rem,13vw,4.5rem)] leading-none font-black tracking-normal [overflow-wrap:anywhere]">{displayWord}</h1>
@@ -673,6 +952,7 @@ export default function GotheWordApp({
             </Card>
           )}
         </main>
+        {syncModals}
       </Cursor>
     );
   }
@@ -683,7 +963,10 @@ export default function GotheWordApp({
     return (
       <Cursor>
         <main className="mx-auto flex min-h-[calc(100svh-5rem)] w-full max-w-[920px] min-w-0 flex-col items-center gap-6 px-4 py-12 pb-[max(4rem,env(safe-area-inset-bottom))] text-center sm:px-5 sm:py-[4.5rem]">
-          <Tag color="app-green" variant="outlined">本轮完成</Tag>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <Tag color="app-green" variant="outlined">本轮完成</Tag>
+            {syncTag}
+          </div>
           <h1 className="m-0 text-[clamp(2.375rem,10vw,3.875rem)] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere]">
             {report.mode === "review"
               ? report.remainingReviewCount > 0
@@ -747,6 +1030,7 @@ export default function GotheWordApp({
           </div>
         </main>
         <Footer type="sea" />
+        {syncModals}
       </Cursor>
     );
   }
@@ -965,6 +1249,7 @@ export default function GotheWordApp({
             </div>
           </div>
           <div className="flex min-w-0 flex-wrap items-center justify-end gap-1 sm:gap-2">
+            {syncTag}
             <Tag color="app-teal">{username}</Tag>
             <Button type="text" size="small" onClick={onSignOut}>退出</Button>
           </div>
@@ -996,8 +1281,30 @@ export default function GotheWordApp({
             <Button
               danger
               onClick={() => {
+                const persistedSession = state.activeSession;
+                if (persistedSession) {
+                  captureAnalyticsEvent(
+                    "learning_session_abandoned",
+                    {
+                      ...sessionAnalyticsProperties(
+                        persistedSession,
+                        dailyGoal,
+                      ),
+                      abandon_reason: "discard_from_resume",
+                      phase: persistedSession.phase,
+                      completed_word_count: persistedSession.completed.length,
+                      queue_word_count: persistedSession.queue.length,
+                      answer_count: persistedSession.answers,
+                      elapsed_seconds: persistedSession.elapsedSeconds,
+                    },
+                    {
+                      insertId:
+                        `${persistedSession.id}:abandoned:discard_from_resume`,
+                    },
+                  );
+                }
                 setState((current) => settleActiveSession(current));
-                setResumeOpen(false);
+                setResumeHandled(true);
                 setSessionResumed(false);
                 setSessionInactive(true);
                 setActiveTab("today");
@@ -1008,6 +1315,16 @@ export default function GotheWordApp({
             <Button
               type="primary"
               onClick={() => {
+                const persistedSession = state.activeSession;
+                if (persistedSession) {
+                  captureAnalyticsEvent("learning_session_resumed", {
+                    ...sessionResumeProperties(
+                      persistedSession,
+                      dailyGoal,
+                    ),
+                    resume_source: "persisted_session_modal",
+                  });
+                }
                 const now = new Date().toISOString();
                 setState((current) =>
                   current.activeSession
@@ -1024,7 +1341,7 @@ export default function GotheWordApp({
                 lastActivityRef.current = Date.now();
                 setSessionInactive(false);
                 setSessionResumed(true);
-                setResumeOpen(false);
+                setResumeHandled(true);
               }}
             >
               继续本次学习
@@ -1032,7 +1349,10 @@ export default function GotheWordApp({
           </>
         }
       >
-        当前单词、队列、完成数和有效学习时长都已保存。你可以从中断处继续，也可以结算并结束本次学习。
+        <div>
+          <ModalInitialFocus label="请选择继续或结束本次学习。" />
+          当前单词、队列、完成数和有效学习时长都已保存。你可以从中断处继续，也可以结算并结束本次学习。
+        </div>
       </Modal>
       <Modal
         open={resetOpen}
@@ -1046,12 +1366,10 @@ export default function GotheWordApp({
               type="primary"
               danger
               onClick={() => {
-                window.localStorage.removeItem(`${STORAGE_KEY}:${userId}`);
-                window.localStorage.removeItem(`${LEGACY_STORAGE_KEY}:${userId}`);
                 setState({ ...EMPTY_STATE });
                 setSessionResumed(false);
                 setSessionInactive(true);
-                setResumeOpen(false);
+                setResumeHandled(true);
                 setGoalChoice(10);
                 setResetOpen(false);
               }}
@@ -1061,8 +1379,12 @@ export default function GotheWordApp({
           </>
         }
       >
-        此操作会删除当前账号在云端和本设备上的单词进度、复习安排与学习统计，且无法恢复。
+        <div>
+          <ModalInitialFocus label="请确认是否清除学习记录。" />
+          此操作会删除当前账号在云端和本设备上的单词进度、复习安排与学习统计，且无法恢复。
+        </div>
       </Modal>
+      {syncModals}
     </Cursor>
   );
 }

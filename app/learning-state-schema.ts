@@ -1,0 +1,1 @@
+export const APP_STATE_SCHEMA_VERSION = 2;

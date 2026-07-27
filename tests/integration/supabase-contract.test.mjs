@@ -18,11 +18,24 @@ test("learning state migration enables RLS for every write path", async () => {
   assert.match(sql, /user_id uuid primary key references auth\.users\(id\)/i);
 });
 
-test("client saves with a user-scoped upsert and propagates conflicts", async () => {
-  const client = await readFile(new URL("../../app/supabase.ts", import.meta.url), "utf8");
+test("client loads by user and saves through the authenticated CAS function", async () => {
+  const [client, revisionSql] = await Promise.all([
+    readFile(new URL("../../app/learning-state-api.ts", import.meta.url), "utf8"),
+    readFile(
+      new URL(
+        "../../supabase/migrations/20260726100000_add_learning_state_revision.sql",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  ]);
 
   assert.match(client, /\.eq\("user_id", userId\)/);
-  assert.match(client, /\.from\("learning_states"\)\.upsert\(\{/);
-  assert.match(client, /user_id: userId/);
-  assert.match(client, /if \(error\) throw error/);
+  assert.match(client, /\.rpc\("save_learning_state", \{/);
+  assert.match(client, /expected_revision: expectedRevision/);
+  assert.match(client, /throw new LearningStateConflictError\(\)/);
+  assert.match(revisionSql, /current_user_id uuid := auth\.uid\(\)/);
+  assert.match(revisionSql, /learning_state\.revision = expected_revision/);
+  assert.match(revisionSql, /grant execute on function public\.save_learning_state/);
+  assert.match(revisionSql, /revoke insert, update, delete on public\.learning_states/);
 });

@@ -34,9 +34,9 @@ test("server-renders the explicit Supabase configuration mode", async () => {
   assert.match(html, /<title>GotheWord · 德语记忆花园<\/title>/i);
   if (process.env.TEST_EXPECT_SUPABASE === "configured") {
     assert.match(html, /正在读取账号/);
-    assert.doesNotMatch(html, /还差一步 Supabase 配置/);
+    assert.doesNotMatch(html, /配置 Supabase/);
   } else {
-    assert.match(html, /还差一步 Supabase 配置/);
+    assert.match(html, /配置 Supabase/);
     assert.doesNotMatch(html, /正在读取账号/);
   }
   assert.match(html, /property="og:image"/);
@@ -76,10 +76,9 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.match(app, /继续本次学习/);
   assert.match(app, /结束本次学习/);
   assert.match(app, /Date\.now\(\) - lastActivityRef\.current >= 30_000/);
-
-  assert.equal((words.match(/\n    id: "/g) ?? []).length, 24);
-  assert.equal((words.match(/\n    examples: \[/g) ?? []).length, 24);
-  assert.equal((words.match(/\{ de: "/g) ?? []).length, 72);
+  assert.match(app, /content\/a1\/generated\/a1-runtime\.ts/);
+  assert.match(words, /Compatibility exports for non-page consumers/);
+  assert.match(words, /A1_WORDS as WORDS/);
 
   await assert.rejects(access(new URL("app/_sites-preview", templateRoot)));
 

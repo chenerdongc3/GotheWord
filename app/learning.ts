@@ -1,3 +1,8 @@
+import { resolveRuntimeWordId } from "./content/a1/generated/a1-runtime.ts";
+import { localDayKey } from "./date.ts";
+
+export { localDayKey } from "./date.ts";
+
 export type WordState = "unlearned" | "learning" | "scheduled" | "weak" | "mastered";
 
 export type WordProgress = {
@@ -120,25 +125,92 @@ function normalizeStringNumberRecord(value: unknown) {
   ) as Record<string, number>;
 }
 
+const WORD_STATE_RANK: Record<WordState, number> = {
+  unlearned: 0,
+  learning: 1,
+  scheduled: 2,
+  weak: 3,
+  mastered: 4,
+};
+
+function earliestIso(left?: string, right?: string) {
+  if (!left) return right;
+  if (!right) return left;
+  return left <= right ? left : right;
+}
+
+export function mergeWordProgress(
+  left: WordProgress,
+  right: WordProgress,
+): WordProgress {
+  const preferred =
+    right.stage > left.stage ||
+    (right.stage === left.stage &&
+      WORD_STATE_RANK[right.state] > WORD_STATE_RANK[left.state])
+      ? right
+      : left;
+  const totalAnswers = Math.max(left.totalAnswers, right.totalAnswers);
+  return {
+    ...preferred,
+    stage: Math.max(left.stage, right.stage),
+    streak: Math.max(left.streak, right.streak),
+    totalAnswers,
+    correctAnswers: Math.min(
+      totalAnswers,
+      Math.max(left.correctAnswers, right.correctAnswers),
+    ),
+    weak: left.weak || right.weak,
+    firstLearnedAt: earliestIso(left.firstLearnedAt, right.firstLearnedAt),
+    nextReviewAt:
+      preferred.state === "mastered"
+        ? undefined
+        : earliestIso(left.nextReviewAt, right.nextReviewAt),
+  };
+}
+
 function migrateProgress(
   progress: AppStateV1["progress"] | AppState["progress"],
   resetStreaks: boolean,
 ) {
-  return Object.fromEntries(
-    Object.entries(progress).map(([wordId, value]) => {
-      const current = {
-        ...(value as WordProgress & { reviewMistakes?: number }),
-      };
-      delete current.reviewMistakes;
-      return [
-        wordId,
-        {
-          ...current,
-          streak: resetStreaks ? 0 : current.streak,
-        },
-      ];
-    }),
-  );
+  const migrated: Record<string, WordProgress> = {};
+  for (const [wordId, value] of Object.entries(progress)) {
+    const current = {
+      ...(value as WordProgress & { reviewMistakes?: number }),
+    };
+    delete current.reviewMistakes;
+    const nextProgress = {
+      ...current,
+      streak: resetStreaks ? 0 : current.streak,
+    };
+    // Unknown progress is retained for diagnostics and possible future recovery.
+    // Unknown active-session references are handled more strictly below.
+    const resolvedId = resolveRuntimeWordId(wordId) ?? wordId;
+    migrated[resolvedId] = migrated[resolvedId]
+      ? mergeWordProgress(migrated[resolvedId], nextProgress)
+      : nextProgress;
+  }
+  return migrated;
+}
+
+function migrateSessionIds(values: string[]) {
+  const migrated: string[] = [];
+  for (const value of values) {
+    const resolved = resolveRuntimeWordId(value);
+    if (!resolved) return null;
+    migrated.push(resolved);
+  }
+  return migrated;
+}
+
+function migrateSessionRecord(value: unknown) {
+  const record = normalizeStringNumberRecord(value);
+  const migrated: Record<string, number> = {};
+  for (const [wordId, count] of Object.entries(record)) {
+    const resolved = resolveRuntimeWordId(wordId);
+    if (!resolved) return null;
+    migrated[resolved] = Math.max(migrated[resolved] ?? 0, count);
+  }
+  return migrated;
 }
 
 function migrateActiveSession(value: unknown): ActiveSession | null {
@@ -162,6 +234,23 @@ function migrateActiveSession(value: unknown): ActiveSession | null {
     return null;
   }
 
+  const wordIds = migrateSessionIds(value.wordIds);
+  const queue = migrateSessionIds(value.queue);
+  const completed = migrateSessionIds(value.completed);
+  const weakIds = migrateSessionIds(value.weakIds);
+  const reviewMistakes = migrateSessionRecord(value.reviewMistakes);
+  const reviewStreaks = migrateSessionRecord(value.reviewStreaks);
+  if (
+    !wordIds ||
+    !queue ||
+    !completed ||
+    !weakIds ||
+    !reviewMistakes ||
+    !reviewStreaks
+  ) {
+    return null;
+  }
+
   const feedback = isRecord(value.feedback) &&
     typeof value.feedback.wordId === "string" &&
     typeof value.feedback.correct === "boolean" &&
@@ -169,20 +258,24 @@ function migrateActiveSession(value: unknown): ActiveSession | null {
     typeof value.feedback.streak === "number" &&
     typeof value.feedback.target === "number" &&
     typeof value.feedback.completed === "boolean"
-    ? value.feedback as SessionFeedback
+    ? {
+        ...(value.feedback as SessionFeedback),
+        wordId: resolveRuntimeWordId(value.feedback.wordId),
+      }
     : undefined;
+  if (feedback && !feedback.wordId) return null;
 
   return {
     id: value.id,
     mode,
     phase,
     memoryIndex: Math.max(0, Math.floor(value.memoryIndex)),
-    wordIds: value.wordIds,
-    queue: value.queue,
-    completed: value.completed,
-    weakIds: value.weakIds,
-    reviewMistakes: normalizeStringNumberRecord(value.reviewMistakes),
-    reviewStreaks: normalizeStringNumberRecord(value.reviewStreaks),
+    wordIds: [...new Set(wordIds)],
+    queue,
+    completed: [...new Set(completed)],
+    weakIds: [...new Set(weakIds)],
+    reviewMistakes,
+    reviewStreaks,
     answers: Math.max(0, Math.floor(value.answers)),
     correct: Math.max(0, Math.floor(value.correct)),
     elapsedSeconds: Math.max(0, Math.floor(value.elapsedSeconds)),
@@ -192,7 +285,7 @@ function migrateActiveSession(value: unknown): ActiveSession | null {
         : 0,
     pausedAt: typeof value.pausedAt === "string" ? value.pausedAt : undefined,
     updatedAt: value.updatedAt,
-    feedback,
+    feedback: feedback as SessionFeedback | undefined,
   };
 }
 
@@ -221,13 +314,6 @@ export function migrateAppState(value: unknown): AppState | null {
     stats: current.stats,
     activeSession: migrateActiveSession(current.activeSession),
   };
-}
-
-export function localDayKey(date = new Date()) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
 }
 
 export function addLocalDays(date: Date, days: number) {

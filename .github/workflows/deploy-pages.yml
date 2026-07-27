@@ -18,6 +18,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: ${{ secrets.POSTHOG_PROJECT_TOKEN }}
+      NEXT_PUBLIC_POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+      NEXT_PUBLIC_SUPABASE_MIGRATION: ${{ vars.SUPABASE_MIGRATION }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -34,17 +40,38 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prepare release metadata
+        run: |
+          echo "NEXT_PUBLIC_APP_VERSION=$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_RELEASE_SHA=$GITHUB_SHA" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_DEPLOYMENT_ENV=production" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_SITES_VERSION=github-pages-run-${GITHUB_RUN_ID}-attempt-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_ENV"
+
+      - name: Verify release metadata
+        run: npm run release:verify
+
       - name: Lint
         run: npm run lint
 
       - name: Type check
         run: npm run typecheck
 
+      - name: Validate A1 content and generated runtime
+        run: npm run content:a1:check
+
       - name: Test application
         run: npm test
 
       - name: Build and test GitHub Pages export
         run: npm run test:pages
+
+      - name: Verify A1 source-list publication rights
+        run: npm run content:a1:check-rights
+
+      - name: Require a pushed, traceable source commit
+        run: |
+          test "$GITHUB_SHA" = "$(git rev-parse HEAD)"
+          test "$GITHUB_SHA" = "$(git ls-remote origin "refs/heads/$GITHUB_REF_NAME" | awk '{print $1}')"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
