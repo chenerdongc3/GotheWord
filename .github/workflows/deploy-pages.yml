@@ -54,7 +54,7 @@ jobs:
         run: npm run lint
 
       - name: Type check
-        run: npx tsc --noEmit
+        run: npm run typecheck
 
       - name: Validate A1 content and generated runtime
         run: npm run content:a1:check
@@ -71,7 +71,7 @@ jobs:
       - name: Require a pushed, traceable source commit
         run: |
           test "$GITHUB_SHA" = "$(git rev-parse HEAD)"
-          git merge-base --is-ancestor "$GITHUB_SHA" "origin/$GITHUB_REF_NAME"
+          test "$GITHUB_SHA" = "$(git ls-remote origin "refs/heads/$GITHUB_REF_NAME" | awk '{print $1}')"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

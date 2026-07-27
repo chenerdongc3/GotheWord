@@ -82,6 +82,14 @@ type SessionReport = {
   remainingReviewCount: number;
 };
 
+function ModalInitialFocus({ label }: { label: string }) {
+  return (
+    <span className="sr-only" tabIndex={0}>
+      {label}
+    </span>
+  );
+}
+
 function stableShuffle(items: string[], seed: string) {
   let value = 0;
   for (const char of seed) value = (value * 31 + char.charCodeAt(0)) >>> 0;
@@ -627,6 +635,7 @@ export default function GotheWordApp({
         }
       >
         <div className="grid gap-3 leading-7">
+          <ModalInitialFocus label="请选择要保留的学习进度版本。" />
           <p className="m-0">
             两处进度都发生过变化，系统已停止自动覆盖。请选择要继续使用的版本。
           </p>
@@ -656,6 +665,7 @@ export default function GotheWordApp({
         }
       >
         <div className="grid gap-3 leading-7">
+          <ModalInitialFocus label="请选择是否导入旧学习记录。" />
           <p className="m-0">
             这份旧记录没有账号标识，因此不会被自动上传。只有确认后，它才会替换当前设备上的进度并尝试同步。
           </p>
@@ -1339,7 +1349,10 @@ export default function GotheWordApp({
           </>
         }
       >
-        当前单词、队列、完成数和有效学习时长都已保存。你可以从中断处继续，也可以结算并结束本次学习。
+        <div>
+          <ModalInitialFocus label="请选择继续或结束本次学习。" />
+          当前单词、队列、完成数和有效学习时长都已保存。你可以从中断处继续，也可以结算并结束本次学习。
+        </div>
       </Modal>
       <Modal
         open={resetOpen}
@@ -1366,7 +1379,10 @@ export default function GotheWordApp({
           </>
         }
       >
-        此操作会删除当前账号在云端和本设备上的单词进度、复习安排与学习统计，且无法恢复。
+        <div>
+          <ModalInitialFocus label="请确认是否清除学习记录。" />
+          此操作会删除当前账号在云端和本设备上的单词进度、复习安排与学习统计，且无法恢复。
+        </div>
       </Modal>
       {syncModals}
     </Cursor>

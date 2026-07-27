@@ -103,7 +103,7 @@ test("关键事件恰好一次且 mock transport 中没有 PII", async ({ page }
   await openAuthenticated(page);
   expect(
     await page.evaluate(async () => {
-      const analytics = await import("../app/analytics");
+      const analytics = await import("../../app/analytics");
       return {
         configured: analytics.isAnalyticsConfigured(),
         doNotTrack: navigator.doNotTrack,
