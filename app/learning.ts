@@ -1,4 +1,4 @@
-import { resolveRuntimeWordId } from "./content/a1/generated/a1-runtime.ts";
+import { resolveRuntimeWordId } from "./content/word-books.ts";
 import { localDayKey } from "./date.ts";
 import { isLevelId, type LevelId } from "./content/levels.ts";
 
@@ -318,7 +318,11 @@ export function migrateAppState(value: unknown): AppState | null {
 
   if (value.version !== 2 && value.version !== 3) return null;
   const current = value as unknown as AppState;
-  const activeLevel = isLevelId(current.activeLevel) ? current.activeLevel : "A1";
+  const activeLevel = isLevelId(current.activeLevel)
+    ? current.activeLevel
+    : value.wordBookId === "a2"
+      ? "A2"
+      : "A1";
   return {
     version: 3,
     activeLevel,
@@ -327,7 +331,7 @@ export function migrateAppState(value: unknown): AppState | null {
     stats: current.stats,
     activeSession: migrateActiveSession(
       current.activeSession,
-      value.version === 2 ? "A1" : activeLevel,
+      activeLevel,
     ),
   };
 }

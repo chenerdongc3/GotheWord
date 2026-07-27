@@ -1,5 +1,5 @@
 /** Stable identifiers used by content, persistence, sessions, and analytics. */
-export const LEVEL_IDS = ["A1", "B1"] as const;
+export const LEVEL_IDS = ["A1", "A2", "B1"] as const;
 export type LevelId = (typeof LEVEL_IDS)[number];
 
 export type LevelAvailability = "active" | "rights-blocked";
@@ -21,6 +21,13 @@ export const LEVEL_CATALOG = [
     id: "A1",
     label: "A1 词汇轨道",
     contentVersion: "2026.07.26-por9.1",
+    availability: "active",
+    sourceKind: "official-word-list",
+  },
+  {
+    id: "A2",
+    label: "A2 词汇轨道",
+    contentVersion: "2026.07.28-a2.1",
     availability: "active",
     sourceKind: "official-word-list",
   },

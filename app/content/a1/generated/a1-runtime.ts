@@ -22903,7 +22903,7 @@ export const PART_OF_SPEECH_LABELS = {
   "numeral": "数词",
   "particle": "语气词",
   "phrase": "表达",
-  "other": "A1 词汇"
+  "other": "词汇与表达"
 } as const;
 
 export type { Word } from "../types.ts";

@@ -146,7 +146,12 @@ function canonicalize(value: unknown): unknown {
 }
 
 export function statesEqual(left: AppState, right: AppState) {
-  return JSON.stringify(canonicalize(left)) === JSON.stringify(canonicalize(right));
+  const normalizedLeft = migrateAppState(left) ?? left;
+  const normalizedRight = migrateAppState(right) ?? right;
+  return (
+    JSON.stringify(canonicalize(normalizedLeft)) ===
+    JSON.stringify(canonicalize(normalizedRight))
+  );
 }
 
 export function resolveSuccessfulSave({

@@ -10,8 +10,11 @@ export type LevelRuntime = {
 };
 
 export class LevelUnavailableError extends Error {
-  constructor(public readonly levelId: LevelId, message: string) {
+  readonly levelId: LevelId;
+
+  constructor(levelId: LevelId, message: string) {
     super(message);
+    this.levelId = levelId;
     this.name = "LevelUnavailableError";
   }
 }
@@ -26,6 +29,18 @@ export async function loadLevelRuntime(levelId: LevelId): Promise<LevelRuntime> 
       words: runtime.A1_WORDS,
       byId: runtime.A1_BY_ID,
       resolveCanonicalId: runtime.resolveRuntimeWordId,
+    };
+  }
+
+  if (levelId === "A2") {
+    const runtime = await import("./a2/generated/a2-runtime.ts");
+    return {
+      levelId,
+      contentVersion: runtime.A2_MANIFEST.contentVersion,
+      words: runtime.A2_WORDS,
+      byId: runtime.A2_BY_ID,
+      resolveCanonicalId: (id) =>
+        runtime.A2_VALID_IDS.has(id) ? id : undefined,
     };
   }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import "animal-island-ui/style";
+import "@gotheword/pencil-pup-ui/style";
 import "./globals.css";
 
 const siteUrl =

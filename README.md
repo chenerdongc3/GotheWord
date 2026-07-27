@@ -16,13 +16,16 @@
 - 用户名与密码注册、登录（注册后立即登录）
 - 学习目标、进度和统计按用户同步到 Supabase，并保留本地副本
 
-## Goethe A1 内容
+## Goethe A1 / A2 内容
 
 - 冻结来源为 `Goethe-Zertifikat A1: Start Deutsch 1` 成人版官方 PDF；URL、获取日期、SHA-256 与内容版本记录在 `app/content/a1/manifest.ts`。
 - 作者层分离来源词条、中文教学内容、taxonomy 与 legacy ID；页面只消费构建期生成的 `app/content/a1/generated/a1-runtime.ts`。
 - 当前基线覆盖 687 个字母词表来源行、13 类词组的 130 个成员/模式，并保留原有 24 个学习 ID。
 - `app/content/a1/coverage-report.json` 记录来源覆盖、quiz-eligible/reviewed、词类/主题、legacy 解析、运行时体积和实际 chunk 归属。
 - 官方来源例句不会进入公开运行时；运行时仅包含 GotheWord 教学例句。
+- A2 沿用相同的来源层、教学层和生成运行时结构，当前提供 1038 个可学习词条；来源版本与校验信息记录在 `app/content/a2/manifest.ts`。
+- A1 与 A2 使用独立稳定 ID。设置页可切换词书，并分别显示总词数和已学词数；切换不会清空另一册进度。
+- A2 中文释义当前标记为机器生成初稿，发布前仍需人工校对；A2 来源清单的公开再分发状态保持 `pending`。
 
 内容维护命令：
 
@@ -31,6 +34,11 @@ npm run content:a1:generate
 npm run content:a1:validate
 npm run content:a1:report
 npm run content:a1:check
+npm run content:a2:generate
+npm run content:a2:validate
+npm run content:a2:report
+npm run content:a2:check
+npm run content:check
 ```
 
 ## 本地运行
@@ -75,13 +83,14 @@ npm run test:pages
 ## GitHub Pages
 
 推送到 `main` 后，GitHub Actions 会构建并验证静态版本。只有
-`A1_MANIFEST.rights.sourceList` 明确为 `approved` 时才允许发布到：
+`A1_MANIFEST.rights.sourceList` 与 `A2_MANIFEST.rights.sourceList` 均明确为
+`approved` 时才允许发布到：
 
 <https://chenerdongc3.github.io/GotheWord/>
 
 本地可通过 `npm run test:pages` 验证 Pages 子路径、静态资源和站点元数据。
-当前完整 Goethe 来源清单的权利状态已由项目负责人确认为 `approved`，
-工作流允许在其余发布检查通过后上传 Pages artifact。
+当前 A1 来源清单已确认为 `approved`；A2 仍为 `pending`，因此 Pages 工作流会在
+A2 权利状态获得项目负责人明确确认前停止上传 artifact。
 
 该入口是 public、免费、非商业的 MVP 测试入口。生产 Supabase URL 与 Publishable
 Key 仅通过 GitHub environment secrets 配置，不进入仓库；发布门禁会核对配置格式、
@@ -90,31 +99,22 @@ Key 仅通过 GitHub environment secrets 配置，不进入仓库；发布门禁
 
 ## UI 与许可
 
-界面组件统一使用 [`animal-island-ui`](https://github.com/guokaigdg/animal-island-ui)。
+界面组件统一使用仓库内的
+[`@gotheword/pencil-pup-ui`](packages/pencil-pup-ui)。该库采用 MIT 许可，
+以原创的暖白纸张、手绘墨线、错位阴影和报纸漫画节奏构建设计语言。
 
-### POR-8：公开发布边界
+### 原创与第三方 IP 边界
 
-- [x] 当前用途已确认为**非商业测试项目**，可用于个人学习、评估、测试和非商业展示。
-- [x] 用途负责人陈erdong已于 2026-07-26 在 [POR-8](https://linear.app/codexnoumi/issue/POR-8/p0-完成-animal-island-ui-许可与公开发布边界评估) 中确认该发布边界。
-- [x] 当前 GitHub Pages 公开版本仅作为免费、非商业的产品测试，不提供收费服务、付费模板或企业商业用途。
-
-### 第三方组件署名
-
-GotheWord 使用由 [guokaigdg](https://github.com/guokaigdg) 创建的
-[`animal-island-ui@1.2.3`](https://github.com/guokaigdg/animal-island-ui)，
-该组件库采用
-[Creative Commons Attribution-NonCommercial 4.0 International（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/)
-许可。组件库源码、版权与免责声明以其
-[仓库说明](https://github.com/guokaigdg/animal-island-ui#copyright-and-disclaimer)
-和 [LICENSE](https://github.com/guokaigdg/animal-island-ui/blob/main/LICENSE) 为准。
-本项目从 npm 包入口直接使用该组件库，未复制或修改其源码。
+Pencil Pup UI 不隶属于 Peanuts Worldwide、Snoopy 或 Charles M. Schulz
+Creative Associates，也未获其背书。组件库中不得加入受保护角色名称、角色轮廓、
+临摹素材、品牌标识或标志性台词。`packages/pencil-pup-ui/LICENSE` 只授权本仓库的
+原创代码，不授予任何第三方角色或品牌权利。
 
 ### Release checklist
 
-每次公开发布前必须确认：
+每次公开发布前确认：
 
-- [ ] 本次发布仍属于免费、非商业的测试、学习或展示用途。
-- [ ] README 中保留组件库作者、源码地址和 CC BY-NC 4.0 许可声明。
-- [ ] 升级或替换 `animal-island-ui` 时重新核对当前版本的许可证和署名要求。
-- [ ] 若计划用于商业产品、企业项目、对外收费服务或付费模板，先停止公开部署；取得商业授权或由负责人确认替代方案后方可恢复。
-- [ ] 组件不满足需求时不得在本仓库仿制；应调整设计、等待上游能力或向上游提出组件需求。
+- [ ] `package-lock.json` 中不存在 `animal-island-ui`。
+- [ ] 应用 UI 只从 `@gotheword/pencil-pup-ui` 导入通用组件。
+- [ ] 新增视觉素材与文案不包含第三方角色、商标、临摹轮廓或标志性元素。
+- [ ] 组件缺失时在 `packages/pencil-pup-ui` 中实现可复用能力，不在业务页面复制组件。

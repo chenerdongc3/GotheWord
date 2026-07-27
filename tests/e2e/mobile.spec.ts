@@ -14,8 +14,9 @@ const VIEWPORTS = [
 
 type LearningState = {
   version: 2 | 3;
-  activeLevel?: "A1" | "B1";
+  activeLevel?: "A1" | "A2" | "B1";
   dailyGoal?: 5 | 10 | 20;
+  wordBookId?: "a1" | "a2";
   progress: Record<string, unknown>;
   stats: Record<string, unknown>;
   activeSession: Record<string, unknown> | null;
@@ -288,6 +289,18 @@ test("首次目标、Header、Tabs、统计、设置与 Modal 适配移动视口
   await settingsTab.focus();
   await page.keyboard.press("Enter");
   await expect(settingsTab).toHaveAttribute("aria-selected", "true");
+  await expect(
+    page.getByRole("radio", { name: /Goethe A1.*共 817 词.*已学 0 词/ }),
+  ).toBeChecked();
+  const a2Book = page.getByRole("radio", {
+    name: /Goethe A2.*共 1038 词.*已学 0 词/,
+  });
+  await a2Book.check();
+  await expect(a2Book).toBeChecked();
+  await expect(
+    page.getByText("共 1038 词 · 已学 0 词", { exact: true }).first(),
+  ).toBeVisible();
+  await expectNoHorizontalOverflow(page);
   await page.getByRole("button", { name: "清除学习记录" }).click();
   await expect(page.getByText("确认清除学习记录？", { exact: true })).toBeVisible();
   for (const viewport of VIEWPORTS) {

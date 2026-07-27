@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #5e4b35;
-  --color-muted: #8f7b63;
-  --color-paper: #fffdf3;
-  --color-sand: #f6f0d8;
-  --color-island-teal: #19c8b9;
-  --color-island-blue: #889df0;
-  --color-island-yellow: #f7cd67;
-  --color-island-pink: #f8a6b2;
-  --color-island-orange: #e59266;
+  --color-ink: #191713;
+  --color-muted: #6f675d;
+  --color-paper: #fffdf7;
+  --color-sand: #f7f1df;
+  --color-island-teal: #2463eb;
+  --color-island-blue: #537ee8;
+  --color-island-yellow: #f4c64f;
+  --color-island-pink: #ef8c82;
+  --color-island-orange: #e14b3f;
 }
 
 @layer base {
@@ -21,7 +21,7 @@
 
   html {
     min-width: 320px;
-    background: #f8f8f0;
+    background: #f7f1df;
   }
 
   body {
@@ -29,11 +29,13 @@
     min-height: 100vh;
     min-height: 100dvh;
     background:
-      radial-gradient(circle at 10% 8%, rgb(247 205 103 / 20%), transparent 24rem),
-      radial-gradient(circle at 92% 24%, rgb(130 213 187 / 20%), transparent 25rem),
-      #f8f8f0;
+      linear-gradient(rgb(25 23 19 / 2%) 1px, transparent 1px),
+      radial-gradient(circle at 10% 8%, rgb(244 198 79 / 23%), transparent 24rem),
+      radial-gradient(circle at 92% 24%, rgb(36 99 235 / 11%), transparent 25rem),
+      #f7f1df;
+    background-size: 100% 28px, auto, auto, auto;
     color: var(--color-ink);
-    font-family: Nunito, "Noto Sans SC", ui-rounded, system-ui, sans-serif;
+    font-family: "Arial Rounded MT Bold", "Noto Sans SC", ui-rounded, system-ui, sans-serif;
   }
 
   button,

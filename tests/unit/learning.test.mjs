@@ -11,6 +11,10 @@ import {
   takeReviewBatch,
   insertThreeToFiveLater,
 } from "../../app/learning.ts";
+import {
+  countLearnedWords,
+  WORD_BOOKS,
+} from "../../app/content/word-books.ts";
 
 const NOW = new Date("2026-07-26T08:00:00.000Z");
 
@@ -95,6 +99,38 @@ test("preserves v3 level and attributes sessions and new statistics", () => {
 
   assert.equal(migrated?.activeLevel, "B1");
   assert.equal(migrated?.activeSession?.levelId, "B1");
+});
+
+test("keeps A1 and A2 selection and learned counts isolated", () => {
+  const a1Word = WORD_BOOKS.a1.words[0];
+  const a2Word = WORD_BOOKS.a2.words[0];
+  const state = migrateAppState({
+    version: 2,
+    dailyGoal: 10,
+    wordBookId: "a2",
+    progress: {
+      [a1Word.id]: {
+        ...EMPTY_PROGRESS,
+        state: "mastered",
+      },
+      [a2Word.id]: {
+        ...EMPTY_PROGRESS,
+        state: "scheduled",
+      },
+    },
+    stats: {},
+    activeSession: null,
+  });
+
+  assert.equal(state?.activeLevel, "A2");
+  assert.equal(
+    countLearnedWords(WORD_BOOKS.a1.words, state?.progress ?? {}),
+    1,
+  );
+  assert.equal(
+    countLearnedWords(WORD_BOOKS.a2.words, state?.progress ?? {}),
+    1,
+  );
 });
 
 test("restores the active word, queue, completion count, and elapsed time", () => {
