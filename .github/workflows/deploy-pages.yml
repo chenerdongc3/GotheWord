@@ -24,6 +24,11 @@ jobs:
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
       NEXT_PUBLIC_SUPABASE_MIGRATION: ${{ vars.SUPABASE_MIGRATION }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      AUTH_EXPECTED_SITE_URL: https://chenerdongc3.github.io/GotheWord/
+      AUTH_EXPECTED_REDIRECT_URLS: https://chenerdongc3.github.io/GotheWord/
+      AUTH_LEGACY_REGISTER_DISABLED: ${{ vars.AUTH_LEGACY_REGISTER_DISABLED }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -49,6 +54,9 @@ jobs:
 
       - name: Verify release metadata
         run: npm run release:verify
+
+      - name: Verify live email Auth configuration
+        run: npm run auth:preflight
 
       - name: Lint
         run: npm run lint
