@@ -33,6 +33,7 @@ import {
   isSupabaseConfigured,
   supabase,
 } from "./supabase";
+import { isLegacyUser } from "./legacy-account-migration";
 
 type AuthMode = "login" | "register";
 
@@ -285,10 +286,12 @@ class AuthenticatedAppErrorBoundary extends Component<
 function AuthenticatedApp({
   userId,
   username,
+  legacyAccount,
   onSignOut,
 }: {
   userId: string;
   username: string;
+  legacyAccount: boolean;
   onSignOut: () => void;
 }) {
   return (
@@ -299,6 +302,7 @@ function AuthenticatedApp({
         <LazyAuthenticatedApp
           userId={userId}
           username={username}
+          legacyAccount={legacyAccount}
           onSignOut={onSignOut}
         />
       </Suspense>
@@ -365,6 +369,7 @@ export default function GotheWordRoot() {
       key={session.user.id}
       userId={session.user.id}
       username={username}
+      legacyAccount={isLegacyUser(session.user)}
       onSignOut={() => void signOut()}
     />
   );

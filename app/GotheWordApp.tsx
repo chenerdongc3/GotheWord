@@ -51,6 +51,7 @@ import {
   type Word,
 } from "./content/word-books.ts";
 import { getLevelCatalogEntry } from "./content/levels.ts";
+import { LegacyAccountMigration } from "./LegacyAccountMigration";
 
 const SYNC_STATUS_META = {
   loading: { label: "读取中", color: "default" },
@@ -191,6 +192,7 @@ function sessionResumeProperties(
 type GotheWordAppProps = {
   userId: string;
   username: string;
+  legacyAccount?: boolean;
   onSignOut: () => void;
   reviewBatchSize?: number;
   rng?: RandomSource;
@@ -199,6 +201,7 @@ type GotheWordAppProps = {
 export default function GotheWordApp({
   userId,
   username,
+  legacyAccount = false,
   onSignOut,
   reviewBatchSize = DEFAULT_REVIEW_BATCH_SIZE,
   rng = Math.random,
@@ -1270,6 +1273,7 @@ export default function GotheWordApp({
         <h1 className="my-4 max-w-[780px] text-[clamp(1.875rem,8vw,3rem)] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere]">让计划适合你，而不是反过来。</h1>
         <p className="m-0 leading-7 text-[#8f7b63]">目标修改只影响之后的新词计划，已经进入复习流程的单词不会变化。</p>
       </section>
+      {legacyAccount && <LegacyAccountMigration userId={userId} username={username} />}
       <Card className="grid min-w-0 gap-[1.375rem]">
         <div className="flex min-w-0 flex-wrap items-start justify-between gap-3">
           <div className="min-w-0">
