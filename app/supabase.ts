@@ -16,25 +16,3 @@ export const supabase = isSupabaseConfigured
       },
     })
   : null;
-
-async function digest(value: string) {
-  const bytes = new TextEncoder().encode(value);
-  const hash = await window.crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(hash))
-    .map((byte) => byte.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-export async function getAuthCredentials(username: string, password: string) {
-  const normalizedUsername = username.trim();
-  const [usernameHash, passwordHash] = await Promise.all([
-    digest(`gotheword:username:${normalizedUsername}`),
-    digest(`gotheword:password:${password}`),
-  ]);
-
-  return {
-    username: normalizedUsername,
-    email: `${usernameHash}@users.gotheword.local`,
-    password: passwordHash,
-  };
-}

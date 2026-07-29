@@ -13,6 +13,7 @@ test("declares the complete POR-12 P0 client event catalog", () => {
   assert.deepEqual(ANALYTICS_EVENT_NAMES, [
     "login_completed",
     "authentication_failed",
+    "auth_flow_completed",
     "onboarding_completed",
     "due_review_prompt_viewed",
     "learning_session_started",
@@ -31,7 +32,7 @@ test("declares the complete POR-12 P0 client event catalog", () => {
 
 test("adds release correlation and schema properties without PII", () => {
   const payload = buildAnalyticsProperties({
-    auth_method: "username_password",
+    auth_method: "email_password",
   });
 
   assert.equal(payload.analytics_schema_version, 1);
@@ -50,11 +51,14 @@ test("rejects forbidden identity, answer, raw error, and state fields", () => {
     findProhibitedAnalyticsKeys({
       username: "hidden",
       password: "hidden",
+      otp: "hidden",
+      token: "hidden",
+      provider: "hidden",
       selected_answer: "hidden",
       raw_error: "hidden",
       state: { progress: {} },
     }),
-    ["password", "raw_error", "selected_answer", "state", "username"],
+    ["otp", "password", "provider", "raw_error", "selected_answer", "state", "token", "username"],
   );
   assert.throws(
     () => buildAnalyticsProperties({ password: "must-not-leave-browser" }),
@@ -98,7 +102,7 @@ test("reports only state byte size and never serializes it into event fields", (
   assert.equal("state" in payload, false);
 });
 
-test("keeps retired registration fail-closed and disables unsafe automatic capture", async () => {
+test("keeps email authentication private and retired registration fail-closed", async () => {
   const [root, edge, analytics, instrumentation] = await Promise.all([
     readFile(new URL("../app/GotheWordRoot.tsx", import.meta.url), "utf8"),
     readFile(
@@ -109,6 +113,9 @@ test("keeps retired registration fail-closed and disables unsafe automatic captu
     readFile(new URL("../instrumentation-client.ts", import.meta.url), "utf8"),
   ]);
 
+  assert.match(root, /auth\.signUp/);
+  assert.match(root, /auth\.verifyOtp/);
+  assert.match(root, /auth\.resetPasswordForEmail/);
   assert.doesNotMatch(root, /sign_up_completed/);
   assert.match(edge, /legacy_registration_disabled/);
   assert.match(edge, /410/);

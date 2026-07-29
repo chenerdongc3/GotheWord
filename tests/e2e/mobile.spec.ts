@@ -230,14 +230,14 @@ test("登录与注册在 320–430px 无横向溢出或标题重叠", async ({ p
 
     const title = await page.getByText("欢迎回来", { exact: true }).boundingBox();
     const description = await page
-      .getByText("输入用户名和密码，继续今天的学习。", { exact: true })
+      .getByText("输入真实邮箱和密码，继续今天的学习。", { exact: true })
       .boundingBox();
     expect(title).not.toBeNull();
     expect(description).not.toBeNull();
     expect(title!.y + title!.height).toBeLessThanOrEqual(description!.y);
   }
 
-  await page.getByRole("button", { name: "第一次来？直接注册" }).click();
+  await page.getByRole("button", { name: "第一次来？使用邮箱注册" }).click();
   await expect(page.getByText("创建账号", { exact: true })).toBeVisible();
   for (const viewport of VIEWPORTS) {
     await page.setViewportSize(viewport);
