@@ -53,6 +53,7 @@ test("migrates v1 state to v3 and drops cross-session mistake counters", () => {
 
   assert.equal(migrated?.version, 3);
   assert.equal(migrated?.activeLevel, "A1");
+  assert.equal(migrated?.freeStudyBatchSize, 5);
   assert.equal(migrated?.activeSession, null);
   assert.equal(migrated?.progress.haus.streak, 0);
   assert.equal("reviewMistakes" in migrated.progress.haus, false);
@@ -92,18 +93,21 @@ test("preserves v3 level and attributes sessions and new statistics", () => {
   const migrated = migrateAppState({
     version: 3,
     activeLevel: "B1",
+    freeStudyBatchSize: 20,
     progress: {},
     stats: {},
     activeSession: session,
   });
 
   assert.equal(migrated?.activeLevel, "B1");
+  assert.equal(migrated?.freeStudyBatchSize, 20);
   assert.equal(migrated?.activeSession?.levelId, "B1");
 });
 
-test("keeps A1 and A2 selection and learned counts isolated", () => {
+test("keeps A1, A2, and B1 learned counts isolated", () => {
   const a1Word = WORD_BOOKS.a1.words[0];
   const a2Word = WORD_BOOKS.a2.words[0];
+  const b1Word = WORD_BOOKS.b1.words[0];
   const state = migrateAppState({
     version: 2,
     dailyGoal: 10,
@@ -117,6 +121,10 @@ test("keeps A1 and A2 selection and learned counts isolated", () => {
         ...EMPTY_PROGRESS,
         state: "scheduled",
       },
+      [b1Word.id]: {
+        ...EMPTY_PROGRESS,
+        state: "mastered",
+      },
     },
     stats: {},
     activeSession: null,
@@ -129,6 +137,10 @@ test("keeps A1 and A2 selection and learned counts isolated", () => {
   );
   assert.equal(
     countLearnedWords(WORD_BOOKS.a2.words, state?.progress ?? {}),
+    1,
+  );
+  assert.equal(
+    countLearnedWords(WORD_BOOKS.b1.words, state?.progress ?? {}),
     1,
   );
 });

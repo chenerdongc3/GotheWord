@@ -45,18 +45,18 @@
   },
   "distributions": {
     "partOfSpeech": {
-      "noun": 381,
-      "verb": 164,
+      "noun": 390,
+      "verb": 155,
       "preposition": 21,
       "conjunction": 5,
-      "adjective": 83,
-      "phrase": 41,
-      "determiner": 12,
-      "adverb": 46,
-      "numeral": 40,
-      "other": 2,
+      "adjective": 80,
+      "phrase": 31,
+      "determiner": 17,
+      "adverb": 55,
+      "numeral": 38,
+      "other": 4,
       "particle": 4,
-      "pronoun": 18
+      "pronoun": 17
     },
     "topic": {
       "housing": 25,
@@ -86,15 +86,15 @@
     "resolvedIds": 24
   },
   "artifact": {
-    "generatedRuntimeBytes": 466938,
-    "gzipBytes": 37171,
-    "brotliBytes": 26117,
+    "generatedRuntimeBytes": 437330,
+    "gzipBytes": 45378,
+    "brotliBytes": 31712,
     "chunks": [
       {
-        "file": "assets/GotheWordApp-DhnSXlrY.js",
-        "bytes": 707709,
-        "gzipBytes": 77256,
-        "brotliBytes": 57837
+        "file": "assets/GotheWordApp-Bb_OUdEQ.js",
+        "bytes": 1795686,
+        "gzipBytes": 171108,
+        "brotliBytes": 120472
       }
     ],
     "initialHtmlIncludesRuntime": false

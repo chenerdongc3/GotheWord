@@ -1,24 +1,24 @@
 import { A1_TOPIC_LABELS } from "../a1/taxonomy.ts";
-import { A2_LEARNING_CONTENT_ZH } from "./learning-content.zh.ts";
-import { A2_MANIFEST, A2_SOURCE_BASELINE } from "./manifest.ts";
-import { A2_SOURCE_ENTRIES } from "./source-entries.ts";
-import type {
-  A2CoverageReport,
-  A2LearningEntry,
-  A2RuntimeManifest,
-  A2SourceEntry,
-  Word,
-} from "./types.ts";
 import {
   findDuplicateGermanExamples,
   validateBilingualTeachingExample,
 } from "../example-quality.ts";
+import { B1_LEARNING_CONTENT_ZH } from "./learning-content.zh.ts";
+import { B1_MANIFEST, B1_SOURCE_BASELINE } from "./manifest.ts";
+import { B1_SOURCE_ENTRIES } from "./source-entries.ts";
+import type {
+  B1CoverageReport,
+  B1LearningEntry,
+  B1RuntimeManifest,
+  B1SourceEntry,
+  Word,
+} from "./types.ts";
 
-const SOURCE_BY_ID = new Map<string, A2SourceEntry>(
-  A2_SOURCE_ENTRIES.map((entry) => [entry.entryId, entry]),
+const SOURCE_BY_ID = new Map<string, B1SourceEntry>(
+  B1_SOURCE_ENTRIES.map((entry) => [entry.entryId, entry]),
 );
-const LEARNING_BY_ID = new Map<string, A2LearningEntry>(
-  A2_LEARNING_CONTENT_ZH.map((entry) => [entry.entryId, entry]),
+const LEARNING_BY_ID = new Map<string, B1LearningEntry>(
+  B1_LEARNING_CONTENT_ZH.map((entry) => [entry.entryId, entry]),
 );
 const TOPIC_PRIORITY = [
   "person",
@@ -53,7 +53,7 @@ function priorityIndex(values: readonly string[], value: string) {
 }
 
 function uniqueByTranslation(
-  candidates: Array<{ author: A2SourceEntry; learning: A2LearningEntry }>,
+  candidates: Array<{ author: B1SourceEntry; learning: B1LearningEntry }>,
   excludedId: string,
   excludedTranslation: string,
 ) {
@@ -69,9 +69,9 @@ function uniqueByTranslation(
 }
 
 function distractorsFor(
-  author: A2SourceEntry,
-  learning: A2LearningEntry,
-  activeEntries: Array<{ author: A2SourceEntry; learning: A2LearningEntry }>,
+  author: B1SourceEntry,
+  learning: B1LearningEntry,
+  activeEntries: Array<{ author: B1SourceEntry; learning: B1LearningEntry }>,
 ) {
   const sameTopicAndKind = activeEntries.filter(
     (candidate) =>
@@ -83,16 +83,15 @@ function distractorsFor(
   const sameKind = activeEntries.filter(
     (candidate) => candidate.author.partOfSpeech === author.partOfSpeech,
   );
-  const candidates = uniqueByTranslation(
+  return uniqueByTranslation(
     [...sameTopicAndKind, ...sameKind, ...activeEntries],
     author.entryId,
     learning.senses[0].zh,
-  );
-  return candidates.slice(0, 3);
+  ).slice(0, 3);
 }
 
-export function buildA2Runtime() {
-  const activeEntries = A2_LEARNING_CONTENT_ZH
+export function buildB1Runtime() {
+  const activeEntries = B1_LEARNING_CONTENT_ZH
     .filter((learning) => learning.active)
     .map((learning) => ({
       learning,
@@ -102,8 +101,8 @@ export function buildA2Runtime() {
       (
         item,
       ): item is {
-        learning: A2LearningEntry;
-        author: A2SourceEntry;
+        learning: B1LearningEntry;
+        author: B1SourceEntry;
       } => Boolean(item.author),
     )
     .sort((left, right) => {
@@ -159,14 +158,14 @@ function duplicates(values: string[]) {
   return [...repeated];
 }
 
-export function validateA2Content() {
+export function validateB1Content() {
   const issues: string[] = [];
-  const sourceIds = A2_SOURCE_ENTRIES.map((entry) => entry.entryId);
-  const learningIds = A2_LEARNING_CONTENT_ZH.map((entry) => entry.entryId);
+  const sourceIds = B1_SOURCE_ENTRIES.map((entry) => entry.entryId);
+  const learningIds = B1_LEARNING_CONTENT_ZH.map((entry) => entry.entryId);
 
-  if (A2_SOURCE_ENTRIES.length !== A2_SOURCE_BASELINE.totalRows) {
+  if (B1_SOURCE_ENTRIES.length !== B1_SOURCE_BASELINE.totalRows) {
     issues.push(
-      `source baseline drift: expected ${A2_SOURCE_BASELINE.totalRows}, got ${A2_SOURCE_ENTRIES.length}`,
+      `source baseline drift: expected ${B1_SOURCE_BASELINE.totalRows}, got ${B1_SOURCE_ENTRIES.length}`,
     );
   }
   for (const duplicate of duplicates(sourceIds)) {
@@ -179,10 +178,12 @@ export function validateA2Content() {
     if (!LEARNING_BY_ID.has(id)) issues.push(`${id}: missing learning content`);
   }
   for (const id of learningIds) {
-    if (!SOURCE_BY_ID.has(id)) issues.push(`${id}: learning entry has no source entry`);
+    if (!SOURCE_BY_ID.has(id)) {
+      issues.push(`${id}: learning entry has no source entry`);
+    }
   }
 
-  const orders = A2_LEARNING_CONTENT_ZH
+  const orders = B1_LEARNING_CONTENT_ZH
     .filter((entry) => entry.active)
     .map((entry) => entry.teachingOrder)
     .sort((left, right) => left - right);
@@ -195,7 +196,18 @@ export function validateA2Content() {
     }
   }
 
-  for (const learning of A2_LEARNING_CONTENT_ZH) {
+  for (const source of B1_SOURCE_ENTRIES) {
+    if (!source.lemma.trim() || !source.sourceDisplay.trim()) {
+      issues.push(`${source.entryId}: missing source text`);
+    }
+    if (
+      source.source.page !== null &&
+      (source.source.page < 8 || source.source.page > B1_MANIFEST.source.pages)
+    ) {
+      issues.push(`${source.entryId}: source page is outside the frozen PDF`);
+    }
+  }
+  for (const learning of B1_LEARNING_CONTENT_ZH) {
     if (!learning.senses[0]?.zh.trim()) {
       issues.push(`${learning.entryId}: missing Chinese sense`);
     }
@@ -212,16 +224,16 @@ export function validateA2Content() {
   }
   issues.push(
     ...findDuplicateGermanExamples(
-      A2_LEARNING_CONTENT_ZH.filter(
+      B1_LEARNING_CONTENT_ZH.filter(
         (learning) => learning.reviewStatus === "reviewed",
       ),
     ),
   );
 
-  const runtime = buildA2Runtime();
+  const runtime = buildB1Runtime();
   for (const word of runtime.words) {
-    if (!word.id.startsWith("a2-")) {
-      issues.push(`${word.id}: A2 runtime id must use the a2- prefix`);
+    if (!word.id.startsWith("b1-")) {
+      issues.push(`${word.id}: B1 runtime id must use the b1- prefix`);
     }
     if (word.distractors.length !== 3 || word.distractorIds.length !== 3) {
       issues.push(`${word.id}: expected 3 distractors`);
@@ -246,38 +258,41 @@ function countBy(values: string[]) {
   );
 }
 
-export function buildA2CoverageReport(
-  artifact: Partial<A2CoverageReport["artifact"]> = {},
-): A2CoverageReport {
-  const runtime = buildA2Runtime();
+export function buildB1CoverageReport(
+  artifact: Partial<B1CoverageReport["artifact"]> = {},
+): B1CoverageReport {
+  const runtime = buildB1Runtime();
   return {
     schemaVersion: 1,
-    generatedAt: A2_MANIFEST.contentVersion,
-    manifest: A2_MANIFEST,
+    generatedAt: B1_MANIFEST.contentVersion,
+    manifest: B1_MANIFEST,
     source: {
-      totalRows: A2_SOURCE_ENTRIES.length,
-      main: A2_SOURCE_ENTRIES.filter((entry) => entry.entryType === "main").length,
-      derived: A2_SOURCE_ENTRIES.filter(
+      totalRows: B1_SOURCE_ENTRIES.length,
+      main: B1_SOURCE_ENTRIES.filter((entry) => entry.entryType === "main").length,
+      derived: B1_SOURCE_ENTRIES.filter(
         (entry) => entry.entryType === "derived",
       ).length,
-      wordGroupMembers: A2_SOURCE_ENTRIES.filter(
+      wordGroupMembers: B1_SOURCE_ENTRIES.filter(
         (entry) => entry.entryType === "word-group-member",
+      ).length,
+      rowsWithVerifiedPage: B1_SOURCE_ENTRIES.filter(
+        (entry) => entry.source.page !== null,
       ).length,
     },
     learning: {
-      total: A2_LEARNING_CONTENT_ZH.length,
+      total: B1_LEARNING_CONTENT_ZH.length,
       runtimeActive: runtime.words.length,
-      reviewed: A2_LEARNING_CONTENT_ZH.filter(
+      reviewed: B1_LEARNING_CONTENT_ZH.filter(
         (entry) => entry.reviewStatus === "reviewed",
       ).length,
-      machineDraft: A2_LEARNING_CONTENT_ZH.filter(
+      machineDraft: B1_LEARNING_CONTENT_ZH.filter(
         (entry) => entry.reviewStatus === "machine-draft",
       ).length,
     },
     distributions: {
       partOfSpeech: countBy(runtime.words.map((word) => word.kind)),
-      topic: countBy(A2_LEARNING_CONTENT_ZH.flatMap((entry) => entry.topicIds)),
-      entryType: countBy(A2_SOURCE_ENTRIES.map((entry) => entry.entryType)),
+      topic: countBy(B1_LEARNING_CONTENT_ZH.flatMap((entry) => entry.topicIds)),
+      entryType: countBy(B1_SOURCE_ENTRIES.map((entry) => entry.entryType)),
     },
     artifact: {
       generatedRuntimeBytes: artifact.generatedRuntimeBytes ?? 0,
@@ -289,33 +304,39 @@ export function buildA2CoverageReport(
   };
 }
 
-export function serializeA2RuntimeModule() {
-  const runtime = buildA2Runtime();
+export function serializeB1RuntimeModule() {
+  const runtime = buildB1Runtime();
   const literal = (value: unknown) => JSON.stringify(value, null, 2);
-  return `import type { A2RuntimeManifest, Word } from "../types.ts";
+  const chunks = Array.from(
+    { length: Math.ceil(runtime.words.length / 100) },
+    (_, index) => runtime.words.slice(index * 100, (index + 1) * 100),
+  );
+  return `import type { B1RuntimeManifest, Word } from "../types.ts";
 
-export const A2_MANIFEST = ${literal(A2_MANIFEST)} as const satisfies A2RuntimeManifest;
+export const B1_MANIFEST = ${literal(B1_MANIFEST)} as const satisfies B1RuntimeManifest;
 
-export const A2_WORDS = ${literal(runtime.words)} as const satisfies readonly Word[];
+const B1_WORD_CHUNKS: readonly (readonly Word[])[] = ${literal(chunks)};
 
-export const A2_BY_ID = new Map<string, Word>(
-  A2_WORDS.map((word) => [word.id, word]),
+export const B1_WORDS: readonly Word[] = B1_WORD_CHUNKS.flat();
+
+export const B1_BY_ID = new Map<string, Word>(
+  B1_WORDS.map((word) => [word.id, word]),
 );
 
-export const A2_VALID_IDS = new Set<string>(A2_WORDS.map((word) => word.id));
+export const B1_VALID_IDS = new Set<string>(B1_WORDS.map((word) => word.id));
 
 export function getDisplayWord(word: Word) {
   return word.article ? \`\${word.article} \${word.german}\` : word.german;
 }
 
-export const A2_CONTENT = {
-  manifest: A2_MANIFEST,
-  words: A2_WORDS,
-  byId: A2_BY_ID,
+export const B1_CONTENT = {
+  manifest: B1_MANIFEST,
+  words: B1_WORDS,
+  byId: B1_BY_ID,
 } as const;
 
 export type { Word } from "../types.ts";
 `;
 }
 
-export type { A2RuntimeManifest };
+export type { B1RuntimeManifest };

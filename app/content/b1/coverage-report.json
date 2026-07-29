@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026.07.28-b1.1",
+  "manifest": {
+    "schemaVersion": 1,
+    "contentVersion": "2026.07.28-b1.1",
+    "source": {
+      "sourceId": "goethe-zertifikat-b1",
+      "landingPageUrl": "https://www.goethe.de/de/spr/prf/ueb/pb1.html",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_B1_Wortliste.pdf",
+      "retrievedAt": "2026-07-28",
+      "sha256": "8860f7f0c916831b2365f66239a3ceba3be81ddba28e1224846ca8420807fe42",
+      "pages": 104,
+      "bytes": 475500,
+      "approximateLexicalUnits": 2400
+    },
+    "rights": {
+      "sourceList": "pending",
+      "examples": "project-authored-only"
+    },
+    "editorial": {
+      "chineseSenses": "machine-draft",
+      "examples": "project-authored-template",
+      "sourcePageMapping": "pending"
+    }
+  },
+  "source": {
+    "totalRows": 3207,
+    "main": 2805,
+    "derived": 0,
+    "wordGroupMembers": 402,
+    "rowsWithVerifiedPage": 0
+  },
+  "learning": {
+    "total": 3207,
+    "runtimeActive": 3207,
+    "reviewed": 0,
+    "machineDraft": 3207
+  },
+  "distributions": {
+    "partOfSpeech": {
+      "noun": 1750,
+      "other": 683,
+      "verb": 715,
+      "preposition": 25,
+      "phrase": 16,
+      "conjunction": 18
+    },
+    "topic": {
+      "education": 2898,
+      "leisure": 31,
+      "work": 29,
+      "services": 23,
+      "person": 38,
+      "environment": 24,
+      "shopping": 40,
+      "housing": 42,
+      "travel": 67,
+      "food": 15
+    },
+    "entryType": {
+      "word-group-member": 402,
+      "main": 2805
+    }
+  },
+  "artifact": {
+    "generatedRuntimeBytes": 1938452,
+    "gzipBytes": 97245,
+    "brotliBytes": 68159,
+    "chunks": [
+      {
+        "file": "assets/GotheWordApp-Bb_OUdEQ.js",
+        "bytes": 1795686,
+        "gzipBytes": 171108,
+        "brotliBytes": 120472
+      }
+    ],
+    "initialHtmlIncludesRuntime": false
+  }
+}

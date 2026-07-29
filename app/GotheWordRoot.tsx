@@ -38,8 +38,7 @@ type AuthMode =
   | "register"
   | "verify_signup"
   | "recover"
-  | "set-password"
-  | "error";
+  | "set-password";
 
 type AuthValues = {
   email: string;
@@ -214,11 +213,18 @@ function AuthScreen() {
 
   return (
     <Cursor>
-      <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1060px] min-w-0 items-center gap-8 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-12 md:grid-cols-[1.08fr_0.92fr] md:gap-10">
+      <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1060px] min-w-0 items-center gap-8 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] text-sm sm:px-5 sm:py-12 sm:text-base md:grid-cols-[1.08fr_0.92fr] md:gap-10">
         <section className="min-w-0" aria-labelledby="auth-title">
           <Tag color="app-teal" variant="outlined">德语 · A1 起步</Tag>
-          <h1 id="auth-title" className="mt-5 max-w-2xl text-[clamp(2.25rem,10vw,5rem)] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere]">记住单词，也记住你的每一步。</h1>
-          <p className="mt-5 max-w-xl text-base leading-7 text-[#8f7b63] sm:text-lg">使用邮箱验证保护账号，并在需要时安全地重设密码。</p>
+          <h1
+            id="auth-title"
+            className="mt-5 max-w-2xl text-[1.875rem] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(2.25rem,10vw,5rem)]"
+          >
+            记住单词，也记住你的每一步。
+          </h1>
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#8f7b63] sm:text-lg">
+            使用邮箱验证保护账号，并在需要时安全地重设密码。
+          </p>
         </section>
         <Card color="default" className="grid min-w-0 gap-5">
           <div className="grid min-w-0 gap-4">

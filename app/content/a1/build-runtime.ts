@@ -19,6 +19,10 @@ import type {
   PartOfSpeech,
   Word,
 } from "./types.ts";
+import {
+  findDuplicateGermanExamples,
+  validateBilingualTeachingExample,
+} from "../example-quality.ts";
 
 type AuthorEntry =
   | A1SourceEntry
@@ -130,7 +134,7 @@ export function buildA1Runtime(): RuntimeBuild {
       topicIds: [...learning.topicIds],
       distractors: distractors.map((candidate) => candidate.translation),
       distractorIds: distractors.map((candidate) => candidate.id),
-      examples: learning.examples.map((example) => ({ ...example })),
+      examples: learning.examples.map(({ de, zh }) => ({ de, zh })),
       sourceEntryType: sourceEntryType(author),
     } satisfies Word;
   });
@@ -273,6 +277,9 @@ export function validateA1Content() {
         if (!example.de.trim() || !example.zh.trim()) {
           issues.push(`${learning.entryId}: empty bilingual example`);
         }
+        issues.push(
+          ...validateBilingualTeachingExample(learning.entryId, example),
+        );
       }
     }
     if (learning.nonQuizReason) {
@@ -282,6 +289,7 @@ export function validateA1Content() {
       }
     }
   }
+  issues.push(...findDuplicateGermanExamples(A1_LEARNING_CONTENT_ZH));
 
   const runtime = buildA1Runtime();
   for (const word of runtime.words) {

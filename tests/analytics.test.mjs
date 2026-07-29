@@ -102,9 +102,13 @@ test("reports only state byte size and never serializes it into event fields", (
   assert.equal("state" in payload, false);
 });
 
-test("keeps authentication analytics private and disables unsafe automatic capture", async () => {
-  const [root, analytics, instrumentation] = await Promise.all([
+test("keeps email authentication private and retired registration fail-closed", async () => {
+  const [root, edge, analytics, instrumentation] = await Promise.all([
     readFile(new URL("../app/GotheWordRoot.tsx", import.meta.url), "utf8"),
+    readFile(
+      new URL("../supabase/functions/register/index.ts", import.meta.url),
+      "utf8",
+    ),
     readFile(new URL("../app/analytics.ts", import.meta.url), "utf8"),
     readFile(new URL("../instrumentation-client.ts", import.meta.url), "utf8"),
   ]);
@@ -112,6 +116,10 @@ test("keeps authentication analytics private and disables unsafe automatic captu
   assert.match(root, /auth\.signUp/);
   assert.match(root, /auth\.verifyOtp/);
   assert.match(root, /auth\.resetPasswordForEmail/);
+  assert.doesNotMatch(root, /sign_up_completed/);
+  assert.match(edge, /legacy_registration_disabled/);
+  assert.match(edge, /410/);
+  assert.doesNotMatch(edge, /createUser|email_confirm|SERVICE_ROLE/);
   assert.match(instrumentation, /initializeAnalyticsClient\(\)/);
   assert.match(analytics, /autocapture: false/);
   assert.match(analytics, /capture_pageview: false/);

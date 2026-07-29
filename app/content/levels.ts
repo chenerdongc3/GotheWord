@@ -34,7 +34,7 @@ export const LEVEL_CATALOG = [
   {
     id: "B1",
     label: "B1 词汇轨道",
-    contentVersion: null,
+    contentVersion: "2026.07.28-b1.1",
     availability: "rights-blocked",
     sourceKind: "official-word-list",
   },
