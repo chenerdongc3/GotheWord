@@ -1,5 +1,4 @@
 import type { SupabaseClient, User } from "@supabase/supabase-js";
-import { getAuthCredentials } from "./supabase";
 
 export const LEGACY_EMAIL_SUFFIX = "@users.gotheword.local";
 
@@ -11,10 +10,33 @@ function assertSameUser(expected: string, actual?: string) {
   if (actual !== expected) throw new Error("账号身份校验失败，迁移已停止");
 }
 
+async function digestLegacyCredential(value: string) {
+  const bytes = new TextEncoder().encode(value);
+  const hash = await window.crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(hash))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function getLegacyAuthCredentials(username: string, password: string) {
+  const normalizedUsername = username.trim();
+  const [usernameHash, passwordHash] = await Promise.all([
+    digestLegacyCredential(`gotheword:username:${normalizedUsername}`),
+    digestLegacyCredential(`gotheword:password:${password}`),
+  ]);
+  return {
+    email: `${usernameHash}${LEGACY_EMAIL_SUFFIX}`,
+    password: passwordHash,
+  };
+}
+
 export async function beginLegacyMigration(client: SupabaseClient, input: {
   userId: string; username: string; currentPassword: string; newEmail: string;
 }) {
-  const credentials = await getAuthCredentials(input.username, input.currentPassword);
+  const credentials = await getLegacyAuthCredentials(
+    input.username,
+    input.currentPassword,
+  );
   const { data: auth, error: authError } = await client.auth.signInWithPassword(credentials);
   if (authError) throw authError;
   assertSameUser(input.userId, auth.user?.id);

@@ -18,15 +18,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Der Tisch ist aus Holz.",
-        zh: "这张桌子是木制的。"
+        zh: "这张桌子是木制的。",
+        target: "Tisch"
       },
       {
         de: "Das Buch liegt auf dem Tisch.",
-        zh: "书放在桌子上。"
+        zh: "书放在桌子上。",
+        target: "Tisch"
       },
       {
         de: "Wir sitzen am Tisch.",
-        zh: "我们坐在桌边。"
+        zh: "我们坐在桌边。",
+        target: "Tisch"
       }
     ],
     teachingOrder: 1,
@@ -47,15 +50,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Der Stuhl ist bequem.",
-        zh: "这把椅子很舒服。"
+        zh: "这把椅子很舒服。",
+        target: "Stuhl"
       },
       {
         de: "Bitte nimm einen Stuhl.",
-        zh: "请拿一把椅子。"
+        zh: "请拿一把椅子。",
+        target: "Stuhl"
       },
       {
         de: "Die Katze sitzt auf dem Stuhl.",
-        zh: "猫坐在椅子上。"
+        zh: "猫坐在椅子上。",
+        target: "Stuhl"
       }
     ],
     teachingOrder: 2,
@@ -76,15 +82,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Das Fenster ist offen.",
-        zh: "窗户开着。"
+        zh: "窗户开着。",
+        target: "Fenster"
       },
       {
         de: "Ich sehe durch das Fenster.",
-        zh: "我透过窗户看。"
+        zh: "我透过窗户看。",
+        target: "Fenster"
       },
       {
         de: "Mach bitte das Fenster zu.",
-        zh: "请把窗户关上。"
+        zh: "请把窗户关上。",
+        target: "Fenster"
       }
     ],
     teachingOrder: 3,
@@ -105,15 +114,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Die Tür ist geschlossen.",
-        zh: "门关着。"
+        zh: "门关着。",
+        target: "Tür"
       },
       {
         de: "Jemand steht vor der Tür.",
-        zh: "有人站在门前。"
+        zh: "有人站在门前。",
+        target: "Tür"
       },
       {
         de: "Öffne bitte die Tür.",
-        zh: "请把门打开。"
+        zh: "请把门打开。",
+        target: "Tür"
       }
     ],
     teachingOrder: 4,
@@ -134,15 +146,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Die Küche ist klein.",
-        zh: "厨房很小。"
+        zh: "厨房很小。",
+        target: "Küche"
       },
       {
         de: "Wir kochen in der Küche.",
-        zh: "我们在厨房做饭。"
+        zh: "我们在厨房做饭。",
+        target: "Küche"
       },
       {
         de: "In der Küche riecht es gut.",
-        zh: "厨房里闻起来很香。"
+        zh: "厨房里闻起来很香。",
+        target: "Küche"
       }
     ],
     teachingOrder: 5,
@@ -163,15 +178,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Das Brot ist frisch.",
-        zh: "面包很新鲜。"
+        zh: "面包很新鲜。",
+        target: "Brot"
       },
       {
         de: "Ich esse Brot zum Frühstück.",
-        zh: "我早餐吃面包。"
+        zh: "我早餐吃面包。",
+        target: "Brot"
       },
       {
         de: "Wir kaufen ein Brot.",
-        zh: "我们买一个面包。"
+        zh: "我们买一个面包。",
+        target: "Brot"
       }
     ],
     teachingOrder: 6,
@@ -192,15 +210,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Der Apfel ist rot.",
-        zh: "苹果是红色的。"
+        zh: "苹果是红色的。",
+        target: "Apfel"
       },
       {
         de: "Sie isst einen Apfel.",
-        zh: "她吃一个苹果。"
+        zh: "她吃一个苹果。",
+        target: "Apfel"
       },
       {
         de: "Äpfel sind gesund.",
-        zh: "苹果很健康。"
+        zh: "苹果很健康。",
+        target: "Äpfel"
       }
     ],
     teachingOrder: 7,
@@ -221,15 +242,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Das Wasser ist kalt.",
-        zh: "水是凉的。"
+        zh: "水是凉的。",
+        target: "Wasser"
       },
       {
         de: "Ich trinke viel Wasser.",
-        zh: "我喝很多水。"
+        zh: "我喝很多水。",
+        target: "Wasser"
       },
       {
         de: "Ein Glas Wasser, bitte.",
-        zh: "请给我一杯水。"
+        zh: "请给我一杯水。",
+        target: "Wasser"
       }
     ],
     teachingOrder: 8,
@@ -250,15 +274,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Der Kaffee ist heiß.",
-        zh: "咖啡很烫。"
+        zh: "咖啡很烫。",
+        target: "Kaffee"
       },
       {
         de: "Möchtest du einen Kaffee?",
-        zh: "你想喝杯咖啡吗？"
+        zh: "你想喝杯咖啡吗？",
+        target: "Kaffee"
       },
       {
         de: "Ich trinke Kaffee ohne Zucker.",
-        zh: "我喝不加糖的咖啡。"
+        zh: "我喝不加糖的咖啡。",
+        target: "Kaffee"
       }
     ],
     teachingOrder: 9,
@@ -279,15 +306,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Meine Familie lebt in Berlin.",
-        zh: "我的家人住在柏林。"
+        zh: "我的家人住在柏林。",
+        target: "Familie"
       },
       {
         de: "Die Familie isst zusammen.",
-        zh: "这家人一起吃饭。"
+        zh: "这家人一起吃饭。",
+        target: "Familie"
       },
       {
         de: "Wir besuchen unsere Familie.",
-        zh: "我们去看望家人。"
+        zh: "我们去看望家人。",
+        target: "Familie"
       }
     ],
     teachingOrder: 10,
@@ -308,15 +338,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Paul ist mein Freund.",
-        zh: "保罗是我的朋友。"
+        zh: "保罗是我的朋友。",
+        target: "Freund"
       },
       {
         de: "Ich treffe einen Freund.",
-        zh: "我要见一位朋友。"
+        zh: "我要见一位朋友。",
+        target: "Freund"
       },
       {
         de: "Gute Freunde helfen einander.",
-        zh: "好朋友互相帮助。"
+        zh: "好朋友互相帮助。",
+        target: "Freunde"
       }
     ],
     teachingOrder: 11,
@@ -337,15 +370,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Die Schule beginnt um acht.",
-        zh: "学校八点开始上课。"
+        zh: "学校八点开始上课。",
+        target: "Schule"
       },
       {
         de: "Mein Sohn geht zur Schule.",
-        zh: "我的儿子去上学。"
+        zh: "我的儿子去上学。",
+        target: "Schule"
       },
       {
         de: "Die Schule ist heute geschlossen.",
-        zh: "学校今天关门。"
+        zh: "学校今天关门。",
+        target: "Schule"
       }
     ],
     teachingOrder: 12,
@@ -366,15 +402,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Das Buch ist interessant.",
-        zh: "这本书很有趣。"
+        zh: "这本书很有趣。",
+        target: "Buch"
       },
       {
         de: "Ich lese ein deutsches Buch.",
-        zh: "我读一本德语书。"
+        zh: "我读一本德语书。",
+        target: "Buch"
       },
       {
         de: "Das Buch liegt im Regal.",
-        zh: "书放在书架上。"
+        zh: "书放在书架上。",
+        target: "Buch"
       }
     ],
     teachingOrder: 13,
@@ -395,15 +434,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Die Stadt ist sehr alt.",
-        zh: "这座城市很古老。"
+        zh: "这座城市很古老。",
+        target: "Stadt"
       },
       {
         de: "Wir fahren in die Stadt.",
-        zh: "我们开车进城。"
+        zh: "我们开车进城。",
+        target: "Stadt"
       },
       {
         de: "In der Stadt gibt es viel zu sehen.",
-        zh: "城里有很多可看的。"
+        zh: "城里有很多可看的。",
+        target: "Stadt"
       }
     ],
     teachingOrder: 14,
@@ -424,15 +466,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Der Bahnhof ist nicht weit.",
-        zh: "火车站不远。"
+        zh: "火车站不远。",
+        target: "Bahnhof"
       },
       {
         de: "Wir treffen uns am Bahnhof.",
-        zh: "我们在火车站见面。"
+        zh: "我们在火车站见面。",
+        target: "Bahnhof"
       },
       {
         de: "Der Zug wartet im Bahnhof.",
-        zh: "火车在车站等候。"
+        zh: "火车在车站等候。",
+        target: "Bahnhof"
       }
     ],
     teachingOrder: 15,
@@ -453,15 +498,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich lerne Deutsch.",
-        zh: "我学习德语。"
+        zh: "我学习德语。",
+        target: "lerne"
       },
       {
         de: "Wir lernen zusammen.",
-        zh: "我们一起学习。"
+        zh: "我们一起学习。",
+        target: "lernen"
       },
       {
         de: "Er lernt jeden Abend.",
-        zh: "他每天晚上学习。"
+        zh: "他每天晚上学习。",
+        target: "lernt"
       }
     ],
     teachingOrder: 16,
@@ -482,15 +530,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich arbeite in Hamburg.",
-        zh: "我在汉堡工作。"
+        zh: "我在汉堡工作。",
+        target: "arbeite"
       },
       {
         de: "Sie arbeitet heute zu Hause.",
-        zh: "她今天在家工作。"
+        zh: "她今天在家工作。",
+        target: "arbeitet"
       },
       {
         de: "Wir arbeiten bis fünf Uhr.",
-        zh: "我们工作到五点。"
+        zh: "我们工作到五点。",
+        target: "arbeiten"
       }
     ],
     teachingOrder: 17,
@@ -511,15 +562,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich wohne in München.",
-        zh: "我住在慕尼黑。"
+        zh: "我住在慕尼黑。",
+        target: "wohne"
       },
       {
         de: "Wo wohnst du?",
-        zh: "你住在哪里？"
+        zh: "你住在哪里？",
+        target: "wohnst"
       },
       {
         de: "Meine Eltern wohnen auf dem Land.",
-        zh: "我的父母住在乡下。"
+        zh: "我的父母住在乡下。",
+        target: "wohnen"
       }
     ],
     teachingOrder: 18,
@@ -540,15 +594,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Wir essen um sieben Uhr.",
-        zh: "我们七点吃饭。"
+        zh: "我们七点吃饭。",
+        target: "essen"
       },
       {
         de: "Er isst gern Gemüse.",
-        zh: "他喜欢吃蔬菜。"
+        zh: "他喜欢吃蔬菜。",
+        target: "isst"
       },
       {
         de: "Was möchtest du essen?",
-        zh: "你想吃什么？"
+        zh: "你想吃什么？",
+        target: "essen"
       }
     ],
     teachingOrder: 19,
@@ -569,15 +626,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich trinke Tee.",
-        zh: "我喝茶。"
+        zh: "我喝茶。",
+        target: "trinke"
       },
       {
         de: "Trinkst du genug Wasser?",
-        zh: "你喝足够的水吗？"
+        zh: "你喝足够的水吗？",
+        target: "Trinkst"
       },
       {
         de: "Wir trinken zusammen Kaffee.",
-        zh: "我们一起喝咖啡。"
+        zh: "我们一起喝咖啡。",
+        target: "trinken"
       }
     ],
     teachingOrder: 20,
@@ -598,15 +658,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich gehe nach Hause.",
-        zh: "我回家。"
+        zh: "我回家。",
+        target: "gehe"
       },
       {
         de: "Wir gehen zu Fuß.",
-        zh: "我们步行去。"
+        zh: "我们步行去。",
+        target: "gehen"
       },
       {
         de: "Gehst du heute zur Arbeit?",
-        zh: "你今天去上班吗？"
+        zh: "你今天去上班吗？",
+        target: "Gehst"
       }
     ],
     teachingOrder: 21,
@@ -627,15 +690,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich fahre mit dem Bus.",
-        zh: "我乘公交车。"
+        zh: "我乘公交车。",
+        target: "fahre"
       },
       {
         de: "Sie fährt gern Fahrrad.",
-        zh: "她喜欢骑自行车。"
+        zh: "她喜欢骑自行车。",
+        target: "fährt"
       },
       {
         de: "Wir fahren morgen nach Köln.",
-        zh: "我们明天去科隆。"
+        zh: "我们明天去科隆。",
+        target: "fahren"
       }
     ],
     teachingOrder: 22,
@@ -656,15 +722,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Sprechen Sie Deutsch?",
-        zh: "您会说德语吗？"
+        zh: "您会说德语吗？",
+        target: "Sprechen"
       },
       {
         de: "Wir sprechen über die Reise.",
-        zh: "我们谈论这次旅行。"
+        zh: "我们谈论这次旅行。",
+        target: "sprechen"
       },
       {
         de: "Bitte sprich langsam.",
-        zh: "请说慢一点。"
+        zh: "请说慢一点。",
+        target: "sprich"
       }
     ],
     teachingOrder: 23,
@@ -685,15 +754,18 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     examples: [
       {
         de: "Ich verstehe die Frage.",
-        zh: "我理解这个问题。"
+        zh: "我理解这个问题。",
+        target: "verstehe"
       },
       {
         de: "Verstehst du mich?",
-        zh: "你听懂我了吗？"
+        zh: "你听懂我了吗？",
+        target: "Verstehst"
       },
       {
         de: "Er versteht nur ein bisschen Deutsch.",
-        zh: "他只懂一点德语。"
+        zh: "他只懂一点德语。",
+        target: "versteht"
       }
     ],
     teachingOrder: 24,
@@ -713,8 +785,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Arm.",
-        zh: "今天我们谈论手臂。"
+        de: "Mein Arm tut weh.",
+        zh: "我的手臂疼。",
+        target: "Arm"
       }
     ],
     teachingOrder: 25,
@@ -734,8 +807,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Bad.",
-        zh: "今天我们谈论浴室。"
+        de: "Das Bad ist klein.",
+        zh: "浴室很小。",
+        target: "Bad"
       }
     ],
     teachingOrder: 26,
@@ -755,8 +829,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Banane.",
-        zh: "今天我们谈论香蕉。"
+        de: "Ich esse eine Banane.",
+        zh: "我在吃一根香蕉。",
+        target: "Banane"
       }
     ],
     teachingOrder: 27,
@@ -776,8 +851,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute abfahren.",
-        zh: "我们今天想出发，启程。"
+        de: "Der Zug fährt um acht ab.",
+        zh: "火车八点出发。",
+        target: "fährt|ab"
       }
     ],
     teachingOrder: 28,
@@ -792,13 +868,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "从 … 起"
+        zh: "从……起"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ab“ bedeutet hier „从 … 起“.",
-        zh: "“ab”在这里表示“从 … 起”。"
+        de: "Ich arbeite ab Montag.",
+        zh: "我从星期一开始上班。",
+        target: "ab"
       }
     ],
     teachingOrder: 29,
@@ -818,8 +895,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Arbeit.",
-        zh: "今天我们谈论工作。"
+        de: "Meine Arbeit ist interessant.",
+        zh: "我的工作很有趣。",
+        target: "Arbeit"
       }
     ],
     teachingOrder: 30,
@@ -839,8 +917,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Angebot.",
-        zh: "今天我们谈论特价商品。"
+        de: "Im Supermarkt gibt es ein Angebot.",
+        zh: "超市有特价商品。",
+        target: "Angebot"
       }
     ],
     teachingOrder: 31,
@@ -860,8 +939,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Adresse.",
-        zh: "今天我们谈论地址。"
+        de: "Schick mir deine Adresse.",
+        zh: "把你的地址发给我。",
+        target: "Adresse"
       }
     ],
     teachingOrder: 32,
@@ -881,8 +961,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Baum.",
-        zh: "今天我们谈论树。"
+        de: "Der Baum ist hoch.",
+        zh: "这棵树很高。",
+        target: "Baum"
       }
     ],
     teachingOrder: 33,
@@ -902,8 +983,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Beispiel.",
-        zh: "今天我们谈论例子。"
+        de: "Gib mir ein Beispiel.",
+        zh: "给我一个例子。",
+        target: "Beispiel"
       }
     ],
     teachingOrder: 34,
@@ -923,8 +1005,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Arzt.",
-        zh: "今天我们谈论男医生。"
+        de: "Der Arzt hilft den Patienten.",
+        zh: "男医生帮助病人。",
+        target: "Arzt"
       }
     ],
     teachingOrder: 35,
@@ -944,8 +1027,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute baden.",
-        zh: "我们今天想洗澡。"
+        de: "Ich bade jeden Abend.",
+        zh: "我每天晚上洗澡。",
+        target: "bade"
       }
     ],
     teachingOrder: 36,
@@ -960,13 +1044,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "啤酒（单数形式）"
+        zh: "啤酒"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Bier.",
-        zh: "今天我们谈论啤酒（单数形式）。"
+        de: "Ich trinke ein Bier.",
+        zh: "我喝一杯啤酒。",
+        target: "Bier"
       }
     ],
     teachingOrder: 37,
@@ -986,8 +1071,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Abfahrt.",
-        zh: "今天我们谈论出发，启程。"
+        de: "Die Abfahrt ist um neun Uhr.",
+        zh: "出发时间是九点。",
+        target: "Abfahrt"
       }
     ],
     teachingOrder: 38,
@@ -1007,8 +1093,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „aber“ bedeutet hier „可是“.",
-        zh: "“aber”在这里表示“可是”。"
+        de: "Ich mag Tee, aber ich trinke Kaffee.",
+        zh: "我喜欢茶，可是我喝咖啡。",
+        target: "aber"
       }
     ],
     teachingOrder: 39,
@@ -1028,8 +1115,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „arbeitslos“ bedeutet hier „失业的“.",
-        zh: "“arbeitslos”在这里表示“失业的”。"
+        de: "Er ist arbeitslos.",
+        zh: "他失业。",
+        target: "arbeitslos"
       }
     ],
     teachingOrder: 40,
@@ -1044,13 +1132,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "点"
+        zh: "点餐"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute bestellen.",
-        zh: "我们今天想点。"
+        de: "Ich bestelle eine Pizza.",
+        zh: "我点一份披萨。",
+        target: "bestelle"
       }
     ],
     teachingOrder: 41,
@@ -1065,13 +1154,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "信息；问讯"
+        zh: "信息"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Auskunft.",
-        zh: "今天我们谈论信息；问讯。"
+        de: "Kann ich eine Auskunft bekommen?",
+        zh: "我可以得到一条信息吗？",
+        target: "Auskunft"
       }
     ],
     teachingOrder: 42,
@@ -1086,13 +1176,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "花朵"
+        zh: "花"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Blume.",
-        zh: "今天我们谈论花朵。"
+        de: "Ich schenke ihr eine Blume.",
+        zh: "我送她一朵花。",
+        target: "Blume"
       }
     ],
     teachingOrder: 43,
@@ -1112,8 +1203,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zum Beispiel/z. B.“ bedeutet hier „例如“.",
-        zh: "“zum Beispiel/z. B.”在这里表示“例如”。"
+        de: "Ich mag Obst, zum Beispiel Äpfel.",
+        zh: "我喜欢水果，例如苹果。",
+        target: "zum Beispiel"
       }
     ],
     teachingOrder: 44,
@@ -1133,8 +1225,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Auge.",
-        zh: "今天我们谈论眼睛。"
+        de: "Mein Auge tut weh.",
+        zh: "我的眼睛疼。",
+        target: "Auge"
       }
     ],
     teachingOrder: 45,
@@ -1154,8 +1247,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Balkon.",
-        zh: "今天我们谈论阳台。"
+        de: "Wir sitzen auf dem Balkon.",
+        zh: "我们坐在阳台上。",
+        target: "Balkon"
       }
     ],
     teachingOrder: 46,
@@ -1175,8 +1269,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Birne.",
-        zh: "今天我们谈论梨子。"
+        de: "Ich esse eine reife Birne.",
+        zh: "我吃一颗熟梨。",
+        target: "Birne"
       }
     ],
     teachingOrder: 47,
@@ -1196,8 +1291,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Ankunft.",
-        zh: "今天我们谈论抵达。"
+        de: "Meine Ankunft ist um acht Uhr.",
+        zh: "我八点到达。",
+        target: "Ankunft"
       }
     ],
     teachingOrder: 48,
@@ -1212,13 +1308,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "交出；递交"
+        zh: "交付"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute abgeben.",
-        zh: "我们今天想交出；递交。"
+        de: "Ich gebe das Formular ab.",
+        zh: "我递交表格。",
+        target: "gebe|ab"
       }
     ],
     teachingOrder: 49,
@@ -1238,8 +1335,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Arbeitsplatz.",
-        zh: "今天我们谈论工作场所。"
+        de: "Mein Arbeitsplatz ist sauber.",
+        zh: "我的工作场所很干净。",
+        target: "Arbeitsplatz"
       }
     ],
     teachingOrder: 50,
@@ -1259,8 +1357,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute bezahlen.",
-        zh: "我们今天想付款。"
+        de: "Ich bezahle die Rechnung.",
+        zh: "我付账单。",
+        target: "bezahle"
       }
     ],
     teachingOrder: 51,
@@ -1280,8 +1379,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Bank.",
-        zh: "今天我们谈论银行。"
+        de: "Wir gehen zur Bank.",
+        zh: "我们去银行。",
+        target: "Bank"
       }
     ],
     teachingOrder: 52,
@@ -1301,8 +1401,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Grad (Celsius).",
-        zh: "今天我们谈论摄氏度。"
+        de: "Es sind 20 Grad.",
+        zh: "气温是20摄氏度。",
+        target: "Grad"
       }
     ],
     teachingOrder: 53,
@@ -1322,8 +1423,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Disco.",
-        zh: "今天我们谈论迪斯科舞厅。"
+        de: "Wir tanzen in der Disco.",
+        zh: "我们在迪斯科舞厅跳舞。",
+        target: "Disco"
       }
     ],
     teachingOrder: 54,
@@ -1343,8 +1445,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Bein.",
-        zh: "今天我们谈论腿。"
+        de: "Mein Bein tut weh.",
+        zh: "我的腿疼。",
+        target: "Bein"
       }
     ],
     teachingOrder: 55,
@@ -1364,8 +1467,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Bett.",
-        zh: "今天我们谈论床。"
+        de: "Ich lege mich ins Bett.",
+        zh: "我躺在床上。",
+        target: "Bett"
       }
     ],
     teachingOrder: 56,
@@ -1385,8 +1489,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute buchstabieren.",
-        zh: "我们今天想拼写。"
+        de: "Kannst du das Wort buchstabieren?",
+        zh: "你能拼写这个词吗？",
+        target: "buchstabieren"
       }
     ],
     teachingOrder: 57,
@@ -1406,8 +1511,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Aufzug.",
-        zh: "今天我们谈论电梯。"
+        de: "Der Aufzug fährt nach oben.",
+        zh: "电梯向上运行。",
+        target: "Aufzug"
       }
     ],
     teachingOrder: 58,
@@ -1422,13 +1528,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "接（人）"
+        zh: "接走（人）"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute abholen.",
-        zh: "我们今天想接（人）。"
+        de: "Ich hole dich ab.",
+        zh: "我来接你。",
+        target: "hole|ab"
       }
     ],
     teachingOrder: 59,
@@ -1448,8 +1555,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Beamte.",
-        zh: "今天我们谈论公务员。"
+        de: "Die Beamte geben Ausweise.",
+        zh: "公务员发放证件。",
+        target: "Beamte"
       }
     ],
     teachingOrder: 60,
@@ -1464,13 +1572,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "购物，采购"
+        zh: "购物"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute einkaufen.",
-        zh: "我们今天想购物，采购。"
+        de: "Ich kaufe Brot ein.",
+        zh: "我买面包。",
+        target: "kaufe|ein"
       }
     ],
     teachingOrder: 61,
@@ -1490,8 +1599,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Brief.",
-        zh: "今天我们谈论信件。"
+        de: "Ich schreibe einen Brief.",
+        zh: "我写一封信。",
+        target: "Brief"
       }
     ],
     teachingOrder: 62,
@@ -1506,13 +1616,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "海，海洋"
+        zh: "海洋"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Meer.",
-        zh: "今天我们谈论海，海洋。"
+        de: "Das Meer ist heute ruhig.",
+        zh: "今天海面很平静。",
+        target: "Meer"
       }
     ],
     teachingOrder: 63,
@@ -1527,13 +1638,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "庆祝；节日相关"
+        zh: "庆祝活动"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Feier-“ bedeutet hier „庆祝；节日相关“.",
-        zh: "“Feier-”在这里表示“庆祝；节日相关”。"
+        de: "Wir planen eine Feier.",
+        zh: "我们计划一次庆祝活动。",
+        target: "Feier"
       }
     ],
     teachingOrder: 64,
@@ -1553,8 +1665,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bruder.",
-        zh: "今天我们谈论兄弟。"
+        de: "Mein Bruder spielt Fußball.",
+        zh: "我的兄弟踢足球。",
+        target: "Bruder"
       }
     ],
     teachingOrder: 65,
@@ -1574,8 +1687,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Garten.",
-        zh: "今天我们谈论花园。"
+        de: "Der Garten hat viele Blumen.",
+        zh: "花园里有很多花。",
+        target: "Garten"
       }
     ],
     teachingOrder: 66,
@@ -1590,13 +1704,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "黄油（单数形式）"
+        zh: "黄油"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Butter.",
-        zh: "今天我们谈论黄油（单数形式）。"
+        de: "Ich streiche Butter auf das Brot.",
+        zh: "我把黄油抹在面包上。",
+        target: "Butter"
       }
     ],
     teachingOrder: 67,
@@ -1616,8 +1731,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ausflug.",
-        zh: "今天我们谈论郊游。"
+        de: "Wir machen einen Ausflug.",
+        zh: "我们去郊游。",
+        target: "Ausflug"
       }
     ],
     teachingOrder: 68,
@@ -1637,8 +1753,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Absender.",
-        zh: "今天我们谈论寄件人。"
+        de: "Der Absender steht oben.",
+        zh: "寄件人写在上面。",
+        target: "Absender"
       }
     ],
     teachingOrder: 69,
@@ -1658,8 +1775,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Beruf.",
-        zh: "今天我们谈论职业。"
+        de: "Mein Beruf ist Lehrer.",
+        zh: "我的职业是老师。",
+        target: "Beruf"
       }
     ],
     teachingOrder: 70,
@@ -1679,8 +1797,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute einladen.",
-        zh: "我们今天想邀请。"
+        de: "Ich lade dich ein.",
+        zh: "我邀请你。",
+        target: "lade|ein"
       }
     ],
     teachingOrder: 71,
@@ -1700,8 +1819,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Briefmarke.",
-        zh: "今天我们谈论邮票。"
+        de: "Die Briefmarke kostet einen Euro.",
+        zh: "这枚邮票一欧元。",
+        target: "Briefmarke"
       }
     ],
     teachingOrder: 72,
@@ -1721,8 +1841,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Regen.",
-        zh: "今天我们谈论雨。"
+        de: "Der Regen fällt heute.",
+        zh: "今天下雨。",
+        target: "Regen"
       }
     ],
     teachingOrder: 73,
@@ -1742,8 +1863,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute feiern.",
-        zh: "我们今天想庆祝。"
+        de: "Wir feiern einen Geburtstag.",
+        zh: "我们庆祝生日。",
+        target: "feiern"
       }
     ],
     teachingOrder: 74,
@@ -1763,8 +1885,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Ehefrau.",
-        zh: "今天我们谈论妻子。"
+        de: "Meine Ehefrau kocht.",
+        zh: "我的妻子做饭。",
+        target: "Ehefrau"
       }
     ],
     teachingOrder: 75,
@@ -1784,8 +1907,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Haus.",
-        zh: "今天我们谈论房子。"
+        de: "Das Haus ist groß.",
+        zh: "这座房子很大。",
+        target: "Haus"
       }
     ],
     teachingOrder: 76,
@@ -1800,13 +1924,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "口渴（单数形式）"
+        zh: "口渴"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Durst.",
-        zh: "今天我们谈论口渴（单数形式）。"
+        de: "Ich habe Durst.",
+        zh: "我口渴。",
+        target: "Durst"
       }
     ],
     teachingOrder: 77,
@@ -1826,8 +1951,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Auto.",
-        zh: "今天我们谈论汽车。"
+        de: "Das Auto ist rot.",
+        zh: "这辆汽车是红色的。",
+        target: "Auto"
       }
     ],
     teachingOrder: 78,
@@ -1847,8 +1973,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Achtung.",
-        zh: "今天我们谈论注意。"
+        de: "Achtung, das ist gefährlich!",
+        zh: "注意，这很危险！",
+        target: "Achtung"
       }
     ],
     teachingOrder: 79,
@@ -1868,8 +1995,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Chef.",
-        zh: "今天我们谈论男性老板。"
+        de: "Der Chef kommt heute.",
+        zh: "老板今天来。",
+        target: "Chef"
       }
     ],
     teachingOrder: 80,
@@ -1884,13 +2012,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "金钱（单数形式）"
+        zh: "钱"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Geld.",
-        zh: "今天我们谈论金钱（单数形式）。"
+        de: "Ich habe genug Geld für die Fahrkarte.",
+        zh: "我的钱够买车票。",
+        target: "Geld"
       }
     ],
     teachingOrder: 81,
@@ -1910,8 +2039,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Fax.",
-        zh: "今天我们谈论传真。"
+        de: "Ich schicke ein Fax.",
+        zh: "我发送传真。",
+        target: "Fax"
       }
     ],
     teachingOrder: 82,
@@ -1931,8 +2061,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den See.",
-        zh: "今天我们谈论湖泊。"
+        de: "Der See ist tief.",
+        zh: "湖很深。",
+        target: "See"
       }
     ],
     teachingOrder: 83,
@@ -1952,8 +2083,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute fernsehen.",
-        zh: "我们今天想看电视。"
+        de: "Wir sehen abends fern.",
+        zh: "我们晚上看电视。",
+        target: "sehen|fern"
       }
     ],
     teachingOrder: 84,
@@ -1973,8 +2105,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ehemann.",
-        zh: "今天我们谈论丈夫。"
+        de: "Mein Ehemann arbeitet.",
+        zh: "我的丈夫工作。",
+        target: "Ehemann"
       }
     ],
     teachingOrder: 85,
@@ -1994,8 +2127,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Hausaufgabe.",
-        zh: "今天我们谈论家庭作业。"
+        de: "Die Hausaufgabe ist schwer.",
+        zh: "这份家庭作业很难。",
+        target: "Hausaufgabe"
       }
     ],
     teachingOrder: 86,
@@ -2010,13 +2144,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "吃"
+        zh: "食物"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Essen.",
-        zh: "今天我们谈论吃。"
+        de: "Das Essen ist warm.",
+        zh: "食物是热的。",
+        target: "Essen"
       }
     ],
     teachingOrder: 87,
@@ -2036,8 +2171,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Autobahn.",
-        zh: "今天我们谈论高速公路。"
+        de: "Die Autobahn ist schnell.",
+        zh: "高速公路很快。",
+        target: "Autobahn"
       }
     ],
     teachingOrder: 88,
@@ -2057,8 +2193,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „all-“ bedeutet hier „全部的；所有的“.",
-        zh: "“all-”在这里表示“全部的；所有的”。"
+        de: "Alle Kinder spielen im Park.",
+        zh: "所有孩子都在公园里玩。",
+        target: "Alle"
       }
     ],
     teachingOrder: 89,
@@ -2073,13 +2210,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "男同事"
+        zh: "男性同事"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kollege.",
-        zh: "今天我们谈论男同事。"
+        de: "Mein Kollege hilft mir.",
+        zh: "我的男同事帮助我。",
+        target: "Kollege"
       }
     ],
     teachingOrder: 90,
@@ -2099,8 +2237,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Geschäft.",
-        zh: "今天我们谈论商店。"
+        de: "Ich gehe ins Geschäft.",
+        zh: "我去商店。",
+        target: "Geschäft"
       }
     ],
     teachingOrder: 91,
@@ -2120,8 +2259,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Konto.",
-        zh: "今天我们谈论银行账户。"
+        de: "Ich eröffne ein Konto.",
+        zh: "我开一个银行账户。",
+        target: "Konto"
       }
     ],
     teachingOrder: 92,
@@ -2136,13 +2276,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "太阳，阳光"
+        zh: "太阳"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Sonne.",
-        zh: "今天我们谈论太阳，阳光。"
+        de: "Die Sonne scheint heute.",
+        zh: "今天太阳照耀。",
+        target: "Sonne"
       }
     ],
     teachingOrder: 93,
@@ -2162,8 +2303,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Foto.",
-        zh: "今天我们谈论照片。"
+        de: "Ich zeige das Foto.",
+        zh: "我展示这张照片。",
+        target: "Foto"
       }
     ],
     teachingOrder: 94,
@@ -2183,8 +2325,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Eltern (pl.).",
-        zh: "今天我们谈论父母。"
+        de: "Meine Eltern kommen morgen.",
+        zh: "我的父母明天来。",
+        target: "Eltern"
       }
     ],
     teachingOrder: 95,
@@ -2204,8 +2347,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Hausfrau.",
-        zh: "今天我们谈论家庭主妇。"
+        de: "Die Hausfrau kocht das Essen.",
+        zh: "这位家庭主妇在做饭。",
+        target: "Hausfrau"
       }
     ],
     teachingOrder: 96,
@@ -2220,13 +2364,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "肉类（单数形式）"
+        zh: "肉"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Fleisch.",
-        zh: "今天我们谈论肉类（单数形式）。"
+        de: "Ich kaufe frisches Fleisch.",
+        zh: "我买新鲜的肉。",
+        target: "Fleisch"
       }
     ],
     teachingOrder: 97,
@@ -2241,13 +2386,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "自动售货机；自动机器"
+        zh: "自动售货机"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Automat.",
-        zh: "今天我们谈论自动售货机；自动机器。"
+        de: "Der Automat gibt Schokolade.",
+        zh: "自动售货机出巧克力。",
+        target: "Automat"
       }
     ],
     teachingOrder: 98,
@@ -2267,8 +2413,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „allein“ bedeutet hier „独自“.",
-        zh: "“allein”在这里表示“独自”。"
+        de: "Ich gehe allein nach Hause.",
+        zh: "我独自回家。",
+        target: "allein"
       }
     ],
     teachingOrder: 99,
@@ -2288,8 +2435,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Praktikum.",
-        zh: "今天我们谈论实习。"
+        de: "Ich mache ein Praktikum.",
+        zh: "我在实习。",
+        target: "Praktikum"
       }
     ],
     teachingOrder: 100,
@@ -2309,8 +2457,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Karte.",
-        zh: "今天我们谈论菜单。"
+        de: "Ich bestelle etwas von der Karte.",
+        zh: "我从菜单点菜。",
+        target: "Karte"
       }
     ],
     teachingOrder: 101,
@@ -2330,8 +2479,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Polizei.",
-        zh: "今天我们谈论警察。"
+        de: "Die Polizei kontrolliert den Verkehr.",
+        zh: "警察检查交通。",
+        target: "Polizei"
       }
     ],
     teachingOrder: 102,
@@ -2346,13 +2496,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "天气（单数形式）"
+        zh: "天气"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Wetter.",
-        zh: "今天我们谈论天气（单数形式）。"
+        de: "Das Wetter ist schön.",
+        zh: "天气很好。",
+        target: "Wetter"
       }
     ],
     teachingOrder: 103,
@@ -2367,13 +2518,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "空闲时间，业余时间"
+        zh: "空闲时间"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Freizeit.",
-        zh: "今天我们谈论空闲时间，业余时间。"
+        de: "In meiner Freizeit lese ich.",
+        zh: "在我的空闲时间我阅读。",
+        target: "Freizeit"
       }
     ],
     teachingOrder: 104,
@@ -2393,8 +2545,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Familienname.",
-        zh: "今天我们谈论姓。"
+        de: "Mein Familienname ist Schmidt.",
+        zh: "我的姓氏是 Schmidt。",
+        target: "Familienname"
       }
     ],
     teachingOrder: 105,
@@ -2414,8 +2567,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Hausmann.",
-        zh: "今天我们谈论家庭主夫。"
+        de: "Der Hausmann kocht das Abendessen.",
+        zh: "这位家庭主夫在做晚饭。",
+        target: "Hausmann"
       }
     ],
     teachingOrder: 106,
@@ -2435,8 +2589,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute frühstücken.",
-        zh: "我们今天想吃早饭。"
+        de: "Ich frühstücke jeden Morgen.",
+        zh: "我每天早上吃早餐。",
+        target: "frühstücke"
       }
     ],
     teachingOrder: 107,
@@ -2456,8 +2611,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „automatisch“ bedeutet hier „自动的“.",
-        zh: "“automatisch”在这里表示“自动的”。"
+        de: "Der Aufzug ist automatisch.",
+        zh: "电梯是自动的。",
+        target: "automatisch"
       }
     ],
     teachingOrder: 108,
@@ -2477,8 +2633,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „also“ bedeutet hier „也就是说，可见“.",
-        zh: "“also”在这里表示“也就是说，可见”。"
+        de: "Ich habe Hunger, also esse ich.",
+        zh: "我饿了，所以我吃东西。",
+        target: "also"
       }
     ],
     teachingOrder: 109,
@@ -2498,8 +2655,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute verdienen.",
-        zh: "我们今天想挣得，赚得。"
+        de: "Ich verdiene zehn Euro.",
+        zh: "我赚十欧元。",
+        target: "verdiene"
       }
     ],
     teachingOrder: 110,
@@ -2514,13 +2672,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "（信用）卡"
+        zh: "信用卡"
       }
     ],
     examples: [
       {
-        de: "Das Wort „(Kredit)-Karte“ bedeutet hier „（信用）卡“.",
-        zh: "“(Kredit)-Karte”在这里表示“（信用）卡”。"
+        de: "Ich zahle mit der Kreditkarte.",
+        zh: "我用信用卡付款。",
+        target: "Kreditkarte"
       }
     ],
     teachingOrder: 111,
@@ -2535,13 +2694,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "邮局（单数形式）"
+        zh: "邮局"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Post.",
-        zh: "今天我们谈论邮局（单数形式）。"
+        de: "Ich gehe zur Post.",
+        zh: "我去邮局。",
+        target: "Post"
       }
     ],
     teachingOrder: 112,
@@ -2561,8 +2721,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Wind.",
-        zh: "今天我们谈论风。"
+        de: "Der Wind weht heute.",
+        zh: "今天风在吹。",
+        target: "Wind"
       }
     ],
     teachingOrder: 113,
@@ -2582,8 +2743,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Fußball.",
-        zh: "今天我们谈论足球。"
+        de: "Wir spielen Fußball im Park.",
+        zh: "我们在公园踢足球。",
+        target: "Fußball"
       }
     ],
     teachingOrder: 114,
@@ -2598,13 +2760,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "家庭情况（单数形式）"
+        zh: "家庭情况"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Familienstand.",
-        zh: "今天我们谈论家庭情况（单数形式）。"
+        de: "Mein Familienstand ist ledig.",
+        zh: "我的家庭情况是单身。",
+        target: "Familienstand"
       }
     ],
     teachingOrder: 115,
@@ -2624,8 +2787,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kindergarten.",
-        zh: "今天我们谈论幼儿园。"
+        de: "Mein Sohn geht in den Kindergarten.",
+        zh: "我儿子去幼儿园。",
+        target: "Kindergarten"
       }
     ],
     teachingOrder: 116,
@@ -2640,13 +2804,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "早饭（单数形式）"
+        zh: "早饭"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Frühstück.",
-        zh: "今天我们谈论早饭（单数形式）。"
+        de: "Das Frühstück ist fertig.",
+        zh: "早饭已经做好了。",
+        target: "Frühstück"
       }
     ],
     teachingOrder: 117,
@@ -2661,13 +2826,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "铁路；火车"
+        zh: "火车"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Bahn.",
-        zh: "今天我们谈论铁路；火车。"
+        de: "Ich fahre mit der Bahn nach Berlin.",
+        zh: "我坐火车去柏林。",
+        target: "Bahn"
       }
     ],
     teachingOrder: 118,
@@ -2687,8 +2853,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „alt“ bedeutet hier „老的旧的“.",
-        zh: "“alt”在这里表示“老的旧的”。"
+        de: "Das Haus ist alt.",
+        zh: "这座房子很老。",
+        target: "alt"
       }
     ],
     teachingOrder: 119,
@@ -2708,8 +2875,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Verkäufer.",
-        zh: "今天我们谈论男售货员。"
+        de: "Der Verkäufer hilft mir.",
+        zh: "男售货员帮助我。",
+        target: "Verkäufer"
       }
     ],
     teachingOrder: 120,
@@ -2729,8 +2897,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute kaufen.",
-        zh: "我们今天想购买。"
+        de: "Ich kaufe ein Brot.",
+        zh: "我买了一块面包。",
+        target: "kaufe"
       }
     ],
     teachingOrder: 121,
@@ -2750,8 +2919,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Postleitzahl.",
-        zh: "今天我们谈论邮政编码。"
+        de: "Wie lautet deine Postleitzahl?",
+        zh: "你的邮政编码是多少？",
+        target: "Postleitzahl"
       }
     ],
     teachingOrder: 122,
@@ -2771,8 +2941,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Frühling/das Frühjahr.",
-        zh: "今天我们谈论春天。"
+        de: "Im Frühling blühen die Blumen.",
+        zh: "春天，花儿绽放。",
+        target: "Frühling"
       }
     ],
     teachingOrder: 123,
@@ -2792,8 +2963,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Kino.",
-        zh: "今天我们谈论电影院。"
+        de: "Wir gehen ins Kino.",
+        zh: "我们去电影院。",
+        target: "Kino"
       }
     ],
     teachingOrder: 124,
@@ -2813,8 +2985,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Frau.",
-        zh: "今天我们谈论女人。"
+        de: "Die Frau liest ein Buch.",
+        zh: "这位女士在读一本书。",
+        target: "Frau"
       }
     ],
     teachingOrder: 125,
@@ -2834,8 +3007,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Licht.",
-        zh: "今天我们谈论灯；光。"
+        de: "Das Licht ist hell.",
+        zh: "灯光很亮。",
+        target: "Licht"
       }
     ],
     teachingOrder: 126,
@@ -2850,13 +3024,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "饥饿（单数形式）"
+        zh: "饥饿"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Hunger.",
-        zh: "今天我们谈论饥饿（单数形式）。"
+        de: "Ich habe Hunger.",
+        zh: "我饿了。",
+        target: "Hunger"
       }
     ],
     teachingOrder: 127,
@@ -2876,8 +3051,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bahnsteig.",
-        zh: "今天我们谈论站台。"
+        de: "Der Zug steht am Bahnsteig.",
+        zh: "火车停在站台。",
+        target: "Bahnsteig"
       }
     ],
     teachingOrder: 128,
@@ -2897,8 +3073,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Alter.",
-        zh: "今天我们谈论年龄。"
+        de: "Mein Alter ist zwanzig.",
+        zh: "我的年龄是二十岁。",
+        target: "Alter"
       }
     ],
     teachingOrder: 129,
@@ -2918,8 +3095,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Kleidung.",
-        zh: "今天我们谈论衣物。"
+        de: "Die Kleidung ist warm.",
+        zh: "这件衣服很暖和。",
+        target: "Kleidung"
       }
     ],
     teachingOrder: 130,
@@ -2939,8 +3117,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Reparatur.",
-        zh: "今天我们谈论修理。"
+        de: "Die Reparatur dauert lange.",
+        zh: "修理需要很久。",
+        target: "Reparatur"
       }
     ],
     teachingOrder: 131,
@@ -2960,8 +3139,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Sommer.",
-        zh: "今天我们谈论夏天。"
+        de: "Im Sommer schwimme ich.",
+        zh: "夏天我去游泳。",
+        target: "Sommer"
       }
     ],
     teachingOrder: 132,
@@ -2981,8 +3161,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Lied.",
-        zh: "今天我们谈论歌曲。"
+        de: "Das Lied ist schön.",
+        zh: "这首歌很好听。",
+        target: "Lied"
       }
     ],
     teachingOrder: 133,
@@ -3002,8 +3183,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Geburtsjahr.",
-        zh: "今天我们谈论出生年份。"
+        de: "Mein Geburtsjahr ist 1990.",
+        zh: "我的出生年份是1990年。",
+        target: "Geburtsjahr"
       }
     ],
     teachingOrder: 134,
@@ -3023,8 +3205,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mieten.",
-        zh: "我们今天想租用。"
+        de: "Ich miete ein Fahrrad.",
+        zh: "我租了一辆自行车。",
+        target: "miete"
       }
     ],
     teachingOrder: 135,
@@ -3039,13 +3222,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "牛奶（单数形式）"
+        zh: "牛奶"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Milch.",
-        zh: "今天我们谈论牛奶（单数形式）。"
+        de: "Ich trinke morgens Milch.",
+        zh: "我早上喝牛奶。",
+        target: "Milch"
       }
     ],
     teachingOrder: 136,
@@ -3060,13 +3244,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "公车"
+        zh: "公交车"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bus.",
-        zh: "今天我们谈论公车。"
+        de: "Der Bus fährt um acht Uhr.",
+        zh: "公交车在八点发车。",
+        target: "Bus"
       }
     ],
     teachingOrder: 137,
@@ -3081,13 +3266,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在……旁；向"
+        zh: "在…旁"
       }
     ],
     examples: [
       {
-        de: "Das Wort „an“ bedeutet hier „在……旁；向“.",
-        zh: "“an”在这里表示“在……旁；向”。"
+        de: "Das Bild hängt an der Wand.",
+        zh: "画挂在墙上。",
+        target: "an"
       }
     ],
     teachingOrder: 138,
@@ -3107,8 +3293,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Laden.",
-        zh: "今天我们谈论店铺。"
+        de: "Ich kaufe Brot im Laden.",
+        zh: "我在店里买面包。",
+        target: "Laden"
       }
     ],
     teachingOrder: 139,
@@ -3123,13 +3310,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "柜台；开关"
+        zh: "柜台"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schalter.",
-        zh: "今天我们谈论柜台；开关。"
+        de: "Ich frage am Schalter nach dem Fahrplan.",
+        zh: "我在柜台询问时刻表。",
+        target: "Schalter"
       }
     ],
     teachingOrder: 140,
@@ -3149,8 +3337,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Herbst.",
-        zh: "今天我们谈论秋天。"
+        de: "Im Herbst fallen die Blätter.",
+        zh: "秋天树叶掉落。",
+        target: "Herbst"
       }
     ],
     teachingOrder: 141,
@@ -3170,8 +3359,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Party.",
-        zh: "今天我们谈论派对。"
+        de: "Wir feiern eine Party am Samstag.",
+        zh: "我们星期六举办派对。",
+        target: "Party"
       }
     ],
     teachingOrder: 142,
@@ -3191,8 +3381,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Geburtsort.",
-        zh: "今天我们谈论出生地。"
+        de: "Mein Geburtsort ist Berlin.",
+        zh: "我的出生地是柏林。",
+        target: "Geburtsort"
       }
     ],
     teachingOrder: 143,
@@ -3212,8 +3403,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Miete.",
-        zh: "今天我们谈论房租。"
+        de: "Die Miete ist vierhundert Euro.",
+        zh: "房租是四百欧元。",
+        target: "Miete"
       }
     ],
     teachingOrder: 144,
@@ -3228,13 +3420,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "水果（单数形式）"
+        zh: "水果"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Obst.",
-        zh: "今天我们谈论水果（单数形式）。"
+        de: "Ich esse jeden Tag Obst.",
+        zh: "我每天吃水果。",
+        target: "Obst"
       }
     ],
     teachingOrder: 145,
@@ -3254,8 +3447,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Doppelzimmer.",
-        zh: "今天我们谈论双人客房。"
+        de: "Wir buchen ein Doppelzimmer im Hotel.",
+        zh: "我们在酒店预订双人客房。",
+        target: "Doppelzimmer"
       }
     ],
     teachingOrder: 146,
@@ -3270,13 +3464,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "提供，给予"
+        zh: "提供"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute anbieten.",
-        zh: "我们今天想提供，给予。"
+        de: "Der Verkäufer bietet mir Hilfe an.",
+        zh: "店员向我提供帮助。",
+        target: "bietet|an"
       }
     ],
     teachingOrder: 147,
@@ -3296,8 +3491,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schuh.",
-        zh: "今天我们谈论鞋子。"
+        de: "Ich probiere den Schuh im Laden.",
+        zh: "我在店里试这只鞋。",
+        target: "Schuh"
       }
     ],
     teachingOrder: 148,
@@ -3317,8 +3513,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute telefonieren.",
-        zh: "我们今天想打电话。"
+        de: "Ich telefoniere mit meiner Mutter.",
+        zh: "我给妈妈打电话。",
+        target: "telefoniere"
       }
     ],
     teachingOrder: 149,
@@ -3338,8 +3535,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Winter.",
-        zh: "今天我们谈论冬天。"
+        de: "Im Winter schneit es oft.",
+        zh: "冬天经常下雪。",
+        target: "Winter"
       }
     ],
     teachingOrder: 150,
@@ -3359,8 +3557,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute schwimmen.",
-        zh: "我们今天想游泳。"
+        de: "Wir schwimmen im See.",
+        zh: "我们在湖里游泳。",
+        target: "schwimmen"
       }
     ],
     teachingOrder: 151,
@@ -3380,8 +3579,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Geburtstag.",
-        zh: "今天我们谈论生日。"
+        de: "Mein Geburtstag ist im März.",
+        zh: "我的生日在三月。",
+        target: "Geburtstag"
       }
     ],
     teachingOrder: 152,
@@ -3401,8 +3601,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Möbel (pl.).",
-        zh: "今天我们谈论家具。"
+        de: "Die Möbel stehen im Wohnzimmer.",
+        zh: "家具摆在客厅里。",
+        target: "Möbel"
       }
     ],
     teachingOrder: 153,
@@ -3422,8 +3623,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Öl.",
-        zh: "今天我们谈论油。"
+        de: "Das Öl steht im Schrank.",
+        zh: "油放在柜子里。",
+        target: "Öl"
       }
     ],
     teachingOrder: 154,
@@ -3443,8 +3645,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Einzelzimmer.",
-        zh: "今天我们谈论单人客房。"
+        de: "Ich buche ein Einzelzimmer.",
+        zh: "我预订一个单人客房。",
+        target: "Einzelzimmer"
       }
     ],
     teachingOrder: 155,
@@ -3459,13 +3662,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "其它"
+        zh: "其他的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ander-“ bedeutet hier „其它“.",
-        zh: "“ander-”在这里表示“其它”。"
+        de: "Ich nehme das andere Buch.",
+        zh: "我拿那本别的书。",
+        target: "andere"
       }
     ],
     teachingOrder: 156,
@@ -3485,8 +3689,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Speisekarte.",
-        zh: "今天我们谈论菜单。"
+        de: "Die Speisekarte liegt auf dem Tisch.",
+        zh: "菜单放在桌子上。",
+        target: "Speisekarte"
       }
     ],
     teachingOrder: 157,
@@ -3501,13 +3706,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "电话电话"
+        zh: "电话"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Telefon.",
-        zh: "今天我们谈论电话电话。"
+        de: "Das Telefon klingelt laut.",
+        zh: "电话响得很大。",
+        target: "Telefon"
       }
     ],
     teachingOrder: 158,
@@ -3522,13 +3728,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "玩，打，踢上映，放映"
+        zh: "玩"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute spielen.",
-        zh: "我们今天想玩，打，踢上映，放映。"
+        de: "Wir spielen im Park.",
+        zh: "我们在公园玩。",
+        target: "spielen"
       }
     ],
     teachingOrder: 159,
@@ -3543,13 +3750,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "祖父母；外祖父母"
+        zh: "祖父母"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Großeltern (pl.).",
-        zh: "今天我们谈论祖父母；外祖父母。"
+        de: "Meine Großeltern besuchen uns.",
+        zh: "我的祖父母来拜访我们。",
+        target: "Großeltern"
       }
     ],
     teachingOrder: 160,
@@ -3569,8 +3777,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schlüssel.",
-        zh: "今天我们谈论钥匙。"
+        de: "Der Schlüssel liegt auf dem Tisch.",
+        zh: "钥匙放在桌子上。",
+        target: "Schlüssel"
       }
     ],
     teachingOrder: 161,
@@ -3590,8 +3799,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Preis.",
-        zh: "今天我们谈论价格。"
+        de: "Der Preis ist zu hoch.",
+        zh: "价格太高。",
+        target: "Preis"
       }
     ],
     teachingOrder: 162,
@@ -3611,8 +3821,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Fahrer.",
-        zh: "今天我们谈论司机。"
+        de: "Der Fahrer öffnet die Tür.",
+        zh: "司机打开门。",
+        target: "Fahrer"
       }
     ],
     teachingOrder: 163,
@@ -3632,8 +3843,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute anfangen.",
-        zh: "我们今天想开始。"
+        de: "Der Kurs fängt um neun Uhr an.",
+        zh: "课程九点开始。",
+        target: "fängt|an"
       }
     ],
     teachingOrder: 164,
@@ -3653,8 +3865,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Tasche.",
-        zh: "今天我们谈论包。"
+        de: "Die Tasche ist rot.",
+        zh: "包是红色的。",
+        target: "Tasche"
       }
     ],
     teachingOrder: 165,
@@ -3674,8 +3887,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Vorwahl.",
-        zh: "今天我们谈论电话区号。"
+        de: "Die Vorwahl beginnt mit 0.",
+        zh: "区号以0开头。",
+        target: "Vorwahl"
       }
     ],
     teachingOrder: 166,
@@ -3690,13 +3904,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "体育（单数形式）"
+        zh: "体育"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Sport.",
-        zh: "今天我们谈论体育（单数形式）。"
+        de: "Sport macht mir Spaß.",
+        zh: "体育让我开心。",
+        target: "Sport"
       }
     ],
     teachingOrder: 167,
@@ -3711,13 +3926,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "祖母，外祖母"
+        zh: "祖母"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Großmutter.",
-        zh: "今天我们谈论祖母，外祖母。"
+        de: "Meine Großmutter kocht Suppe.",
+        zh: "我的祖母做汤。",
+        target: "Großmutter"
       }
     ],
     teachingOrder: 168,
@@ -3737,8 +3953,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Schwimmbad.",
-        zh: "今天我们谈论游泳池。"
+        de: "Wir gehen ins Schwimmbad.",
+        zh: "我们去游泳池。",
+        target: "Schwimmbad"
       }
     ],
     teachingOrder: 169,
@@ -3753,13 +3970,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "米饭（单数形式）"
+        zh: "米饭"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Reis.",
-        zh: "今天我们谈论米饭（单数形式）。"
+        de: "Ich esse Reis.",
+        zh: "我吃米饭。",
+        target: "Reis"
       }
     ],
     teachingOrder: 170,
@@ -3779,8 +3997,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Fahrkarte.",
-        zh: "今天我们谈论车票。"
+        de: "Ich kaufe eine Fahrkarte.",
+        zh: "我买一张车票。",
+        target: "Fahrkarte"
       }
     ],
     teachingOrder: 171,
@@ -3795,13 +4014,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "开端，开始"
+        zh: "开始"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Anfang.",
-        zh: "今天我们谈论开端，开始。"
+        de: "Der Film hat einen guten Anfang.",
+        zh: "这部电影有一个好的开始。",
+        target: "Anfang"
       }
     ],
     teachingOrder: 172,
@@ -3821,8 +4041,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute verkaufen.",
-        zh: "我们今天想出售。"
+        de: "Sie verkauft ein Buch.",
+        zh: "她卖一本书。",
+        target: "verkauft"
       }
     ],
     teachingOrder: 173,
@@ -3842,8 +4063,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Zoll.",
-        zh: "今天我们谈论海关。"
+        de: "Der Zoll prüft das Gepäck.",
+        zh: "海关检查行李。",
+        target: "Zoll"
       }
     ],
     teachingOrder: 174,
@@ -3858,13 +4080,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "舞蹈，跳舞"
+        zh: "跳舞"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute tanzen.",
-        zh: "我们今天想舞蹈，跳舞。"
+        de: "Wir tanzen im Garten.",
+        zh: "我们在花园里跳舞。",
+        target: "tanzen"
       }
     ],
     teachingOrder: 175,
@@ -3879,13 +4102,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "祖父，外祖父"
+        zh: "祖父"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Großvater.",
-        zh: "今天我们谈论祖父，外祖父。"
+        de: "Mein Großvater liest.",
+        zh: "我的祖父在读书。",
+        target: "Großvater"
       }
     ],
     teachingOrder: 176,
@@ -3905,8 +4129,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Sofa.",
-        zh: "今天我们谈论沙发。"
+        de: "Das Sofa ist blau.",
+        zh: "沙发是蓝色的。",
+        target: "Sofa"
       }
     ],
     teachingOrder: 177,
@@ -3921,13 +4146,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "饭馆"
+        zh: "餐馆"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Restaurant.",
-        zh: "今天我们谈论饭馆。"
+        de: "Wir essen im Restaurant.",
+        zh: "我们在餐馆吃饭。",
+        target: "Restaurant"
       }
     ],
     teachingOrder: 178,
@@ -3947,8 +4173,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Fahrrad.",
-        zh: "今天我们谈论自行车。"
+        de: "Ich fahre mit dem Fahrrad.",
+        zh: "我骑自行车。",
+        target: "Fahrrad"
       }
     ],
     teachingOrder: 179,
@@ -3968,8 +4195,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute anklicken.",
-        zh: "我们今天想点击。"
+        de: "Klicken Sie bitte das Bild an.",
+        zh: "请点击图片。",
+        target: "Klicken|an"
       }
     ],
     teachingOrder: 180,
@@ -3984,13 +4212,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "付款，支付"
+        zh: "付款"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute zahlen.",
-        zh: "我们今天想付款，支付。"
+        de: "Wir wollen jetzt zahlen.",
+        zh: "我们现在想付款。",
+        target: "zahlen"
       }
     ],
     teachingOrder: 181,
@@ -4005,13 +4234,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "协会；俱乐部"
+        zh: "俱乐部"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Verein.",
-        zh: "今天我们谈论协会；俱乐部。"
+        de: "Der Verein trifft sich.",
+        zh: "俱乐部正在聚会。",
+        target: "Verein"
       }
     ],
     teachingOrder: 182,
@@ -4031,8 +4261,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Haar.",
-        zh: "今天我们谈论头发。"
+        de: "Ihr Haar ist lang.",
+        zh: "她的头发很长。",
+        target: "Haar"
       }
     ],
     teachingOrder: 183,
@@ -4052,8 +4283,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Treppe.",
-        zh: "今天我们谈论楼梯。"
+        de: "Die Treppe ist neu.",
+        zh: "楼梯是新的。",
+        target: "Treppe"
       }
     ],
     teachingOrder: 184,
@@ -4073,8 +4305,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Saft.",
-        zh: "今天我们谈论果汁。"
+        de: "Ich trinke einen Saft.",
+        zh: "我喝一杯果汁。",
+        target: "Saft"
       }
     ],
     teachingOrder: 185,
@@ -4089,13 +4322,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "起飞；出发"
+        zh: "起飞"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Abflug.",
-        zh: "今天我们谈论起飞；出发。"
+        de: "Der Abflug ist um acht Uhr.",
+        zh: "起飞时间是八点。",
+        target: "Abflug"
       }
     ],
     teachingOrder: 186,
@@ -4115,8 +4349,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute ankommen.",
-        zh: "我们今天想到达。"
+        de: "Wir kommen um neun an.",
+        zh: "我们九点到达。",
+        target: "kommen|an"
       }
     ],
     teachingOrder: 187,
@@ -4136,8 +4371,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1 Euro“ bedeutet hier „一欧元“.",
-        zh: "“1 Euro”在这里表示“一欧元”。"
+        de: "Das kostet 1 Euro.",
+        zh: "这要一欧元。",
+        target: "1 Euro"
       }
     ],
     teachingOrder: 188,
@@ -4157,8 +4393,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Kind.",
-        zh: "今天我们谈论孩子。"
+        de: "Das Kind spielt im Garten.",
+        zh: "这个孩子在花园里玩。",
+        target: "Kind"
       }
     ],
     teachingOrder: 189,
@@ -4178,8 +4415,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute vermieten.",
-        zh: "我们今天想出租。"
+        de: "Wir vermieten die Wohnung.",
+        zh: "我们出租这套公寓。",
+        target: "vermieten"
       }
     ],
     teachingOrder: 190,
@@ -4199,8 +4437,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Salat.",
-        zh: "今天我们谈论沙拉。"
+        de: "Ich esse einen Salat.",
+        zh: "我吃一份沙拉。",
+        target: "Salat"
       }
     ],
     teachingOrder: 191,
@@ -4220,8 +4459,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Flughafen.",
-        zh: "今天我们谈论机场。"
+        de: "Der Flughafen ist groß.",
+        zh: "机场很大。",
+        target: "Flughafen"
       }
     ],
     teachingOrder: 192,
@@ -4241,8 +4481,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute ankreuzen.",
-        zh: "我们今天想勾选。"
+        de: "Bitte kreuzen Sie das Kästchen an.",
+        zh: "请在方框里勾选。",
+        target: "kreuzen|an"
       }
     ],
     teachingOrder: 193,
@@ -4262,8 +4503,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „100 Cent“ bedeutet hier „一百欧分“.",
-        zh: "“100 Cent”在这里表示“一百欧分”。"
+        de: "Das kostet 100 Cent.",
+        zh: "这要一百欧分。",
+        target: "100 Cent"
       }
     ],
     teachingOrder: 194,
@@ -4283,8 +4525,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kopf.",
-        zh: "今天我们谈论头。"
+        de: "Mein Kopf tut weh.",
+        zh: "我的头疼。",
+        target: "Kopf"
       }
     ],
     teachingOrder: 195,
@@ -4304,8 +4547,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Vermieter.",
-        zh: "今天我们谈论房东。"
+        de: "Der Vermieter ruft an.",
+        zh: "房东打电话来。",
+        target: "Vermieter"
       }
     ],
     teachingOrder: 196,
@@ -4320,13 +4564,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "盐（单数形式）"
+        zh: "盐"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Salz.",
-        zh: "今天我们谈论盐（单数形式）。"
+        de: "Ich brauche Salz für die Suppe.",
+        zh: "我需要盐来做汤。",
+        target: "Salz"
       }
     ],
     teachingOrder: 197,
@@ -4346,8 +4591,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Flugzeug.",
-        zh: "今天我们谈论飞机。"
+        de: "Das Flugzeug startet bald.",
+        zh: "飞机很快起飞。",
+        target: "Flugzeug"
       }
     ],
     teachingOrder: 198,
@@ -4367,8 +4613,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute anmachen.",
-        zh: "我们今天想打开（电器）。"
+        de: "Er macht das Licht an.",
+        zh: "他打开灯。",
+        target: "macht|an"
       }
     ],
     teachingOrder: 199,
@@ -4388,8 +4635,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Meter = 1 m“ bedeutet hier „一米“.",
-        zh: "“ein Meter = 1 m”在这里表示“一米”。"
+        de: "Ein Meter ist ein gängiges Längenmaß.",
+        zh: "一米是常用的长度单位。",
+        target: "Ein Meter"
       }
     ],
     teachingOrder: 200,
@@ -4409,8 +4657,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mann.",
-        zh: "今天我们谈论男人。"
+        de: "Der Mann liest ein Buch.",
+        zh: "那位男人在读一本书。",
+        target: "Mann"
       }
     ],
     teachingOrder: 201,
@@ -4425,13 +4674,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "公寓，住房"
+        zh: "公寓"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Wohnung.",
-        zh: "今天我们谈论公寓，住房。"
+        de: "Die Wohnung liegt im Stadtzentrum.",
+        zh: "这间公寓位于市中心。",
+        target: "Wohnung"
       }
     ],
     teachingOrder: 202,
@@ -4451,8 +4701,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Tee.",
-        zh: "今天我们谈论茶。"
+        de: "Der Tee duftet nach Kräutern.",
+        zh: "这杯茶散发着草本的香味。",
+        target: "Tee"
       }
     ],
     teachingOrder: 203,
@@ -4467,13 +4718,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "行李（单数形式）"
+        zh: "行李"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Gepäck.",
-        zh: "今天我们谈论行李（单数形式）。"
+        de: "Das Gepäck steht neben dem Ausgang.",
+        zh: "行李放在出口旁边。",
+        target: "Gepäck"
       }
     ],
     teachingOrder: 204,
@@ -4488,13 +4740,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "报名；登记"
+        zh: "报名"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns anmelden.",
-        zh: "我们今天想报名；登记。"
+        de: "Ich melde mich für den Kurs an.",
+        zh: "我报名参加了课程。",
+        target: "melde|an"
       }
     ],
     teachingOrder: 205,
@@ -4514,8 +4767,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Zentimeter = 1 cm“ bedeutet hier „一厘米“.",
-        zh: "“ein Zentimeter = 1 cm”在这里表示“一厘米”。"
+        de: "Ein Zentimeter ist kaum sichtbar.",
+        zh: "一厘米几乎看不见。",
+        target: "Ein Zentimeter"
       }
     ],
     teachingOrder: 206,
@@ -4535,8 +4789,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mensch.",
-        zh: "今天我们谈论人。"
+        de: "Der Mensch braucht täglich Wasser.",
+        zh: "人每天需要水。",
+        target: "Mensch"
       }
     ],
     teachingOrder: 207,
@@ -4556,8 +4811,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Tomate.",
-        zh: "今天我们谈论西红柿。"
+        de: "Die Tomate schmeckt frisch.",
+        zh: "番茄尝起来很新鲜。",
+        target: "Tomate"
       }
     ],
     teachingOrder: 208,
@@ -4577,8 +4833,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Hotel.",
-        zh: "今天我们谈论酒店。"
+        de: "Das Hotel bietet kostenloses WLAN.",
+        zh: "这家酒店提供免费无线网络。",
+        target: "Hotel"
       }
     ],
     teachingOrder: 209,
@@ -4598,8 +4855,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Anmeldung.",
-        zh: "今天我们谈论报名表。"
+        de: "Die Anmeldung ist noch offen.",
+        zh: "报名表仍然开放。",
+        target: "Anmeldung"
       }
     ],
     teachingOrder: 210,
@@ -4619,8 +4877,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Meter fünfzehn = 1“ bedeutet hier „一米十五“.",
-        zh: "“ein Meter fünfzehn = 1”在这里表示“一米十五”。"
+        de: "Ein Meter fünfzehn ist die Breite des Regals.",
+        zh: "一米十五是书架的宽度。",
+        target: "Ein Meter fünfzehn"
       }
     ],
     teachingOrder: 211,
@@ -4640,8 +4899,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Mutter.",
-        zh: "今天我们谈论母亲。"
+        de: "Die Mutter liest eine Geschichte vor.",
+        zh: "妈妈在给孩子朗读故事。",
+        target: "Mutter"
       }
     ],
     teachingOrder: 212,
@@ -4661,8 +4921,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Wein.",
-        zh: "今天我们谈论葡萄酒。"
+        de: "Der Wein schmeckt fruchtig.",
+        zh: "这杯酒尝起来果香。",
+        target: "Wein"
       }
     ],
     teachingOrder: 213,
@@ -4682,8 +4943,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Koffer.",
-        zh: "今天我们谈论行李箱。"
+        de: "Der Koffer liegt im Schrank.",
+        zh: "行李箱放在柜子里。",
+        target: "Koffer"
       }
     ],
     teachingOrder: 214,
@@ -4703,8 +4965,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Anrede.",
-        zh: "今天我们谈论称呼，称谓。"
+        de: "Die Anrede im Brief ist förmlich.",
+        zh: "信中的称呼是正式的。",
+        target: "Anrede"
       }
     ],
     teachingOrder: 215,
@@ -4724,8 +4987,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zweihundert Kilometer = 200 km“ bedeutet hier „二百公里“.",
-        zh: "“zweihundert Kilometer = 200 km”在这里表示“二百公里”。"
+        de: "Wir fahren zweihundert Kilometer nach Hamburg.",
+        zh: "我们开车去汉堡，路程二百公里。",
+        target: "zweihundert Kilometer"
       }
     ],
     teachingOrder: 216,
@@ -4745,8 +5009,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Name.",
-        zh: "今天我们谈论名字。"
+        de: "Mein Name ist Anna.",
+        zh: "我的名字是安娜。",
+        target: "Name"
       }
     ],
     teachingOrder: 217,
@@ -4766,8 +5031,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Pass.",
-        zh: "今天我们谈论护照。"
+        de: "Ich habe einen Pass.",
+        zh: "我有一本护照。",
+        target: "Pass"
       }
     ],
     teachingOrder: 218,
@@ -4782,13 +5048,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "给 … 打电话"
+        zh: "打电话"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute anrufen.",
-        zh: "我们今天想给 … 打电话。"
+        de: "Ich rufe dich an.",
+        zh: "我给你打电话。",
+        target: "rufe|an"
       }
     ],
     teachingOrder: 219,
@@ -4808,8 +5075,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Quadratmeter = 1 m²“ bedeutet hier „一平方米“.",
-        zh: "“ein Quadratmeter = 1 m²”在这里表示“一平方米”。"
+        de: "Der Teppich ist ein Quadratmeter groß.",
+        zh: "这块地毯有一平方米。",
+        target: "ein Quadratmeter"
       }
     ],
     teachingOrder: 220,
@@ -4829,8 +5097,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Partner.",
-        zh: "今天我们谈论男性合作伙伴。"
+        de: "Mein Partner arbeitet hier.",
+        zh: "我的男性合作伙伴在这里工作。",
+        target: "Partner"
       }
     ],
     teachingOrder: 221,
@@ -4850,8 +5119,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute Rad fahren.",
-        zh: "我们今天想骑自行车。"
+        de: "Ich gehe Rad fahren.",
+        zh: "我去骑自行车。",
+        target: "Rad fahren"
       }
     ],
     teachingOrder: 222,
@@ -4866,13 +5136,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "电话，通话"
+        zh: "来电"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Anruf.",
-        zh: "今天我们谈论电话，通话。"
+        de: "Ich bekomme einen Anruf.",
+        zh: "我收到一个来电。",
+        target: "Anruf"
       }
     ],
     teachingOrder: 223,
@@ -4892,8 +5163,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Grad unter Null = -1°“ bedeutet hier „零下一度“.",
-        zh: "“ein Grad unter Null = -1°”在这里表示“零下一度”。"
+        de: "Es ist ein Grad unter Null.",
+        zh: "气温是零下一度。",
+        target: "ein Grad unter Null"
       }
     ],
     teachingOrder: 224,
@@ -4908,13 +5180,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "女性合作伙伴"
+        zh: "伴侣"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Partnerin.",
-        zh: "今天我们谈论女性合作伙伴。"
+        de: "Meine Partnerin studiert Medizin.",
+        zh: "我的伴侣在学医。",
+        target: "Partnerin"
       }
     ],
     teachingOrder: 225,
@@ -4934,8 +5207,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute reisen.",
-        zh: "我们今天想旅游。"
+        de: "Wir reisen nach Berlin.",
+        zh: "我们去柏林旅行。",
+        target: "reisen"
       }
     ],
     teachingOrder: 226,
@@ -4955,8 +5229,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Anrufbeantworter.",
-        zh: "今天我们谈论电话答录机。"
+        de: "Der Anrufbeantworter ist voll.",
+        zh: "电话答录机已满。",
+        target: "Anrufbeantworter"
       }
     ],
     teachingOrder: 227,
@@ -4976,8 +5251,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „vier Grad über Null = +4°“ bedeutet hier „零上四度“.",
-        zh: "“vier Grad über Null = +4°”在这里表示“零上四度”。"
+        de: "Heute ist vier Grad über Null.",
+        zh: "今天气温是零上四度。",
+        target: "vier Grad über Null"
       }
     ],
     teachingOrder: 228,
@@ -4997,8 +5273,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Schwester.",
-        zh: "今天我们谈论姐妹。"
+        de: "Meine Schwester heißt Lisa.",
+        zh: "我的姐妹叫莉萨。",
+        target: "Schwester"
       }
     ],
     teachingOrder: 229,
@@ -5018,8 +5295,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Reise.",
-        zh: "今天我们谈论旅行。"
+        de: "Die Reise dauert drei Tage.",
+        zh: "这次旅行持续三天。",
+        target: "Reise"
       }
     ],
     teachingOrder: 230,
@@ -5039,8 +5317,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Ansage.",
-        zh: "今天我们谈论广播通知。"
+        de: "Die Ansage ist laut.",
+        zh: "广播通知很响。",
+        target: "Ansage"
       }
     ],
     teachingOrder: 231,
@@ -5060,8 +5339,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Prozent = 1 %“ bedeutet hier „百分之一“.",
-        zh: "“ein Prozent = 1 %”在这里表示“百分之一”。"
+        de: "Das ist ein Prozent Rabatt.",
+        zh: "这是百分之一的折扣。",
+        target: "ein Prozent"
       }
     ],
     teachingOrder: 232,
@@ -5081,8 +5361,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Sohn.",
-        zh: "今天我们谈论儿子。"
+        de: "Mein Sohn spielt im Garten.",
+        zh: "我的儿子在花园里玩。",
+        target: "Sohn"
       }
     ],
     teachingOrder: 233,
@@ -5102,8 +5383,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Reisebüro.",
-        zh: "今天我们谈论旅行社。"
+        de: "Das Reisebüro hat günstige Tickets.",
+        zh: "旅行社有便宜的票。",
+        target: "Reisebüro"
       }
     ],
     teachingOrder: 234,
@@ -5118,13 +5400,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "连接；换乘衔接"
+        zh: "换乘"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Anschluss.",
-        zh: "今天我们谈论连接；换乘衔接。"
+        de: "Der Anschluss kommt in fünf Minuten.",
+        zh: "换乘将在五分钟后到达。",
+        target: "Anschluss"
       }
     ],
     teachingOrder: 235,
@@ -5144,8 +5427,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Liter = 1 l“ bedeutet hier „一升“.",
-        zh: "“ein Liter = 1 l”在这里表示“一升”。"
+        de: "Ein Liter Wasser kostet zwei Euro.",
+        zh: "一升水的价格是两欧元。",
+        target: "Ein Liter"
       }
     ],
     teachingOrder: 236,
@@ -5165,8 +5449,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Tochter.",
-        zh: "今天我们谈论女儿。"
+        de: "Meine Tochter liest ein Buch.",
+        zh: "我的女儿在读一本书。",
+        target: "Tochter"
       }
     ],
     teachingOrder: 237,
@@ -5181,13 +5466,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "旅行指南书"
+        zh: "旅行指南"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Reiseführer.",
-        zh: "今天我们谈论旅行指南书。"
+        de: "Der Reiseführer zeigt die Stadtkarte.",
+        zh: "旅行指南展示了城市地图。",
+        target: "Reiseführer"
       }
     ],
     teachingOrder: 238,
@@ -5207,8 +5493,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute an sein.",
-        zh: "我们今天想开着。"
+        de: "Bitte das Gerät an sein lassen.",
+        zh: "请把设备保持开启。",
+        target: "an sein"
       }
     ],
     teachingOrder: 239,
@@ -5228,8 +5515,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Gramm = 1 g“ bedeutet hier „一克“.",
-        zh: "“ein Gramm = 1 g”在这里表示“一克”。"
+        de: "Ein Gramm Zucker kostet fünf Cent.",
+        zh: "一克糖的价格是五分钱。",
+        target: "Ein Gramm"
       }
     ],
     teachingOrder: 240,
@@ -5249,8 +5537,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Vater.",
-        zh: "今天我们谈论父亲。"
+        de: "Mein Vater kocht gern.",
+        zh: "我的父亲喜欢做饭。",
+        target: "Vater"
       }
     ],
     teachingOrder: 241,
@@ -5265,13 +5554,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "轻轨铁路"
+        zh: "轻轨"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die S-Bahn.",
-        zh: "今天我们谈论轻轨铁路。"
+        de: "Ich fahre mit der S-Bahn.",
+        zh: "我乘坐S-Bahn。",
+        target: "S-Bahn"
       }
     ],
     teachingOrder: 242,
@@ -5291,8 +5581,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute antworten.",
-        zh: "我们今天想回答。"
+        de: "Er kann nicht sofort antworten.",
+        zh: "他不能马上回答。",
+        target: "antworten"
       }
     ],
     teachingOrder: 243,
@@ -5312,8 +5603,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Pfund = 500 g“ bedeutet hier „一磅（五百克）“.",
-        zh: "“ein Pfund = 500 g”在这里表示“一磅（五百克）”。"
+        de: "Ein Pfund Äpfel kostet drei Euro.",
+        zh: "一磅苹果的价格是三欧元。",
+        target: "Ein Pfund"
       }
     ],
     teachingOrder: 244,
@@ -5333,8 +5625,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Verwandte.",
-        zh: "今天我们谈论亲属。"
+        de: "Meine Verwandte kommen morgen.",
+        zh: "我的亲属明天来。",
+        target: "Verwandte"
       }
     ],
     teachingOrder: 245,
@@ -5349,13 +5642,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "不在；离开了"
+        zh: "不在"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute weg sein.",
-        zh: "我们今天想不在；离开了。"
+        de: "Sie will nicht mehr weg sein.",
+        zh: "她不想再离开。",
+        target: "weg sein"
       }
     ],
     teachingOrder: 246,
@@ -5370,13 +5664,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "答案，回答"
+        zh: "答案"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Antwort.",
-        zh: "今天我们谈论答案，回答。"
+        de: "Die Antwort ist richtig.",
+        zh: "答案是正确的。",
+        target: "Antwort"
       }
     ],
     teachingOrder: 247,
@@ -5396,8 +5691,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Kilo(gramm) = 1 kg“ bedeutet hier „一千克“.",
-        zh: "“ein Kilo(gramm) = 1 kg”在这里表示“一千克”。"
+        de: "Ich kaufe ein Kilo Äpfel.",
+        zh: "我买了一公斤苹果。",
+        target: "ein Kilo"
       }
     ],
     teachingOrder: 248,
@@ -5412,13 +5708,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "名"
+        zh: "名字"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Vorname.",
-        zh: "今天我们谈论名。"
+        de: "Mein Vorname ist Anna.",
+        zh: "我的名字是安娜。",
+        target: "Vorname"
       }
     ],
     teachingOrder: 249,
@@ -5438,8 +5735,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Straße.",
-        zh: "今天我们谈论街道。"
+        de: "Die Straße ist breit.",
+        zh: "这条街道很宽。",
+        target: "Straße"
       }
     ],
     teachingOrder: 250,
@@ -5454,13 +5752,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "告示牌"
+        zh: "告示"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Anzeige.",
-        zh: "今天我们谈论告示牌。"
+        de: "Die Anzeige im Fenster ist neu.",
+        zh: "窗户上的告示是新的。",
+        target: "Anzeige"
       }
     ],
     teachingOrder: 251,
@@ -5480,8 +5779,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „schwarz“ bedeutet hier „黑色“.",
-        zh: "“schwarz”在这里表示“黑色”。"
+        de: "Der Mantel ist schwarz.",
+        zh: "这件外套是黑色的。",
+        target: "schwarz"
       }
     ],
     teachingOrder: 252,
@@ -5501,8 +5801,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „Deutschland“ bedeutet hier „德国“.",
-        zh: "“Deutschland”在这里表示“德国”。"
+        de: "Deutschland liegt in Europa.",
+        zh: "德国位于欧洲。",
+        target: "Deutschland"
       }
     ],
     teachingOrder: 253,
@@ -5522,8 +5823,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Straßenbahn.",
-        zh: "今天我们谈论有轨电车。"
+        de: "Die Straßenbahn fährt heute pünktlich.",
+        zh: "有轨电车今天准时。",
+        target: "Straßenbahn"
       }
     ],
     teachingOrder: 254,
@@ -5543,8 +5845,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute uns anziehen.",
-        zh: "我们今天想穿上。"
+        de: "Ich ziehe mich schnell an.",
+        zh: "我快速穿好衣服。",
+        target: "ziehe|an"
       }
     ],
     teachingOrder: 255,
@@ -5564,8 +5867,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „grau“ bedeutet hier „灰色“.",
-        zh: "“grau”在这里表示“灰色”。"
+        de: "Der Himmel ist grau.",
+        zh: "天空是灰色的。",
+        target: "grau"
       }
     ],
     teachingOrder: 256,
@@ -5585,8 +5889,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „der/die Deutsche“ bedeutet hier „德国人“.",
-        zh: "“der/die Deutsche”在这里表示“德国人”。"
+        de: "Der Deutsche trinkt Kaffee.",
+        zh: "这位德国人喝咖啡。",
+        target: "Deutsche"
       }
     ],
     teachingOrder: 257,
@@ -5606,8 +5911,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Taxi.",
-        zh: "今天我们谈论出租车。"
+        de: "Das Taxi kommt gleich.",
+        zh: "出租车马上就来。",
+        target: "Taxi"
       }
     ],
     teachingOrder: 258,
@@ -5622,13 +5928,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "公寓套间"
+        zh: "公寓"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Apartment.",
-        zh: "今天我们谈论公寓套间。"
+        de: "Das Apartment ist klein.",
+        zh: "这间公寓很小。",
+        target: "Apartment"
       }
     ],
     teachingOrder: 259,
@@ -5648,8 +5955,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „blau“ bedeutet hier „蓝色“.",
-        zh: "“blau”在这里表示“蓝色”。"
+        de: "Das T-Shirt ist blau.",
+        zh: "这件T恤是蓝色的。",
+        target: "blau"
       }
     ],
     teachingOrder: 260,
@@ -5664,13 +5972,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "一个德国男性／女性；德国人"
+        zh: "一个德国人"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ein Deutscher“ bedeutet hier „一个德国男性／女性；德国人“.",
-        zh: "“ein Deutscher”在这里表示“一个德国男性／女性；德国人”。"
+        de: "Ein Deutscher spricht Englisch.",
+        zh: "一个德国人说英语。",
+        target: "Ein Deutscher"
       }
     ],
     teachingOrder: 261,
@@ -5690,8 +5999,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Ticket.",
-        zh: "今天我们谈论票。"
+        de: "Das Ticket kostet fünf Euro.",
+        zh: "这张票要五欧元。",
+        target: "Ticket"
       }
     ],
     teachingOrder: 262,
@@ -5706,13 +6016,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "胃口，食欲（单数形式）"
+        zh: "食欲"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Appetit.",
-        zh: "今天我们谈论胃口，食欲（单数形式）。"
+        de: "Ich habe keinen Appetit.",
+        zh: "我没有食欲。",
+        target: "Appetit"
       }
     ],
     teachingOrder: 263,
@@ -5732,8 +6043,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „grün“ bedeutet hier „绿色“.",
-        zh: "“grün”在这里表示“绿色”。"
+        de: "Der Apfel ist grün.",
+        zh: "这个苹果是绿色的。",
+        target: "grün"
       }
     ],
     teachingOrder: 264,
@@ -5748,13 +6060,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "德国的；德语"
+        zh: "德国的；德语的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „deutsch“ bedeutet hier „德国的；德语“.",
-        zh: "“deutsch”在这里表示“德国的；德语”。"
+        de: "Ich bin deutsch.",
+        zh: "我是德国人。",
+        target: "deutsch"
       }
     ],
     teachingOrder: 265,
@@ -5769,13 +6082,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "假日，休假"
+        zh: "假期"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Urlaub.",
-        zh: "今天我们谈论假日，休假。"
+        de: "Wir machen Urlaub.",
+        zh: "我们去度假。",
+        target: "Urlaub"
       }
     ],
     teachingOrder: 266,
@@ -5795,8 +6109,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „auch“ bedeutet hier „也“.",
-        zh: "“auch”在这里表示“也”。"
+        de: "Ich habe auch Hunger.",
+        zh: "我也饿。",
+        target: "auch"
       }
     ],
     teachingOrder: 267,
@@ -5811,13 +6126,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "白色"
+        zh: "白色的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „weiß“ bedeutet hier „白色“.",
-        zh: "“weiß”在这里表示“白色”。"
+        de: "Das T-Shirt ist weiß.",
+        zh: "这件T恤是白色的。",
+        target: "weiß"
       }
     ],
     teachingOrder: 268,
@@ -5837,8 +6153,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „Europa“ bedeutet hier „欧洲“.",
-        zh: "“Europa”在这里表示“欧洲”。"
+        de: "Europa liegt im Westen.",
+        zh: "欧洲在西边。",
+        target: "Europa"
       }
     ],
     teachingOrder: 269,
@@ -5858,8 +6175,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Zimmer.",
-        zh: "今天我们谈论房间。"
+        de: "Mein Zimmer ist klein.",
+        zh: "我的房间很小。",
+        target: "Zimmer"
       }
     ],
     teachingOrder: 270,
@@ -5874,13 +6192,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在……上；到……上"
+        zh: "在……上"
       }
     ],
     examples: [
       {
-        de: "Das Wort „auf“ bedeutet hier „在……上；到……上“.",
-        zh: "“auf”在这里表示“在……上；到……上”。"
+        de: "Die Tasche liegt auf dem Stuhl.",
+        zh: "包放在椅子上。",
+        target: "auf"
       }
     ],
     teachingOrder: 271,
@@ -5895,13 +6214,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "红色"
+        zh: "红色的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „rot“ bedeutet hier „红色“.",
-        zh: "“rot”在这里表示“红色”。"
+        de: "Die Rose ist rot.",
+        zh: "玫瑰是红色的。",
+        target: "rot"
       }
     ],
     teachingOrder: 272,
@@ -5921,8 +6241,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „Europäer“ bedeutet hier „欧洲人“.",
-        zh: "“Europäer”在这里表示“欧洲人”。"
+        de: "Er ist ein Europäer.",
+        zh: "他是欧洲人。",
+        target: "Europäer"
       }
     ],
     teachingOrder: 273,
@@ -5942,8 +6263,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Zug.",
-        zh: "今天我们谈论火车。"
+        de: "Der Zug kommt pünktlich.",
+        zh: "火车准时到达。",
+        target: "Zug"
       }
     ],
     teachingOrder: 274,
@@ -5963,8 +6285,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Aufgabe.",
-        zh: "今天我们谈论任务。"
+        de: "Die Aufgabe ist leicht.",
+        zh: "这项任务很容易。",
+        target: "Aufgabe"
       }
     ],
     teachingOrder: 275,
@@ -5979,13 +6302,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "黄色"
+        zh: "黄色的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gelb“ bedeutet hier „黄色“.",
-        zh: "“gelb”在这里表示“黄色”。"
+        de: "Der Ball ist gelb.",
+        zh: "球是黄色的。",
+        target: "gelb"
       }
     ],
     teachingOrder: 276,
@@ -6005,8 +6329,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „europäisch“ bedeutet hier „欧洲的“.",
-        zh: "“europäisch”在这里表示“欧洲的”。"
+        de: "Das Essen ist europäisch.",
+        zh: "这道菜是欧洲风味的。",
+        target: "europäisch"
       }
     ],
     teachingOrder: 277,
@@ -6026,8 +6351,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Norden.",
-        zh: "今天我们谈论北方。"
+        de: "Wir fahren nach Norden.",
+        zh: "我们向北行驶。",
+        target: "Norden"
       }
     ],
     teachingOrder: 278,
@@ -6047,8 +6373,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute aufhören.",
-        zh: "我们今天想停止。"
+        de: "Hör auf zu reden.",
+        zh: "请停止说话。",
+        target: "Hör|auf"
       }
     ],
     teachingOrder: 279,
@@ -6063,13 +6390,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "棕色"
+        zh: "棕色的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „braun“ bedeutet hier „棕色“.",
-        zh: "“braun”在这里表示“棕色”。"
+        de: "Der Tisch ist braun.",
+        zh: "桌子是棕色的。",
+        target: "braun"
       }
     ],
     teachingOrder: 280,
@@ -6084,13 +6412,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "说明自己的来源地或国籍"
+        zh: "说明自己的来源或国籍"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Angabe der eigenen Herkunft oder Nationalität“ bedeutet hier „说明自己的来源地或国籍“.",
-        zh: "“Angabe der eigenen Herkunft oder Nationalität”在这里表示“说明自己的来源地或国籍”。"
+        de: "Die Angabe der eigenen Herkunft oder Nationalität steht im Formular.",
+        zh: "表格里有填写本人来源或国籍的栏目。",
+        target: "Angabe der eigenen Herkunft oder Nationalität"
       }
     ],
     teachingOrder: 281,
@@ -6110,8 +6439,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Süden.",
-        zh: "今天我们谈论南方。"
+        de: "Im Süden ist es warm.",
+        zh: "南方很暖。",
+        target: "Süden"
       }
     ],
     teachingOrder: 282,
@@ -6126,13 +6456,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "开着"
+        zh: "打开（状态）"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute auf sein.",
-        zh: "我们今天想开着。"
+        de: "Der Herd ist auf.",
+        zh: "炉子是开的。",
+        target: "auf"
       }
     ],
     teachingOrder: 283,
@@ -6147,13 +6478,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "国家、居民、国籍"
+        zh: "国家"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Land“ bedeutet hier „国家、居民、国籍“.",
-        zh: "“Land”在这里表示“国家、居民、国籍”。"
+        de: "Das Land ist klein.",
+        zh: "这个国家很小。",
+        target: "Land"
       }
     ],
     teachingOrder: 284,
@@ -6173,8 +6505,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Westen.",
-        zh: "今天我们谈论西方。"
+        de: "Im Westen ist es kühl.",
+        zh: "西方很凉。",
+        target: "Westen"
       }
     ],
     teachingOrder: 285,
@@ -6194,8 +6527,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute aufstehen.",
-        zh: "我们今天想起床。"
+        de: "Ich stehe um sieben auf.",
+        zh: "我七点起床。",
+        target: "stehe|auf"
       }
     ],
     teachingOrder: 286,
@@ -6210,13 +6544,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "土耳其、土耳其人、土耳其的"
+        zh: "土耳其"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Türkei“ bedeutet hier „土耳其、土耳其人、土耳其的“.",
-        zh: "“Türkei”在这里表示“土耳其、土耳其人、土耳其的”。"
+        de: "Die Türkei liegt in Asien.",
+        zh: "土耳其位于亚洲。",
+        target: "Türkei"
       }
     ],
     teachingOrder: 287,
@@ -6236,8 +6571,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Osten.",
-        zh: "今天我们谈论东方。"
+        de: "Im Osten ist es sonnig.",
+        zh: "东方很阳光。",
+        target: "Osten"
       }
     ],
     teachingOrder: 288,
@@ -6252,13 +6588,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "来自从 ... 里出来"
+        zh: "来自"
       }
     ],
     examples: [
       {
-        de: "Das Wort „aus“ bedeutet hier „来自从 ... 里出来“.",
-        zh: "“aus”在这里表示“来自从 ... 里出来”。"
+        de: "Ich komme aus Berlin.",
+        zh: "我来自柏林。",
+        target: "aus"
       }
     ],
     teachingOrder: 289,
@@ -6273,13 +6610,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "芬兰、芬兰人、芬兰的"
+        zh: "芬兰"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Finnland“ bedeutet hier „芬兰、芬兰人、芬兰的“.",
-        zh: "“Finnland”在这里表示“芬兰、芬兰人、芬兰的”。"
+        de: "Finnland liegt im Norden.",
+        zh: "芬兰位于北部。",
+        target: "Finnland"
       }
     ],
     teachingOrder: 290,
@@ -6299,8 +6637,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute ausfüllen.",
-        zh: "我们今天想填写。"
+        de: "Bitte das Formular ausfüllen.",
+        zh: "请填写表格。",
+        target: "ausfüllen"
       }
     ],
     teachingOrder: 291,
@@ -6315,13 +6654,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "墨西哥、墨西哥人、墨西哥的"
+        zh: "墨西哥"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Mexiko“ bedeutet hier „墨西哥、墨西哥人、墨西哥的“.",
-        zh: "“Mexiko”在这里表示“墨西哥、墨西哥人、墨西哥的”。"
+        de: "Mexiko hat warme Strände.",
+        zh: "墨西哥有温暖的海滩。",
+        target: "Mexiko"
       }
     ],
     teachingOrder: 292,
@@ -6341,8 +6681,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ausgang.",
-        zh: "今天我们谈论出口。"
+        de: "Der Ausgang ist rechts.",
+        zh: "出口在右边。",
+        target: "Ausgang"
       }
     ],
     teachingOrder: 293,
@@ -6357,13 +6698,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "外国"
+        zh: "国外"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Ausland.",
-        zh: "今天我们谈论外国。"
+        de: "Ich reise ins Ausland.",
+        zh: "我去国外旅行。",
+        target: "Ausland"
       }
     ],
     teachingOrder: 294,
@@ -6383,8 +6725,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ausländer.",
-        zh: "今天我们谈论外国人。"
+        de: "Der Ausländer spricht Deutsch.",
+        zh: "这位外国人说德语。",
+        target: "Ausländer"
       }
     ],
     teachingOrder: 295,
@@ -6404,8 +6747,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ausländisch“ bedeutet hier „外国的“.",
-        zh: "“ausländisch”在这里表示“外国的”。"
+        de: "Das Essen ist ausländisch.",
+        zh: "这食物是外国的。",
+        target: "ausländisch"
       }
     ],
     teachingOrder: 296,
@@ -6420,13 +6764,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "关掉；约定"
+        zh: "关掉"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute ausmachen.",
-        zh: "我们今天想关掉；约定。"
+        de: "Ich mache das Licht aus.",
+        zh: "我把灯关掉。",
+        target: "mache|aus"
       }
     ],
     teachingOrder: 297,
@@ -6441,13 +6786,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "陈述，说法，观点"
+        zh: "陈述"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Aussage.",
-        zh: "今天我们谈论陈述，说法，观点。"
+        de: "Seine Aussage war klar.",
+        zh: "他的陈述很清楚。",
+        target: "Aussage"
       }
     ],
     teachingOrder: 298,
@@ -6467,8 +6813,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute aussehen.",
-        zh: "我们今天想看起来。"
+        de: "Er sieht müde aus.",
+        zh: "他看起来很累。",
+        target: "sieht|aus"
       }
     ],
     teachingOrder: 299,
@@ -6483,13 +6830,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在关机（状态）"
+        zh: "关机"
       }
     ],
     examples: [
       {
-        de: "Das Wort „aus sein“ bedeutet hier „在关机（状态）“.",
-        zh: "“aus sein”在这里表示“在关机（状态）”。"
+        de: "Der Fernseher ist aus.",
+        zh: "电视关机了。",
+        target: "ist|aus"
       }
     ],
     teachingOrder: 300,
@@ -6504,13 +6852,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "下车，下船"
+        zh: "下车"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute aussteigen.",
-        zh: "我们今天想下车，下船。"
+        de: "Ich steige an der Haltestelle aus.",
+        zh: "我在站台下车。",
+        target: "steige|aus"
       }
     ],
     teachingOrder: 301,
@@ -6530,8 +6879,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ausweis.",
-        zh: "今天我们谈论证件。"
+        de: "Ich zeige meinen Ausweis.",
+        zh: "我出示我的证件。",
+        target: "Ausweis"
       }
     ],
     teachingOrder: 302,
@@ -6546,13 +6896,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "脱下；搬出"
+        zh: "脱下"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns ausziehen.",
-        zh: "我们今天想脱下；搬出。"
+        de: "Ich ziehe mich zu Hause aus.",
+        zh: "我在家里脱衣服。",
+        target: "ziehe|aus"
       }
     ],
     teachingOrder: 303,
@@ -6572,8 +6923,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Baby.",
-        zh: "今天我们谈论婴儿。"
+        de: "Das Baby schläft friedlich.",
+        zh: "宝宝安静地睡着。",
+        target: "Baby"
       }
     ],
     teachingOrder: 304,
@@ -6593,8 +6945,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Bäckerei.",
-        zh: "今天我们谈论面包店。"
+        de: "Wir gehen in die Bäckerei.",
+        zh: "我们去面包店。",
+        target: "Bäckerei"
       }
     ],
     teachingOrder: 305,
@@ -6609,13 +6962,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "很快，即将"
+        zh: "很快"
       }
     ],
     examples: [
       {
-        de: "Das Wort „bald“ bedeutet hier „很快，即将“.",
-        zh: "“bald”在这里表示“很快，即将”。"
+        de: "Wir kommen bald zurück.",
+        zh: "我们很快回来。",
+        target: "bald"
       }
     ],
     teachingOrder: 306,
@@ -6635,8 +6989,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „bar“ bedeutet hier „酒吧“.",
-        zh: "“bar”在这里表示“酒吧”。"
+        de: "Wir treffen uns in der Bar.",
+        zh: "我们在酒吧见面。",
+        target: "Bar"
       }
     ],
     teachingOrder: 307,
@@ -6656,8 +7011,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bauch.",
-        zh: "今天我们谈论腹部。"
+        de: "Mein Bauch tut weh.",
+        zh: "我的肚子疼。",
+        target: "Bauch"
       }
     ],
     teachingOrder: 308,
@@ -6672,13 +7028,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "意味着，意思是"
+        zh: "意味着"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute bedeuten.",
-        zh: "我们今天想意味着，意思是。"
+        de: "Was bedeutet das Wort?",
+        zh: "这个词是什么意思？",
+        target: "bedeutet"
       }
     ],
     teachingOrder: 309,
@@ -6693,13 +7050,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "开始开始"
+        zh: "开始"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute beginnen.",
-        zh: "我们今天想开始开始。"
+        de: "Der Film beginnt um acht.",
+        zh: "电影八点开始。",
+        target: "beginnt"
       }
     ],
     teachingOrder: 310,
@@ -6714,13 +7072,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在 … 地点在 … 的时间"
+        zh: "在…地点/时间"
       }
     ],
     examples: [
       {
-        de: "Das Wort „bei“ bedeutet hier „在 … 地点在 … 的时间“.",
-        zh: "“bei”在这里表示“在 … 地点在 … 的时间”。"
+        de: "Ich warte bei der Schule.",
+        zh: "我在学校等候。",
+        target: "bei"
       }
     ],
     teachingOrder: 311,
@@ -6735,13 +7094,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "两个（物，事）"
+        zh: "两个"
       }
     ],
     examples: [
       {
-        de: "Das Wort „beide“ bedeutet hier „两个（物，事）“.",
-        zh: "“beide”在这里表示“两个（物，事）”。"
+        de: "Beide Kinder lachen.",
+        zh: "两个孩子在笑。",
+        target: "beide"
       }
     ],
     teachingOrder: 312,
@@ -6756,13 +7116,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "出名的"
+        zh: "著名的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „bekannt“ bedeutet hier „出名的“.",
-        zh: "“bekannt”在这里表示“出名的”。"
+        de: "Der Sänger ist sehr bekannt.",
+        zh: "这位歌手非常有名。",
+        target: "bekannt"
       }
     ],
     teachingOrder: 313,
@@ -6782,8 +7143,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „der/die Bekannte“ bedeutet hier „熟人“.",
-        zh: "“der/die Bekannte”在这里表示“熟人”。"
+        de: "Ich treffe meine Bekannte heute.",
+        zh: "我今天见我的熟人。",
+        target: "Bekannte"
       }
     ],
     teachingOrder: 314,
@@ -6803,8 +7165,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute bekommen.",
-        zh: "我们今天想得到得了（某种症状或疾病）。"
+        de: "Ich habe eine Erkältung bekommen.",
+        zh: "我得了感冒。",
+        target: "bekommen"
       }
     ],
     teachingOrder: 315,
@@ -6824,8 +7187,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute benutzen.",
-        zh: "我们今天想使用。"
+        de: "Ich benutze das Handy.",
+        zh: "我使用这部手机。",
+        target: "benutze"
       }
     ],
     teachingOrder: 316,
@@ -6840,13 +7204,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "占用的；忙线的"
+        zh: "占用的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „besetzt“ bedeutet hier „占用的；忙线的“.",
-        zh: "“besetzt”在这里表示“占用的；忙线的”。"
+        de: "Das Büro ist besetzt.",
+        zh: "办公室已被占用。",
+        target: "besetzt"
       }
     ],
     teachingOrder: 317,
@@ -6866,8 +7231,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute besichtigen.",
-        zh: "我们今天想参观。"
+        de: "Wir wollen das Museum besichtigen.",
+        zh: "我们想参观博物馆。",
+        target: "besichtigen"
       }
     ],
     teachingOrder: 318,
@@ -6887,8 +7253,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „besser“ bedeutet hier „更好“.",
-        zh: "“besser”在这里表示“更好”。"
+        de: "Dieses Buch ist besser.",
+        zh: "这本书更好。",
+        target: "besser"
       }
     ],
     teachingOrder: 319,
@@ -6908,8 +7275,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „best-“ bedeutet hier „最好的“.",
-        zh: "“best-”在这里表示“最好的”。"
+        de: "Paul ist mein bester Freund.",
+        zh: "保罗是我最好的朋友。",
+        target: "bester"
       }
     ],
     teachingOrder: 320,
@@ -6924,13 +7292,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "参观，拜访"
+        zh: "拜访"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute besuchen.",
-        zh: "我们今天想参观，拜访。"
+        de: "Ich möchte meine Tante besuchen.",
+        zh: "我想拜访我的阿姨。",
+        target: "besuchen"
       }
     ],
     teachingOrder: 321,
@@ -6950,8 +7319,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Bild.",
-        zh: "今天我们谈论图画。"
+        de: "Das Bild ist schön.",
+        zh: "这幅画很漂亮。",
+        target: "Bild"
       }
     ],
     teachingOrder: 322,
@@ -6971,8 +7341,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „billig“ bedeutet hier „便宜的“.",
-        zh: "“billig”在这里表示“便宜的”。"
+        de: "Das T-Shirt ist billig.",
+        zh: "这件 T 恤很便宜。",
+        target: "billig"
       }
     ],
     teachingOrder: 323,
@@ -6987,13 +7358,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "直到直到 … 为止"
+        zh: "直到"
       }
     ],
     examples: [
       {
-        de: "Das Wort „bis“ bedeutet hier „直到直到 … 为止“.",
-        zh: "“bis”在这里表示“直到直到 … 为止”。"
+        de: "Wir warten bis morgen.",
+        zh: "我们等到明天。",
+        target: "bis"
       }
     ],
     teachingOrder: 324,
@@ -7008,13 +7380,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "一点点"
+        zh: "一点儿"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute bisschen.",
-        zh: "我们今天想一点点。"
+        de: "Ich bin ein bisschen müde.",
+        zh: "我有点儿累。",
+        target: "bisschen"
       }
     ],
     teachingOrder: 325,
@@ -7034,8 +7407,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „bitte“ bedeutet hier „请“.",
-        zh: "“bitte”在这里表示“请”。"
+        de: "Bitte, setz dich hin.",
+        zh: "请坐。",
+        target: "Bitte"
       }
     ],
     teachingOrder: 326,
@@ -7050,13 +7424,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "请"
+        zh: "请求"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Bitte.",
-        zh: "今天我们谈论请。"
+        de: "Ich habe eine Bitte.",
+        zh: "我有一个请求。",
+        target: "Bitte"
       }
     ],
     teachingOrder: 327,
@@ -7071,13 +7446,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "请求，恳求"
+        zh: "请求"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute bitten.",
-        zh: "我们今天想请求，恳求。"
+        de: "Kann ich dich um Hilfe bitten?",
+        zh: "我可以请你帮忙吗？",
+        target: "bitten"
       }
     ],
     teachingOrder: 328,
@@ -7097,8 +7473,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „bitter“ bedeutet hier „苦的“.",
-        zh: "“bitter”在这里表示“苦的”。"
+        de: "Der Kaffee ist bitter.",
+        zh: "咖啡是苦的。",
+        target: "bitter"
       }
     ],
     teachingOrder: 329,
@@ -7113,13 +7490,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "停留，逗留"
+        zh: "停留"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute bleiben.",
-        zh: "我们今天想停留，逗留。"
+        de: "Ich bleibe zu Hause.",
+        zh: "我待在家里。",
+        target: "bleibe"
       }
     ],
     teachingOrder: 330,
@@ -7139,8 +7517,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bleistift.",
-        zh: "今天我们谈论铅笔。"
+        de: "Der Bleistift liegt auf dem Tisch.",
+        zh: "铅笔在桌子上。",
+        target: "Bleistift"
       }
     ],
     teachingOrder: 331,
@@ -7155,13 +7534,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "目光；景色"
+        zh: "目光"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Blick.",
-        zh: "今天我们谈论目光；景色。"
+        de: "Ich habe einen kurzen Blick.",
+        zh: "我扫了一眼。",
+        target: "Blick"
       }
     ],
     teachingOrder: 332,
@@ -7176,13 +7556,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "表格；纸张"
+        zh: "纸张"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Bogen.",
-        zh: "今天我们谈论表格；纸张。"
+        de: "Der Bogen liegt auf dem Tisch.",
+        zh: "这张纸在桌子上。",
+        target: "Bogen"
       }
     ],
     teachingOrder: 333,
@@ -7197,13 +7578,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "生气的；坏的"
+        zh: "生气的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „böse“ bedeutet hier „生气的；坏的“.",
-        zh: "“böse”在这里表示“生气的；坏的”。"
+        de: "Er ist heute böse.",
+        zh: "他今天生气。",
+        target: "böse"
       }
     ],
     teachingOrder: 334,
@@ -7218,13 +7600,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "需要需要"
+        zh: "需要"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute brauchen.",
-        zh: "我们今天想需要需要。"
+        de: "Ich brauche ein Buch.",
+        zh: "我需要一本书。",
+        target: "brauche"
       }
     ],
     teachingOrder: 335,
@@ -7244,8 +7627,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „breit“ bedeutet hier „宽阔的“.",
-        zh: "“breit”在这里表示“宽阔的”。"
+        de: "Der Weg ist breit.",
+        zh: "道路很宽阔。",
+        target: "breit"
       }
     ],
     teachingOrder: 336,
@@ -7265,8 +7649,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute bringen.",
-        zh: "我们今天想带来。"
+        de: "Ich bringe das Buch.",
+        zh: "我把书带来。",
+        target: "bringe"
       }
     ],
     teachingOrder: 337,
@@ -7286,8 +7671,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Brötchen.",
-        zh: "今天我们谈论小面包。"
+        de: "Das Brötchen ist frisch.",
+        zh: "小面包是新鲜的。",
+        target: "Brötchen"
       }
     ],
     teachingOrder: 338,
@@ -7307,8 +7693,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Buchstabe.",
-        zh: "今天我们谈论字母。"
+        de: "Der Buchstabe A ist groß.",
+        zh: "字母A是大写的。",
+        target: "Buchstabe"
       }
     ],
     teachingOrder: 339,
@@ -7328,8 +7715,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Café.",
-        zh: "今天我们谈论咖啡馆。"
+        de: "Das Café ist offen.",
+        zh: "咖啡馆是开的。",
+        target: "Café"
       }
     ],
     teachingOrder: 340,
@@ -7344,13 +7732,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "CD"
+        zh: "光盘"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die CD.",
-        zh: "今天我们谈论CD。"
+        de: "Die CD spielt Musik.",
+        zh: "光盘播放音乐。",
+        target: "CD"
       }
     ],
     teachingOrder: 341,
@@ -7370,8 +7759,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „circa/ca.“ bedeutet hier „大约“.",
-        zh: "“circa/ca.”在这里表示“大约”。"
+        de: "Das Buch kostet ca. 5 Euro.",
+        zh: "这本书大约5欧元。",
+        target: "ca."
       }
     ],
     teachingOrder: 342,
@@ -7391,8 +7781,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Computer.",
-        zh: "今天我们谈论计算机。"
+        de: "Der Computer ist neu.",
+        zh: "计算机是新的。",
+        target: "Computer"
       }
     ],
     teachingOrder: 343,
@@ -7407,13 +7798,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "那儿，那里在这种情况下在那时"
+        zh: "那里"
       }
     ],
     examples: [
       {
-        de: "Das Wort „da“ bedeutet hier „那儿，那里在这种情况下在那时“.",
-        zh: "“da”在这里表示“那儿，那里在这种情况下在那时”。"
+        de: "Ich bin jetzt da.",
+        zh: "我现在在那里。",
+        target: "da"
       }
     ],
     teachingOrder: 344,
@@ -7433,8 +7825,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Dame.",
-        zh: "今天我们谈论女士。"
+        de: "Die Dame kauft Brot.",
+        zh: "这位女士买面包。",
+        target: "Dame"
       }
     ],
     teachingOrder: 345,
@@ -7454,8 +7847,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute daneben.",
-        zh: "我们今天想在旁边。"
+        de: "Der Stuhl steht daneben.",
+        zh: "椅子就在旁边。",
+        target: "daneben"
       }
     ],
     teachingOrder: 346,
@@ -7475,8 +7869,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute danken.",
-        zh: "我们今天想感谢。"
+        de: "Wir danken euch.",
+        zh: "我们感谢你们。",
+        target: "danken"
       }
     ],
     teachingOrder: 347,
@@ -7491,13 +7886,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "感谢"
+        zh: "感谢（名词）"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Dank.",
-        zh: "今天我们谈论感谢。"
+        de: "Vielen Dank für deine Hilfe.",
+        zh: "非常感谢你的帮助。",
+        target: "Dank"
       }
     ],
     teachingOrder: 348,
@@ -7517,8 +7913,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „danke“ bedeutet hier „谢谢“.",
-        zh: "“danke”在这里表示“谢谢”。"
+        de: "Danke, das ist nett.",
+        zh: "谢谢，这很好。",
+        target: "danke"
       }
     ],
     teachingOrder: 349,
@@ -7533,13 +7930,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "此后、然后"
+        zh: "然后"
       }
     ],
     examples: [
       {
-        de: "Das Wort „dann“ bedeutet hier „此后、然后“.",
-        zh: "“dann”在这里表示“此后、然后”。"
+        de: "Wir gehen dann nach Hause.",
+        zh: "我们随后回家。",
+        target: "dann"
       }
     ],
     teachingOrder: 350,
@@ -7559,8 +7957,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Datum.",
-        zh: "今天我们谈论日期。"
+        de: "Welches Datum ist heute?",
+        zh: "今天是哪一天？",
+        target: "Datum"
       }
     ],
     teachingOrder: 351,
@@ -7580,8 +7979,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute dauern.",
-        zh: "我们今天想持续。"
+        de: "Der Film wird zwei Stunden dauern.",
+        zh: "电影将持续两个小时。",
+        target: "dauern"
       }
     ],
     teachingOrder: 352,
@@ -7601,8 +8001,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „dein-“ bedeutet hier „你的“.",
-        zh: "“dein-”在这里表示“你的”。"
+        de: "Ist das dein Buch?",
+        zh: "这是你的书吗？",
+        target: "dein"
       }
     ],
     teachingOrder: 353,
@@ -7617,13 +8018,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "究竟因为"
+        zh: "因为"
       }
     ],
     examples: [
       {
-        de: "Das Wort „denn“ bedeutet hier „究竟因为“.",
-        zh: "“denn”在这里表示“究竟因为”。"
+        de: "Ich bleibe zu Hause, denn es regnet.",
+        zh: "我待在家里，因为下雨。",
+        target: "denn"
       }
     ],
     teachingOrder: 354,
@@ -7638,13 +8040,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "这个（阳性，中性，阴性）"
+        zh: "这个（定冠词）"
       }
     ],
     examples: [
       {
-        de: "Das Wort „der“ bedeutet hier „这个（阳性，中性，阴性）“.",
-        zh: "“der”在这里表示“这个（阳性，中性，阴性）”。"
+        de: "Der Mann trägt einen Hut.",
+        zh: "这位男士戴着帽子。",
+        target: "der"
       }
     ],
     teachingOrder: 355,
@@ -7659,13 +8062,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "你（第四格）"
+        zh: "你（宾格）"
       }
     ],
     examples: [
       {
-        de: "Das Wort „dich“ bedeutet hier „你（第四格）“.",
-        zh: "“dich”在这里表示“你（第四格）”。"
+        de: "Ich sehe dich.",
+        zh: "我看见你。",
+        target: "dich"
       }
     ],
     teachingOrder: 356,
@@ -7685,8 +8089,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „dies-“ bedeutet hier „这个“.",
-        zh: "“dies-”在这里表示“这个”。"
+        de: "Dies ist mein Stift.",
+        zh: "这是我的笔。",
+        target: "Dies"
       }
     ],
     teachingOrder: 357,
@@ -7701,13 +8106,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "你（第三格）"
+        zh: "你（与格）"
       }
     ],
     examples: [
       {
-        de: "Das Wort „dir“ bedeutet hier „你（第三格）“.",
-        zh: "“dir”在这里表示“你（第三格）”。"
+        de: "Ich gebe dir das Buch.",
+        zh: "我把书给你。",
+        target: "dir"
       }
     ],
     teachingOrder: 358,
@@ -7727,8 +8133,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Doktor.",
-        zh: "今天我们谈论男博士。"
+        de: "Der Doktor kommt heute.",
+        zh: "这位男博士今天来。",
+        target: "Doktor"
       }
     ],
     teachingOrder: 359,
@@ -7748,8 +8155,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Dorf.",
-        zh: "今天我们谈论乡村，村庄。"
+        de: "Das Dorf liegt am Fluss.",
+        zh: "这个村庄在河边。",
+        target: "Dorf"
       }
     ],
     teachingOrder: 360,
@@ -7764,13 +8172,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "那里，那儿"
+        zh: "那里"
       }
     ],
     examples: [
       {
-        de: "Das Wort „dort“ bedeutet hier „那里，那儿“.",
-        zh: "“dort”在这里表示“那里，那儿”。"
+        de: "Das Buch liegt dort.",
+        zh: "书在那儿。",
+        target: "dort"
       }
     ],
     teachingOrder: 361,
@@ -7790,8 +8199,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute draußen.",
-        zh: "我们今天想在外面。"
+        de: "Wir spielen draußen.",
+        zh: "我们在外面玩。",
+        target: "draußen"
       }
     ],
     teachingOrder: 362,
@@ -7811,8 +8221,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute drucken.",
-        zh: "我们今天想打印。"
+        de: "Ich drucke das Bild.",
+        zh: "我打印这张图片。",
+        target: "drucke"
       }
     ],
     teachingOrder: 363,
@@ -7832,8 +8243,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Drucker.",
-        zh: "今天我们谈论打印机。"
+        de: "Der Drucker ist neu.",
+        zh: "这台打印机是新的。",
+        target: "Drucker"
       }
     ],
     teachingOrder: 364,
@@ -7848,13 +8260,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "压，按"
+        zh: "按"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute drücken.",
-        zh: "我们今天想压，按。"
+        de: "Bitte drücken Sie hier.",
+        zh: "请在这里按。",
+        target: "drücken"
       }
     ],
     teachingOrder: 365,
@@ -7869,13 +8282,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "穿过，经过通过"
+        zh: "穿过"
       }
     ],
     examples: [
       {
-        de: "Das Wort „durch“ bedeutet hier „穿过，经过通过“.",
-        zh: "“durch”在这里表示“穿过，经过通过”。"
+        de: "Wir gehen durch den Park.",
+        zh: "我们穿过公园。",
+        target: "durch"
       }
     ],
     teachingOrder: 366,
@@ -7895,8 +8309,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Durchsage.",
-        zh: "今天我们谈论广播通知。"
+        de: "Die Durchsage war laut.",
+        zh: "广播通知很响。",
+        target: "Durchsage"
       }
     ],
     teachingOrder: 367,
@@ -7916,8 +8331,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute dürfen.",
-        zh: "我们今天想允许。"
+        de: "Du darfst hier sitzen.",
+        zh: "你可以坐在这里。",
+        target: "darfst"
       }
     ],
     teachingOrder: 368,
@@ -7937,8 +8353,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute uns duschen.",
-        zh: "我们今天想淋浴。"
+        de: "Ich dusche jeden Morgen.",
+        zh: "我每天早上洗澡。",
+        target: "dusche"
       }
     ],
     teachingOrder: 369,
@@ -7958,8 +8375,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Dusche.",
-        zh: "今天我们谈论淋浴间。"
+        de: "Die Dusche ist klein.",
+        zh: "淋浴间很小。",
+        target: "Dusche"
       }
     ],
     teachingOrder: 370,
@@ -7974,13 +8392,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "角落；街角"
+        zh: "角落"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Ecke.",
-        zh: "今天我们谈论角落；街角。"
+        de: "Wir treffen uns in der Ecke.",
+        zh: "我们在角落见面。",
+        target: "Ecke"
       }
     ],
     teachingOrder: 371,
@@ -8000,8 +8419,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Ei.",
-        zh: "今天我们谈论鸡蛋。"
+        de: "Das Ei ist frisch.",
+        zh: "鸡蛋是新鲜的。",
+        target: "Ei"
       }
     ],
     teachingOrder: 372,
@@ -8021,8 +8441,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „eilig“ bedeutet hier „匆忙的“.",
-        zh: "“eilig”在这里表示“匆忙的”。"
+        de: "Ich habe es heute eilig.",
+        zh: "我今天赶时间。",
+        target: "eilig"
       }
     ],
     teachingOrder: 373,
@@ -8037,13 +8458,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "一个；某个"
+        zh: "一个"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ein-“ bedeutet hier „一个；某个“.",
-        zh: "“ein-”在这里表示“一个；某个”。"
+        de: "Ein Mann kommt.",
+        zh: "一个男人来了。",
+        target: "Ein"
       }
     ],
     teachingOrder: 374,
@@ -8058,13 +8480,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "简单的；单程的"
+        zh: "简单的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „einfach“ bedeutet hier „简单的；单程的“.",
-        zh: "“einfach”在这里表示“简单的；单程的”。"
+        de: "Das ist einfach.",
+        zh: "这很简单。",
+        target: "einfach"
       }
     ],
     teachingOrder: 375,
@@ -8084,8 +8507,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Eingang.",
-        zh: "今天我们谈论入口。"
+        de: "Der Eingang ist offen.",
+        zh: "入口是开的。",
+        target: "Eingang"
       }
     ],
     teachingOrder: 376,
@@ -8105,8 +8529,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Einladung.",
-        zh: "今天我们谈论邀请信。"
+        de: "Ich habe eine Einladung bekommen.",
+        zh: "我收到了一个邀请函。",
+        target: "Einladung"
       }
     ],
     teachingOrder: 377,
@@ -8126,8 +8551,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „einmal“ bedeutet hier „一次“.",
-        zh: "“einmal”在这里表示“一次”。"
+        de: "Komm bitte einmal später.",
+        zh: "请稍后再来一次。",
+        target: "einmal"
       }
     ],
     teachingOrder: 378,
@@ -8147,8 +8573,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute einsteigen.",
-        zh: "我们今天想上车，上船。"
+        de: "Ich steige jetzt ein.",
+        zh: "我现在上车。",
+        target: "steige"
       }
     ],
     teachingOrder: 379,
@@ -8168,8 +8595,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Eintritt.",
-        zh: "今天我们谈论入场。"
+        de: "Der Eintritt kostet fünf Euro.",
+        zh: "入场费是五欧元。",
+        target: "Eintritt"
       }
     ],
     teachingOrder: 380,
@@ -8189,8 +8617,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die E-Mail.",
-        zh: "今天我们谈论电子邮件。"
+        de: "Ich schreibe eine E‑Mail.",
+        zh: "我写一封电子邮件。",
+        target: "E‑Mail"
       }
     ],
     teachingOrder: 381,
@@ -8210,8 +8639,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Empfänger.",
-        zh: "今天我们谈论收件人。"
+        de: "Der Empfänger liest die Nachricht.",
+        zh: "收件人阅读信息。",
+        target: "Empfänger"
       }
     ],
     teachingOrder: 382,
@@ -8231,8 +8661,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute empfehlen.",
-        zh: "我们今天想推荐。"
+        de: "Ich empfehle dir das Buch.",
+        zh: "我向你推荐这本书。",
+        target: "empfehle"
       }
     ],
     teachingOrder: 383,
@@ -8252,8 +8683,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute enden.",
-        zh: "我们今天想结束。"
+        de: "Der Film endet um acht.",
+        zh: "电影在八点结束。",
+        target: "endet"
       }
     ],
     teachingOrder: 384,
@@ -8273,8 +8705,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Ende.",
-        zh: "今天我们谈论尽头，末尾。"
+        de: "Das Ende ist sehr traurig.",
+        zh: "结局非常悲伤。",
+        target: "Ende"
       }
     ],
     teachingOrder: 385,
@@ -8294,8 +8727,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute entschuldigen.",
-        zh: "我们今天想原谅。"
+        de: "Entschuldige bitte das Geräusch.",
+        zh: "请原谅这个噪音。",
+        target: "Entschuldige"
       }
     ],
     teachingOrder: 386,
@@ -8315,8 +8749,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Entschuldigung.",
-        zh: "今天我们谈论对不起。"
+        de: "Entschuldigung, ich bin zu spät.",
+        zh: "对不起，我迟到了。",
+        target: "Entschuldigung"
       }
     ],
     teachingOrder: 387,
@@ -8336,8 +8771,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „er“ bedeutet hier „他“.",
-        zh: "“er”在这里表示“他”。"
+        de: "Er kommt aus Berlin.",
+        zh: "他来自柏林。",
+        target: "er"
       }
     ],
     teachingOrder: 388,
@@ -8357,8 +8793,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Ergebnis.",
-        zh: "今天我们谈论结果。"
+        de: "Das Ergebnis ist richtig.",
+        zh: "结果是正确的。",
+        target: "Ergebnis"
       }
     ],
     teachingOrder: 389,
@@ -8378,8 +8815,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute erklären.",
-        zh: "我们今天想解释。"
+        de: "Kannst du das bitte erklären?",
+        zh: "你能解释一下吗？",
+        target: "erklären"
       }
     ],
     teachingOrder: 390,
@@ -8399,8 +8837,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute erlauben.",
-        zh: "我们今天想允许。"
+        de: "Erlauben Sie das bitte?",
+        zh: "您允许吗？",
+        target: "Erlauben"
       }
     ],
     teachingOrder: 391,
@@ -8420,8 +8859,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Erwachsene.",
-        zh: "今天我们谈论成年人。"
+        de: "Erwachsene zahlen mehr.",
+        zh: "成年人付得更多。",
+        target: "Erwachsene"
       }
     ],
     teachingOrder: 392,
@@ -8441,8 +8881,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute erzählen.",
-        zh: "我们今天想讲述。"
+        de: "Ich erzähle dir eine Geschichte.",
+        zh: "我给你讲一个故事。",
+        target: "erzähle"
       }
     ],
     teachingOrder: 393,
@@ -8462,8 +8903,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „es“ bedeutet hier „它“.",
-        zh: "“es”在这里表示“它”。"
+        de: "Es ist kalt heute.",
+        zh: "今天很冷。",
+        target: "es"
       }
     ],
     teachingOrder: 394,
@@ -8483,8 +8925,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „euer“ bedeutet hier „你们的“.",
-        zh: "“euer”在这里表示“你们的”。"
+        de: "Ist das euer Buch?",
+        zh: "这是你们的书吗？",
+        target: "euer"
       }
     ],
     teachingOrder: 395,
@@ -8504,8 +8947,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „falsch“ bedeutet hier „错误的“.",
-        zh: "“falsch”在这里表示“错误的”。"
+        de: "Die Antwort ist falsch.",
+        zh: "答案是错误的。",
+        target: "falsch"
       }
     ],
     teachingOrder: 396,
@@ -8525,8 +8969,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Farbe.",
-        zh: "今天我们谈论颜色。"
+        de: "Welche Farbe hat das Auto?",
+        zh: "这辆车是什么颜色？",
+        target: "Farbe"
       }
     ],
     teachingOrder: 397,
@@ -8546,8 +8991,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute fehlen.",
-        zh: "我们今天想缺少。"
+        de: "Mir fehlt das Salz.",
+        zh: "我缺盐。",
+        target: "fehlt"
       }
     ],
     teachingOrder: 398,
@@ -8567,8 +9013,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Fehler.",
-        zh: "今天我们谈论错误。"
+        de: "Ich habe einen Fehler gemacht.",
+        zh: "我犯了一个错误。",
+        target: "Fehler"
       }
     ],
     teachingOrder: 399,
@@ -8583,13 +9030,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "完工的，完成的"
+        zh: "完成的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „fertig“ bedeutet hier „完工的，完成的“.",
-        zh: "“fertig”在这里表示“完工的，完成的”。"
+        de: "Der Kuchen ist fertig.",
+        zh: "蛋糕已经做好了。",
+        target: "fertig"
       }
     ],
     teachingOrder: 400,
@@ -8609,8 +9057,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Feuer.",
-        zh: "今天我们谈论火。"
+        de: "Das Feuer brennt im Kamin.",
+        zh: "壁炉里的火在燃烧。",
+        target: "Feuer"
       }
     ],
     teachingOrder: 401,
@@ -8625,13 +9074,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "发烧（单数形式）"
+        zh: "发烧"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Fieber.",
-        zh: "今天我们谈论发烧（单数形式）。"
+        de: "Sie hat hohes Fieber.",
+        zh: "她发高烧。",
+        target: "Fieber"
       }
     ],
     teachingOrder: 402,
@@ -8646,13 +9096,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "电影院"
+        zh: "电影"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Film.",
-        zh: "今天我们谈论电影院。"
+        de: "Wir sehen einen Film.",
+        zh: "我们在看一部电影。",
+        target: "Film"
       }
     ],
     teachingOrder: 403,
@@ -8667,13 +9118,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "找到认为"
+        zh: "找到"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute finden.",
-        zh: "我们今天想找到认为。"
+        de: "Ich finde den Schlüssel.",
+        zh: "我找到了钥匙。",
+        target: "finde"
       }
     ],
     teachingOrder: 404,
@@ -8693,8 +9145,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Firma.",
-        zh: "今天我们谈论公司。"
+        de: "Meine Mutter arbeitet in einer Firma.",
+        zh: "我妈妈在一家公司工作。",
+        target: "Firma"
       }
     ],
     teachingOrder: 405,
@@ -8714,8 +9167,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Fisch.",
-        zh: "今天我们谈论鱼。"
+        de: "Der Fisch ist frisch.",
+        zh: "这条鱼很新鲜。",
+        target: "Fisch"
       }
     ],
     teachingOrder: 406,
@@ -8735,8 +9189,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Flasche.",
-        zh: "今天我们谈论瓶子。"
+        de: "Die Flasche ist leer.",
+        zh: "瓶子是空的。",
+        target: "Flasche"
       }
     ],
     teachingOrder: 407,
@@ -8751,13 +9206,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "乘飞机"
+        zh: "飞"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute fliegen.",
-        zh: "我们今天想乘飞机。"
+        de: "Vögel fliegen im Himmel.",
+        zh: "鸟在天空中飞。",
+        target: "fliegen"
       }
     ],
     teachingOrder: 408,
@@ -8777,8 +9233,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute abfliegen.",
-        zh: "我们今天想起飞。"
+        de: "Der Flug fliegt um 10 Uhr ab.",
+        zh: "航班在上午10点起飞。",
+        target: "fliegt|ab"
       }
     ],
     teachingOrder: 409,
@@ -8798,8 +9255,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Formular.",
-        zh: "今天我们谈论表格。"
+        de: "Ich fülle das Formular aus.",
+        zh: "我填写这张表格。",
+        target: "Formular"
       }
     ],
     teachingOrder: 410,
@@ -8819,8 +9277,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute fragen.",
-        zh: "我们今天想问。"
+        de: "Ich frage den Lehrer.",
+        zh: "我向老师提问。",
+        target: "frage"
       }
     ],
     teachingOrder: 411,
@@ -8840,8 +9299,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Frage.",
-        zh: "今天我们谈论问题。"
+        de: "Hast du eine Frage?",
+        zh: "你有问题吗？",
+        target: "Frage"
       }
     ],
     teachingOrder: 412,
@@ -8856,13 +9316,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "空着的，无人占用的"
+        zh: "空着的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „frei“ bedeutet hier „空着的，无人占用的“.",
-        zh: "“frei”在这里表示“空着的，无人占用的”。"
+        de: "Der Sitz ist frei.",
+        zh: "座位是空的。",
+        target: "frei"
       }
     ],
     teachingOrder: 413,
@@ -8877,13 +9338,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "陌生的；外来的"
+        zh: "陌生的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „fremd“ bedeutet hier „陌生的；外来的“.",
-        zh: "“fremd”在这里表示“陌生的；外来的”。"
+        de: "Das ist ein fremdes Wort.",
+        zh: "这是一个陌生的词。",
+        target: "fremdes"
       }
     ],
     teachingOrder: 414,
@@ -8898,13 +9360,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "高兴；期待"
+        zh: "高兴"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns freuen.",
-        zh: "我们今天想高兴；期待。"
+        de: "Ich freue mich sehr.",
+        zh: "我很高兴。",
+        target: "freue"
       }
     ],
     teachingOrder: 415,
@@ -8919,13 +9382,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "以前；更早"
+        zh: "以前"
       }
     ],
     examples: [
       {
-        de: "Das Wort „früher“ bedeutet hier „以前；更早“.",
-        zh: "“früher”在这里表示“以前；更早”。"
+        de: "Früher war ich Schüler.",
+        zh: "以前我还是学生。",
+        target: "Früher"
       }
     ],
     teachingOrder: 416,
@@ -8945,8 +9409,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Führung.",
-        zh: "今天我们谈论导游。"
+        de: "Die Führung beginnt um neun.",
+        zh: "导览在九点开始。",
+        target: "Führung"
       }
     ],
     teachingOrder: 417,
@@ -8961,13 +9426,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "为了为了，由于"
+        zh: "为了"
       }
     ],
     examples: [
       {
-        de: "Das Wort „für“ bedeutet hier „为了为了，由于“.",
-        zh: "“für”在这里表示“为了为了，由于”。"
+        de: "Das Geschenk ist für dich.",
+        zh: "这份礼物是给你的。",
+        target: "für"
       }
     ],
     teachingOrder: 418,
@@ -8982,13 +9448,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "足"
+        zh: "脚"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Fuß.",
-        zh: "今天我们谈论足。"
+        de: "Mein Fuß tut weh.",
+        zh: "我的脚疼。",
+        target: "Fuß"
       }
     ],
     teachingOrder: 419,
@@ -9008,8 +9475,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Gast.",
-        zh: "今天我们谈论客人。"
+        de: "Der Gast kommt morgen.",
+        zh: "客人明天来。",
+        target: "Gast"
       }
     ],
     teachingOrder: 420,
@@ -9024,13 +9492,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "有，存在递给"
+        zh: "给"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute geben.",
-        zh: "我们今天想有，存在递给。"
+        de: "Ich gebe dir einen Stift.",
+        zh: "我把笔给你。",
+        target: "gebe"
       }
     ],
     teachingOrder: 421,
@@ -9050,8 +9519,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „geboren“ bedeutet hier „出生“.",
-        zh: "“geboren”在这里表示“出生”。"
+        de: "Ich bin 1990 geboren.",
+        zh: "我1990年出生。",
+        target: "geboren"
       }
     ],
     teachingOrder: 422,
@@ -9071,8 +9541,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute gefallen.",
-        zh: "我们今天想喜欢。"
+        de: "Der Film gefällt mir.",
+        zh: "这部电影我喜欢。",
+        target: "gefällt"
       }
     ],
     teachingOrder: 423,
@@ -9087,13 +9558,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "防对，对阵"
+        zh: "对抗"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gegen“ bedeutet hier „防对，对阵“.",
-        zh: "“gegen”在这里表示“防对，对阵”。"
+        de: "Der Ball fliegt gegen die Wand.",
+        zh: "球撞向墙壁。",
+        target: "gegen"
       }
     ],
     teachingOrder: 424,
@@ -9113,8 +9585,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute gehören.",
-        zh: "我们今天想属于。"
+        de: "Wem gehören diese Stifte?",
+        zh: "这些笔属于谁？",
+        target: "gehören"
       }
     ],
     teachingOrder: 425,
@@ -9129,13 +9602,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "蔬菜（单数形式）"
+        zh: "蔬菜"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Gemüse.",
-        zh: "今天我们谈论蔬菜（单数形式）。"
+        de: "Ich kaufe frisches Gemüse.",
+        zh: "我买新鲜的蔬菜。",
+        target: "Gemüse"
       }
     ],
     teachingOrder: 426,
@@ -9150,13 +9624,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "恰巧，刚刚正立的，挺直的"
+        zh: "恰好"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gerade“ bedeutet hier „恰巧，刚刚正立的，挺直的“.",
-        zh: "“gerade”在这里表示“恰巧，刚刚正立的，挺直的”。"
+        de: "Ich komme gerade nach Hause.",
+        zh: "我刚回家。",
+        target: "gerade"
       }
     ],
     teachingOrder: 427,
@@ -9171,13 +9646,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "一直向前的"
+        zh: "直走"
       }
     ],
     examples: [
       {
-        de: "Das Wort „geradeaus“ bedeutet hier „一直向前的“.",
-        zh: "“geradeaus”在这里表示“一直向前的”。"
+        de: "Gehen Sie bitte geradeaus.",
+        zh: "请直走。",
+        target: "geradeaus"
       }
     ],
     teachingOrder: 428,
@@ -9192,13 +9668,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "乐意，喜欢"
+        zh: "喜欢"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gern(e)“ bedeutet hier „乐意，喜欢“.",
-        zh: "“gern(e)”在这里表示“乐意，喜欢”。"
+        de: "Ich trinke gern Tee.",
+        zh: "我喜欢喝茶。",
+        target: "gern"
       }
     ],
     teachingOrder: 429,
@@ -9218,8 +9695,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Geschenk.",
-        zh: "今天我们谈论礼物。"
+        de: "Das Geschenk ist schön.",
+        zh: "这份礼物很漂亮。",
+        target: "Geschenk"
       }
     ],
     teachingOrder: 430,
@@ -9239,8 +9717,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Geschwister (pl.).",
-        zh: "今天我们谈论兄弟姐妹。"
+        de: "Meine Geschwister wohnen in Berlin.",
+        zh: "我的兄弟姐妹住在柏林。",
+        target: "Geschwister"
       }
     ],
     teachingOrder: 431,
@@ -9260,8 +9739,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Gespräch.",
-        zh: "今天我们谈论谈话。"
+        de: "Wir führen ein kurzes Gespräch.",
+        zh: "我们进行一次简短的谈话。",
+        target: "Gespräch"
       }
     ],
     teachingOrder: 432,
@@ -9281,8 +9761,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute gestern.",
-        zh: "我们今天想昨天。"
+        de: "Es regnete gestern stark.",
+        zh: "昨天雨下得很大。",
+        target: "gestern"
       }
     ],
     teachingOrder: 433,
@@ -9302,8 +9783,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „gestorben“ bedeutet hier „去世的“.",
-        zh: "“gestorben”在这里表示“去世的”。"
+        de: "Mein Opa ist gestorben.",
+        zh: "我的爷爷去世了。",
+        target: "gestorben"
       }
     ],
     teachingOrder: 434,
@@ -9323,8 +9805,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Getränk.",
-        zh: "今天我们谈论饮料。"
+        de: "Ein kaltes Getränk bitte.",
+        zh: "请来一杯冰饮料。",
+        target: "Getränk"
       }
     ],
     teachingOrder: 435,
@@ -9344,8 +9827,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Gewicht.",
-        zh: "今天我们谈论重量。"
+        de: "Das Gewicht ist fünf Kilo.",
+        zh: "重量是五公斤。",
+        target: "Gewicht"
       }
     ],
     teachingOrder: 436,
@@ -9360,13 +9844,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "中奖"
+        zh: "赢得"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute gewinnen.",
-        zh: "我们今天想中奖。"
+        de: "Wir wollen im Spiel gewinnen.",
+        zh: "我们想在游戏中获胜。",
+        target: "gewinnen"
       }
     ],
     teachingOrder: 437,
@@ -9386,8 +9871,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Glas.",
-        zh: "今天我们谈论玻璃杯。"
+        de: "Ein Glas Wasser bitte.",
+        zh: "请来一杯水。",
+        target: "Glas"
       }
     ],
     teachingOrder: 438,
@@ -9407,8 +9893,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute glauben.",
-        zh: "我们今天想相信。"
+        de: "Ich will dir glauben.",
+        zh: "我想相信你。",
+        target: "glauben"
       }
     ],
     teachingOrder: 439,
@@ -9423,13 +9910,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "立刻，马上同样，一样"
+        zh: "马上"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gleich“ bedeutet hier „立刻，马上同样，一样“.",
-        zh: "“gleich”在这里表示“立刻，马上同样，一样”。"
+        de: "Ich komme gleich.",
+        zh: "我马上来。",
+        target: "gleich"
       }
     ],
     teachingOrder: 440,
@@ -9449,8 +9937,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Gleis.",
-        zh: "今天我们谈论站台。"
+        de: "Der Zug steht am Gleis 3.",
+        zh: "火车停在三号站台。",
+        target: "Gleis"
       }
     ],
     teachingOrder: 441,
@@ -9465,13 +9954,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "运气，幸福"
+        zh: "运气"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Glück.",
-        zh: "今天我们谈论运气，幸福。"
+        de: "Ich habe heute Glück.",
+        zh: "我今天运气好。",
+        target: "Glück"
       }
     ],
     teachingOrder: 442,
@@ -9491,8 +9981,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „glücklich“ bedeutet hier „幸福的“.",
-        zh: "“glücklich”在这里表示“幸福的”。"
+        de: "Ich bin heute glücklich.",
+        zh: "我今天很幸福。",
+        target: "glücklich"
       }
     ],
     teachingOrder: 443,
@@ -9507,13 +9998,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "祝贺，祝愿"
+        zh: "祝贺"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Glückwunsch.",
-        zh: "今天我们谈论祝贺，祝愿。"
+        de: "Herzlichen Glückwunsch zum Geburtstag!",
+        zh: "衷心祝你生日快乐！",
+        target: "Glückwunsch"
       }
     ],
     teachingOrder: 444,
@@ -9533,8 +10025,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute gratulieren.",
-        zh: "我们今天想祝贺。"
+        de: "Wir gratulieren dir zum Erfolg.",
+        zh: "我们祝贺你的成功。",
+        target: "gratulieren"
       }
     ],
     teachingOrder: 445,
@@ -9554,8 +10047,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute grillen.",
-        zh: "我们今天想烧烤。"
+        de: "Wir grillen am Samstag.",
+        zh: "我们周六烧烤。",
+        target: "grillen"
       }
     ],
     teachingOrder: 446,
@@ -9575,8 +10069,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „groß“ bedeutet hier „大的“.",
-        zh: "“groß”在这里表示“大的”。"
+        de: "Das Haus ist sehr groß.",
+        zh: "这座房子很大。",
+        target: "groß"
       }
     ],
     teachingOrder: 447,
@@ -9596,8 +10091,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Größe.",
-        zh: "今天我们谈论尺码。"
+        de: "Welche Größe passt dir?",
+        zh: "哪个尺码适合你？",
+        target: "Größe"
       }
     ],
     teachingOrder: 448,
@@ -9617,8 +10113,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Gruppe.",
-        zh: "今天我们谈论团体。"
+        de: "Wir sind eine kleine Gruppe.",
+        zh: "我们是一小组。",
+        target: "Gruppe"
       }
     ],
     teachingOrder: 449,
@@ -9633,13 +10130,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "问候，致意"
+        zh: "问候"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Gruß.",
-        zh: "今天我们谈论问候，致意。"
+        de: "Ein herzlicher Gruß an dich.",
+        zh: "向你致以诚挚的问候。",
+        target: "Gruß"
       }
     ],
     teachingOrder: 450,
@@ -9659,8 +10157,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „gültig“ bedeutet hier „有效的“.",
-        zh: "“gültig”在这里表示“有效的”。"
+        de: "Der Ausweis ist noch gültig.",
+        zh: "这张证件仍然有效。",
+        target: "gültig"
       }
     ],
     teachingOrder: 451,
@@ -9680,8 +10179,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „günstig“ bedeutet hier „价廉的“.",
-        zh: "“günstig”在这里表示“价廉的”。"
+        de: "Das Angebot ist sehr günstig.",
+        zh: "这个优惠非常便宜。",
+        target: "günstig"
       }
     ],
     teachingOrder: 452,
@@ -9696,13 +10196,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "好的好的好的"
+        zh: "好的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „gut“ bedeutet hier „好的好的好的“.",
-        zh: "“gut”在这里表示“好的好的好的”。"
+        de: "Das Essen schmeckt gut.",
+        zh: "这道菜味道好。",
+        target: "gut"
       }
     ],
     teachingOrder: 453,
@@ -9722,8 +10223,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute haben.",
-        zh: "我们今天想有。"
+        de: "Wir haben ein neues Auto.",
+        zh: "我们有一辆新车。",
+        target: "haben"
       }
     ],
     teachingOrder: 454,
@@ -9743,8 +10245,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Hähnchen.",
-        zh: "今天我们谈论鸡肉。"
+        de: "Ich kaufe frisches Hähnchen.",
+        zh: "我买新鲜的鸡肉。",
+        target: "Hähnchen"
       }
     ],
     teachingOrder: 455,
@@ -9764,8 +10267,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Halbpension.",
-        zh: "今天我们谈论半膳住宿。"
+        de: "Wir buchen Halbpension im Hotel.",
+        zh: "我们在酒店预订半膳住宿。",
+        target: "Halbpension"
       }
     ],
     teachingOrder: 456,
@@ -9785,8 +10289,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Halle.",
-        zh: "今天我们谈论大厅。"
+        de: "Wir treffen uns in der Halle.",
+        zh: "我们在大厅碰面。",
+        target: "Halle"
       }
     ],
     teachingOrder: 457,
@@ -9806,8 +10311,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „hallo“ bedeutet hier „你好“.",
-        zh: "“hallo”在这里表示“你好”。"
+        de: "Hallo, ich bin Anna.",
+        zh: "你好，我是安娜。",
+        target: "Hallo"
       }
     ],
     teachingOrder: 458,
@@ -9822,13 +10328,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "保持 ... 状态"
+        zh: "保持"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute halten.",
-        zh: "我们今天想保持 ... 状态。"
+        de: "Bitte halten Sie die Tür offen.",
+        zh: "请把门保持打开。",
+        target: "halten"
       }
     ],
     teachingOrder: 459,
@@ -9843,13 +10350,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "公车站，电车站"
+        zh: "公交站"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Haltestelle.",
-        zh: "今天我们谈论公车站，电车站。"
+        de: "Die Haltestelle ist gleich hier.",
+        zh: "公交站就在这里。",
+        target: "Haltestelle"
       }
     ],
     teachingOrder: 460,
@@ -9869,8 +10377,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Hand.",
-        zh: "今天我们谈论手。"
+        de: "Ich habe mir die Hand verletzt.",
+        zh: "我的手受伤了。",
+        target: "Hand"
       }
     ],
     teachingOrder: 461,
@@ -9890,8 +10399,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Handy.",
-        zh: "今天我们谈论手机。"
+        de: "Mein Handy ist leer.",
+        zh: "我的手机没电了。",
+        target: "Handy"
       }
     ],
     teachingOrder: 462,
@@ -9911,8 +10421,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Heimat.",
-        zh: "今天我们谈论家乡。"
+        de: "Meine Heimat ist Berlin.",
+        zh: "我的家乡是柏林。",
+        target: "Heimat"
       }
     ],
     teachingOrder: 463,
@@ -9932,8 +10443,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute heiraten.",
-        zh: "我们今天想结婚。"
+        de: "Wir heiraten im Juni.",
+        zh: "我们在六月结婚。",
+        target: "heiraten"
       }
     ],
     teachingOrder: 464,
@@ -9948,13 +10460,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "叫，名为称为，意味着"
+        zh: "叫"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute heißen.",
-        zh: "我们今天想叫，名为称为，意味着。"
+        de: "Wie heißen Sie?",
+        zh: "您叫什么？",
+        target: "heißen"
       }
     ],
     teachingOrder: 465,
@@ -9974,8 +10487,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute helfen.",
-        zh: "我们今天想帮助。"
+        de: "Kannst du mir helfen?",
+        zh: "你能帮我吗？",
+        target: "helfen"
       }
     ],
     teachingOrder: 466,
@@ -9995,8 +10509,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „hell“ bedeutet hier „明亮的“.",
-        zh: "“hell”在这里表示“明亮的”。"
+        de: "Das Zimmer ist hell.",
+        zh: "房间很明亮。",
+        target: "hell"
       }
     ],
     teachingOrder: 467,
@@ -10016,8 +10531,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Herd.",
-        zh: "今天我们谈论炉灶。"
+        de: "Der Herd ist neu.",
+        zh: "炉灶是新的。",
+        target: "Herd"
       }
     ],
     teachingOrder: 468,
@@ -10037,8 +10553,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Herr.",
-        zh: "今天我们谈论先生。"
+        de: "Guten Morgen, Herr Müller.",
+        zh: "早上好，穆勒先生。",
+        target: "Herr"
       }
     ],
     teachingOrder: 469,
@@ -10053,13 +10570,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "衷心的"
+        zh: "衷心"
       }
     ],
     examples: [
       {
-        de: "Das Wort „herzlich“ bedeutet hier „衷心的“.",
-        zh: "“herzlich”在这里表示“衷心的”。"
+        de: "Wir danken Ihnen herzlich.",
+        zh: "我们衷心感谢您。",
+        target: "herzlich"
       }
     ],
     teachingOrder: 470,
@@ -10079,8 +10597,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „heute“ bedeutet hier „今天“.",
-        zh: "“heute”在这里表示“今天”。"
+        de: "Heute ist es warm.",
+        zh: "今天很暖。",
+        target: "heute"
       }
     ],
     teachingOrder: 471,
@@ -10095,13 +10614,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "这里这里"
+        zh: "这里"
       }
     ],
     examples: [
       {
-        de: "Das Wort „hier“ bedeutet hier „这里这里“.",
-        zh: "“hier”在这里表示“这里这里”。"
+        de: "Hier ist das Buch.",
+        zh: "书在这里。",
+        target: "hier"
       }
     ],
     teachingOrder: 472,
@@ -10121,8 +10641,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Hilfe.",
-        zh: "今天我们谈论帮助。"
+        de: "Kannst du mir bitte Hilfe geben?",
+        zh: "你能给我帮助吗？",
+        target: "Hilfe"
       }
     ],
     teachingOrder: 473,
@@ -10142,8 +10663,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute hinten.",
-        zh: "我们今天想后面。"
+        de: "Der Ball liegt hinten.",
+        zh: "球在后面。",
+        target: "hinten"
       }
     ],
     teachingOrder: 474,
@@ -10163,8 +10685,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Hobby.",
-        zh: "今天我们谈论爱好。"
+        de: "Mein Hobby ist Lesen.",
+        zh: "我的爱好是阅读。",
+        target: "Hobby"
       }
     ],
     teachingOrder: 475,
@@ -10184,8 +10707,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „hoch“ bedeutet hier „高的“.",
-        zh: "“hoch”在这里表示“高的”。"
+        de: "Der Turm ist hoch.",
+        zh: "这座塔很高。",
+        target: "hoch"
       }
     ],
     teachingOrder: 476,
@@ -10205,8 +10729,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Hochzeit.",
-        zh: "今天我们谈论婚礼。"
+        de: "Wir feiern die Hochzeit.",
+        zh: "我们庆祝婚礼。",
+        target: "Hochzeit"
       }
     ],
     teachingOrder: 477,
@@ -10226,8 +10751,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute holen.",
-        zh: "我们今天想取来，拿来。"
+        de: "Kannst du das Buch holen?",
+        zh: "你能把书拿来吗？",
+        target: "holen"
       }
     ],
     teachingOrder: 478,
@@ -10242,13 +10768,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "听听"
+        zh: "听"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute hören.",
-        zh: "我们今天想听听。"
+        de: "Kannst du mich hören?",
+        zh: "你能听见我吗？",
+        target: "hören"
       }
     ],
     teachingOrder: 479,
@@ -10268,8 +10795,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Hund.",
-        zh: "今天我们谈论狗。"
+        de: "Der Hund schläft.",
+        zh: "那只狗在睡觉。",
+        target: "Hund"
       }
     ],
     teachingOrder: 480,
@@ -10289,8 +10817,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ich“ bedeutet hier „我“.",
-        zh: "“ich”在这里表示“我”。"
+        de: "Ich komme heute etwas später.",
+        zh: "我今天会晚一点儿来。",
+        target: "Ich"
       }
     ],
     teachingOrder: 481,
@@ -10305,13 +10834,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "她的；给他；他（第四格）"
+        zh: "她（属格）/他（与格）/他（宾格）"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ihr/ihm/ihn“ bedeutet hier „她的；给他；他（第四格）“.",
-        zh: "“ihr/ihm/ihn”在这里表示“她的；给他；他（第四格）”。"
+        de: "Ich gebe ihr das Buch.",
+        zh: "我把书给她。",
+        target: "ihr"
       }
     ],
     teachingOrder: 482,
@@ -10331,8 +10861,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „immer“ bedeutet hier „总是“.",
-        zh: "“immer”在这里表示“总是”。"
+        de: "Er kommt immer pünktlich.",
+        zh: "他总是准时来。",
+        target: "immer"
       }
     ],
     teachingOrder: 483,
@@ -10352,8 +10883,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „in“ bedeutet hier „在……里；进入“.",
-        zh: "“in”在这里表示“在……里；进入”。"
+        de: "Das Buch ist in der Tasche.",
+        zh: "书在口袋里。",
+        target: "in"
       }
     ],
     teachingOrder: 484,
@@ -10373,8 +10905,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Information.",
-        zh: "今天我们谈论信息。"
+        de: "Die Information ist wichtig.",
+        zh: "这条信息很重要。",
+        target: "Information"
       }
     ],
     teachingOrder: 485,
@@ -10394,8 +10927,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „international“ bedeutet hier „国际的“.",
-        zh: "“international”在这里表示“国际的”。"
+        de: "Die Schule organisiert ein internationales Fest.",
+        zh: "学校组织了一场国际文化节。",
+        target: "internationales"
       }
     ],
     teachingOrder: 486,
@@ -10410,13 +10944,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "因特网（单数形式）"
+        zh: "互联网"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Internet.",
-        zh: "今天我们谈论因特网（单数形式）。"
+        de: "Ich nutze jeden Tag das Internet.",
+        zh: "我每天都使用互联网。",
+        target: "Internet"
       }
     ],
     teachingOrder: 487,
@@ -10431,13 +10966,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "是的真的，的确"
+        zh: "是的，真的，的确"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ja“ bedeutet hier „是的真的，的确“.",
-        zh: "“ja”在这里表示“是的真的，的确”。"
+        de: "Das ist ja richtig.",
+        zh: "是的，没错。",
+        target: "ja"
       }
     ],
     teachingOrder: 488,
@@ -10452,13 +10988,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "夹克"
+        zh: "外套"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Jacke.",
-        zh: "今天我们谈论夹克。"
+        de: "Ich trage eine warme Jacke.",
+        zh: "我穿着一件暖和的外套。",
+        target: "Jacke"
       }
     ],
     teachingOrder: 489,
@@ -10478,8 +11015,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „jed-“ bedeutet hier „每个“.",
-        zh: "“jed-”在这里表示“每个”。"
+        de: "Jeder Schüler hat ein Buch.",
+        zh: "每个学生都有一本书。",
+        target: "Jeder"
       }
     ],
     teachingOrder: 490,
@@ -10499,8 +11037,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „jetzt“ bedeutet hier „现在“.",
-        zh: "“jetzt”在这里表示“现在”。"
+        de: "Ich komme jetzt gleich.",
+        zh: "我现在马上来。",
+        target: "jetzt"
       }
     ],
     teachingOrder: 491,
@@ -10515,13 +11054,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "打工"
+        zh: "工作"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Job.",
-        zh: "今天我们谈论打工。"
+        de: "Mein Vater hat einen neuen Job.",
+        zh: "我父亲有一份新工作。",
+        target: "Job"
       }
     ],
     teachingOrder: 492,
@@ -10541,8 +11081,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Jugendliche.",
-        zh: "今天我们谈论青少年。"
+        de: "Jugendliche treffen sich im Park.",
+        zh: "青少年在公园里相聚。",
+        target: "Jugendliche"
       }
     ],
     teachingOrder: 493,
@@ -10562,8 +11103,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „jung“ bedeutet hier „年轻的“.",
-        zh: "“jung”在这里表示“年轻的”。"
+        de: "Der Mann ist noch jung.",
+        zh: "这个男人还很年轻。",
+        target: "jung"
       }
     ],
     teachingOrder: 494,
@@ -10583,8 +11125,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Junge.",
-        zh: "今天我们谈论男孩。"
+        de: "Der Junge liest ein Buch.",
+        zh: "男孩在读一本书。",
+        target: "Junge"
       }
     ],
     teachingOrder: 495,
@@ -10599,13 +11142,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "损坏的"
+        zh: "坏的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „kaputt“ bedeutet hier „损坏的“.",
-        zh: "“kaputt”在这里表示“损坏的”。"
+        de: "Der Stuhl ist kaputt.",
+        zh: "这把椅子坏了。",
+        target: "kaputt"
       }
     ],
     teachingOrder: 496,
@@ -10625,8 +11169,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Kartoffel.",
-        zh: "今天我们谈论土豆。"
+        de: "Die Kartoffel ist frisch.",
+        zh: "这颗土豆是新鲜的。",
+        target: "Kartoffel"
       }
     ],
     teachingOrder: 497,
@@ -10646,8 +11191,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Kasse.",
-        zh: "今天我们谈论收银台。"
+        de: "Ich bezahle an der Kasse.",
+        zh: "我在收银台付款。",
+        target: "Kasse"
       }
     ],
     teachingOrder: 498,
@@ -10662,13 +11208,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "没有一个，没有"
+        zh: "没有"
       }
     ],
     examples: [
       {
-        de: "Das Wort „kein“ bedeutet hier „没有一个，没有“.",
-        zh: "“kein”在这里表示“没有一个，没有”。"
+        de: "Ich habe kein Geld.",
+        zh: "我没有钱。",
+        target: "kein"
       }
     ],
     teachingOrder: 499,
@@ -10683,13 +11230,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "了解"
+        zh: "认识，了解"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute kennen.",
-        zh: "我们今天想了解。"
+        de: "Ich kenne Berlin gut.",
+        zh: "我很了解柏林。",
+        target: "kenne"
       }
     ],
     teachingOrder: 500,
@@ -10704,13 +11252,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "认识"
+        zh: "认识（初次）"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute kennenlernen.",
-        zh: "我们今天想认识。"
+        de: "Ich möchte dich kennenlernen.",
+        zh: "我想认识你。",
+        target: "kennenlernen"
       }
     ],
     teachingOrder: 501,
@@ -10725,13 +11274,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "书报亭"
+        zh: "报刊亭"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kiosk.",
-        zh: "今天我们谈论书报亭。"
+        de: "Der Kiosk verkauft Zeitungen.",
+        zh: "报刊亭卖报纸。",
+        target: "Kiosk"
       }
     ],
     teachingOrder: 502,
@@ -10751,8 +11301,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „klar“ bedeutet hier „当然，显然“.",
-        zh: "“klar”在这里表示“当然，显然”。"
+        de: "Das ist klar, ich helfe dir.",
+        zh: "当然，我帮你。",
+        target: "klar"
       }
     ],
     teachingOrder: 503,
@@ -10767,13 +11318,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "年纪"
+        zh: "班级"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Klasse.",
-        zh: "今天我们谈论年纪。"
+        de: "Meine Klasse ist groß.",
+        zh: "我的班级很大。",
+        target: "Klasse"
       }
     ],
     teachingOrder: 504,
@@ -10793,8 +11345,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „klein“ bedeutet hier „小的“.",
-        zh: "“klein”在这里表示“小的”。"
+        de: "Das Haus ist klein.",
+        zh: "这座房子很小。",
+        target: "klein"
       }
     ],
     teachingOrder: 505,
@@ -10809,13 +11362,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "烹饪"
+        zh: "烹调"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute kochen.",
-        zh: "我们今天想烹饪。"
+        de: "Ich koche Suppe.",
+        zh: "我在煮汤。",
+        target: "koche"
       }
     ],
     teachingOrder: 506,
@@ -10830,13 +11384,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "来来，来到"
+        zh: "来到"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute kommen.",
-        zh: "我们今天想来来，来到。"
+        de: "Er kommt nach Hause.",
+        zh: "他回家。",
+        target: "kommt"
       }
     ],
     teachingOrder: 507,
@@ -10851,13 +11406,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "能够，会能够"
+        zh: "能够"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute können.",
-        zh: "我们今天想能够，会能够。"
+        de: "Ich kann schwimmen.",
+        zh: "我会游泳。",
+        target: "kann"
       }
     ],
     teachingOrder: 508,
@@ -10877,8 +11433,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute kosten.",
-        zh: "我们今天想价值，价格为。"
+        de: "Das Buch kostet fünf Euro.",
+        zh: "这本书价值五欧元。",
+        target: "kostet"
       }
     ],
     teachingOrder: 509,
@@ -10893,13 +11450,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "患病的"
+        zh: "生病的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „krank“ bedeutet hier „患病的“.",
-        zh: "“krank”在这里表示“患病的”。"
+        de: "Er ist krank.",
+        zh: "他生病了。",
+        target: "krank"
       }
     ],
     teachingOrder: 510,
@@ -10919,8 +11477,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute kriegen.",
-        zh: "我们今天想得到。"
+        de: "Ich kriege ein Geschenk.",
+        zh: "我得到一份礼物。",
+        target: "kriege"
       }
     ],
     teachingOrder: 511,
@@ -10935,13 +11494,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "糕点"
+        zh: "蛋糕"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kuchen.",
-        zh: "今天我们谈论糕点。"
+        de: "Der Kuchen ist süß.",
+        zh: "这块蛋糕很甜。",
+        target: "Kuchen"
       }
     ],
     teachingOrder: 512,
@@ -10961,8 +11521,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kugelschreiber.",
-        zh: "今天我们谈论圆珠笔。"
+        de: "Der Kugelschreiber schreibt gut.",
+        zh: "这支圆珠笔写得好。",
+        target: "Kugelschreiber"
       }
     ],
     teachingOrder: 513,
@@ -10982,8 +11543,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kühlschrank.",
-        zh: "今天我们谈论冰箱。"
+        de: "Der Kühlschrank ist leer.",
+        zh: "冰箱是空的。",
+        target: "Kühlschrank"
       }
     ],
     teachingOrder: 514,
@@ -10998,13 +11560,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "文化方面的"
+        zh: "文化的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „kulturell“ bedeutet hier „文化方面的“.",
-        zh: "“kulturell”在这里表示“文化方面的”。"
+        de: "Das Museum ist kulturell interessant.",
+        zh: "这座博物馆在文化上很有趣。",
+        target: "kulturell"
       }
     ],
     teachingOrder: 515,
@@ -11019,13 +11582,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "照料；关心"
+        zh: "照顾"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns kümmern.",
-        zh: "我们今天想照料；关心。"
+        de: "Ich will mich um das Kind kümmern.",
+        zh: "我想照顾这个孩子。",
+        target: "kümmern"
       }
     ],
     teachingOrder: 516,
@@ -11040,13 +11604,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "男顾客"
+        zh: "顾客"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kunde.",
-        zh: "今天我们谈论男顾客。"
+        de: "Der Kunde kauft Brot.",
+        zh: "这位顾客买面包。",
+        target: "Kunde"
       }
     ],
     teachingOrder: 517,
@@ -11066,8 +11631,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Kurs.",
-        zh: "今天我们谈论课程。"
+        de: "Der Kurs beginnt um neun.",
+        zh: "课程在九点开始。",
+        target: "Kurs"
       }
     ],
     teachingOrder: 518,
@@ -11082,13 +11648,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "简短的短的"
+        zh: "短的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „kurz“ bedeutet hier „简短的短的“.",
-        zh: "“kurz”在这里表示“简短的短的”。"
+        de: "Der Film ist kurz.",
+        zh: "这部电影很短。",
+        target: "kurz"
       }
     ],
     teachingOrder: 519,
@@ -11108,8 +11675,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute lachen.",
-        zh: "我们今天想笑。"
+        de: "Wir lachen zusammen.",
+        zh: "我们一起笑。",
+        target: "lachen"
       }
     ],
     teachingOrder: 520,
@@ -11129,8 +11697,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Land.",
-        zh: "今天我们谈论国家。"
+        de: "Das Land ist schön.",
+        zh: "这个国家很美。",
+        target: "Land"
       }
     ],
     teachingOrder: 521,
@@ -11145,13 +11714,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "长的长的"
+        zh: "长的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „lang“ bedeutet hier „长的长的“.",
-        zh: "“lang”在这里表示“长的长的”。"
+        de: "Der Flur ist lang.",
+        zh: "走廊很长。",
+        target: "lang"
       }
     ],
     teachingOrder: 522,
@@ -11166,13 +11736,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "长时间；很久"
+        zh: "很久"
       }
     ],
     examples: [
       {
-        de: "Das Wort „lange“ bedeutet hier „长时间；很久“.",
-        zh: "“lange”在这里表示“长时间；很久”。"
+        de: "Ich warte lange.",
+        zh: "我等很久。",
+        target: "lange"
       }
     ],
     teachingOrder: 523,
@@ -11192,8 +11763,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „langsam“ bedeutet hier „缓慢的“.",
-        zh: "“langsam”在这里表示“缓慢的”。"
+        de: "Der Zug ist langsam.",
+        zh: "火车很慢。",
+        target: "langsam"
       }
     ],
     teachingOrder: 524,
@@ -11208,13 +11780,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "走路，步行运转，进行"
+        zh: "走路"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute laufen.",
-        zh: "我们今天想走路，步行运转，进行。"
+        de: "Ich laufe jeden Tag.",
+        zh: "我每天走路。",
+        target: "laufe"
       }
     ],
     teachingOrder: 525,
@@ -11229,13 +11802,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "喧闹的，响亮的..."
+        zh: "响亮的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „laut“ bedeutet hier „喧闹的，响亮的...“.",
-        zh: "“laut”在这里表示“喧闹的，响亮的...”。"
+        de: "Der Hund ist laut.",
+        zh: "那只狗很响亮。",
+        target: "laut"
       }
     ],
     teachingOrder: 526,
@@ -11255,8 +11829,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute leben.",
-        zh: "我们今天想生活。"
+        de: "Ich lebe in Berlin.",
+        zh: "我住在柏林。",
+        target: "lebe"
       }
     ],
     teachingOrder: 527,
@@ -11276,8 +11851,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Leben.",
-        zh: "今天我们谈论生活。"
+        de: "Das Leben ist kurz.",
+        zh: "生活很短。",
+        target: "Leben"
       }
     ],
     teachingOrder: 528,
@@ -11297,8 +11873,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Lebensmittel (pl.).",
-        zh: "今天我们谈论食品。"
+        de: "Die Lebensmittel sind frisch.",
+        zh: "这些食品很新鲜。",
+        target: "Lebensmittel"
       }
     ],
     teachingOrder: 529,
@@ -11318,8 +11895,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ledig“ bedeutet hier „未婚的“.",
-        zh: "“ledig”在这里表示“未婚的”。"
+        de: "Sie ist ledig.",
+        zh: "她未婚。",
+        target: "ledig"
       }
     ],
     teachingOrder: 530,
@@ -11334,13 +11912,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "把 ... 平放"
+        zh: "平放"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute legen.",
-        zh: "我们今天想把 ... 平放。"
+        de: "Ich lege das Buch auf den Tisch.",
+        zh: "我把书放在桌子上。",
+        target: "lege"
       }
     ],
     teachingOrder: 531,
@@ -11360,8 +11939,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Lehrer.",
-        zh: "今天我们谈论男老师。"
+        de: "Der Lehrer erklärt das.",
+        zh: "男老师解释这个。",
+        target: "Lehrer"
       }
     ],
     teachingOrder: 532,
@@ -11376,13 +11956,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "轻微的薄的"
+        zh: "轻的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „leicht“ bedeutet hier „轻微的薄的“.",
-        zh: "“leicht”在这里表示“轻微的薄的”。"
+        de: "Der Koffer ist leicht.",
+        zh: "这个箱子很轻。",
+        target: "leicht"
       }
     ],
     teachingOrder: 533,
@@ -11402,8 +11983,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „leider“ bedeutet hier „可惜“.",
-        zh: "“leider”在这里表示“可惜”。"
+        de: "Leider regnet es.",
+        zh: "可惜下雨了。",
+        target: "leider"
       }
     ],
     teachingOrder: 534,
@@ -11423,8 +12005,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „leise“ bedeutet hier „低声的“.",
-        zh: "“leise”在这里表示“低声的”。"
+        de: "Bitte sprich leise.",
+        zh: "请低声说话。",
+        target: "leise"
       }
     ],
     teachingOrder: 535,
@@ -11444,8 +12027,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute lesen.",
-        zh: "我们今天想读。"
+        de: "Ich lese ein Buch.",
+        zh: "我在读一本书。",
+        target: "lese"
       }
     ],
     teachingOrder: 536,
@@ -11460,13 +12044,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "最后的"
+        zh: "上一个的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „letzt-“ bedeutet hier „最后的“.",
-        zh: "“letzt-”在这里表示“最后的”。"
+        de: "Letzte Woche war ich krank.",
+        zh: "我上周生病了。",
+        target: "Letzte"
       }
     ],
     teachingOrder: 537,
@@ -11486,8 +12071,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Leute (pl.).",
-        zh: "今天我们谈论人们。"
+        de: "Die Leute trinken Kaffee.",
+        zh: "人们喝咖啡。",
+        target: "Leute"
       }
     ],
     teachingOrder: 538,
@@ -11507,8 +12093,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „lieb-“ bedeutet hier „亲爱的“.",
-        zh: "“lieb-”在这里表示“亲爱的”。"
+        de: "Liebe Anna, wie geht es dir?",
+        zh: "亲爱的安娜，你好吗？",
+        target: "Liebe"
       }
     ],
     teachingOrder: 539,
@@ -11528,8 +12115,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute lieben.",
-        zh: "我们今天想热爱，喜爱。"
+        de: "Ich will Deutsch lieben.",
+        zh: "我想热爱德语。",
+        target: "lieben"
       }
     ],
     teachingOrder: 540,
@@ -11549,8 +12137,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „lieber“ bedeutet hier „宁愿，更喜欢“.",
-        zh: "“lieber”在这里表示“宁愿，更喜欢”。"
+        de: "Ich trinke lieber Tee.",
+        zh: "我宁愿喝茶。",
+        target: "lieber"
       }
     ],
     teachingOrder: 541,
@@ -11570,8 +12159,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „Lieblings-“ bedeutet hier „最喜欢的“.",
-        zh: "“Lieblings-”在这里表示“最喜欢的”。"
+        de: "Mein Lieblingsbuch liegt auf dem Tisch.",
+        zh: "我最喜欢的书放在桌上。",
+        target: "Lieblingsbuch"
       }
     ],
     teachingOrder: 542,
@@ -11586,13 +12176,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "位于躺，卧（指物）平放，横放位于"
+        zh: "位于；躺着"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute liegen.",
-        zh: "我们今天想位于躺，卧（指物）平放，横放位于。"
+        de: "Das Buch soll hier liegen.",
+        zh: "书应该放在这里。",
+        target: "liegen"
       }
     ],
     teachingOrder: 543,
@@ -11612,8 +12203,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „links“ bedeutet hier „在左边“.",
-        zh: "“links”在这里表示“在左边”。"
+        de: "Der Stuhl steht links.",
+        zh: "椅子在左边。",
+        target: "links"
       }
     ],
     teachingOrder: 544,
@@ -11633,8 +12225,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Lkw.",
-        zh: "今天我们谈论卡车。"
+        de: "Der Lkw fährt schnell.",
+        zh: "卡车开得很快。",
+        target: "Lkw"
       }
     ],
     teachingOrder: 545,
@@ -11654,8 +12247,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Lokal.",
-        zh: "今天我们谈论餐馆；店铺。"
+        de: "Das Lokal hat Pizza.",
+        zh: "这家店有披萨。",
+        target: "Lokal"
       }
     ],
     teachingOrder: 546,
@@ -11675,8 +12269,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Lösung.",
-        zh: "今天我们谈论答案；解决办法。"
+        de: "Die Lösung ist einfach.",
+        zh: "答案很简单。",
+        target: "Lösung"
       }
     ],
     teachingOrder: 547,
@@ -11696,8 +12291,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „lustig“ bedeutet hier „有趣的“.",
-        zh: "“lustig”在这里表示“有趣的”。"
+        de: "Der Film ist lustig.",
+        zh: "这部电影很有趣。",
+        target: "lustig"
       }
     ],
     teachingOrder: 548,
@@ -11717,8 +12313,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute machen.",
-        zh: "我们今天想做。"
+        de: "Wir machen Hausaufgaben.",
+        zh: "我们做作业。",
+        target: "machen"
       }
     ],
     teachingOrder: 549,
@@ -11738,8 +12335,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Mädchen.",
-        zh: "今天我们谈论女孩。"
+        de: "Das Mädchen singt.",
+        zh: "女孩在唱歌。",
+        target: "Mädchen"
       }
     ],
     teachingOrder: 550,
@@ -11759,8 +12357,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „man“ bedeutet hier „人们“.",
-        zh: "“man”在这里表示“人们”。"
+        de: "Man spricht hier Deutsch.",
+        zh: "这里人们说德语。",
+        target: "Man"
       }
     ],
     teachingOrder: 551,
@@ -11780,8 +12379,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „männlich“ bedeutet hier „男性的“.",
-        zh: "“männlich”在这里表示“男性的”。"
+        de: "Der Lehrer ist männlich.",
+        zh: "老师是男性。",
+        target: "männlich"
       }
     ],
     teachingOrder: 552,
@@ -11801,8 +12401,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Maschine.",
-        zh: "今天我们谈论机器。"
+        de: "Die Maschine ist neu.",
+        zh: "这台机器是新的。",
+        target: "Maschine"
       }
     ],
     teachingOrder: 553,
@@ -11822,8 +12423,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „mehr“ bedeutet hier „更多“.",
-        zh: "“mehr”在这里表示“更多”。"
+        de: "Ich habe mehr Äpfel.",
+        zh: "我有更多的苹果。",
+        target: "mehr"
       }
     ],
     teachingOrder: 554,
@@ -11843,8 +12445,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „mein“ bedeutet hier „我的“.",
-        zh: "“mein”在这里表示“我的”。"
+        de: "Das ist mein Buch.",
+        zh: "这是我的书。",
+        target: "mein"
       }
     ],
     teachingOrder: 555,
@@ -11864,8 +12467,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „meist-“ bedeutet hier „大多数的“.",
-        zh: "“meist-”在这里表示“大多数的”。"
+        de: "Er kommt meist pünktlich.",
+        zh: "他通常准时来。",
+        target: "meist"
       }
     ],
     teachingOrder: 556,
@@ -11885,8 +12489,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „mit“ bedeutet hier „和 … 一起，同在 … 的时候“.",
-        zh: "“mit”在这里表示“和 … 一起，同在 … 的时候”。"
+        de: "Ich gehe mit Anna.",
+        zh: "我和安娜一起去。",
+        target: "mit"
       }
     ],
     teachingOrder: 557,
@@ -11906,8 +12511,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mitbringen.",
-        zh: "我们今天想带来。"
+        de: "Ich bringe das Buch mit.",
+        zh: "我把书带来。",
+        target: "bringe|mit"
       }
     ],
     teachingOrder: 558,
@@ -11927,8 +12533,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mitkommen.",
-        zh: "我们今天想同来，同去。"
+        de: "Ich komme mit.",
+        zh: "我一起去。",
+        target: "komme|mit"
       }
     ],
     teachingOrder: 559,
@@ -11948,8 +12555,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mitmachen.",
-        zh: "我们今天想参加。"
+        de: "Ich mache mit.",
+        zh: "我参加。",
+        target: "mache|mit"
       }
     ],
     teachingOrder: 560,
@@ -11969,8 +12577,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mitnehmen.",
-        zh: "我们今天想一起带走，顺便带走。"
+        de: "Ich nehme den Regenschirm mit.",
+        zh: "我把雨伞带走。",
+        target: "nehme|mit"
       }
     ],
     teachingOrder: 561,
@@ -11990,8 +12599,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Mitte.",
-        zh: "今天我们谈论中间。"
+        de: "Die Bank steht in der Mitte.",
+        zh: "这张长椅在中间。",
+        target: "Mitte"
       }
     ],
     teachingOrder: 562,
@@ -12011,8 +12621,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute möchten.",
-        zh: "我们今天想想要。"
+        de: "Wir möchten ein Eis.",
+        zh: "我们想要一个冰淇淋。",
+        target: "möchten"
       }
     ],
     teachingOrder: 563,
@@ -12032,8 +12643,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute mögen.",
-        zh: "我们今天想喜欢。"
+        de: "Wir mögen Musik.",
+        zh: "我们喜欢音乐。",
+        target: "mögen"
       }
     ],
     teachingOrder: 564,
@@ -12048,13 +12660,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "可行的，可能的"
+        zh: "可行的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „möglich“ bedeutet hier „可行的，可能的“.",
-        zh: "“möglich”在这里表示“可行的，可能的”。"
+        de: "Ein Termin am Montag ist möglich.",
+        zh: "可以约在星期一。",
+        target: "möglich"
       }
     ],
     teachingOrder: 565,
@@ -12074,8 +12687,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Moment.",
-        zh: "今天我们谈论片刻，瞬间。"
+        de: "Einen Moment bitte.",
+        zh: "请稍等。",
+        target: "Moment"
       }
     ],
     teachingOrder: 566,
@@ -12095,8 +12709,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute morgen.",
-        zh: "我们今天想明天。"
+        de: "Morgen fahre ich nach Berlin.",
+        zh: "明天我去柏林。",
+        target: "morgen"
       }
     ],
     teachingOrder: 567,
@@ -12116,8 +12731,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „müde“ bedeutet hier „疲倦的“.",
-        zh: "“müde”在这里表示“疲倦的”。"
+        de: "Ich bin müde.",
+        zh: "我很累。",
+        target: "müde"
       }
     ],
     teachingOrder: 568,
@@ -12132,13 +12748,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "嘴"
+        zh: "嘴巴"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mund.",
-        zh: "今天我们谈论嘴。"
+        de: "Der Mund ist offen.",
+        zh: "嘴巴是张开的。",
+        target: "Mund"
       }
     ],
     teachingOrder: 569,
@@ -12158,8 +12775,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute müssen.",
-        zh: "我们今天想必须。"
+        de: "Ich muss heute arbeiten.",
+        zh: "我今天必须工作。",
+        target: "muss"
       }
     ],
     teachingOrder: 570,
@@ -12174,13 +12792,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在 … 之后在 … 之后到 … 去"
+        zh: "…之后；去…"
       }
     ],
     examples: [
       {
-        de: "Das Wort „nach“ bedeutet hier „在 … 之后在 … 之后到 … 去“.",
-        zh: "“nach”在这里表示“在 … 之后在 … 之后到 … 去”。"
+        de: "Wir fahren nach Berlin.",
+        zh: "我们开车去柏林。",
+        target: "nach"
       }
     ],
     teachingOrder: 571,
@@ -12200,8 +12819,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „nächst-“ bedeutet hier „下一个“.",
-        zh: "“nächst-”在这里表示“下一个”。"
+        de: "Das ist das nächste Haus.",
+        zh: "这是下一栋房子。",
+        target: "nächste"
       }
     ],
     teachingOrder: 572,
@@ -12216,13 +12836,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "选择，选购乘，坐服用"
+        zh: "拿，取，乘，服用"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute nehmen.",
-        zh: "我们今天想选择，选购乘，坐服用。"
+        de: "Ich nehme den Bus.",
+        zh: "我乘坐公交车。",
+        target: "nehme"
       }
     ],
     teachingOrder: 573,
@@ -12242,8 +12863,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „nein“ bedeutet hier „不是“.",
-        zh: "“nein”在这里表示“不是”。"
+        de: "Nein, ich komme nicht.",
+        zh: "不，我不来。",
+        target: "Nein"
       }
     ],
     teachingOrder: 574,
@@ -12263,8 +12885,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „neu“ bedeutet hier „新的“.",
-        zh: "“neu”在这里表示“新的”。"
+        de: "Das Auto ist neu.",
+        zh: "这辆车是新的。",
+        target: "neu"
       }
     ],
     teachingOrder: 575,
@@ -12284,8 +12907,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „nicht“ bedeutet hier „不“.",
-        zh: "“nicht”在这里表示“不”。"
+        de: "Ich habe nicht genug.",
+        zh: "我没有足够的。",
+        target: "nicht"
       }
     ],
     teachingOrder: 576,
@@ -12305,8 +12929,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „nichts“ bedeutet hier „什么也没有“.",
-        zh: "“nichts”在这里表示“什么也没有”。"
+        de: "Ich habe nichts.",
+        zh: "我什么都没有。",
+        target: "nichts"
       }
     ],
     teachingOrder: 577,
@@ -12321,13 +12946,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "从不，从未"
+        zh: "从不"
       }
     ],
     examples: [
       {
-        de: "Das Wort „nie“ bedeutet hier „从不，从未“.",
-        zh: "“nie”在这里表示“从不，从未”。"
+        de: "Ich esse nie Fleisch.",
+        zh: "我从不吃肉。",
+        target: "nie"
       }
     ],
     teachingOrder: 578,
@@ -12347,8 +12973,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „noch“ bedeutet hier „还“.",
-        zh: "“noch”在这里表示“还”。"
+        de: "Ich habe noch Zeit.",
+        zh: "我还有时间。",
+        target: "noch"
       }
     ],
     teachingOrder: 579,
@@ -12368,8 +12995,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „normal“ bedeutet hier „正常的，普通的“.",
-        zh: "“normal”在这里表示“正常的，普通的”。"
+        de: "Das ist normal.",
+        zh: "这很正常。",
+        target: "normal"
       }
     ],
     teachingOrder: 580,
@@ -12389,8 +13017,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Nummer.",
-        zh: "今天我们谈论号码。"
+        de: "Meine Nummer ist fünf.",
+        zh: "我的号码是五。",
+        target: "Nummer"
       }
     ],
     teachingOrder: 581,
@@ -12410,8 +13039,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „nur“ bedeutet hier „只；仅仅“.",
-        zh: "“nur”在这里表示“只；仅仅”。"
+        de: "Ich habe nur ein Buch.",
+        zh: "我只有一本书。",
+        target: "nur"
       }
     ],
     teachingOrder: 582,
@@ -12431,8 +13061,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute oben.",
-        zh: "我们今天想在上面。"
+        de: "Das Bild hängt oben.",
+        zh: "画挂在上面。",
+        target: "oben"
       }
     ],
     teachingOrder: 583,
@@ -12452,8 +13083,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „oder“ bedeutet hier „或者“.",
-        zh: "“oder”在这里表示“或者”。"
+        de: "Möchtest du Tee oder Kaffee?",
+        zh: "你想喝茶还是咖啡？",
+        target: "oder"
       }
     ],
     teachingOrder: 584,
@@ -12468,13 +13100,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "开门"
+        zh: "打开（门、窗等）"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute öffnen.",
-        zh: "我们今天想开门。"
+        de: "Ich öffne die Tür.",
+        zh: "我打开门。",
+        target: "öffne"
       }
     ],
     teachingOrder: 585,
@@ -12489,13 +13122,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "开门的，开放的"
+        zh: "已打开的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „geöffnet“ bedeutet hier „开门的，开放的“.",
-        zh: "“geöffnet”在这里表示“开门的，开放的”。"
+        de: "Die Tür ist geöffnet.",
+        zh: "门是打开的。",
+        target: "geöffnet"
       }
     ],
     teachingOrder: 586,
@@ -12515,8 +13149,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „oft“ bedeutet hier „经常“.",
-        zh: "“oft”在这里表示“经常”。"
+        de: "Ich gehe oft spazieren.",
+        zh: "我经常散步。",
+        target: "oft"
       }
     ],
     teachingOrder: 587,
@@ -12531,13 +13166,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "没有，无"
+        zh: "没有；不带"
       }
     ],
     examples: [
       {
-        de: "Das Wort „ohne“ bedeutet hier „没有，无“.",
-        zh: "“ohne”在这里表示“没有，无”。"
+        de: "Ich esse das Brot ohne Butter.",
+        zh: "我吃面包不抹黄油。",
+        target: "ohne"
       }
     ],
     teachingOrder: 588,
@@ -12552,13 +13188,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "祖母，外祖母"
+        zh: "祖母"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Oma.",
-        zh: "今天我们谈论祖母，外祖母。"
+        de: "Meine Oma kocht Suppe.",
+        zh: "我的奶奶做汤。",
+        target: "Oma"
       }
     ],
     teachingOrder: 589,
@@ -12573,13 +13210,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "爷爷，姥爷"
+        zh: "祖父"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Opa.",
-        zh: "今天我们谈论爷爷，姥爷。"
+        de: "Mein Opa liest die Zeitung.",
+        zh: "我的爷爷读报纸。",
+        target: "Opa"
       }
     ],
     teachingOrder: 590,
@@ -12594,13 +13232,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "秩序；正常状态"
+        zh: "秩序"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Ordnung.",
-        zh: "今天我们谈论秩序；正常状态。"
+        de: "Bitte halte Ordnung im Zimmer.",
+        zh: "请保持房间整洁。",
+        target: "Ordnung"
       }
     ],
     teachingOrder: 591,
@@ -12615,13 +13254,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "地方，地点"
+        zh: "地点"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Ort.",
-        zh: "今天我们谈论地方，地点。"
+        de: "Der Bahnhof ist ein Ort.",
+        zh: "火车站是一个地点。",
+        target: "Ort"
       }
     ],
     teachingOrder: 592,
@@ -12641,8 +13281,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Papier.",
-        zh: "今天我们谈论纸张。"
+        de: "Ich schreibe auf Papier.",
+        zh: "我在纸上写字。",
+        target: "Papier"
       }
     ],
     teachingOrder: 593,
@@ -12657,13 +13298,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "证件；文件"
+        zh: "文件"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Papiere (pl.).",
-        zh: "今天我们谈论证件；文件。"
+        de: "Ich bringe meine Papiere mit.",
+        zh: "我把我的文件带上。",
+        target: "Papiere"
       }
     ],
     teachingOrder: 594,
@@ -12683,8 +13325,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Pause.",
-        zh: "今天我们谈论休息。"
+        de: "Wir machen eine Pause.",
+        zh: "我们稍作休息。",
+        target: "Pause"
       }
     ],
     teachingOrder: 595,
@@ -12699,13 +13342,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "规划，计划计划计划"
+        zh: "计划"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Plan.",
-        zh: "今天我们谈论规划，计划计划计划。"
+        de: "Ich habe einen Plan.",
+        zh: "我有一个计划。",
+        target: "Plan"
       }
     ],
     teachingOrder: 596,
@@ -12720,13 +13364,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "空间（单数形式）"
+        zh: "位置"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Platz.",
-        zh: "今天我们谈论空间（单数形式）。"
+        de: "Gib mir einen Platz.",
+        zh: "请给我一个座位。",
+        target: "Platz"
       }
     ],
     teachingOrder: 597,
@@ -12746,8 +13391,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Pommes frites (pl.).",
-        zh: "今天我们谈论炸薯条。"
+        de: "Ich bestelle Pommes frites.",
+        zh: "我点炸薯条。",
+        target: "Pommes frites"
       }
     ],
     teachingOrder: 598,
@@ -12767,8 +13413,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Praxis.",
-        zh: "今天我们谈论诊所。"
+        de: "Ich gehe zur Praxis.",
+        zh: "我去诊所。",
+        target: "Praxis"
       }
     ],
     teachingOrder: 599,
@@ -12788,8 +13435,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Problem.",
-        zh: "今天我们谈论问题。"
+        de: "Das ist ein Problem.",
+        zh: "这是一个问题。",
+        target: "Problem"
       }
     ],
     teachingOrder: 600,
@@ -12804,13 +13452,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "宣传册，手册"
+        zh: "宣传册"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Prospekt.",
-        zh: "今天我们谈论宣传册，手册。"
+        de: "Ich nehme den Prospekt am Schalter.",
+        zh: "我从柜台拿了宣传册。",
+        target: "Prospekt"
       }
     ],
     teachingOrder: 601,
@@ -12830,8 +13479,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Prüfung.",
-        zh: "今天我们谈论考试。"
+        de: "Morgen habe ich die Prüfung.",
+        zh: "明天我有考试。",
+        target: "Prüfung"
       }
     ],
     teachingOrder: 602,
@@ -12851,8 +13501,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „pünktlich“ bedeutet hier „准时的“.",
-        zh: "“pünktlich”在这里表示“准时的”。"
+        de: "Der Zug kommt pünktlich an.",
+        zh: "火车准时到达。",
+        target: "pünktlich"
       }
     ],
     teachingOrder: 603,
@@ -12872,8 +13523,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute rauchen.",
-        zh: "我们今天想吸烟。"
+        de: "Er darf hier nicht rauchen.",
+        zh: "他不能在这里吸烟。",
+        target: "rauchen"
       }
     ],
     teachingOrder: 604,
@@ -12893,8 +13545,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Raum.",
-        zh: "今天我们谈论房间。"
+        de: "Der Raum ist leer.",
+        zh: "房间是空的。",
+        target: "Raum"
       }
     ],
     teachingOrder: 605,
@@ -12914,8 +13567,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Rechnung.",
-        zh: "今天我们谈论账单。"
+        de: "Bitte geben Sie mir die Rechnung.",
+        zh: "请把账单给我。",
+        target: "Rechnung"
       }
     ],
     teachingOrder: 606,
@@ -12930,13 +13584,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在右边"
+        zh: "右边"
       }
     ],
     examples: [
       {
-        de: "Das Wort „rechts“ bedeutet hier „在右边“.",
-        zh: "“rechts”在这里表示“在右边”。"
+        de: "Das Buch liegt rechts.",
+        zh: "书在右边。",
+        target: "rechts"
       }
     ],
     teachingOrder: 607,
@@ -12956,8 +13611,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute regnen.",
-        zh: "我们今天想下雨。"
+        de: "Es wird heute regnen.",
+        zh: "今天会下雨。",
+        target: "regnen"
       }
     ],
     teachingOrder: 608,
@@ -12977,8 +13633,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute reparieren.",
-        zh: "我们今天想修理。"
+        de: "Ich will das Fahrrad reparieren.",
+        zh: "我想修理自行车。",
+        target: "reparieren"
       }
     ],
     teachingOrder: 609,
@@ -12998,8 +13655,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Rezeption.",
-        zh: "今天我们谈论前台。"
+        de: "Ich warte an der Rezeption.",
+        zh: "我在前台等候。",
+        target: "Rezeption"
       }
     ],
     teachingOrder: 610,
@@ -13014,13 +13672,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "正确的正确的"
+        zh: "正确的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „richtig“ bedeutet hier „正确的正确的“.",
-        zh: "“richtig”在这里表示“正确的正确的”。"
+        de: "Deine Antwort ist richtig.",
+        zh: "你的答案是正确的。",
+        target: "richtig"
       }
     ],
     teachingOrder: 611,
@@ -13035,13 +13694,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "闻起来，发出气味"
+        zh: "闻"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute riechen.",
-        zh: "我们今天想闻起来，发出气味。"
+        de: "Ich will das Parfüm riechen.",
+        zh: "我想闻这个香水。",
+        target: "riechen"
       }
     ],
     teachingOrder: 612,
@@ -13061,8 +13721,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ruhig“ bedeutet hier „安静的“.",
-        zh: "“ruhig”在这里表示“安静的”。"
+        de: "Bitte sei jetzt ruhig.",
+        zh: "请现在保持安静。",
+        target: "ruhig"
       }
     ],
     teachingOrder: 613,
@@ -13082,8 +13743,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute sagen.",
-        zh: "我们今天想说。"
+        de: "Kannst du das bitte sagen?",
+        zh: "你能把它说出来吗？",
+        target: "sagen"
       }
     ],
     teachingOrder: 614,
@@ -13103,8 +13765,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Satz.",
-        zh: "今天我们谈论句子。"
+        de: "Der Satz ist zu lang.",
+        zh: "这句话太长了。",
+        target: "Satz"
       }
     ],
     teachingOrder: 615,
@@ -13124,8 +13787,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute scheinen.",
-        zh: "我们今天想照耀。"
+        de: "Ich hoffe, die Sonne wird scheinen.",
+        zh: "我希望太阳会照耀。",
+        target: "scheinen"
       }
     ],
     teachingOrder: 616,
@@ -13140,13 +13804,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "寄"
+        zh: "寄送"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute schicken.",
-        zh: "我们今天想寄。"
+        de: "Ich schicke dir das Paket.",
+        zh: "我把包裹寄给你。",
+        target: "schicke"
       }
     ],
     teachingOrder: 617,
@@ -13161,13 +13826,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "牌子"
+        zh: "标志牌"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Schild.",
-        zh: "今天我们谈论牌子。"
+        de: "Das Schild zeigt den Ausgang.",
+        zh: "这个标志牌指示出口。",
+        target: "Schild"
       }
     ],
     teachingOrder: 618,
@@ -13187,8 +13853,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schinken.",
-        zh: "今天我们谈论火腿。"
+        de: "Ich esse Schinken zum Frühstück.",
+        zh: "我早餐吃火腿。",
+        target: "Schinken"
       }
     ],
     teachingOrder: 619,
@@ -13208,8 +13875,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute schlafen.",
-        zh: "我们今天想睡觉。"
+        de: "Ich schlafe jetzt.",
+        zh: "我现在睡觉。",
+        target: "schlafe"
       }
     ],
     teachingOrder: 620,
@@ -13229,8 +13897,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „schlecht“ bedeutet hier „差的；不舒服的“.",
-        zh: "“schlecht”在这里表示“差的；不舒服的”。"
+        de: "Das Wetter ist schlecht.",
+        zh: "天气很差。",
+        target: "schlecht"
       }
     ],
     teachingOrder: 621,
@@ -13245,13 +13914,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "关门"
+        zh: "关上"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute schließen.",
-        zh: "我们今天想关门。"
+        de: "Ich schließe die Tür.",
+        zh: "我把门关上。",
+        target: "schließe"
       }
     ],
     teachingOrder: 622,
@@ -13266,13 +13936,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "关门的，关闭的"
+        zh: "关闭的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „geschlossen“ bedeutet hier „关门的，关闭的“.",
-        zh: "“geschlossen”在这里表示“关门的，关闭的”。"
+        de: "Der Laden ist am Sonntag geschlossen.",
+        zh: "商店星期日不营业。",
+        target: "geschlossen"
       }
     ],
     teachingOrder: 623,
@@ -13287,13 +13958,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "结束语（单数形式）结束"
+        zh: "结束"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schluss.",
-        zh: "今天我们谈论结束语（单数形式）结束。"
+        de: "Der Schluss ist kurz.",
+        zh: "结尾很短。",
+        target: "Schluss"
       }
     ],
     teachingOrder: 624,
@@ -13308,13 +13980,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "觉得好吃，合口味"
+        zh: "好吃"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute schmecken.",
-        zh: "我们今天想觉得好吃，合口味。"
+        de: "Der Kuchen schmeckt gut.",
+        zh: "蛋糕很好吃。",
+        target: "schmeckt"
       }
     ],
     teachingOrder: 625,
@@ -13334,8 +14007,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „schnell“ bedeutet hier „快的“.",
-        zh: "“schnell”在这里表示“快的”。"
+        de: "Der Zug ist schnell.",
+        zh: "这列火车很快。",
+        target: "schnell"
       }
     ],
     teachingOrder: 626,
@@ -13355,8 +14029,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „schon“ bedeutet hier „已经“.",
-        zh: "“schon”在这里表示“已经”。"
+        de: "Ich bin schon zu Hause.",
+        zh: "我已经在家了。",
+        target: "schon"
       }
     ],
     teachingOrder: 627,
@@ -13371,13 +14046,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "美丽的真好很，非常"
+        zh: "美丽的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „schön“ bedeutet hier „美丽的真好很，非常“.",
-        zh: "“schön”在这里表示“美丽的真好很，非常”。"
+        de: "Der Park ist schön.",
+        zh: "公园很美丽。",
+        target: "schön"
       }
     ],
     teachingOrder: 628,
@@ -13397,8 +14073,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schrank.",
-        zh: "今天我们谈论柜子。"
+        de: "Der Schrank ist voll.",
+        zh: "柜子里装满了东西。",
+        target: "Schrank"
       }
     ],
     teachingOrder: 629,
@@ -13418,8 +14095,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute schreiben.",
-        zh: "我们今天想写。"
+        de: "Ich schreibe jeden Tag im Tagebuch.",
+        zh: "我每天在日记本里写字。",
+        target: "schreibe"
       }
     ],
     teachingOrder: 630,
@@ -13439,8 +14117,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Schüler.",
-        zh: "今天我们谈论男学生。"
+        de: "Der Schüler liest ein Buch.",
+        zh: "这位男学生在读一本书。",
+        target: "Schüler"
       }
     ],
     teachingOrder: 631,
@@ -13455,13 +14134,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "困难的沉重的"
+        zh: "困难的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „schwer“ bedeutet hier „困难的沉重的“.",
-        zh: "“schwer”在这里表示“困难的沉重的”。"
+        de: "Die Aufgabe ist schwer.",
+        zh: "这道题很难。",
+        target: "schwer"
       }
     ],
     teachingOrder: 632,
@@ -13476,13 +14156,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "看，看见"
+        zh: "看见"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute sehen.",
-        zh: "我们今天想看，看见。"
+        de: "Ich sehe den Hund.",
+        zh: "我看到那只狗。",
+        target: "sehe"
       }
     ],
     teachingOrder: 633,
@@ -13497,13 +14178,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "景点，名胜古迹"
+        zh: "名胜"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Sehenswürdigkeit.",
-        zh: "今天我们谈论景点，名胜古迹。"
+        de: "Die Sehenswürdigkeit ist schön.",
+        zh: "这座名胜很漂亮。",
+        target: "Sehenswürdigkeit"
       }
     ],
     teachingOrder: 634,
@@ -13518,13 +14200,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "很"
+        zh: "非常"
       }
     ],
     examples: [
       {
-        de: "Das Wort „sehr“ bedeutet hier „很“.",
-        zh: "“sehr”在这里表示“很”。"
+        de: "Das Essen ist sehr gut.",
+        zh: "这道菜非常好。",
+        target: "sehr"
       }
     ],
     teachingOrder: 635,
@@ -13544,8 +14227,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute sein.",
-        zh: "我们今天想是。"
+        de: "Er ist mein Freund.",
+        zh: "他是我的朋友。",
+        target: "ist"
       }
     ],
     teachingOrder: 636,
@@ -13560,13 +14244,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "关着"
+        zh: "是"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute zu sein.",
-        zh: "我们今天想关着。"
+        de: "Es ist schön, hier zu sein.",
+        zh: "在这里很舒服。",
+        target: "zu sein"
       }
     ],
     teachingOrder: 637,
@@ -13581,13 +14266,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "从 … 以来"
+        zh: "自……以来"
       }
     ],
     examples: [
       {
-        de: "Das Wort „seit“ bedeutet hier „从 … 以来“.",
-        zh: "“seit”在这里表示“从 … 以来”。"
+        de: "Ich wohne seit 2020 hier.",
+        zh: "我自2020年以来住在这里。",
+        target: "seit"
       }
     ],
     teachingOrder: 638,
@@ -13607,8 +14293,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „selbstständig“ bedeutet hier „独立的“.",
-        zh: "“selbstständig”在这里表示“独立的”。"
+        de: "Sie arbeitet selbstständig.",
+        zh: "她独立工作。",
+        target: "selbstständig"
       }
     ],
     teachingOrder: 639,
@@ -13623,13 +14310,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "自己；自身"
+        zh: "自己"
       }
     ],
     examples: [
       {
-        de: "Das Wort „sich“ bedeutet hier „自己；自身“.",
-        zh: "“sich”在这里表示“自己；自身”。"
+        de: "Er erinnert sich.",
+        zh: "他记得了。",
+        target: "sich"
       }
     ],
     teachingOrder: 640,
@@ -13644,13 +14332,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "您，您们"
+        zh: "她"
       }
     ],
     examples: [
       {
-        de: "Das Wort „sie“ bedeutet hier „您，您们“.",
-        zh: "“sie”在这里表示“您，您们”。"
+        de: "Ich treffe sie morgen.",
+        zh: "我明天会见她。",
+        target: "sie"
       }
     ],
     teachingOrder: 641,
@@ -13665,13 +14354,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "您，您们"
+        zh: "您"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Sie“ bedeutet hier „您，您们“.",
-        zh: "“Sie”在这里表示“您，您们”。"
+        de: "Können Sie mir helfen?",
+        zh: "您能帮我吗？",
+        target: "Sie"
       }
     ],
     teachingOrder: 642,
@@ -13691,8 +14381,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute sitzen.",
-        zh: "我们今天想坐。"
+        de: "Wir sitzen im Bus.",
+        zh: "我们坐在公交车上。",
+        target: "sitzen"
       }
     ],
     teachingOrder: 643,
@@ -13707,13 +14398,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "这么，这样如此"
+        zh: "这样"
       }
     ],
     examples: [
       {
-        de: "Das Wort „so“ bedeutet hier „这么，这样如此“.",
-        zh: "“so”在这里表示“这么，这样如此”。"
+        de: "Das ist so.",
+        zh: "就是这样。",
+        target: "so"
       }
     ],
     teachingOrder: 644,
@@ -13728,13 +14420,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "立刻，马上"
+        zh: "马上"
       }
     ],
     examples: [
       {
-        de: "Das Wort „sofort“ bedeutet hier „立刻，马上“.",
-        zh: "“sofort”在这里表示“立刻，马上”。"
+        de: "Komm sofort hierher!",
+        zh: "马上来这里！",
+        target: "sofort"
       }
     ],
     teachingOrder: 645,
@@ -13749,13 +14442,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "应该"
+        zh: "应当"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute sollen.",
-        zh: "我们今天想应该。"
+        de: "Wir sollen lernen.",
+        zh: "我们应该学习。",
+        target: "sollen"
       }
     ],
     teachingOrder: 646,
@@ -13770,13 +14464,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "晚的"
+        zh: "迟的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „spät“ bedeutet hier „晚的“.",
-        zh: "“spät”在这里表示“晚的”。"
+        de: "Der Zug ist spät.",
+        zh: "火车晚点了。",
+        target: "spät"
       }
     ],
     teachingOrder: 647,
@@ -13791,13 +14486,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "以后以后"
+        zh: "以后"
       }
     ],
     examples: [
       {
-        de: "Das Wort „später“ bedeutet hier „以后以后“.",
-        zh: "“später”在这里表示“以后以后”。"
+        de: "Wir kommen später.",
+        zh: "我们稍后到。",
+        target: "später"
       }
     ],
     teachingOrder: 648,
@@ -13812,13 +14508,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "语音"
+        zh: "语言"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Sprache.",
-        zh: "今天我们谈论语音。"
+        de: "Deutsch ist eine schöne Sprache.",
+        zh: "德语是一门美丽的语言。",
+        target: "Sprache"
       }
     ],
     teachingOrder: 649,
@@ -13833,13 +14530,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "处于某种情况站立适合（某人）---处于 的情况"
+        zh: "站立；处于某种状态"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute stehen.",
-        zh: "我们今天想处于某种情况站立适合（某人）---处于 的情况。"
+        de: "Der Stuhl steht neben dem Tisch.",
+        zh: "椅子在桌子旁边。",
+        target: "steht"
       }
     ],
     teachingOrder: 650,
@@ -13859,8 +14557,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Stelle.",
-        zh: "今天我们谈论职位。"
+        de: "Ich habe eine neue Stelle gefunden.",
+        zh: "我找到了一个新职位。",
+        target: "Stelle"
       }
     ],
     teachingOrder: 651,
@@ -13875,13 +14574,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "放置；站立"
+        zh: "放置"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute stellen.",
-        zh: "我们今天想放置；站立。"
+        de: "Bitte stell die Tasse auf den Tisch.",
+        zh: "请把杯子放在桌子上。",
+        target: "stell"
       }
     ],
     teachingOrder: 652,
@@ -13896,13 +14596,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "楼层（单数形式）"
+        zh: "楼层"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Stock.",
-        zh: "今天我们谈论楼层（单数形式）。"
+        de: "Wir wohnen im dritten Stock.",
+        zh: "我们住在三楼。",
+        target: "Stock"
       }
     ],
     teachingOrder: 653,
@@ -13917,13 +14618,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "（在大学）攻读，学习"
+        zh: "在大学学习"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute studieren.",
-        zh: "我们今天想（在大学）攻读，学习。"
+        de: "Anna studiert Biologie an der Uni.",
+        zh: "安娜在大学学习生物。",
+        target: "studiert"
       }
     ],
     teachingOrder: 654,
@@ -13938,13 +14640,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "大学学习，学业"
+        zh: "大学学习"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Studium.",
-        zh: "今天我们谈论大学学习，学业。"
+        de: "Mein Studium dauert vier Jahre.",
+        zh: "我的大学学习持续四年。",
+        target: "Studium"
       }
     ],
     teachingOrder: 655,
@@ -13959,13 +14662,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "男大学生"
+        zh: "大学生（男性）"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Student.",
-        zh: "今天我们谈论男大学生。"
+        de: "Der Student liest in der Bibliothek.",
+        zh: "这位男大学生在图书馆阅读。",
+        target: "Student"
       }
     ],
     teachingOrder: 656,
@@ -13985,8 +14689,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Stunde.",
-        zh: "今天我们谈论小时。"
+        de: "Die Stunde beginnt um neun Uhr.",
+        zh: "这节课在九点开始。",
+        target: "Stunde"
       }
     ],
     teachingOrder: 657,
@@ -14006,8 +14711,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute suchen.",
-        zh: "我们今天想寻找。"
+        de: "Ich suche meine Schlüssel.",
+        zh: "我在找我的钥匙。",
+        target: "suche"
       }
     ],
     teachingOrder: 658,
@@ -14027,8 +14733,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Teil.",
-        zh: "今天我们谈论部分。"
+        de: "Ein Teil des Kuchens fehlt.",
+        zh: "蛋糕的一块不见了。",
+        target: "Teil"
       }
     ],
     teachingOrder: 659,
@@ -14043,13 +14750,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "（约定的）日程，约会"
+        zh: "约会；预约时间"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Termin.",
-        zh: "今天我们谈论（约定的）日程，约会。"
+        de: "Wir haben einen Termin um zehn.",
+        zh: "我们十点有一个约会。",
+        target: "Termin"
       }
     ],
     teachingOrder: 660,
@@ -14069,8 +14777,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Test.",
-        zh: "今天我们谈论测验。"
+        de: "Der Test ist morgen.",
+        zh: "测验在明天。",
+        target: "Test"
       }
     ],
     teachingOrder: 661,
@@ -14090,8 +14799,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „teuer“ bedeutet hier „昂贵的“.",
-        zh: "“teuer”在这里表示“昂贵的”。"
+        de: "Das Buch ist sehr teuer.",
+        zh: "这本书很贵。",
+        target: "teuer"
       }
     ],
     teachingOrder: 662,
@@ -14111,8 +14821,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Text.",
-        zh: "今天我们谈论文章。"
+        de: "Der Text ist leicht zu lesen.",
+        zh: "这篇文章很容易阅读。",
+        target: "Text"
       }
     ],
     teachingOrder: 663,
@@ -14127,13 +14838,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "主题，话题"
+        zh: "主题；话题"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Thema.",
-        zh: "今天我们谈论主题，话题。"
+        de: "Unser Thema ist Umweltschutz.",
+        zh: "我们的主题是环境保护。",
+        target: "Thema"
       }
     ],
     teachingOrder: 664,
@@ -14148,13 +14860,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "卫生间"
+        zh: "厕所"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Toilette.",
-        zh: "今天我们谈论卫生间。"
+        de: "Wo ist die Toilette?",
+        zh: "厕所在哪里？",
+        target: "Toilette"
       }
     ],
     teachingOrder: 665,
@@ -14174,8 +14887,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „tot“ bedeutet hier „死的“.",
-        zh: "“tot”在这里表示“死的”。"
+        de: "Der Fisch ist tot.",
+        zh: "这条鱼死了。",
+        target: "tot"
       }
     ],
     teachingOrder: 666,
@@ -14190,13 +14904,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "会面，会见"
+        zh: "见面"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns treffen.",
-        zh: "我们今天想会面，会见。"
+        de: "Wir treffen uns um acht.",
+        zh: "我们八点见面。",
+        target: "treffen"
       }
     ],
     teachingOrder: 667,
@@ -14216,8 +14931,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „tschüss“ bedeutet hier „再见“.",
-        zh: "“tschüss”在这里表示“再见”。"
+        de: "Tschüss, bis morgen!",
+        zh: "再见，明天见！",
+        target: "tschüss"
       }
     ],
     teachingOrder: 668,
@@ -14232,13 +14948,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "干，工作"
+        zh: "做"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute tun.",
-        zh: "我们今天想干，工作。"
+        de: "Was willst du tun?",
+        zh: "你想做什么？",
+        target: "tun"
       }
     ],
     teachingOrder: 669,
@@ -14253,13 +14970,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在 … 期间超过对于在 … 上方通过"
+        zh: "关于"
       }
     ],
     examples: [
       {
-        de: "Das Wort „über“ bedeutet hier „在 … 期间超过对于在 … 上方通过“.",
-        zh: "“über”在这里表示“在 … 期间超过对于在 … 上方通过”。"
+        de: "Das Buch ist über Berlin.",
+        zh: "这本书是关于柏林的。",
+        target: "über"
       }
     ],
     teachingOrder: 670,
@@ -14279,8 +14997,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute übernachten.",
-        zh: "我们今天想过夜。"
+        de: "Wir übernachten im Hotel.",
+        zh: "我们在酒店过夜。",
+        target: "übernachten"
       }
     ],
     teachingOrder: 671,
@@ -14300,8 +15019,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute überweisen.",
-        zh: "我们今天想转账。"
+        de: "Ich möchte Geld überweisen.",
+        zh: "我想转账。",
+        target: "überweisen"
       }
     ],
     teachingOrder: 672,
@@ -14316,13 +15036,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "钟点"
+        zh: "钟表"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Uhr.",
-        zh: "今天我们谈论钟点。"
+        de: "Wie spät ist die Uhr?",
+        zh: "现在几点？",
+        target: "Uhr"
       }
     ],
     teachingOrder: 673,
@@ -14337,13 +15058,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在 … 时刻"
+        zh: "在…时"
       }
     ],
     examples: [
       {
-        de: "Das Wort „um“ bedeutet hier „在 … 时刻“.",
-        zh: "“um”在这里表示“在 … 时刻”。"
+        de: "Wir treffen uns um neun.",
+        zh: "我们九点见面。",
+        target: "um"
       }
     ],
     teachingOrder: 674,
@@ -14363,8 +15085,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute umziehen.",
-        zh: "我们今天想搬家。"
+        de: "Wir wollen umziehen.",
+        zh: "我们想搬家。",
+        target: "umziehen"
       }
     ],
     teachingOrder: 675,
@@ -14384,8 +15107,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „und“ bedeutet hier „和“.",
-        zh: "“und”在这里表示“和”。"
+        de: "Anna und Ben kommen.",
+        zh: "安娜和本来了。",
+        target: "und"
       }
     ],
     teachingOrder: 676,
@@ -14405,8 +15129,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „unser-“ bedeutet hier „我们的“.",
-        zh: "“unser-”在这里表示“我们的”。"
+        de: "Unser Haus ist groß.",
+        zh: "我们的房子很大。",
+        target: "Unser"
       }
     ],
     teachingOrder: 677,
@@ -14426,8 +15151,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute unten.",
-        zh: "我们今天想在下面。"
+        de: "Das Buch liegt unten.",
+        zh: "书在下面。",
+        target: "unten"
       }
     ],
     teachingOrder: 678,
@@ -14442,13 +15168,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在……下面"
+        zh: "在…下面"
       }
     ],
     examples: [
       {
-        de: "Das Wort „unter“ bedeutet hier „在……下面“.",
-        zh: "“unter”在这里表示“在……下面”。"
+        de: "Der Ball ist unter dem Tisch.",
+        zh: "球在桌子下面。",
+        target: "unter"
       }
     ],
     teachingOrder: 679,
@@ -14463,13 +15190,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "课程；课堂"
+        zh: "课程"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Unterricht.",
-        zh: "今天我们谈论课程；课堂。"
+        de: "Der Unterricht beginnt um acht.",
+        zh: "课程在八点开始。",
+        target: "Unterricht"
       }
     ],
     teachingOrder: 680,
@@ -14484,13 +15212,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "签名"
+        zh: "签字"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute unterschreiben.",
-        zh: "我们今天想签名。"
+        de: "Ich unterschreibe das Formular.",
+        zh: "我在表格上签字。",
+        target: "unterschreibe"
       }
     ],
     teachingOrder: 681,
@@ -14510,8 +15239,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Unterschrift.",
-        zh: "今天我们谈论签名。"
+        de: "Bitte geben Sie Ihre Unterschrift.",
+        zh: "请您签名。",
+        target: "Unterschrift"
       }
     ],
     teachingOrder: 682,
@@ -14531,8 +15261,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „verboten“ bedeutet hier „禁止的“.",
-        zh: "“verboten”在这里表示“禁止的”。"
+        de: "Rauchen ist hier verboten.",
+        zh: "这里禁止吸烟。",
+        target: "verboten"
       }
     ],
     teachingOrder: 683,
@@ -14552,8 +15283,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „verheiratet“ bedeutet hier „已婚的“.",
-        zh: "“verheiratet”在这里表示“已婚的”。"
+        de: "Sie ist verheiratet.",
+        zh: "她已婚。",
+        target: "verheiratet"
       }
     ],
     teachingOrder: 684,
@@ -14568,13 +15300,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "多"
+        zh: "很多"
       }
     ],
     examples: [
       {
-        de: "Das Wort „viel“ bedeutet hier „多“.",
-        zh: "“viel”在这里表示“多”。"
+        de: "Ich habe viel zu tun.",
+        zh: "我有很多事要做。",
+        target: "viel"
       }
     ],
     teachingOrder: 685,
@@ -14594,8 +15327,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „vielleicht“ bedeutet hier „也许“.",
-        zh: "“vielleicht”在这里表示“也许”。"
+        de: "Vielleicht kommt er später.",
+        zh: "也许他稍后会来。",
+        target: "vielleicht"
       }
     ],
     teachingOrder: 686,
@@ -14610,13 +15344,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "（属于或来源于） 的关于"
+        zh: "属于"
       }
     ],
     examples: [
       {
-        de: "Das Wort „von“ bedeutet hier „（属于或来源于） 的关于“.",
-        zh: "“von”在这里表示“（属于或来源于） 的关于”。"
+        de: "Das Buch ist von Anna.",
+        zh: "这本书是安娜的。",
+        target: "von"
       }
     ],
     teachingOrder: 687,
@@ -14631,13 +15366,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "在 … 之前在 … 前面在 … 之前"
+        zh: "在…之前"
       }
     ],
     examples: [
       {
-        de: "Das Wort „vor“ bedeutet hier „在 … 之前在 … 前面在 … 之前“.",
-        zh: "“vor”在这里表示“在 … 之前在 … 前面在 … 之前”。"
+        de: "Wir treffen uns vor dem Kino.",
+        zh: "我们在电影院前见面。",
+        target: "vor"
       }
     ],
     teachingOrder: 688,
@@ -14657,8 +15393,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Vorsicht.",
-        zh: "今天我们谈论小心。"
+        de: "Vorsicht, das Wasser ist heiß!",
+        zh: "小心，水很烫！",
+        target: "Vorsicht"
       }
     ],
     teachingOrder: 689,
@@ -14673,13 +15410,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "介绍"
+        zh: "自我介绍"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute uns vorstellen.",
-        zh: "我们今天想介绍。"
+        de: "Ich stelle mich vor.",
+        zh: "我自我介绍。",
+        target: "stelle"
       }
     ],
     teachingOrder: 690,
@@ -14699,8 +15437,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute wandern.",
-        zh: "我们今天想徒步走。"
+        de: "Wir wandern im Wald.",
+        zh: "我们在森林里徒步走。",
+        target: "wandern"
       }
     ],
     teachingOrder: 691,
@@ -14720,8 +15459,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wann“ bedeutet hier „什么时候“.",
-        zh: "“wann”在这里表示“什么时候”。"
+        de: "Wann beginnt der Film?",
+        zh: "电影什么时候开始？",
+        target: "wann"
       }
     ],
     teachingOrder: 692,
@@ -14741,8 +15481,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute warten.",
-        zh: "我们今天想等待。"
+        de: "Wir warten auf den Bus.",
+        zh: "我们在等公交。",
+        target: "warten"
       }
     ],
     teachingOrder: 693,
@@ -14762,8 +15503,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „warum“ bedeutet hier „为什么“.",
-        zh: "“warum”在这里表示“为什么”。"
+        de: "Warum bist du müde?",
+        zh: "你为什么累？",
+        target: "warum"
       }
     ],
     teachingOrder: 694,
@@ -14783,8 +15525,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „was“ bedeutet hier „什么“.",
-        zh: "“was”在这里表示“什么”。"
+        de: "Was kostet das?",
+        zh: "这个多少钱？",
+        target: "was"
       }
     ],
     teachingOrder: 695,
@@ -14804,8 +15547,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „was für ein“ bedeutet hier „什么样的“.",
-        zh: "“was für ein”在这里表示“什么样的”。"
+        de: "Was für ein Buch hast du?",
+        zh: "你有什么样的书？",
+        target: "Was für ein"
       }
     ],
     teachingOrder: 696,
@@ -14825,8 +15569,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute uns waschen.",
-        zh: "我们今天想洗。"
+        de: "Ich wasche mich.",
+        zh: "我洗澡。",
+        target: "wasche"
       }
     ],
     teachingOrder: 697,
@@ -14841,13 +15586,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "使 … 感到疼痛"
+        zh: "疼痛"
       }
     ],
     examples: [
       {
-        de: "Das Wort „weh tun“ bedeutet hier „使 … 感到疼痛“.",
-        zh: "“weh tun”在这里表示“使 … 感到疼痛”。"
+        de: "Mein Rücken tut weh.",
+        zh: "我的背疼。",
+        target: "tut"
       }
     ],
     teachingOrder: 698,
@@ -14867,8 +15613,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „weiblich“ bedeutet hier „女性的“.",
-        zh: "“weiblich”在这里表示“女性的”。"
+        de: "Sie ist weiblich.",
+        zh: "她是女性。",
+        target: "weiblich"
       }
     ],
     teachingOrder: 699,
@@ -14883,13 +15630,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "遥远的宽松的"
+        zh: "遥远的"
       }
     ],
     examples: [
       {
-        de: "Das Wort „weit“ bedeutet hier „遥远的宽松的“.",
-        zh: "“weit”在这里表示“遥远的宽松的”。"
+        de: "Der Bahnhof ist weit entfernt.",
+        zh: "火车站很远。",
+        target: "weit"
       }
     ],
     teachingOrder: 700,
@@ -14904,13 +15652,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "继续；更远"
+        zh: "继续"
       }
     ],
     examples: [
       {
-        de: "Das Wort „weiter“ bedeutet hier „继续；更远“.",
-        zh: "“weiter”在这里表示“继续；更远”。"
+        de: "Wir gehen weiter.",
+        zh: "我们继续走。",
+        target: "weiter"
       }
     ],
     teachingOrder: 701,
@@ -14930,8 +15679,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „welch-“ bedeutet hier „哪个“.",
-        zh: "“welch-”在这里表示“哪个”。"
+        de: "Welcher Stift ist rot?",
+        zh: "哪支笔是红色的？",
+        target: "Welcher"
       }
     ],
     teachingOrder: 702,
@@ -14946,13 +15696,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "世界（单数形式）"
+        zh: "世界"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Welt.",
-        zh: "今天我们谈论世界（单数形式）。"
+        de: "Die Welt ist groß.",
+        zh: "世界很大。",
+        target: "Welt"
       }
     ],
     teachingOrder: 703,
@@ -14972,8 +15723,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wenig“ bedeutet hier „少“.",
-        zh: "“wenig”在这里表示“少”。"
+        de: "Ich habe wenig Geld.",
+        zh: "我钱很少。",
+        target: "wenig"
       }
     ],
     teachingOrder: 704,
@@ -14993,8 +15745,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wer“ bedeutet hier „谁“.",
-        zh: "“wer”在这里表示“谁”。"
+        de: "Wer kommt?",
+        zh: "谁来？",
+        target: "Wer"
       }
     ],
     teachingOrder: 705,
@@ -15009,13 +15762,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "变成；将要"
+        zh: "变成"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute werden.",
-        zh: "我们今天想变成；将要。"
+        de: "Ich werde müde.",
+        zh: "我变得很累。",
+        target: "werde"
       }
     ],
     teachingOrder: 706,
@@ -15035,8 +15789,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wichtig“ bedeutet hier „重要的“.",
-        zh: "“wichtig”在这里表示“重要的”。"
+        de: "Das ist wichtig.",
+        zh: "这很重要。",
+        target: "wichtig"
       }
     ],
     teachingOrder: 707,
@@ -15051,13 +15806,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "怎样；如何"
+        zh: "怎样"
       }
     ],
     examples: [
       {
-        de: "Das Wort „wie“ bedeutet hier „怎样；如何“.",
-        zh: "“wie”在这里表示“怎样；如何”。"
+        de: "Wie heißt du?",
+        zh: "你叫什么？",
+        target: "wie"
       }
     ],
     teachingOrder: 708,
@@ -15077,8 +15833,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute wiederholen.",
-        zh: "我们今天想重复。"
+        de: "Ich wiederhole das Wort.",
+        zh: "我重复这个词。",
+        target: "wiederhole"
       }
     ],
     teachingOrder: 709,
@@ -15098,8 +15855,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Wiederhören.",
-        zh: "今天我们谈论再次通话。"
+        de: "Das Wiederhören war gut.",
+        zh: "再次通话很不错。",
+        target: "Wiederhören"
       }
     ],
     teachingOrder: 710,
@@ -15119,8 +15877,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Wiedersehen.",
-        zh: "今天我们谈论再次见面。"
+        de: "Das Wiedersehen war schön.",
+        zh: "再次见面很美好。",
+        target: "Wiedersehen"
       }
     ],
     teachingOrder: 711,
@@ -15140,8 +15899,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wie viel“ bedeutet hier „多少“.",
-        zh: "“wie viel”在这里表示“多少”。"
+        de: "Wie viel kostet das?",
+        zh: "这个多少钱？",
+        target: "wie viel"
       }
     ],
     teachingOrder: 712,
@@ -15161,8 +15921,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „willkommen“ bedeutet hier „欢迎“.",
-        zh: "“willkommen”在这里表示“欢迎”。"
+        de: "Willkommen in Berlin!",
+        zh: "欢迎来柏林！",
+        target: "Willkommen"
       }
     ],
     teachingOrder: 713,
@@ -15182,8 +15943,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wir“ bedeutet hier „我们“.",
-        zh: "“wir”在这里表示“我们”。"
+        de: "Wir gehen nach Hause.",
+        zh: "我们回家。",
+        target: "wir"
       }
     ],
     teachingOrder: 714,
@@ -15203,8 +15965,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute wissen.",
-        zh: "我们今天想知道。"
+        de: "Ich weiß die Antwort.",
+        zh: "我知道答案。",
+        target: "weiß"
       }
     ],
     teachingOrder: 715,
@@ -15224,8 +15987,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wo“ bedeutet hier „在哪里“.",
-        zh: "“wo”在这里表示“在哪里”。"
+        de: "Wo ist das Buch?",
+        zh: "书在哪里？",
+        target: "Wo"
       }
     ],
     teachingOrder: 716,
@@ -15245,8 +16009,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „woher“ bedeutet hier „从哪里“.",
-        zh: "“woher”在这里表示“从哪里”。"
+        de: "Woher kommst du?",
+        zh: "你从哪里来？",
+        target: "Woher"
       }
     ],
     teachingOrder: 717,
@@ -15266,8 +16031,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wohin“ bedeutet hier „去哪里“.",
-        zh: "“wohin”在这里表示“去哪里”。"
+        de: "Wohin gehst du?",
+        zh: "你去哪里？",
+        target: "Wohin"
       }
     ],
     teachingOrder: 718,
@@ -15282,13 +16048,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "要，想，愿意，打算"
+        zh: "想要"
       }
     ],
     examples: [
       {
-        de: "Wir möchten heute wollen.",
-        zh: "我们今天想要，想，愿意，打算。"
+        de: "Ich will ein Eis.",
+        zh: "我想要一个冰淇淋。",
+        target: "will"
       }
     ],
     teachingOrder: 719,
@@ -15303,13 +16070,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "单词；话语"
+        zh: "单词"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Wort.",
-        zh: "今天我们谈论单词；话语。"
+        de: "Das Wort ist neu.",
+        zh: "这个词是新的。",
+        target: "Wort"
       }
     ],
     teachingOrder: 720,
@@ -15329,8 +16097,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „wunderbar“ bedeutet hier „好极了，了不起的“.",
-        zh: "“wunderbar”在这里表示“好极了，了不起的”。"
+        de: "Das Wetter ist wunderbar.",
+        zh: "天气好极了。",
+        target: "wunderbar"
       }
     ],
     teachingOrder: 721,
@@ -15345,13 +16114,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "时间（单数形式）"
+        zh: "时间（单数）"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Zeit.",
-        zh: "今天我们谈论时间（单数形式）。"
+        de: "Die Zeit ist kurz.",
+        zh: "时间很短。",
+        target: "Zeit"
       }
     ],
     teachingOrder: 722,
@@ -15371,8 +16141,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zurzeit“ bedeutet hier „目前“.",
-        zh: "“zurzeit”在这里表示“目前”。"
+        de: "Ich lerne zurzeit Deutsch.",
+        zh: "我目前在学德语。",
+        target: "zurzeit"
       }
     ],
     teachingOrder: 723,
@@ -15387,13 +16158,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "报社"
+        zh: "报纸"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Zeitung.",
-        zh: "今天我们谈论报社。"
+        de: "Ich lese die Zeitung.",
+        zh: "我在读报纸。",
+        target: "Zeitung"
       }
     ],
     teachingOrder: 724,
@@ -15413,8 +16185,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Zigarette.",
-        zh: "今天我们谈论香烟。"
+        de: "Er raucht eine Zigarette.",
+        zh: "他抽一支香烟。",
+        target: "Zigarette"
       }
     ],
     teachingOrder: 725,
@@ -15429,13 +16202,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "太到 … 去，向"
+        zh: "向，去"
       }
     ],
     examples: [
       {
-        de: "Das Wort „zu“ bedeutet hier „太到 … 去，向“.",
-        zh: "“zu”在这里表示“太到 … 去，向”。"
+        de: "Ich gehe zu dir.",
+        zh: "我去你那里。",
+        target: "zu"
       }
     ],
     teachingOrder: 726,
@@ -15455,8 +16229,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zufrieden“ bedeutet hier „满意的“.",
-        zh: "“zufrieden”在这里表示“满意的”。"
+        de: "Ich bin zufrieden.",
+        zh: "我很满意。",
+        target: "zufrieden"
       }
     ],
     teachingOrder: 727,
@@ -15471,13 +16246,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "退回"
+        zh: "返回"
       }
     ],
     examples: [
       {
-        de: "Das Wort „zurück“ bedeutet hier „退回“.",
-        zh: "“zurück”在这里表示“退回”。"
+        de: "Ich komme zurück.",
+        zh: "我回来。",
+        target: "zurück"
       }
     ],
     teachingOrder: 728,
@@ -15497,8 +16273,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute zusammen.",
-        zh: "我们今天想一起。"
+        de: "Wir arbeiten jeden Tag zusammen.",
+        zh: "我们每天一起工作。",
+        target: "zusammen"
       }
     ],
     teachingOrder: 729,
@@ -15518,8 +16295,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zwischen“ bedeutet hier „在 … 和 … 之间“.",
-        zh: "“zwischen”在这里表示“在 … 和 … 之间”。"
+        de: "Das Buch liegt zwischen den Stühlen.",
+        zh: "书在椅子之间。",
+        target: "zwischen"
       }
     ],
     teachingOrder: 730,
@@ -15539,8 +16317,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1 = eins“ bedeutet hier „一“.",
-        zh: "“1 = eins”在这里表示“一”。"
+        de: "Ich habe eins gekauft.",
+        zh: "我买了一个。",
+        target: "eins"
       }
     ],
     teachingOrder: 731,
@@ -15560,8 +16339,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „2 = zwei“ bedeutet hier „二“.",
-        zh: "“2 = zwei”在这里表示“二”。"
+        de: "Wir sind zwei Personen.",
+        zh: "我们是两个人。",
+        target: "zwei"
       }
     ],
     teachingOrder: 732,
@@ -15581,8 +16361,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „3 = drei“ bedeutet hier „三“.",
-        zh: "“3 = drei”在这里表示“三”。"
+        de: "Ich sehe drei Vögel.",
+        zh: "我看到三只鸟。",
+        target: "drei"
       }
     ],
     teachingOrder: 733,
@@ -15602,8 +16383,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „4 = vier“ bedeutet hier „四“.",
-        zh: "“4 = vier”在这里表示“四”。"
+        de: "Sie hat vier Bücher.",
+        zh: "她有四本书。",
+        target: "vier"
       }
     ],
     teachingOrder: 734,
@@ -15623,8 +16405,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „5 = fünf“ bedeutet hier „五“.",
-        zh: "“5 = fünf”在这里表示“五”。"
+        de: "Er kauft fünf Äpfel.",
+        zh: "他买了五个苹果。",
+        target: "fünf"
       }
     ],
     teachingOrder: 735,
@@ -15644,8 +16427,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „6 = sechs“ bedeutet hier „六“.",
-        zh: "“6 = sechs”在这里表示“六”。"
+        de: "Wir treffen uns um sechs Uhr.",
+        zh: "我们六点见面。",
+        target: "sechs"
       }
     ],
     teachingOrder: 736,
@@ -15665,8 +16449,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „7 = sieben“ bedeutet hier „七“.",
-        zh: "“7 = sieben”在这里表示“七”。"
+        de: "Der Zug kommt um sieben Uhr.",
+        zh: "火车七点到。",
+        target: "sieben"
       }
     ],
     teachingOrder: 737,
@@ -15686,8 +16471,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „8 = acht“ bedeutet hier „八“.",
-        zh: "“8 = acht”在这里表示“八”。"
+        de: "Ich habe acht Stühle.",
+        zh: "我有八把椅子。",
+        target: "acht"
       }
     ],
     teachingOrder: 738,
@@ -15707,8 +16493,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „9 = neun“ bedeutet hier „九“.",
-        zh: "“9 = neun”在这里表示“九”。"
+        de: "Sie liest neun Seiten.",
+        zh: "她读了九页。",
+        target: "neun"
       }
     ],
     teachingOrder: 739,
@@ -15728,8 +16515,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „10 = zehn“ bedeutet hier „十“.",
-        zh: "“10 = zehn”在这里表示“十”。"
+        de: "Wir zählen bis zehn.",
+        zh: "我们数到十。",
+        target: "zehn"
       }
     ],
     teachingOrder: 740,
@@ -15749,8 +16537,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „11 = elf“ bedeutet hier „十一“.",
-        zh: "“11 = elf”在这里表示“十一”。"
+        de: "Er ist elf Jahre alt.",
+        zh: "他十一岁。",
+        target: "elf"
       }
     ],
     teachingOrder: 741,
@@ -15770,8 +16559,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „12 = zwölf“ bedeutet hier „十二“.",
-        zh: "“12 = zwölf”在这里表示“十二”。"
+        de: "Der Film dauert zwölf Minuten.",
+        zh: "电影十二分钟。",
+        target: "zwölf"
       }
     ],
     teachingOrder: 742,
@@ -15791,8 +16581,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „13 = dreizehn“ bedeutet hier „十三“.",
-        zh: "“13 = dreizehn”在这里表示“十三”。"
+        de: "Der Zug fährt um dreizehn Uhr.",
+        zh: "火车在十三点开。",
+        target: "dreizehn"
       }
     ],
     teachingOrder: 743,
@@ -15812,8 +16603,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „14 = vierzehn“ bedeutet hier „十四“.",
-        zh: "“14 = vierzehn”在这里表示“十四”。"
+        de: "Sie hat vierzehn Karten.",
+        zh: "她有十四张卡片。",
+        target: "vierzehn"
       }
     ],
     teachingOrder: 744,
@@ -15833,8 +16625,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „15 = fünfzehn“ bedeutet hier „十五“.",
-        zh: "“15 = fünfzehn”在这里表示“十五”。"
+        de: "Ich habe fünfzehn Euro.",
+        zh: "我有十五欧元。",
+        target: "fünfzehn"
       }
     ],
     teachingOrder: 745,
@@ -15854,8 +16647,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „16 = sechzehn“ bedeutet hier „十六“.",
-        zh: "“16 = sechzehn”在这里表示“十六”。"
+        de: "Ich habe sechzehn Äpfel.",
+        zh: "我有十六个苹果。",
+        target: "sechzehn"
       }
     ],
     teachingOrder: 746,
@@ -15875,8 +16669,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „17 = siebzehn“ bedeutet hier „十七“.",
-        zh: "“17 = siebzehn”在这里表示“十七”。"
+        de: "Wir brauchen siebzehn Stühle.",
+        zh: "我们需要十七把椅子。",
+        target: "siebzehn"
       }
     ],
     teachingOrder: 747,
@@ -15896,8 +16691,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „18 = achtzehn“ bedeutet hier „十八“.",
-        zh: "“18 = achtzehn”在这里表示“十八”。"
+        de: "Sie kauft achtzehn Bananen.",
+        zh: "她买了十八根香蕉。",
+        target: "achtzehn"
       }
     ],
     teachingOrder: 748,
@@ -15917,8 +16713,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „19 = neunzehn“ bedeutet hier „十九“.",
-        zh: "“19 = neunzehn”在这里表示“十九”。"
+        de: "Er hat neunzehn Bücher.",
+        zh: "他有十九本书。",
+        target: "neunzehn"
       }
     ],
     teachingOrder: 749,
@@ -15938,8 +16735,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „20 = zwanzig“ bedeutet hier „二十“.",
-        zh: "“20 = zwanzig”在这里表示“二十”。"
+        de: "Ich sehe zwanzig Vögel.",
+        zh: "我看到二十只鸟。",
+        target: "zwanzig"
       }
     ],
     teachingOrder: 750,
@@ -15959,8 +16757,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „21 = einundzwanzig“ bedeutet hier „二十一“.",
-        zh: "“21 = einundzwanzig”在这里表示“二十一”。"
+        de: "Wir haben einundzwanzig Gäste.",
+        zh: "我们有二十一位客人。",
+        target: "einundzwanzig"
       }
     ],
     teachingOrder: 751,
@@ -15980,8 +16779,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „30 = dreißig“ bedeutet hier „三十“.",
-        zh: "“30 = dreißig”在这里表示“三十”。"
+        de: "Sie zählt dreißig Karten.",
+        zh: "她数了三十张卡片。",
+        target: "dreißig"
       }
     ],
     teachingOrder: 752,
@@ -16001,8 +16801,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „40 = vierzig“ bedeutet hier „四十“.",
-        zh: "“40 = vierzig”在这里表示“四十”。"
+        de: "Er malt vierzig Bilder.",
+        zh: "他画了四十幅画。",
+        target: "vierzig"
       }
     ],
     teachingOrder: 753,
@@ -16022,8 +16823,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „50 = fünfzig“ bedeutet hier „五十“.",
-        zh: "“50 = fünfzig”在这里表示“五十”。"
+        de: "Ich bringe fünfzig Geschenke.",
+        zh: "我带来五十件礼物。",
+        target: "fünfzig"
       }
     ],
     teachingOrder: 754,
@@ -16043,8 +16845,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „60 = sechzig“ bedeutet hier „六十“.",
-        zh: "“60 = sechzig”在这里表示“六十”。"
+        de: "Sie sammelt sechzig Muscheln.",
+        zh: "她收集了六十只贝壳。",
+        target: "sechzig"
       }
     ],
     teachingOrder: 755,
@@ -16064,8 +16867,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „70 = siebzig“ bedeutet hier „七十“.",
-        zh: "“70 = siebzig”在这里表示“七十”。"
+        de: "Wir sehen siebzig Sterne.",
+        zh: "我们看到七十颗星星。",
+        target: "siebzig"
       }
     ],
     teachingOrder: 756,
@@ -16085,8 +16889,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „80 = achtzig“ bedeutet hier „八十“.",
-        zh: "“80 = achtzig”在这里表示“八十”。"
+        de: "Er hat achtzig Punkte.",
+        zh: "他得了八十分。",
+        target: "achtzig"
       }
     ],
     teachingOrder: 757,
@@ -16106,8 +16911,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „90 = neunzig“ bedeutet hier „九十“.",
-        zh: "“90 = neunzig”在这里表示“九十”。"
+        de: "Ich lese neunzig Seiten.",
+        zh: "我读了九十页。",
+        target: "neunzig"
       }
     ],
     teachingOrder: 758,
@@ -16127,8 +16933,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „100 = (ein)hundert“ bedeutet hier „一百“.",
-        zh: "“100 = (ein)hundert”在这里表示“一百”。"
+        de: "Sie hat hundert Euro.",
+        zh: "她有一百欧元。",
+        target: "hundert"
       }
     ],
     teachingOrder: 759,
@@ -16148,8 +16955,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „101 = hunderteins“ bedeutet hier „一百零一“.",
-        zh: "“101 = hunderteins”在这里表示“一百零一”。"
+        de: "Ich habe hunderteins Fragen.",
+        zh: "我有一百零一个问题。",
+        target: "hunderteins"
       }
     ],
     teachingOrder: 760,
@@ -16169,8 +16977,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „200 = zweihundert“ bedeutet hier „二百“.",
-        zh: "“200 = zweihundert”在这里表示“二百”。"
+        de: "Ich habe zweihundert Euro gespart.",
+        zh: "我已经存了两百欧元。",
+        target: "zweihundert"
       }
     ],
     teachingOrder: 761,
@@ -16190,8 +16999,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1.000 = (ein)tausend“ bedeutet hier „一千“.",
-        zh: "“1.000 = (ein)tausend”在这里表示“一千”。"
+        de: "Wir haben tausend Karten verkauft.",
+        zh: "我们卖出了一千张票。",
+        target: "tausend"
       }
     ],
     teachingOrder: 762,
@@ -16211,8 +17021,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1.000.000 = eine Million“ bedeutet hier „一百万“.",
-        zh: "“1.000.000 = eine Million”在这里表示“一百万”。"
+        de: "Sie hat eine Million Euro gewonnen.",
+        zh: "她赢得了一百万欧元。",
+        target: "eine Million"
       }
     ],
     teachingOrder: 763,
@@ -16232,8 +17043,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1.000.000.000 = eine Milliarde“ bedeutet hier „十亿“.",
-        zh: "“1.000.000.000 = eine Milliarde”在这里表示“十亿”。"
+        de: "Die Erde hat eine Milliarde Menschen.",
+        zh: "地球有十亿人。",
+        target: "eine Milliarde"
       }
     ],
     teachingOrder: 764,
@@ -16253,8 +17065,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „das/der/die erste“ bedeutet hier „第一“.",
-        zh: "“das/der/die erste”在这里表示“第一”。"
+        de: "Das ist die erste Frage.",
+        zh: "这是第一个问题。",
+        target: "erste"
       }
     ],
     teachingOrder: 765,
@@ -16274,8 +17087,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „zweite“ bedeutet hier „第二“.",
-        zh: "“zweite”在这里表示“第二”。"
+        de: "Nimm die zweite Straße.",
+        zh: "请走第二条街。",
+        target: "zweite"
       }
     ],
     teachingOrder: 766,
@@ -16295,8 +17109,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „dritte“ bedeutet hier „第三“.",
-        zh: "“dritte”在这里表示“第三”。"
+        de: "Er sitzt in der dritten Reihe.",
+        zh: "他坐在第三排。",
+        target: "dritten"
       }
     ],
     teachingOrder: 767,
@@ -16316,8 +17131,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „vierte“ bedeutet hier „第四“.",
-        zh: "“vierte”在这里表示“第四”。"
+        de: "Wir treffen uns in der vierten Woche.",
+        zh: "我们在第四周见面。",
+        target: "vierten"
       }
     ],
     teachingOrder: 768,
@@ -16337,8 +17153,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „usw.“ bedeutet hier „等等“.",
-        zh: "“usw.”在这里表示“等等”。"
+        de: "Kaufe Äpfel, Birnen, Pflaumen usw.",
+        zh: "买苹果、梨、李子等等。",
+        target: "usw."
       }
     ],
     teachingOrder: 769,
@@ -16358,8 +17175,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1/2 = ein halb; halb ...“ bedeutet hier „二分之一；半“.",
-        zh: "“1/2 = ein halb; halb ...”在这里表示“二分之一；半”。"
+        de: "Ein halb ist mehr als ein Viertel.",
+        zh: "半个比四分之一多。",
+        target: "ein halb"
       }
     ],
     teachingOrder: 770,
@@ -16379,8 +17197,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1/4 = ein Viertel; Viertel ...“ bedeutet hier „四分之一；一刻钟“.",
-        zh: "“1/4 = ein Viertel; Viertel ...”在这里表示“四分之一；一刻钟”。"
+        de: "Ich habe ein Viertel Kuchen gegessen.",
+        zh: "我吃了四分之一块蛋糕。",
+        target: "ein Viertel"
       }
     ],
     teachingOrder: 771,
@@ -16400,8 +17219,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „1999 = neunzehnhundertneunundneunzig“ bedeutet hier „1999 年“.",
-        zh: "“1999 = neunzehnhundertneunundneunzig”在这里表示“1999 年”。"
+        de: "Ich wurde neunzehnhundertneunundneunzig geboren.",
+        zh: "我出生于1999年。",
+        target: "neunzehnhundertneunundneunzig"
       }
     ],
     teachingOrder: 772,
@@ -16421,8 +17241,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „2014 = zweitausendvierzehn“ bedeutet hier „2014 年“.",
-        zh: "“2014 = zweitausendvierzehn”在这里表示“2014 年”。"
+        de: "Das Spiel begann im Jahr zweitausendvierzehn.",
+        zh: "比赛在2014年开始。",
+        target: "zweitausendvierzehn"
       }
     ],
     teachingOrder: 773,
@@ -16442,8 +17263,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „heute ist der 1. März“ bedeutet hier „今天是 3 月 1 日“.",
-        zh: "“heute ist der 1. März”在这里表示“今天是 3 月 1 日”。"
+        de: "Heute ist der 1. März.",
+        zh: "今天是3月1日。",
+        target: "heute ist der 1. März"
       }
     ],
     teachingOrder: 774,
@@ -16458,13 +17280,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "柏林，2002 年 4 月 12 日"
+        zh: "柏林"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Berlin“ bedeutet hier „柏林，2002 年 4 月 12 日“.",
-        zh: "“Berlin”在这里表示“柏林，2002 年 4 月 12 日”。"
+        de: "Ich wohne in Berlin.",
+        zh: "我住在柏林。",
+        target: "Berlin"
       }
     ],
     teachingOrder: 775,
@@ -16484,8 +17307,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „0.03 Uhr = null Uhr drei“ bedeutet hier „零点零三分“.",
-        zh: "“0.03 Uhr = null Uhr drei”在这里表示“零点零三分”。"
+        de: "Der Zug fährt um null Uhr drei ab.",
+        zh: "火车在零点零三分发车。",
+        target: "null Uhr drei"
       }
     ],
     teachingOrder: 776,
@@ -16505,8 +17329,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „7.15 Uhr = sieben Uhr fünfzehn“ bedeutet hier „七点十五分“.",
-        zh: "“7.15 Uhr = sieben Uhr fünfzehn”在这里表示“七点十五分”。"
+        de: "Der Zug fährt um sieben Uhr fünfzehn ab.",
+        zh: "火车在七点十五分发车。",
+        target: "sieben Uhr fünfzehn"
       }
     ],
     teachingOrder: 777,
@@ -16526,8 +17351,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „13.17 Uhr = dreizehn Uhr siebzehn“ bedeutet hier „十三点十七分“.",
-        zh: "“13.17 Uhr = dreizehn Uhr siebzehn”在这里表示“十三点十七分”。"
+        de: "Der Film beginnt um dreizehn Uhr siebzehn.",
+        zh: "电影在十三点十七分开始。",
+        target: "dreizehn Uhr siebzehn"
       }
     ],
     teachingOrder: 778,
@@ -16547,8 +17373,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „24.00 Uhr = vierundzwanzig Uhr“ bedeutet hier „二十四点“.",
-        zh: "“24.00 Uhr = vierundzwanzig Uhr”在这里表示“二十四点”。"
+        de: "Der Supermarkt schließt um vierundzwanzig Uhr.",
+        zh: "超市在二十四点关门。",
+        target: "vierundzwanzig Uhr"
       }
     ],
     teachingOrder: 779,
@@ -16568,8 +17395,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „ein Uhr“ bedeutet hier „一点“.",
-        zh: "“ein Uhr”在这里表示“一点”。"
+        de: "Der Kurs beginnt um ein Uhr.",
+        zh: "课程在一点开始。",
+        target: "ein Uhr"
       }
     ],
     teachingOrder: 780,
@@ -16584,13 +17412,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "一点差五分／一点过五分"
+        zh: "一点过五分"
       }
     ],
     examples: [
       {
-        de: "Das Wort „fünf Minuten vor/nach eins“ bedeutet hier „一点差五分／一点过五分“.",
-        zh: "“fünf Minuten vor/nach eins”在这里表示“一点差五分／一点过五分”。"
+        de: "Der Zug kommt fünf Minuten nach eins.",
+        zh: "火车在一点过五分到达。",
+        target: "fünf Minuten nach eins"
       }
     ],
     teachingOrder: 781,
@@ -16605,13 +17434,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "两点差一刻／两点一刻"
+        zh: "两点一刻"
       }
     ],
     examples: [
       {
-        de: "Das Wort „Viertel vor/nach zwei“ bedeutet hier „两点差一刻／两点一刻“.",
-        zh: "“Viertel vor/nach zwei”在这里表示“两点差一刻／两点一刻”。"
+        de: "Der Film startet um Viertel nach zwei.",
+        zh: "电影在两点一刻开始。",
+        target: "Viertel nach zwei"
       }
     ],
     teachingOrder: 782,
@@ -16631,8 +17461,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „halb drei“ bedeutet hier „两点半“.",
-        zh: "“halb drei”在这里表示“两点半”。"
+        de: "Der Unterricht endet um halb drei.",
+        zh: "课程在两点半结束。",
+        target: "halb drei"
       }
     ],
     teachingOrder: 783,
@@ -16652,8 +17483,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Sekunde.",
-        zh: "今天我们谈论秒。"
+        de: "Eine Sekunde ist kurz.",
+        zh: "一秒很短。",
+        target: "Sekunde"
       }
     ],
     teachingOrder: 784,
@@ -16673,8 +17505,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Minute.",
-        zh: "今天我们谈论分钟。"
+        de: "Eine Minute reicht.",
+        zh: "一分钟足够。",
+        target: "Minute"
       }
     ],
     teachingOrder: 785,
@@ -16694,8 +17527,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Tag.",
-        zh: "今天我们谈论天。"
+        de: "Der Tag ist sonnig.",
+        zh: "这天是晴天。",
+        target: "Tag"
       }
     ],
     teachingOrder: 786,
@@ -16715,8 +17549,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Woche.",
-        zh: "今天我们谈论周。"
+        de: "Eine Woche hat sieben Tage.",
+        zh: "一周有七天。",
+        target: "Woche"
       }
     ],
     teachingOrder: 787,
@@ -16736,8 +17571,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Jahr.",
-        zh: "今天我们谈论年。"
+        de: "Ein Jahr hat zwölf Monate.",
+        zh: "一年有十二个月。",
+        target: "Jahr"
       }
     ],
     teachingOrder: 788,
@@ -16752,13 +17588,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "工作日；星期中的一天"
+        zh: "工作日"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Wochentag.",
-        zh: "今天我们谈论工作日；星期中的一天。"
+        de: "Ein Wochentag ist Montag.",
+        zh: "工作日是星期一。",
+        target: "Wochentag"
       }
     ],
     teachingOrder: 789,
@@ -16778,8 +17615,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Sonntag.",
-        zh: "今天我们谈论星期日。"
+        de: "Der Sonntag ist frei.",
+        zh: "星期日是休息日。",
+        target: "Sonntag"
       }
     ],
     teachingOrder: 790,
@@ -16799,8 +17637,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Montag.",
-        zh: "今天我们谈论星期一。"
+        de: "Der Montag ist der erste Tag.",
+        zh: "星期一是一周的第一天。",
+        target: "Montag"
       }
     ],
     teachingOrder: 791,
@@ -16820,8 +17659,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Dienstag.",
-        zh: "今天我们谈论星期二。"
+        de: "Der Dienstag folgt dem Montag.",
+        zh: "星期二紧跟在星期一之后。",
+        target: "Dienstag"
       }
     ],
     teachingOrder: 792,
@@ -16841,8 +17681,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mittwoch.",
-        zh: "今天我们谈论星期三。"
+        de: "Am Mittwoch habe ich Deutschunterricht.",
+        zh: "我在星期三有德语课。",
+        target: "Mittwoch"
       }
     ],
     teachingOrder: 793,
@@ -16862,8 +17703,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Donnerstag.",
-        zh: "今天我们谈论星期四。"
+        de: "Am Donnerstag kommt meine Tante.",
+        zh: "我的姑妈星期四来。",
+        target: "Donnerstag"
       }
     ],
     teachingOrder: 794,
@@ -16883,8 +17725,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Freitag.",
-        zh: "今天我们谈论星期五。"
+        de: "Am Freitag essen wir Pizza.",
+        zh: "我们星期五吃披萨。",
+        target: "Freitag"
       }
     ],
     teachingOrder: 795,
@@ -16904,8 +17747,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Samstag/Sonnabend.",
-        zh: "今天我们谈论星期六。"
+        de: "Am Samstag gehen wir ins Kino.",
+        zh: "我们星期六去电影院。",
+        target: "Samstag"
       }
     ],
     teachingOrder: 796,
@@ -16925,8 +17769,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über das Wochenende.",
-        zh: "今天我们谈论周末。"
+        de: "Am Wochenende fahre ich nach Berlin.",
+        zh: "我在周末去柏林。",
+        target: "Wochenende"
       }
     ],
     teachingOrder: 797,
@@ -16946,8 +17791,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Das Wort „am Wochenende“ bedeutet hier „在周末“.",
-        zh: "“am Wochenende”在这里表示“在周末”。"
+        de: "Wir treffen uns am Wochenende.",
+        zh: "我们在周末见面。",
+        target: "am Wochenende"
       }
     ],
     teachingOrder: 798,
@@ -16962,13 +17808,14 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     senses: [
       {
         senseId: "zh-1",
-        zh: "白天；一天"
+        zh: "一天"
       }
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Tag.",
-        zh: "今天我们谈论白天；一天。"
+        de: "Heute ist ein schöner Tag.",
+        zh: "今天是美好的一天。",
+        target: "Tag"
       }
     ],
     teachingOrder: 799,
@@ -16988,8 +17835,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Morgen.",
-        zh: "今天我们谈论早晨。"
+        de: "Der Morgen ist kühl.",
+        zh: "早晨很凉爽。",
+        target: "Morgen"
       }
     ],
     teachingOrder: 800,
@@ -17009,8 +17857,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Vormittag.",
-        zh: "今天我们谈论上午。"
+        de: "Am Vormittag lese ich.",
+        zh: "我在上午阅读。",
+        target: "Vormittag"
       }
     ],
     teachingOrder: 801,
@@ -17030,8 +17879,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mittag.",
-        zh: "今天我们谈论中午。"
+        de: "Mittag essen wir zusammen.",
+        zh: "中午我们一起吃饭。",
+        target: "Mittag"
       }
     ],
     teachingOrder: 802,
@@ -17051,8 +17901,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Nachmittag.",
-        zh: "今天我们谈论下午。"
+        de: "Am Nachmittag spiele ich Fußball.",
+        zh: "下午我踢足球。",
+        target: "Nachmittag"
       }
     ],
     teachingOrder: 803,
@@ -17072,8 +17923,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Abend.",
-        zh: "今天我们谈论晚上。"
+        de: "Am Abend sehe ich fern.",
+        zh: "晚上我看电视。",
+        target: "Abend"
       }
     ],
     teachingOrder: 804,
@@ -17093,8 +17945,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Nacht.",
-        zh: "今天我们谈论夜晚。"
+        de: "In der Nacht schlafe ich gut.",
+        zh: "夜晚我睡得好。",
+        target: "Nacht"
       }
     ],
     teachingOrder: 805,
@@ -17114,8 +17967,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Januar.",
-        zh: "今天我们谈论一月。"
+        de: "Im Januar schneit es.",
+        zh: "一月下雪。",
+        target: "Januar"
       }
     ],
     teachingOrder: 806,
@@ -17135,8 +17989,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Februar.",
-        zh: "今天我们谈论二月。"
+        de: "Im Februar ist es kalt.",
+        zh: "二月很冷。",
+        target: "Februar"
       }
     ],
     teachingOrder: 807,
@@ -17156,8 +18011,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den März.",
-        zh: "今天我们谈论三月。"
+        de: "Im März blühen die Blumen.",
+        zh: "三月花开。",
+        target: "März"
       }
     ],
     teachingOrder: 808,
@@ -17177,8 +18033,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den April.",
-        zh: "今天我们谈论四月。"
+        de: "Im April blühen die Bäume.",
+        zh: "四月树木开花。",
+        target: "April"
       }
     ],
     teachingOrder: 809,
@@ -17198,8 +18055,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Mai.",
-        zh: "今天我们谈论五月。"
+        de: "Im Mai feiern wir den Muttertag.",
+        zh: "五月我们庆祝母亲节。",
+        target: "Mai"
       }
     ],
     teachingOrder: 810,
@@ -17219,8 +18077,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Juni.",
-        zh: "今天我们谈论六月。"
+        de: "Im Juni ist das Wetter warm.",
+        zh: "六月天气很暖。",
+        target: "Juni"
       }
     ],
     teachingOrder: 811,
@@ -17240,8 +18099,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Juli.",
-        zh: "今天我们谈论七月。"
+        de: "Im Juli gehen wir schwimmen.",
+        zh: "七月我们去游泳。",
+        target: "Juli"
       }
     ],
     teachingOrder: 812,
@@ -17261,8 +18121,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den August.",
-        zh: "今天我们谈论八月。"
+        de: "Im August gibt es viele Ferien.",
+        zh: "八月有很多假期。",
+        target: "August"
       }
     ],
     teachingOrder: 813,
@@ -17282,8 +18143,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den September.",
-        zh: "今天我们谈论九月。"
+        de: "Im September fällt das Laub.",
+        zh: "九月树叶落下。",
+        target: "September"
       }
     ],
     teachingOrder: 814,
@@ -17303,8 +18165,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Oktober.",
-        zh: "今天我们谈论十月。"
+        de: "Im Oktober wird es kühler.",
+        zh: "十月天气变凉。",
+        target: "Oktober"
       }
     ],
     teachingOrder: 815,
@@ -17324,8 +18187,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den November.",
-        zh: "今天我们谈论十一月。"
+        de: "Im November regnet es oft.",
+        zh: "十一月经常下雨。",
+        target: "November"
       }
     ],
     teachingOrder: 816,
@@ -17345,8 +18209,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über den Dezember.",
-        zh: "今天我们谈论十二月。"
+        de: "Im Dezember schneit es.",
+        zh: "十二月下雪。",
+        target: "Dezember"
       }
     ],
     teachingOrder: 817,
@@ -17366,8 +18231,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute an sein.",
-        zh: "我们今天想开着。"
+        de: "Ich frage, ob das Licht an sein kann.",
+        zh: "我在问灯能否开着。",
+        target: "an sein"
       }
     ],
     teachingOrder: 818,
@@ -17388,8 +18254,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Wir möchten heute auf sein.",
-        zh: "我们今天想开着。"
+        de: "Ich frage, ob der Herd auf sein kann.",
+        zh: "我在问炉子能否开着。",
+        target: "auf sein"
       }
     ],
     teachingOrder: 819,
@@ -17410,8 +18277,9 @@ export const A1_LEARNING_CONTENT_ZH: readonly A1LearningEntry[] = [
     ],
     examples: [
       {
-        de: "Heute sprechen wir über die Stunde.",
-        zh: "今天我们谈论小时。"
+        de: "Ich lerne eine Stunde Deutsch.",
+        zh: "我学一小时德语。",
+        target: "Stunde"
       }
     ],
     teachingOrder: 820,

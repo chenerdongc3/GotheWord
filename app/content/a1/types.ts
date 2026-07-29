@@ -95,6 +95,7 @@ export type A1LearningEntry = {
   examples: Array<{
     de: string;
     zh: string;
+    target: string;
   }>;
   distractorOverrides?: string[];
   teachingOrder: number;

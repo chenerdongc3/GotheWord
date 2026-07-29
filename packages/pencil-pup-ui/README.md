@@ -34,7 +34,22 @@ import { Button, Card, Input } from "@gotheword/pencil-pup-ui";
 
 The first release contains the primitives required by GotheWord: `Button`,
 `Card`, `Cursor`, `Divider`, `Footer`, `Form`, `FormItem`, `Input`, `Modal`,
-`Progress`, `Radio`, `Tabs`, `Tag`, `Time`, and `Title`.
+`Progress`, `Radio`, `Tabs`, `Tag`, `Time`, `Title`, and `BotChallenge`.
+
+### BotChallenge
+
+`BotChallenge` provides one public API for Cloudflare Turnstile and hCaptcha.
+The application must submit the token from `onVerify` as the Supabase Auth
+`captchaToken`; the component never stores or logs that token.
+
+```tsx
+<BotChallenge
+  provider="turnstile"
+  siteKey={siteKey}
+  onVerify={(token) => setCaptchaToken(token)}
+  onExpire={() => setCaptchaToken("")}
+/>
+```
 
 ## License
 

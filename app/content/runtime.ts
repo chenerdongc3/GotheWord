@@ -44,8 +44,13 @@ export async function loadLevelRuntime(levelId: LevelId): Promise<LevelRuntime> 
     };
   }
 
-  throw new LevelUnavailableError(
+  const runtime = await import("./b1/generated/b1-runtime.ts");
+  return {
     levelId,
-    "B1 来源清单的公开使用权尚未独立批准，因此未发布 runtime artifact。",
-  );
+    contentVersion: runtime.B1_MANIFEST.contentVersion,
+    words: runtime.B1_WORDS,
+    byId: runtime.B1_BY_ID,
+    resolveCanonicalId: (id) =>
+      runtime.B1_VALID_IDS.has(id) ? id : undefined,
+  };
 }
