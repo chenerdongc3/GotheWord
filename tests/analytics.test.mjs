@@ -98,7 +98,7 @@ test("reports only state byte size and never serializes it into event fields", (
   assert.equal("state" in payload, false);
 });
 
-test("keeps server registration authoritative and disables unsafe automatic capture", async () => {
+test("keeps retired registration fail-closed and disables unsafe automatic capture", async () => {
   const [root, edge, analytics, instrumentation] = await Promise.all([
     readFile(new URL("../app/GotheWordRoot.tsx", import.meta.url), "utf8"),
     readFile(
@@ -110,10 +110,9 @@ test("keeps server registration authoritative and disables unsafe automatic capt
   ]);
 
   assert.doesNotMatch(root, /sign_up_completed/);
-  assert.match(edge, /event: "sign_up_completed"/);
-  assert.match(edge, /distinct_id: userId/);
-  assert.match(edge, /\$geoip_disable: true/);
-  assert.match(edge, /\/i\/v0\/e\//);
+  assert.match(edge, /legacy_registration_disabled/);
+  assert.match(edge, /410/);
+  assert.doesNotMatch(edge, /createUser|email_confirm|SERVICE_ROLE/);
   assert.match(instrumentation, /initializeAnalyticsClient\(\)/);
   assert.match(analytics, /autocapture: false/);
   assert.match(analytics, /capture_pageview: false/);
