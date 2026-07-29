@@ -36,8 +36,11 @@ key; never add an ephemeral preview hostname to the production allowlist.
 4. Apply Auth config to staging first. In the Supabase dashboard confirm email
    confirmation is enabled, OTP is six digits and expires in 600 seconds, resend
    frequency is 60 seconds, email/sign-up/verification limits match the checked
-   config, and CAPTCHA is enabled. Dashboard state is the deployed truth: attach
-   a redacted export or screenshots to the release.
+   config, and CAPTCHA is enabled. Confirm the deployed confirmation, recovery,
+   and email-change template bodies contain `{{ .Token }}` and contain neither
+   `{{ .ConfirmationURL }}` nor `{{ .TokenHash }}`. A checked-in template file
+   does not update a hosted project by itself. Dashboard state is the deployed
+   truth: attach a redacted export or screenshots to the release.
 5. Confirm SMTP provider tracking is disabled and send confirmation and recovery
    messages to unrelated Gmail, Outlook, and one custom-domain mailbox. Check
    headers show SPF, DKIM, and DMARC pass and that no URL points to localhost or

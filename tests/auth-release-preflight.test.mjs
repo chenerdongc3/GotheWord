@@ -10,6 +10,9 @@ const valid = {
   external_email_enabled: true,
   smtp_host: "smtp.example.test",
   smtp_admin_email: "accounts@example.test",
+  mailer_templates_confirmation_content: "<p>{{ .Token }}</p>",
+  mailer_templates_recovery_content: "<p>{{ .Token }}</p>",
+  mailer_templates_email_change_content: "<p>{{ .Token }}</p>",
   security_captcha_enabled: true,
   rate_limit_email_sent: 4,
 };
@@ -30,8 +33,13 @@ test("rejects autoconfirm, wildcard redirects, missing controls, and legacy regi
     uri_allow_list: ["https://chenerdongc3.github.io/**"],
     mailer_autoconfirm: true,
     smtp_host: "localhost",
+    mailer_templates_confirmation_content: "<a href=\"{{ .ConfirmationURL }}\">Confirm</a>",
+    mailer_templates_recovery_content: "",
     security_captcha_enabled: false,
     rate_limit_email_sent: 0,
   }, { ...env, AUTH_LEGACY_REGISTER_DISABLED: "false" });
-  assert.ok(failures.length >= 7);
+  assert.ok(failures.length >= 11);
+  assert.ok(failures.includes("confirmation email template must include the six-digit OTP token"));
+  assert.ok(failures.includes("confirmation email template must not contain an action link"));
+  assert.ok(failures.includes("recovery email template must include the six-digit OTP token"));
 });

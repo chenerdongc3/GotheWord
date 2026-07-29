@@ -23,6 +23,19 @@ export function validateAuthConfig(config, env = process.env) {
   if (config.external_email_enabled === false) failures.push("email provider is disabled");
   if (!config.smtp_host || /^(localhost|127\.0\.0\.1)$/i.test(config.smtp_host)) failures.push("a non-local SMTP host is required");
   if (!config.smtp_admin_email) failures.push("SMTP sender address is required");
+  const otpTemplates = [
+    ["confirmation", config.mailer_templates_confirmation_content],
+    ["recovery", config.mailer_templates_recovery_content],
+    ["email change", config.mailer_templates_email_change_content],
+  ];
+  for (const [name, template] of otpTemplates) {
+    if (!String(template ?? "").includes("{{ .Token }}")) {
+      failures.push(`${name} email template must include the six-digit OTP token`);
+    }
+    if (/ConfirmationURL|TokenHash/.test(String(template ?? ""))) {
+      failures.push(`${name} email template must not contain an action link`);
+    }
+  }
   if (config.security_captcha_enabled !== true) failures.push("Captcha must be enabled");
   if (!Number.isInteger(config.rate_limit_email_sent) || config.rate_limit_email_sent < 1) failures.push("email rate limit must be a positive integer");
   if (env.AUTH_LEGACY_REGISTER_DISABLED !== "true") failures.push("legacy register Edge Function is not attested disabled");
