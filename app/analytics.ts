@@ -20,9 +20,7 @@ export type AnalyticsErrorCode =
   | "invalid_state"
   | "revision_conflict"
   | "invalid_credentials"
-  | "account_exists"
-  | "otp_invalid"
-  | "otp_expired"
+  | "username_exists"
   | "invalid_input"
   | "unknown";
 
@@ -37,15 +35,12 @@ type LearningEventProperties = {
 
 export type AnalyticsEventPropertiesMap = {
   login_completed: {
-    auth_method: "email_password";
+    auth_method: "username_password";
   };
   authentication_failed: {
-    auth_flow: "login" | "sign_up" | "verify_signup" | "recover" | "set_password";
-    failure_stage: "request" | "verify" | "update";
+    auth_flow: "login" | "sign_up";
+    failure_stage: "register" | "fallback_login" | "login";
     error_code: AnalyticsErrorCode;
-  };
-  auth_flow_completed: {
-    auth_flow: "sign_up_requested" | "signup_verified" | "recovery_requested" | "recovery_verified" | "password_updated" | "signup_resent";
   };
   onboarding_completed: {
     selected_daily_goal: 5 | 10 | 20;
@@ -165,7 +160,6 @@ declare global {
 export const ANALYTICS_EVENT_NAMES = [
   "login_completed",
   "authentication_failed",
-  "auth_flow_completed",
   "onboarding_completed",
   "due_review_prompt_viewed",
   "learning_session_started",
@@ -208,9 +202,6 @@ const PROHIBITED_PROPERTY_KEYS = new Set([
   "password",
   "password_hash",
   "email",
-  "otp",
-  "token",
-  "provider",
   "access_token",
   "refresh_token",
   "service_role_key",
@@ -428,10 +419,8 @@ export function normalizeAnalyticsError(error: unknown): AnalyticsErrorCode {
     code.includes("user_already_exists") ||
     message.includes("user already registered")
   ) {
-    return "account_exists";
+    return "username_exists";
   }
-  if (code.includes("otp_expired") || message.includes("expired")) return "otp_expired";
-  if (code.includes("otp") || message.includes("token")) return "otp_invalid";
   if (status === 400 || code.includes("invalid_input")) return "invalid_input";
   if (
     message.includes("failed to fetch") ||
