@@ -18,7 +18,7 @@
     "test:pages": "npm run build:pages && node --test tests/pages-export.test.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test:unit": "node --experimental-strip-types --test tests/unit/*.test.mjs tests/a1-content.test.mjs tests/a2-content.test.mjs tests/learning-sync.test.mjs tests/analytics.test.mjs tests/release-metadata.test.mjs tests/auth-release-preflight.test.mjs",
+    "test:unit": "node --experimental-strip-types --test tests/unit/*.test.mjs tests/a1-content.test.mjs tests/a2-content.test.mjs tests/b1-content.test.mjs tests/learning-sync.test.mjs tests/analytics.test.mjs tests/release-metadata.test.mjs tests/auth-production-config.test.mjs tests/auth-release-preflight.test.mjs tests/legacy-account-migration.test.mjs",
     "auth:preflight": "node scripts/auth-release-preflight.mjs",
     "test:integration": "npm run test:ssr:unconfigured && npm run test:ssr:configured && node --test tests/integration/supabase-contract.test.mjs",
     "test:ssr:unconfigured": "NEXT_PUBLIC_SUPABASE_URL='' NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY='' npm run build && TEST_EXPECT_SUPABASE=unconfigured node --test tests/integration/rendered-html.test.mjs",
@@ -39,9 +39,15 @@
     "content:a2:prepare": "npm run content:a2:generate && npm run content:a2:validate && npm run content:a2:report",
     "content:a2:check": "npm run content:a2:validate && node --experimental-strip-types scripts/generate-a2-runtime.mjs --check",
     "content:a2:check-rights": "node --experimental-strip-types scripts/check-a2-rights.mjs",
-    "content:prepare": "npm run content:a1:prepare && npm run content:a2:prepare",
-    "content:check": "npm run content:a1:check && npm run content:a2:check",
-    "content:check-rights": "npm run content:a1:check-rights && npm run content:a2:check-rights"
+    "content:b1:generate": "node --experimental-strip-types scripts/generate-b1-runtime.mjs",
+    "content:b1:validate": "node --experimental-strip-types scripts/validate-b1-content.mjs",
+    "content:b1:report": "node --experimental-strip-types scripts/report-b1-coverage.mjs",
+    "content:b1:prepare": "npm run content:b1:generate && npm run content:b1:validate && npm run content:b1:report",
+    "content:b1:check": "npm run content:b1:validate && node --experimental-strip-types scripts/generate-b1-runtime.mjs --check",
+    "content:b1:check-rights": "node --experimental-strip-types scripts/check-b1-rights.mjs",
+    "content:prepare": "npm run content:a1:prepare && npm run content:a2:prepare && npm run content:b1:prepare",
+    "content:check": "npm run content:a1:check && npm run content:a2:check && npm run content:b1:check",
+    "content:check-rights": "npm run content:a1:check-rights && npm run content:a2:check-rights && npm run content:b1:check-rights"
   },
   "dependencies": {
     "@gotheword/pencil-pup-ui": "file:packages/pencil-pup-ui",

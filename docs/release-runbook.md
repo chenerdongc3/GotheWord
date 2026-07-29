@@ -7,6 +7,9 @@
 > Function 必须撤下或固定返回 `410`，且 GitHub environment variable
 > `AUTH_LEGACY_REGISTER_DISABLED=true`；该证明不替代线上 endpoint 负向测试。
 
+邮箱认证、SMTP、DNS、CAPTCHA、限流与故障回滚的专用门禁见
+[`auth-production-runbook.md`](./auth-production-runbook.md)；正式发布必须同时满足该清单。
+
 当前 MVP 入口采用 **public 测试**。GitHub Pages environment 必须保持
 public；若改为白名单测试，必须在发布记录中写明获准账号与访问策略（不得记录密码），
 并先验证目标测试用户而非仅站点所有者可以访问。
