@@ -12,6 +12,7 @@ import { extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildCoverageReport } from "../app/content/a1/build-runtime.ts";
 import { buildA2CoverageReport } from "../app/content/a2/build-runtime.ts";
+import { buildB1CoverageReport } from "../app/content/b1/build-runtime.ts";
 
 const clientRoot = fileURLToPath(new URL("../dist/client/", import.meta.url));
 const manifestPath = join(clientRoot, ".vite", "manifest.json");
@@ -41,6 +42,19 @@ const runtimeConfigs = [
       import.meta.url,
     ),
     buildReport: buildA2CoverageReport,
+  },
+  {
+    level: "B1",
+    sentinel: "b1-0001",
+    runtimeUrl: new URL(
+      "../app/content/b1/generated/b1-runtime.ts",
+      import.meta.url,
+    ),
+    reportUrl: new URL(
+      "../app/content/b1/coverage-report.json",
+      import.meta.url,
+    ),
+    buildReport: buildB1CoverageReport,
   },
 ];
 

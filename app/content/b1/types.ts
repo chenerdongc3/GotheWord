@@ -5,7 +5,7 @@ import type {
   Word,
 } from "../a1/types.ts";
 
-export type A2SourceEntry = {
+export type B1SourceEntry = {
   entryId: string;
   lemma: string;
   display: string;
@@ -15,16 +15,16 @@ export type A2SourceEntry = {
   plural?: string;
   forms?: string[];
   entryType: A1EntryType;
-  cefr: "A2";
+  cefr: "B1";
   source: {
-    sourceId: "goethe-zertifikat-a2";
-    page: number;
+    sourceId: "goethe-zertifikat-b1";
+    page: number | null;
     order: number;
     section: string;
   };
 };
 
-export type A2LearningEntry = {
+export type B1LearningEntry = {
   entryId: string;
   topicIds: A1TopicId[];
   senses: Array<{
@@ -41,11 +41,12 @@ export type A2LearningEntry = {
   reviewStatus: "machine-draft" | "reviewed";
 };
 
-export type A2RuntimeManifest = {
+export type B1RuntimeManifest = {
   schemaVersion: number;
   contentVersion: string;
   source: {
-    sourceId: "goethe-zertifikat-a2";
+    sourceId: "goethe-zertifikat-b1";
+    landingPageUrl: string;
     url: string;
     retrievedAt: string;
     sha256: string;
@@ -55,23 +56,25 @@ export type A2RuntimeManifest = {
   };
   rights: {
     sourceList: "pending" | "approved";
-    examples: "editorial-only";
+    examples: "project-authored-only";
   };
   editorial: {
     chineseSenses: "machine-draft" | "reviewed";
     examples: "project-authored-template";
+    sourcePageMapping: "pending" | "reviewed";
   };
 };
 
-export type A2CoverageReport = {
+export type B1CoverageReport = {
   schemaVersion: 1;
   generatedAt: string;
-  manifest: A2RuntimeManifest;
+  manifest: B1RuntimeManifest;
   source: {
     totalRows: number;
     main: number;
     derived: number;
     wordGroupMembers: number;
+    rowsWithVerifiedPage: number;
   };
   learning: {
     total: number;

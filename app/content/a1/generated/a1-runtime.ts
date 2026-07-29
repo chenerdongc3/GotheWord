@@ -909,8 +909,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Arm.",
-        "zh": "今天我们谈论手臂。"
+        "de": "Mein Arm tut weh.",
+        "zh": "我的手臂疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -937,8 +937,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Bad.",
-        "zh": "今天我们谈论浴室。"
+        "de": "Das Bad ist klein.",
+        "zh": "浴室很小。"
       }
     ],
     "sourceEntryType": "main"
@@ -966,8 +966,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Banane.",
-        "zh": "今天我们谈论香蕉。"
+        "de": "Ich esse eine Banane.",
+        "zh": "我在吃一根香蕉。"
       }
     ],
     "sourceEntryType": "main"
@@ -993,8 +993,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute abfahren.",
-        "zh": "我们今天想出发，启程。"
+        "de": "Der Zug fährt um acht ab.",
+        "zh": "火车八点出发。"
       }
     ],
     "sourceEntryType": "main"
@@ -1002,16 +1002,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0001",
     "german": "ab",
-    "translation": "从 … 起",
+    "translation": "从……起",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在……旁；向",
-      "在……上；到……上",
-      "来自从 ... 里出来"
+      "在…旁",
+      "在……上",
+      "来自"
     ],
     "distractorIds": [
       "a1-alpha-0015",
@@ -1020,8 +1020,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ab“ bedeutet hier „从 … 起“.",
-        "zh": "“ab”在这里表示“从 … 起”。"
+        "de": "Ich arbeite ab Montag.",
+        "zh": "我从星期一开始上班。"
       }
     ],
     "sourceEntryType": "main"
@@ -1049,8 +1049,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Arbeit.",
-        "zh": "今天我们谈论工作。"
+        "de": "Meine Arbeit ist interessant.",
+        "zh": "我的工作很有趣。"
       }
     ],
     "sourceEntryType": "derived"
@@ -1067,7 +1067,7 @@ export const A1_WORDS = [
       "shopping"
     ],
     "distractors": [
-      "金钱（单数形式）",
+      "钱",
       "商店",
       "菜单"
     ],
@@ -1078,8 +1078,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Angebot.",
-        "zh": "今天我们谈论特价商品。"
+        "de": "Im Supermarkt gibt es ein Angebot.",
+        "zh": "超市有特价商品。"
       }
     ],
     "sourceEntryType": "derived"
@@ -1096,7 +1096,7 @@ export const A1_WORDS = [
       "services"
     ],
     "distractors": [
-      "信息；问讯",
+      "信息",
       "银行",
       "信件"
     ],
@@ -1107,8 +1107,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Adresse.",
-        "zh": "今天我们谈论地址。"
+        "de": "Schick mir deine Adresse.",
+        "zh": "把你的地址发给我。"
       }
     ],
     "sourceEntryType": "main"
@@ -1125,9 +1125,9 @@ export const A1_WORDS = [
       "environment"
     ],
     "distractors": [
-      "花朵",
+      "花",
       "摄氏度",
-      "海，海洋"
+      "海洋"
     ],
     "distractorIds": [
       "a1-alpha-0123",
@@ -1136,8 +1136,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Baum.",
-        "zh": "今天我们谈论树。"
+        "de": "Der Baum ist hoch.",
+        "zh": "这棵树很高。"
       }
     ],
     "sourceEntryType": "main"
@@ -1155,7 +1155,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "迪斯科舞厅",
-      "庆祝；节日相关",
+      "庆祝活动",
       "照片"
     ],
     "distractorIds": [
@@ -1165,8 +1165,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Beispiel.",
-        "zh": "今天我们谈论例子。"
+        "de": "Gib mir ein Beispiel.",
+        "zh": "给我一个例子。"
       }
     ],
     "sourceEntryType": "main"
@@ -1194,8 +1194,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Arzt.",
-        "zh": "今天我们谈论男医生。"
+        "de": "Der Arzt hilft den Patienten.",
+        "zh": "男医生帮助病人。"
       }
     ],
     "sourceEntryType": "main"
@@ -1221,8 +1221,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute baden.",
-        "zh": "我们今天想洗澡。"
+        "de": "Ich bade jeden Abend.",
+        "zh": "我每天晚上洗澡。"
       }
     ],
     "sourceEntryType": "main"
@@ -1230,7 +1230,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0110",
     "german": "Bier",
-    "translation": "啤酒（单数形式）",
+    "translation": "啤酒",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -1249,8 +1249,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Bier.",
-        "zh": "今天我们谈论啤酒（单数形式）。"
+        "de": "Ich trinke ein Bier.",
+        "zh": "我喝一杯啤酒。"
       }
     ],
     "sourceEntryType": "main"
@@ -1277,8 +1277,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Abfahrt.",
-        "zh": "今天我们谈论出发，启程。"
+        "de": "Die Abfahrt ist um neun Uhr.",
+        "zh": "出发时间是九点。"
       }
     ],
     "sourceEntryType": "derived"
@@ -1294,7 +1294,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "也就是说，可见",
-      "究竟因为",
+      "因为",
       "或者"
     ],
     "distractorIds": [
@@ -1304,8 +1304,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „aber“ bedeutet hier „可是“.",
-        "zh": "“aber”在这里表示“可是”。"
+        "de": "Ich mag Tee, aber ich trinke Kaffee.",
+        "zh": "我喜欢茶，可是我喝咖啡。"
       }
     ],
     "sourceEntryType": "main"
@@ -1331,8 +1331,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „arbeitslos“ bedeutet hier „失业的“.",
-        "zh": "“arbeitslos”在这里表示“失业的”。"
+        "de": "Er ist arbeitslos.",
+        "zh": "他失业。"
       }
     ],
     "sourceEntryType": "main"
@@ -1340,7 +1340,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0106",
     "german": "bestellen",
-    "translation": "点",
+    "translation": "点餐",
     "kind": "verb",
     "topic": "购物与日用品",
     "topicIds": [
@@ -1348,7 +1348,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "付款",
-      "购物，采购",
+      "购物",
       "邀请"
     ],
     "distractorIds": [
@@ -1358,8 +1358,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bestellen.",
-        "zh": "我们今天想点。"
+        "de": "Ich bestelle eine Pizza.",
+        "zh": "我点一份披萨。"
       }
     ],
     "sourceEntryType": "main"
@@ -1367,7 +1367,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0060",
     "german": "Auskunft",
-    "translation": "信息；问讯",
+    "translation": "信息",
     "kind": "noun",
     "article": "die",
     "plural": "-ü, e",
@@ -1387,8 +1387,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Auskunft.",
-        "zh": "今天我们谈论信息；问讯。"
+        "de": "Kann ich eine Auskunft bekommen?",
+        "zh": "我可以得到一条信息吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -1396,7 +1396,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0123",
     "german": "Blume",
-    "translation": "花朵",
+    "translation": "花",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -1407,7 +1407,7 @@ export const A1_WORDS = [
     "distractors": [
       "树",
       "摄氏度",
-      "海，海洋"
+      "海洋"
     ],
     "distractorIds": [
       "a1-alpha-0088",
@@ -1416,8 +1416,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Blume.",
-        "zh": "今天我们谈论花朵。"
+        "de": "Ich schenke ihr eine Blume.",
+        "zh": "我送她一朵花。"
       }
     ],
     "sourceEntryType": "main"
@@ -1443,8 +1443,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „zum Beispiel/z. B.“ bedeutet hier „例如“.",
-        "zh": "“zum Beispiel/z. B.”在这里表示“例如”。"
+        "de": "Ich mag Obst, zum Beispiel Äpfel.",
+        "zh": "我喜欢水果，例如苹果。"
       }
     ],
     "sourceEntryType": "derived"
@@ -1472,8 +1472,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Auge.",
-        "zh": "今天我们谈论眼睛。"
+        "de": "Mein Auge tut weh.",
+        "zh": "我的眼睛疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -1500,8 +1500,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Balkon.",
-        "zh": "今天我们谈论阳台。"
+        "de": "Wir sitzen auf dem Balkon.",
+        "zh": "我们坐在阳台上。"
       }
     ],
     "sourceEntryType": "main"
@@ -1529,8 +1529,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Birne.",
-        "zh": "今天我们谈论梨子。"
+        "de": "Ich esse eine reife Birne.",
+        "zh": "我吃一颗熟梨。"
       }
     ],
     "sourceEntryType": "main"
@@ -1557,8 +1557,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Ankunft.",
-        "zh": "今天我们谈论抵达。"
+        "de": "Meine Ankunft ist um acht Uhr.",
+        "zh": "我八点到达。"
       }
     ],
     "sourceEntryType": "main"
@@ -1566,7 +1566,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0005",
     "german": "abgeben",
-    "translation": "交出；递交",
+    "translation": "交付",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -1584,8 +1584,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute abgeben.",
-        "zh": "我们今天想交出；递交。"
+        "de": "Ich gebe das Formular ab.",
+        "zh": "我递交表格。"
       }
     ],
     "sourceEntryType": "main"
@@ -1613,8 +1613,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Arbeitsplatz.",
-        "zh": "今天我们谈论工作场所。"
+        "de": "Mein Arbeitsplatz ist sauber.",
+        "zh": "我的工作场所很干净。"
       }
     ],
     "sourceEntryType": "main"
@@ -1629,8 +1629,8 @@ export const A1_WORDS = [
       "shopping"
     ],
     "distractors": [
-      "点",
-      "购物，采购",
+      "点餐",
+      "购物",
       "邀请"
     ],
     "distractorIds": [
@@ -1640,8 +1640,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bezahlen.",
-        "zh": "我们今天想付款。"
+        "de": "Ich bezahle die Rechnung.",
+        "zh": "我付账单。"
       }
     ],
     "sourceEntryType": "main"
@@ -1658,7 +1658,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "信件"
     ],
     "distractorIds": [
@@ -1668,8 +1668,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Bank.",
-        "zh": "今天我们谈论银行。"
+        "de": "Wir gehen zur Bank.",
+        "zh": "我们去银行。"
       }
     ],
     "sourceEntryType": "main"
@@ -1686,8 +1686,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
-      "海，海洋"
+      "花",
+      "海洋"
     ],
     "distractorIds": [
       "a1-alpha-0088",
@@ -1696,8 +1696,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Grad (Celsius).",
-        "zh": "今天我们谈论摄氏度。"
+        "de": "Es sind 20 Grad.",
+        "zh": "气温是20摄氏度。"
       }
     ],
     "sourceEntryType": "main"
@@ -1714,7 +1714,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "例子",
-      "庆祝；节日相关",
+      "庆祝活动",
       "照片"
     ],
     "distractorIds": [
@@ -1724,8 +1724,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Disco.",
-        "zh": "今天我们谈论迪斯科舞厅。"
+        "de": "Wir tanzen in der Disco.",
+        "zh": "我们在迪斯科舞厅跳舞。"
       }
     ],
     "sourceEntryType": "main"
@@ -1753,8 +1753,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Bein.",
-        "zh": "今天我们谈论腿。"
+        "de": "Mein Bein tut weh.",
+        "zh": "我的腿疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -1782,8 +1782,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Bett.",
-        "zh": "今天我们谈论床。"
+        "de": "Ich lege mich ins Bett.",
+        "zh": "我躺在床上。"
       }
     ],
     "sourceEntryType": "main"
@@ -1809,8 +1809,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute buchstabieren.",
-        "zh": "我们今天想拼写。"
+        "de": "Kannst du das Wort buchstabieren?",
+        "zh": "你能拼写这个词吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -1838,8 +1838,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Aufzug.",
-        "zh": "今天我们谈论电梯。"
+        "de": "Der Aufzug fährt nach oben.",
+        "zh": "电梯向上运行。"
       }
     ],
     "sourceEntryType": "main"
@@ -1847,7 +1847,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0006",
     "german": "abholen",
-    "translation": "接（人）",
+    "translation": "接走（人）",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -1865,8 +1865,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute abholen.",
-        "zh": "我们今天想接（人）。"
+        "de": "Ich hole dich ab.",
+        "zh": "我来接你。"
       }
     ],
     "sourceEntryType": "main"
@@ -1894,8 +1894,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Beamte.",
-        "zh": "今天我们谈论公务员。"
+        "de": "Die Beamte geben Ausweise.",
+        "zh": "公务员发放证件。"
       }
     ],
     "sourceEntryType": "main"
@@ -1903,14 +1903,14 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0182",
     "german": "einkaufen",
-    "translation": "购物，采购",
+    "translation": "购物",
     "kind": "verb",
     "topic": "购物与日用品",
     "topicIds": [
       "shopping"
     ],
     "distractors": [
-      "点",
+      "点餐",
       "付款",
       "邀请"
     ],
@@ -1921,8 +1921,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute einkaufen.",
-        "zh": "我们今天想购物，采购。"
+        "de": "Ich kaufe Brot ein.",
+        "zh": "我买面包。"
       }
     ],
     "sourceEntryType": "main"
@@ -1940,7 +1940,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -1950,8 +1950,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Brief.",
-        "zh": "今天我们谈论信件。"
+        "de": "Ich schreibe einen Brief.",
+        "zh": "我写一封信。"
       }
     ],
     "sourceEntryType": "main"
@@ -1959,7 +1959,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0424",
     "german": "Meer",
-    "translation": "海，海洋",
+    "translation": "海洋",
     "kind": "noun",
     "article": "das",
     "topic": "环境",
@@ -1968,7 +1968,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -1978,8 +1978,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Meer.",
-        "zh": "今天我们谈论海，海洋。"
+        "de": "Das Meer ist heute ruhig.",
+        "zh": "今天海面很平静。"
       }
     ],
     "sourceEntryType": "main"
@@ -1987,7 +1987,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0217",
     "german": "Feier-",
-    "translation": "庆祝；节日相关",
+    "translation": "庆祝活动",
     "kind": "noun",
     "topic": "休闲与娱乐",
     "topicIds": [
@@ -2005,8 +2005,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „Feier-“ bedeutet hier „庆祝；节日相关“.",
-        "zh": "“Feier-”在这里表示“庆祝；节日相关”。"
+        "de": "Wir planen eine Feier.",
+        "zh": "我们计划一次庆祝活动。"
       }
     ],
     "sourceEntryType": "main"
@@ -2034,8 +2034,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bruder.",
-        "zh": "今天我们谈论兄弟。"
+        "de": "Mein Bruder spielt Fußball.",
+        "zh": "我的兄弟踢足球。"
       }
     ],
     "sourceEntryType": "main"
@@ -2062,8 +2062,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Garten.",
-        "zh": "今天我们谈论花园。"
+        "de": "Der Garten hat viele Blumen.",
+        "zh": "花园里有很多花。"
       }
     ],
     "sourceEntryType": "main"
@@ -2071,7 +2071,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0138",
     "german": "Butter",
-    "translation": "黄油（单数形式）",
+    "translation": "黄油",
     "kind": "noun",
     "article": "die",
     "topic": "饮食",
@@ -2090,8 +2090,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Butter.",
-        "zh": "今天我们谈论黄油（单数形式）。"
+        "de": "Ich streiche Butter auf das Brot.",
+        "zh": "我把黄油抹在面包上。"
       }
     ],
     "sourceEntryType": "main"
@@ -2118,8 +2118,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ausflug.",
-        "zh": "今天我们谈论郊游。"
+        "de": "Wir machen einen Ausflug.",
+        "zh": "我们去郊游。"
       }
     ],
     "sourceEntryType": "main"
@@ -2146,8 +2146,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Absender.",
-        "zh": "今天我们谈论寄件人。"
+        "de": "Der Absender steht oben.",
+        "zh": "寄件人写在上面。"
       }
     ],
     "sourceEntryType": "main"
@@ -2175,8 +2175,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Beruf.",
-        "zh": "今天我们谈论职业。"
+        "de": "Mein Beruf ist Lehrer.",
+        "zh": "我的职业是老师。"
       }
     ],
     "sourceEntryType": "main"
@@ -2191,9 +2191,9 @@ export const A1_WORDS = [
       "shopping"
     ],
     "distractors": [
-      "点",
+      "点餐",
       "付款",
-      "购物，采购"
+      "购物"
     ],
     "distractorIds": [
       "a1-alpha-0106",
@@ -2202,8 +2202,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute einladen.",
-        "zh": "我们今天想邀请。"
+        "de": "Ich lade dich ein.",
+        "zh": "我邀请你。"
       }
     ],
     "sourceEntryType": "main"
@@ -2221,7 +2221,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -2231,8 +2231,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Briefmarke.",
-        "zh": "今天我们谈论邮票。"
+        "de": "Die Briefmarke kostet einen Euro.",
+        "zh": "这枚邮票一欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -2249,7 +2249,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -2259,8 +2259,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Regen.",
-        "zh": "今天我们谈论雨。"
+        "de": "Der Regen fällt heute.",
+        "zh": "今天下雨。"
       }
     ],
     "sourceEntryType": "derived"
@@ -2277,7 +2277,7 @@ export const A1_WORDS = [
     "distractors": [
       "看电视",
       "游泳",
-      "玩，打，踢上映，放映"
+      "玩"
     ],
     "distractorIds": [
       "a1-alpha-0221",
@@ -2286,8 +2286,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute feiern.",
-        "zh": "我们今天想庆祝。"
+        "de": "Wir feiern einen Geburtstag.",
+        "zh": "我们庆祝生日。"
       }
     ],
     "sourceEntryType": "main"
@@ -2315,8 +2315,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Ehefrau.",
-        "zh": "今天我们谈论妻子。"
+        "de": "Meine Ehefrau kocht.",
+        "zh": "我的妻子做饭。"
       }
     ],
     "sourceEntryType": "main"
@@ -2344,8 +2344,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Haus.",
-        "zh": "今天我们谈论房子。"
+        "de": "Das Haus ist groß.",
+        "zh": "这座房子很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -2353,7 +2353,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0171",
     "german": "Durst",
-    "translation": "口渴（单数形式）",
+    "translation": "口渴",
     "kind": "noun",
     "article": "der",
     "topic": "饮食",
@@ -2372,8 +2372,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Durst.",
-        "zh": "今天我们谈论口渴（单数形式）。"
+        "de": "Ich habe Durst.",
+        "zh": "我口渴。"
       }
     ],
     "sourceEntryType": "main"
@@ -2401,8 +2401,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Auto.",
-        "zh": "今天我们谈论汽车。"
+        "de": "Das Auto ist rot.",
+        "zh": "这辆汽车是红色的。"
       }
     ],
     "sourceEntryType": "main"
@@ -2429,8 +2429,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Achtung.",
-        "zh": "今天我们谈论注意。"
+        "de": "Achtung, das ist gefährlich!",
+        "zh": "注意，这很危险！"
       }
     ],
     "sourceEntryType": "main"
@@ -2457,8 +2457,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Chef.",
-        "zh": "今天我们谈论男性老板。"
+        "de": "Der Chef kommt heute.",
+        "zh": "老板今天来。"
       }
     ],
     "sourceEntryType": "main"
@@ -2466,7 +2466,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0264",
     "german": "Geld",
-    "translation": "金钱（单数形式）",
+    "translation": "钱",
     "kind": "noun",
     "article": "das",
     "topic": "购物与日用品",
@@ -2485,8 +2485,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Geld.",
-        "zh": "今天我们谈论金钱（单数形式）。"
+        "de": "Ich habe genug Geld für die Fahrkarte.",
+        "zh": "我的钱够买车票。"
       }
     ],
     "sourceEntryType": "main"
@@ -2504,7 +2504,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -2514,8 +2514,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Fax.",
-        "zh": "今天我们谈论传真。"
+        "de": "Ich schicke ein Fax.",
+        "zh": "我发送传真。"
       }
     ],
     "sourceEntryType": "main"
@@ -2532,7 +2532,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -2542,8 +2542,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den See.",
-        "zh": "今天我们谈论湖泊。"
+        "de": "Der See ist tief.",
+        "zh": "湖很深。"
       }
     ],
     "sourceEntryType": "main"
@@ -2560,7 +2560,7 @@ export const A1_WORDS = [
     "distractors": [
       "庆祝",
       "游泳",
-      "玩，打，踢上映，放映"
+      "玩"
     ],
     "distractorIds": [
       "a1-alpha-0218",
@@ -2569,8 +2569,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute fernsehen.",
-        "zh": "我们今天想看电视。"
+        "de": "Wir sehen abends fern.",
+        "zh": "我们晚上看电视。"
       }
     ],
     "sourceEntryType": "main"
@@ -2598,8 +2598,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ehemann.",
-        "zh": "今天我们谈论丈夫。"
+        "de": "Mein Ehemann arbeitet.",
+        "zh": "我的丈夫工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -2627,8 +2627,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Hausaufgabe.",
-        "zh": "今天我们谈论家庭作业。"
+        "de": "Die Hausaufgabe ist schwer.",
+        "zh": "这份家庭作业很难。"
       }
     ],
     "sourceEntryType": "main"
@@ -2636,7 +2636,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0205",
     "german": "Essen",
-    "translation": "吃",
+    "translation": "食物",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -2655,8 +2655,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Essen.",
-        "zh": "今天我们谈论吃。"
+        "de": "Das Essen ist warm.",
+        "zh": "食物是热的。"
       }
     ],
     "sourceEntryType": "derived"
@@ -2684,8 +2684,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Autobahn.",
-        "zh": "今天我们谈论高速公路。"
+        "de": "Die Autobahn ist schnell.",
+        "zh": "高速公路很快。"
       }
     ],
     "sourceEntryType": "main"
@@ -2700,19 +2700,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "其它",
-      "两个（物，事）",
-      "最好的"
+      "其他的",
+      "两个",
+      "你的"
     ],
     "distractorIds": [
       "a1-alpha-0018",
       "a1-alpha-0093",
-      "a1-alpha-0105"
+      "a1-alpha-0153"
     ],
     "examples": [
       {
-        "de": "Das Wort „all-“ bedeutet hier „全部的；所有的“.",
-        "zh": "“all-”在这里表示“全部的；所有的”。"
+        "de": "Alle Kinder spielen im Park.",
+        "zh": "所有孩子都在公园里玩。"
       }
     ],
     "sourceEntryType": "main"
@@ -2720,7 +2720,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0368",
     "german": "Kollege",
-    "translation": "男同事",
+    "translation": "男性同事",
     "kind": "noun",
     "article": "der",
     "plural": "-n",
@@ -2740,8 +2740,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kollege.",
-        "zh": "今天我们谈论男同事。"
+        "de": "Mein Kollege hilft mir.",
+        "zh": "我的男同事帮助我。"
       }
     ],
     "sourceEntryType": "main"
@@ -2759,7 +2759,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "菜单"
     ],
     "distractorIds": [
@@ -2769,8 +2769,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Geschäft.",
-        "zh": "今天我们谈论商店。"
+        "de": "Ich gehe ins Geschäft.",
+        "zh": "我去商店。"
       }
     ],
     "sourceEntryType": "main"
@@ -2787,7 +2787,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -2797,8 +2797,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Konto.",
-        "zh": "今天我们谈论银行账户。"
+        "de": "Ich eröffne ein Konto.",
+        "zh": "我开一个银行账户。"
       }
     ],
     "sourceEntryType": "main"
@@ -2806,7 +2806,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0562",
     "german": "Sonne",
-    "translation": "太阳，阳光",
+    "translation": "太阳",
     "kind": "noun",
     "article": "die",
     "topic": "环境",
@@ -2815,7 +2815,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -2825,8 +2825,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Sonne.",
-        "zh": "今天我们谈论太阳，阳光。"
+        "de": "Die Sonne scheint heute.",
+        "zh": "今天太阳照耀。"
       }
     ],
     "sourceEntryType": "main"
@@ -2845,7 +2845,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -2854,8 +2854,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Foto.",
-        "zh": "今天我们谈论照片。"
+        "de": "Ich zeige das Foto.",
+        "zh": "我展示这张照片。"
       }
     ],
     "sourceEntryType": "main"
@@ -2882,8 +2882,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Eltern (pl.).",
-        "zh": "今天我们谈论父母。"
+        "de": "Meine Eltern kommen morgen.",
+        "zh": "我的父母明天来。"
       }
     ],
     "sourceEntryType": "main"
@@ -2911,8 +2911,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Hausfrau.",
-        "zh": "今天我们谈论家庭主妇。"
+        "de": "Die Hausfrau kocht das Essen.",
+        "zh": "这位家庭主妇在做饭。"
       }
     ],
     "sourceEntryType": "main"
@@ -2920,7 +2920,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0230",
     "german": "Fleisch",
-    "translation": "肉类（单数形式）",
+    "translation": "肉",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -2939,8 +2939,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Fleisch.",
-        "zh": "今天我们谈论肉类（单数形式）。"
+        "de": "Ich kaufe frisches Fleisch.",
+        "zh": "我买新鲜的肉。"
       }
     ],
     "sourceEntryType": "main"
@@ -2948,7 +2948,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0073",
     "german": "Automat",
-    "translation": "自动售货机；自动机器",
+    "translation": "自动售货机",
     "kind": "noun",
     "article": "der",
     "topic": "旅行与交通",
@@ -2967,8 +2967,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Automat.",
-        "zh": "今天我们谈论自动售货机；自动机器。"
+        "de": "Der Automat gibt Schokolade.",
+        "zh": "自动售货机出巧克力。"
       }
     ],
     "sourceEntryType": "main"
@@ -2984,18 +2984,18 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "也",
-      "很快，即将",
-      "酒吧"
+      "打开（状态）",
+      "很快"
     ],
     "distractorIds": [
       "a1-alpha-0048",
-      "a1-alpha-0082",
-      "a1-alpha-0086"
+      "a1-alpha-0052",
+      "a1-alpha-0082"
     ],
     "examples": [
       {
-        "de": "Das Wort „allein“ bedeutet hier „独自“.",
-        "zh": "“allein”在这里表示“独自”。"
+        "de": "Ich gehe allein nach Hause.",
+        "zh": "我独自回家。"
       }
     ],
     "sourceEntryType": "main"
@@ -3022,8 +3022,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Praktikum.",
-        "zh": "今天我们谈论实习。"
+        "de": "Ich mache ein Praktikum.",
+        "zh": "我在实习。"
       }
     ],
     "sourceEntryType": "main"
@@ -3041,7 +3041,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -3051,8 +3051,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Karte.",
-        "zh": "今天我们谈论菜单。"
+        "de": "Ich bestelle etwas von der Karte.",
+        "zh": "我从菜单点菜。"
       }
     ],
     "sourceEntryType": "main"
@@ -3069,7 +3069,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -3079,8 +3079,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Polizei.",
-        "zh": "今天我们谈论警察。"
+        "de": "Die Polizei kontrolliert den Verkehr.",
+        "zh": "警察检查交通。"
       }
     ],
     "sourceEntryType": "main"
@@ -3088,7 +3088,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0656",
     "german": "Wetter",
-    "translation": "天气（单数形式）",
+    "translation": "天气",
     "kind": "noun",
     "article": "das",
     "topic": "环境",
@@ -3097,7 +3097,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -3107,8 +3107,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Wetter.",
-        "zh": "今天我们谈论天气（单数形式）。"
+        "de": "Das Wetter ist schön.",
+        "zh": "天气很好。"
       }
     ],
     "sourceEntryType": "main"
@@ -3116,7 +3116,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0242",
     "german": "Freizeit",
-    "translation": "空闲时间，业余时间",
+    "translation": "空闲时间",
     "kind": "noun",
     "article": "die",
     "topic": "休闲与娱乐",
@@ -3126,7 +3126,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -3135,8 +3135,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Freizeit.",
-        "zh": "今天我们谈论空闲时间，业余时间。"
+        "de": "In meiner Freizeit lese ich.",
+        "zh": "在我的空闲时间我阅读。"
       }
     ],
     "sourceEntryType": "main"
@@ -3163,8 +3163,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Familienname.",
-        "zh": "今天我们谈论姓。"
+        "de": "Mein Familienname ist Schmidt.",
+        "zh": "我的姓氏是 Schmidt。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3191,8 +3191,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Hausmann.",
-        "zh": "今天我们谈论家庭主夫。"
+        "de": "Der Hausmann kocht das Abendessen.",
+        "zh": "这位家庭主夫在做晚饭。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3218,8 +3218,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute frühstücken.",
-        "zh": "我们今天想吃早饭。"
+        "de": "Ich frühstücke jeden Morgen.",
+        "zh": "我每天早上吃早餐。"
       }
     ],
     "sourceEntryType": "main"
@@ -3245,8 +3245,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „automatisch“ bedeutet hier „自动的“.",
-        "zh": "“automatisch”在这里表示“自动的”。"
+        "de": "Der Aufzug ist automatisch.",
+        "zh": "电梯是自动的。"
       }
     ],
     "sourceEntryType": "main"
@@ -3262,7 +3262,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "可是",
-      "究竟因为",
+      "因为",
       "或者"
     ],
     "distractorIds": [
@@ -3272,8 +3272,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „also“ bedeutet hier „也就是说，可见“.",
-        "zh": "“also”在这里表示“也就是说，可见”。"
+        "de": "Ich habe Hunger, also esse ich.",
+        "zh": "我饿了，所以我吃东西。"
       }
     ],
     "sourceEntryType": "main"
@@ -3299,8 +3299,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute verdienen.",
-        "zh": "我们今天想挣得，赚得。"
+        "de": "Ich verdiene zehn Euro.",
+        "zh": "我赚十欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -3308,27 +3308,27 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0351",
     "german": "(Kredit)-Karte",
-    "translation": "（信用）卡",
-    "kind": "adverb",
+    "translation": "信用卡",
+    "kind": "noun",
     "plural": "-n",
     "topic": "购物与日用品",
     "topicIds": [
       "shopping"
     ],
     "distractors": [
-      "独自",
-      "也",
-      "很快，即将"
+      "特价商品",
+      "钱",
+      "商店"
     ],
     "distractorIds": [
-      "a1-alpha-0011",
-      "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0017",
+      "a1-alpha-0264",
+      "a1-alpha-0270"
     ],
     "examples": [
       {
-        "de": "Das Wort „(Kredit)-Karte“ bedeutet hier „（信用）卡“.",
-        "zh": "“(Kredit)-Karte”在这里表示“（信用）卡”。"
+        "de": "Ich zahle mit der Kreditkarte.",
+        "zh": "我用信用卡付款。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3336,7 +3336,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0484",
     "german": "Post",
-    "translation": "邮局（单数形式）",
+    "translation": "邮局",
     "kind": "noun",
     "article": "die",
     "topic": "公共服务",
@@ -3345,7 +3345,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -3355,8 +3355,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Post.",
-        "zh": "今天我们谈论邮局（单数形式）。"
+        "de": "Ich gehe zur Post.",
+        "zh": "我去邮局。"
       }
     ],
     "sourceEntryType": "main"
@@ -3373,7 +3373,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -3383,8 +3383,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Wind.",
-        "zh": "今天我们谈论风。"
+        "de": "Der Wind weht heute.",
+        "zh": "今天风在吹。"
       }
     ],
     "sourceEntryType": "main"
@@ -3402,7 +3402,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -3411,8 +3411,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Fußball.",
-        "zh": "今天我们谈论足球。"
+        "de": "Wir spielen Fußball im Park.",
+        "zh": "我们在公园踢足球。"
       }
     ],
     "sourceEntryType": "main"
@@ -3420,7 +3420,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0214",
     "german": "Familienstand",
-    "translation": "家庭情况（单数形式）",
+    "translation": "家庭情况",
     "kind": "noun",
     "article": "der",
     "topic": "个人与家庭",
@@ -3439,8 +3439,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Familienstand.",
-        "zh": "今天我们谈论家庭情况（单数形式）。"
+        "de": "Mein Familienstand ist ledig.",
+        "zh": "我的家庭情况是单身。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3467,8 +3467,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kindergarten.",
-        "zh": "今天我们谈论幼儿园。"
+        "de": "Mein Sohn geht in den Kindergarten.",
+        "zh": "我儿子去幼儿园。"
       }
     ],
     "sourceEntryType": "main"
@@ -3476,7 +3476,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0248",
     "german": "Frühstück",
-    "translation": "早饭（单数形式）",
+    "translation": "早饭",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -3495,8 +3495,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Frühstück.",
-        "zh": "今天我们谈论早饭（单数形式）。"
+        "de": "Das Frühstück ist fertig.",
+        "zh": "早饭已经做好了。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3504,7 +3504,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0079",
     "german": "Bahn",
-    "translation": "铁路；火车",
+    "translation": "火车",
     "kind": "noun",
     "article": "die",
     "topic": "旅行与交通",
@@ -3523,8 +3523,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Bahn.",
-        "zh": "今天我们谈论铁路；火车。"
+        "de": "Ich fahre mit der Bahn nach Berlin.",
+        "zh": "我坐火车去柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -3540,8 +3540,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "外国的",
-      "出名的",
-      "占用的；忙线的"
+      "著名的",
+      "占用的"
     ],
     "distractorIds": [
       "a1-alpha-0063",
@@ -3550,8 +3550,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „alt“ bedeutet hier „老的旧的“.",
-        "zh": "“alt”在这里表示“老的旧的”。"
+        "de": "Das Haus ist alt.",
+        "zh": "这座房子很老。"
       }
     ],
     "sourceEntryType": "main"
@@ -3579,8 +3579,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Verkäufer.",
-        "zh": "今天我们谈论男售货员。"
+        "de": "Der Verkäufer hilft mir.",
+        "zh": "男售货员帮助我。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3595,9 +3595,9 @@ export const A1_WORDS = [
       "shopping"
     ],
     "distractors": [
-      "点",
+      "点餐",
       "付款",
-      "购物，采购"
+      "购物"
     ],
     "distractorIds": [
       "a1-alpha-0106",
@@ -3606,8 +3606,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kaufen.",
-        "zh": "我们今天想购买。"
+        "de": "Ich kaufe ein Brot.",
+        "zh": "我买了一块面包。"
       }
     ],
     "sourceEntryType": "main"
@@ -3624,7 +3624,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -3634,8 +3634,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Postleitzahl.",
-        "zh": "今天我们谈论邮政编码。"
+        "de": "Wie lautet deine Postleitzahl?",
+        "zh": "你的邮政编码是多少？"
       }
     ],
     "sourceEntryType": "main"
@@ -3652,7 +3652,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -3662,8 +3662,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Frühling/das Frühjahr.",
-        "zh": "今天我们谈论春天。"
+        "de": "Im Frühling blühen die Blumen.",
+        "zh": "春天，花儿绽放。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -3682,7 +3682,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -3691,8 +3691,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Kino.",
-        "zh": "今天我们谈论电影院。"
+        "de": "Wir gehen ins Kino.",
+        "zh": "我们去电影院。"
       }
     ],
     "sourceEntryType": "main"
@@ -3720,8 +3720,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Frau.",
-        "zh": "今天我们谈论女人。"
+        "de": "Die Frau liest ein Buch.",
+        "zh": "这位女士在读一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -3748,8 +3748,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Licht.",
-        "zh": "今天我们谈论灯；光。"
+        "de": "Das Licht ist hell.",
+        "zh": "灯光很亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -3757,7 +3757,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0332",
     "german": "Hunger",
-    "translation": "饥饿（单数形式）",
+    "translation": "饥饿",
     "kind": "noun",
     "article": "der",
     "topic": "饮食",
@@ -3776,8 +3776,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Hunger.",
-        "zh": "今天我们谈论饥饿（单数形式）。"
+        "de": "Ich habe Hunger.",
+        "zh": "我饿了。"
       }
     ],
     "sourceEntryType": "main"
@@ -3804,8 +3804,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bahnsteig.",
-        "zh": "今天我们谈论站台。"
+        "de": "Der Zug steht am Bahnsteig.",
+        "zh": "火车停在站台。"
       }
     ],
     "sourceEntryType": "main"
@@ -3832,8 +3832,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Alter.",
-        "zh": "今天我们谈论年龄。"
+        "de": "Mein Alter ist zwanzig.",
+        "zh": "我的年龄是二十岁。"
       }
     ],
     "sourceEntryType": "main"
@@ -3850,7 +3850,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -3860,8 +3860,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Kleidung.",
-        "zh": "今天我们谈论衣物。"
+        "de": "Die Kleidung ist warm.",
+        "zh": "这件衣服很暖和。"
       }
     ],
     "sourceEntryType": "main"
@@ -3878,7 +3878,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -3888,8 +3888,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Reparatur.",
-        "zh": "今天我们谈论修理。"
+        "de": "Die Reparatur dauert lange.",
+        "zh": "修理需要很久。"
       }
     ],
     "sourceEntryType": "derived"
@@ -3906,7 +3906,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -3916,8 +3916,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Sommer.",
-        "zh": "今天我们谈论夏天。"
+        "de": "Im Sommer schwimme ich.",
+        "zh": "夏天我去游泳。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -3936,7 +3936,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -3945,8 +3945,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Lied.",
-        "zh": "今天我们谈论歌曲。"
+        "de": "Das Lied ist schön.",
+        "zh": "这首歌很好听。"
       }
     ],
     "sourceEntryType": "main"
@@ -3973,8 +3973,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Geburtsjahr.",
-        "zh": "今天我们谈论出生年份。"
+        "de": "Mein Geburtsjahr ist 1990.",
+        "zh": "我的出生年份是1990年。"
       }
     ],
     "sourceEntryType": "main"
@@ -4000,8 +4000,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mieten.",
-        "zh": "我们今天想租用。"
+        "de": "Ich miete ein Fahrrad.",
+        "zh": "我租了一辆自行车。"
       }
     ],
     "sourceEntryType": "main"
@@ -4009,7 +4009,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0431",
     "german": "Milch",
-    "translation": "牛奶（单数形式）",
+    "translation": "牛奶",
     "kind": "noun",
     "article": "die",
     "topic": "饮食",
@@ -4028,8 +4028,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Milch.",
-        "zh": "今天我们谈论牛奶（单数形式）。"
+        "de": "Ich trinke morgens Milch.",
+        "zh": "我早上喝牛奶。"
       }
     ],
     "sourceEntryType": "main"
@@ -4037,7 +4037,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0137",
     "german": "Bus",
-    "translation": "公车",
+    "translation": "公交车",
     "kind": "noun",
     "article": "der",
     "plural": "-se",
@@ -4057,8 +4057,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bus.",
-        "zh": "今天我们谈论公车。"
+        "de": "Der Bus fährt um acht Uhr.",
+        "zh": "公交车在八点发车。"
       }
     ],
     "sourceEntryType": "main"
@@ -4066,16 +4066,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0015",
     "german": "an",
-    "translation": "在……旁；向",
+    "translation": "在…旁",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……上；到……上",
-      "来自从 ... 里出来"
+      "从……起",
+      "在……上",
+      "来自"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -4084,8 +4084,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „an“ bedeutet hier „在……旁；向“.",
-        "zh": "“an”在这里表示“在……旁；向”。"
+        "de": "Das Bild hängt an der Wand.",
+        "zh": "画挂在墙上。"
       }
     ],
     "sourceEntryType": "main"
@@ -4103,7 +4103,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -4113,8 +4113,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Laden.",
-        "zh": "今天我们谈论店铺。"
+        "de": "Ich kaufe Brot im Laden.",
+        "zh": "我在店里买面包。"
       }
     ],
     "sourceEntryType": "main"
@@ -4122,7 +4122,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0518",
     "german": "Schalter",
-    "translation": "柜台；开关",
+    "translation": "柜台",
     "kind": "noun",
     "article": "der",
     "topic": "公共服务",
@@ -4131,7 +4131,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -4141,8 +4141,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schalter.",
-        "zh": "今天我们谈论柜台；开关。"
+        "de": "Ich frage am Schalter nach dem Fahrplan.",
+        "zh": "我在柜台询问时刻表。"
       }
     ],
     "sourceEntryType": "main"
@@ -4159,7 +4159,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -4169,8 +4169,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Herbst.",
-        "zh": "今天我们谈论秋天。"
+        "de": "Im Herbst fallen die Blätter.",
+        "zh": "秋天树叶掉落。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -4188,7 +4188,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -4197,8 +4197,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Party.",
-        "zh": "今天我们谈论派对。"
+        "de": "Wir feiern eine Party am Samstag.",
+        "zh": "我们星期六举办派对。"
       }
     ],
     "sourceEntryType": "main"
@@ -4225,8 +4225,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Geburtsort.",
-        "zh": "今天我们谈论出生地。"
+        "de": "Mein Geburtsort ist Berlin.",
+        "zh": "我的出生地是柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -4253,8 +4253,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Miete.",
-        "zh": "今天我们谈论房租。"
+        "de": "Die Miete ist vierhundert Euro.",
+        "zh": "房租是四百欧元。"
       }
     ],
     "sourceEntryType": "derived"
@@ -4262,7 +4262,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0462",
     "german": "Obst",
-    "translation": "水果（单数形式）",
+    "translation": "水果",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -4281,8 +4281,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Obst.",
-        "zh": "今天我们谈论水果（单数形式）。"
+        "de": "Ich esse jeden Tag Obst.",
+        "zh": "我每天吃水果。"
       }
     ],
     "sourceEntryType": "main"
@@ -4309,8 +4309,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Doppelzimmer.",
-        "zh": "今天我们谈论双人客房。"
+        "de": "Wir buchen ein Doppelzimmer im Hotel.",
+        "zh": "我们在酒店预订双人客房。"
       }
     ],
     "sourceEntryType": "main"
@@ -4318,7 +4318,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0016",
     "german": "anbieten",
-    "translation": "提供，给予",
+    "translation": "提供",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -4336,8 +4336,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute anbieten.",
-        "zh": "我们今天想提供，给予。"
+        "de": "Der Verkäufer bietet mir Hilfe an.",
+        "zh": "店员向我提供帮助。"
       }
     ],
     "sourceEntryType": "main"
@@ -4355,7 +4355,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -4365,8 +4365,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schuh.",
-        "zh": "今天我们谈论鞋子。"
+        "de": "Ich probiere den Schuh im Laden.",
+        "zh": "我在店里试这只鞋。"
       }
     ],
     "sourceEntryType": "main"
@@ -4392,8 +4392,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute telefonieren.",
-        "zh": "我们今天想打电话。"
+        "de": "Ich telefoniere mit meiner Mutter.",
+        "zh": "我给妈妈打电话。"
       }
     ],
     "sourceEntryType": "main"
@@ -4410,7 +4410,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "树",
-      "花朵",
+      "花",
       "摄氏度"
     ],
     "distractorIds": [
@@ -4420,8 +4420,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Winter.",
-        "zh": "今天我们谈论冬天。"
+        "de": "Im Winter schneit es oft.",
+        "zh": "冬天经常下雪。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -4438,7 +4438,7 @@ export const A1_WORDS = [
     "distractors": [
       "庆祝",
       "看电视",
-      "玩，打，踢上映，放映"
+      "玩"
     ],
     "distractorIds": [
       "a1-alpha-0218",
@@ -4447,8 +4447,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schwimmen.",
-        "zh": "我们今天想游泳。"
+        "de": "Wir schwimmen im See.",
+        "zh": "我们在湖里游泳。"
       }
     ],
     "sourceEntryType": "main"
@@ -4475,8 +4475,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Geburtstag.",
-        "zh": "今天我们谈论生日。"
+        "de": "Mein Geburtstag ist im März.",
+        "zh": "我的生日在三月。"
       }
     ],
     "sourceEntryType": "main"
@@ -4503,8 +4503,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Möbel (pl.).",
-        "zh": "今天我们谈论家具。"
+        "de": "Die Möbel stehen im Wohnzimmer.",
+        "zh": "家具摆在客厅里。"
       }
     ],
     "sourceEntryType": "main"
@@ -4531,8 +4531,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Öl.",
-        "zh": "今天我们谈论油。"
+        "de": "Das Öl steht im Schrank.",
+        "zh": "油放在柜子里。"
       }
     ],
     "sourceEntryType": "main"
@@ -4559,8 +4559,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Einzelzimmer.",
-        "zh": "今天我们谈论单人客房。"
+        "de": "Ich buche ein Einzelzimmer.",
+        "zh": "我预订一个单人客房。"
       }
     ],
     "sourceEntryType": "main"
@@ -4568,7 +4568,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0018",
     "german": "ander-",
-    "translation": "其它",
+    "translation": "其他的",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -4576,18 +4576,18 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "两个（物，事）",
-      "最好的"
+      "两个",
+      "你的"
     ],
     "distractorIds": [
       "a1-alpha-0010",
       "a1-alpha-0093",
-      "a1-alpha-0105"
+      "a1-alpha-0153"
     ],
     "examples": [
       {
-        "de": "Das Wort „ander-“ bedeutet hier „其它“.",
-        "zh": "“ander-”在这里表示“其它”。"
+        "de": "Ich nehme das andere Buch.",
+        "zh": "我拿那本别的书。"
       }
     ],
     "sourceEntryType": "main"
@@ -4604,7 +4604,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -4614,8 +4614,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Speisekarte.",
-        "zh": "今天我们谈论菜单。"
+        "de": "Die Speisekarte liegt auf dem Tisch.",
+        "zh": "菜单放在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -4623,7 +4623,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0588",
     "german": "Telefon",
-    "translation": "电话电话",
+    "translation": "电话",
     "kind": "noun",
     "article": "das",
     "topic": "公共服务",
@@ -4632,7 +4632,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -4642,8 +4642,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Telefon.",
-        "zh": "今天我们谈论电话电话。"
+        "de": "Das Telefon klingelt laut.",
+        "zh": "电话响得很大。"
       }
     ],
     "sourceEntryType": "derived"
@@ -4651,7 +4651,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0566",
     "german": "spielen",
-    "translation": "玩，打，踢上映，放映",
+    "translation": "玩",
     "kind": "verb",
     "topic": "休闲与娱乐",
     "topicIds": [
@@ -4669,8 +4669,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute spielen.",
-        "zh": "我们今天想玩，打，踢上映，放映。"
+        "de": "Wir spielen im Park.",
+        "zh": "我们在公园玩。"
       }
     ],
     "sourceEntryType": "main"
@@ -4678,7 +4678,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0291",
     "german": "Großeltern (pl.)",
-    "translation": "祖父母；外祖父母",
+    "translation": "祖父母",
     "kind": "noun",
     "article": "die",
     "topic": "个人与家庭",
@@ -4697,8 +4697,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Großeltern (pl.).",
-        "zh": "今天我们谈论祖父母；外祖父母。"
+        "de": "Meine Großeltern besuchen uns.",
+        "zh": "我的祖父母来拜访我们。"
       }
     ],
     "sourceEntryType": "main"
@@ -4726,8 +4726,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schlüssel.",
-        "zh": "今天我们谈论钥匙。"
+        "de": "Der Schlüssel liegt auf dem Tisch.",
+        "zh": "钥匙放在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -4755,8 +4755,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Preis.",
-        "zh": "今天我们谈论价格。"
+        "de": "Der Preis ist zu hoch.",
+        "zh": "价格太高。"
       }
     ],
     "sourceEntryType": "main"
@@ -4783,8 +4783,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Fahrer.",
-        "zh": "今天我们谈论司机。"
+        "de": "Der Fahrer öffnet die Tür.",
+        "zh": "司机打开门。"
       }
     ],
     "sourceEntryType": "derived"
@@ -4810,8 +4810,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute anfangen.",
-        "zh": "我们今天想开始。"
+        "de": "Der Kurs fängt um neun Uhr an.",
+        "zh": "课程九点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -4829,7 +4829,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "特价商品",
-      "金钱（单数形式）",
+      "钱",
       "商店"
     ],
     "distractorIds": [
@@ -4839,8 +4839,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Tasche.",
-        "zh": "今天我们谈论包。"
+        "de": "Die Tasche ist rot.",
+        "zh": "包是红色的。"
       }
     ],
     "sourceEntryType": "main"
@@ -4857,7 +4857,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -4867,8 +4867,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Vorwahl.",
-        "zh": "今天我们谈论电话区号。"
+        "de": "Die Vorwahl beginnt mit 0.",
+        "zh": "区号以0开头。"
       }
     ],
     "sourceEntryType": "main"
@@ -4876,7 +4876,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0567",
     "german": "Sport",
-    "translation": "体育（单数形式）",
+    "translation": "体育",
     "kind": "noun",
     "article": "der",
     "topic": "休闲与娱乐",
@@ -4886,7 +4886,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -4895,8 +4895,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Sport.",
-        "zh": "今天我们谈论体育（单数形式）。"
+        "de": "Sport macht mir Spaß.",
+        "zh": "体育让我开心。"
       }
     ],
     "sourceEntryType": "main"
@@ -4904,7 +4904,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0292",
     "german": "Großmutter",
-    "translation": "祖母，外祖母",
+    "translation": "祖母",
     "kind": "noun",
     "article": "die",
     "topic": "个人与家庭",
@@ -4923,8 +4923,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Großmutter.",
-        "zh": "今天我们谈论祖母，外祖母。"
+        "de": "Meine Großmutter kocht Suppe.",
+        "zh": "我的祖母做汤。"
       }
     ],
     "sourceEntryType": "derived"
@@ -4951,8 +4951,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Schwimmbad.",
-        "zh": "今天我们谈论游泳池。"
+        "de": "Wir gehen ins Schwimmbad.",
+        "zh": "我们去游泳池。"
       }
     ],
     "sourceEntryType": "derived"
@@ -4960,7 +4960,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0500",
     "german": "Reis",
-    "translation": "米饭（单数形式）",
+    "translation": "米饭",
     "kind": "noun",
     "article": "der",
     "topic": "饮食",
@@ -4979,8 +4979,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Reis.",
-        "zh": "今天我们谈论米饭（单数形式）。"
+        "de": "Ich esse Reis.",
+        "zh": "我吃米饭。"
       }
     ],
     "sourceEntryType": "main"
@@ -5008,8 +5008,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Fahrkarte.",
-        "zh": "今天我们谈论车票。"
+        "de": "Ich kaufe eine Fahrkarte.",
+        "zh": "我买一张车票。"
       }
     ],
     "sourceEntryType": "main"
@@ -5017,7 +5017,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0020",
     "german": "Anfang",
-    "translation": "开端，开始",
+    "translation": "开始",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -5036,8 +5036,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Anfang.",
-        "zh": "今天我们谈论开端，开始。"
+        "de": "Der Film hat einen guten Anfang.",
+        "zh": "这部电影有一个好的开始。"
       }
     ],
     "sourceEntryType": "derived"
@@ -5052,9 +5052,9 @@ export const A1_WORDS = [
       "shopping"
     ],
     "distractors": [
-      "点",
+      "点餐",
       "付款",
-      "购物，采购"
+      "购物"
     ],
     "distractorIds": [
       "a1-alpha-0106",
@@ -5063,8 +5063,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute verkaufen.",
-        "zh": "我们今天想出售。"
+        "de": "Sie verkauft ein Buch.",
+        "zh": "她卖一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -5081,7 +5081,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "地址",
-      "信息；问讯",
+      "信息",
       "银行"
     ],
     "distractorIds": [
@@ -5091,8 +5091,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Zoll.",
-        "zh": "今天我们谈论海关。"
+        "de": "Der Zoll prüft das Gepäck.",
+        "zh": "海关检查行李。"
       }
     ],
     "sourceEntryType": "main"
@@ -5100,7 +5100,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0582",
     "german": "tanzen",
-    "translation": "舞蹈，跳舞",
+    "translation": "跳舞",
     "kind": "verb",
     "topic": "休闲与娱乐",
     "topicIds": [
@@ -5118,8 +5118,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute tanzen.",
-        "zh": "我们今天想舞蹈，跳舞。"
+        "de": "Wir tanzen im Garten.",
+        "zh": "我们在花园里跳舞。"
       }
     ],
     "sourceEntryType": "main"
@@ -5127,7 +5127,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0293",
     "german": "Großvater",
-    "translation": "祖父，外祖父",
+    "translation": "祖父",
     "kind": "noun",
     "article": "der",
     "topic": "个人与家庭",
@@ -5146,8 +5146,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Großvater.",
-        "zh": "今天我们谈论祖父，外祖父。"
+        "de": "Mein Großvater liest.",
+        "zh": "我的祖父在读书。"
       }
     ],
     "sourceEntryType": "derived"
@@ -5174,8 +5174,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Sofa.",
-        "zh": "今天我们谈论沙发。"
+        "de": "Das Sofa ist blau.",
+        "zh": "沙发是蓝色的。"
       }
     ],
     "sourceEntryType": "main"
@@ -5183,7 +5183,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0507",
     "german": "Restaurant",
-    "translation": "饭馆",
+    "translation": "餐馆",
     "kind": "noun",
     "article": "das",
     "plural": "-s",
@@ -5203,8 +5203,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Restaurant.",
-        "zh": "今天我们谈论饭馆。"
+        "de": "Wir essen im Restaurant.",
+        "zh": "我们在餐馆吃饭。"
       }
     ],
     "sourceEntryType": "main"
@@ -5232,8 +5232,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Fahrrad.",
-        "zh": "今天我们谈论自行车。"
+        "de": "Ich fahre mit dem Fahrrad.",
+        "zh": "我骑自行车。"
       }
     ],
     "sourceEntryType": "main"
@@ -5259,8 +5259,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute anklicken.",
-        "zh": "我们今天想点击。"
+        "de": "Klicken Sie bitte das Bild an.",
+        "zh": "请点击图片。"
       }
     ],
     "sourceEntryType": "main"
@@ -5268,26 +5268,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0675",
     "german": "zahlen",
-    "translation": "付款，支付",
+    "translation": "付款",
     "kind": "verb",
     "topic": "购物与日用品",
     "topicIds": [
       "shopping"
     ],
     "distractors": [
-      "点",
-      "付款",
-      "购物，采购"
+      "点餐",
+      "购物",
+      "邀请"
     ],
     "distractorIds": [
       "a1-alpha-0106",
-      "a1-alpha-0109",
-      "a1-alpha-0182"
+      "a1-alpha-0182",
+      "a1-alpha-0183"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute zahlen.",
-        "zh": "我们今天想付款，支付。"
+        "de": "Wir wollen jetzt zahlen.",
+        "zh": "我们现在想付款。"
       }
     ],
     "sourceEntryType": "main"
@@ -5295,7 +5295,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0622",
     "german": "Verein",
-    "translation": "协会；俱乐部",
+    "translation": "俱乐部",
     "kind": "noun",
     "article": "der",
     "topic": "休闲与娱乐",
@@ -5305,7 +5305,7 @@ export const A1_WORDS = [
     "distractors": [
       "例子",
       "迪斯科舞厅",
-      "庆祝；节日相关"
+      "庆祝活动"
     ],
     "distractorIds": [
       "a1-alpha-0095",
@@ -5314,8 +5314,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Verein.",
-        "zh": "今天我们谈论协会；俱乐部。"
+        "de": "Der Verein trifft sich.",
+        "zh": "俱乐部正在聚会。"
       }
     ],
     "sourceEntryType": "main"
@@ -5343,8 +5343,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Haar.",
-        "zh": "今天我们谈论头发。"
+        "de": "Ihr Haar ist lang.",
+        "zh": "她的头发很长。"
       }
     ],
     "sourceEntryType": "main"
@@ -5372,8 +5372,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Treppe.",
-        "zh": "今天我们谈论楼梯。"
+        "de": "Die Treppe ist neu.",
+        "zh": "楼梯是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -5400,8 +5400,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Saft.",
-        "zh": "今天我们谈论果汁。"
+        "de": "Ich trinke einen Saft.",
+        "zh": "我喝一杯果汁。"
       }
     ],
     "sourceEntryType": "main"
@@ -5409,7 +5409,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0233",
     "german": "Abflug",
-    "translation": "起飞；出发",
+    "translation": "起飞",
     "kind": "noun",
     "article": "der",
     "topic": "旅行与交通",
@@ -5428,8 +5428,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Abflug.",
-        "zh": "今天我们谈论起飞；出发。"
+        "de": "Der Abflug ist um acht Uhr.",
+        "zh": "起飞时间是八点。"
       }
     ],
     "sourceEntryType": "derived"
@@ -5455,8 +5455,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute ankommen.",
-        "zh": "我们今天想到达。"
+        "de": "Wir kommen um neun an.",
+        "zh": "我们九点到达。"
       }
     ],
     "sourceEntryType": "main"
@@ -5482,8 +5482,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „1 Euro“ bedeutet hier „一欧元“.",
-        "zh": "“1 Euro”在这里表示“一欧元”。"
+        "de": "Das kostet 1 Euro.",
+        "zh": "这要一欧元。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -5511,8 +5511,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Kind.",
-        "zh": "今天我们谈论孩子。"
+        "de": "Das Kind spielt im Garten.",
+        "zh": "这个孩子在花园里玩。"
       }
     ],
     "sourceEntryType": "main"
@@ -5538,8 +5538,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute vermieten.",
-        "zh": "我们今天想出租。"
+        "de": "Wir vermieten die Wohnung.",
+        "zh": "我们出租这套公寓。"
       }
     ],
     "sourceEntryType": "main"
@@ -5566,8 +5566,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Salat.",
-        "zh": "今天我们谈论沙拉。"
+        "de": "Ich esse einen Salat.",
+        "zh": "我吃一份沙拉。"
       }
     ],
     "sourceEntryType": "main"
@@ -5594,8 +5594,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Flughafen.",
-        "zh": "今天我们谈论机场。"
+        "de": "Der Flughafen ist groß.",
+        "zh": "机场很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -5621,8 +5621,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute ankreuzen.",
-        "zh": "我们今天想勾选。"
+        "de": "Bitte kreuzen Sie das Kästchen an.",
+        "zh": "请在方框里勾选。"
       }
     ],
     "sourceEntryType": "main"
@@ -5648,8 +5648,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „100 Cent“ bedeutet hier „一百欧分“.",
-        "zh": "“100 Cent”在这里表示“一百欧分”。"
+        "de": "Das kostet 100 Cent.",
+        "zh": "这要一百欧分。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -5676,8 +5676,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kopf.",
-        "zh": "今天我们谈论头。"
+        "de": "Mein Kopf tut weh.",
+        "zh": "我的头疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -5704,8 +5704,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Vermieter.",
-        "zh": "今天我们谈论房东。"
+        "de": "Der Vermieter ruft an.",
+        "zh": "房东打电话来。"
       }
     ],
     "sourceEntryType": "derived"
@@ -5713,7 +5713,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0515",
     "german": "Salz",
-    "translation": "盐（单数形式）",
+    "translation": "盐",
     "kind": "noun",
     "article": "das",
     "topic": "饮食",
@@ -5732,8 +5732,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Salz.",
-        "zh": "今天我们谈论盐（单数形式）。"
+        "de": "Ich brauche Salz für die Suppe.",
+        "zh": "我需要盐来做汤。"
       }
     ],
     "sourceEntryType": "main"
@@ -5760,8 +5760,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Flugzeug.",
-        "zh": "今天我们谈论飞机。"
+        "de": "Das Flugzeug startet bald.",
+        "zh": "飞机很快起飞。"
       }
     ],
     "sourceEntryType": "main"
@@ -5787,8 +5787,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute anmachen.",
-        "zh": "我们今天想打开（电器）。"
+        "de": "Er macht das Licht an.",
+        "zh": "他打开灯。"
       }
     ],
     "sourceEntryType": "main"
@@ -5814,8 +5814,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Meter = 1 m“ bedeutet hier „一米“.",
-        "zh": "“ein Meter = 1 m”在这里表示“一米”。"
+        "de": "Ein Meter ist ein gängiges Längenmaß.",
+        "zh": "一米是常用的长度单位。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -5843,8 +5843,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mann.",
-        "zh": "今天我们谈论男人。"
+        "de": "Der Mann liest ein Buch.",
+        "zh": "那位男人在读一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -5852,7 +5852,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0671",
     "german": "Wohnung",
-    "translation": "公寓，住房",
+    "translation": "公寓",
     "kind": "noun",
     "article": "die",
     "plural": "-en",
@@ -5872,8 +5872,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Wohnung.",
-        "zh": "今天我们谈论公寓，住房。"
+        "de": "Die Wohnung liegt im Stadtzentrum.",
+        "zh": "这间公寓位于市中心。"
       }
     ],
     "sourceEntryType": "derived"
@@ -5900,8 +5900,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Tee.",
-        "zh": "今天我们谈论茶。"
+        "de": "Der Tee duftet nach Kräutern.",
+        "zh": "这杯茶散发着草本的香味。"
       }
     ],
     "sourceEntryType": "main"
@@ -5909,7 +5909,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0266",
     "german": "Gepäck",
-    "translation": "行李（单数形式）",
+    "translation": "行李",
     "kind": "noun",
     "article": "das",
     "topic": "旅行与交通",
@@ -5928,8 +5928,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Gepäck.",
-        "zh": "今天我们谈论行李（单数形式）。"
+        "de": "Das Gepäck steht neben dem Ausgang.",
+        "zh": "行李放在出口旁边。"
       }
     ],
     "sourceEntryType": "main"
@@ -5937,7 +5937,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0026",
     "german": "(sich) anmelden",
-    "translation": "报名；登记",
+    "translation": "报名",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -5955,8 +5955,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns anmelden.",
-        "zh": "我们今天想报名；登记。"
+        "de": "Ich melde mich für den Kurs an.",
+        "zh": "我报名参加了课程。"
       }
     ],
     "sourceEntryType": "main"
@@ -5982,8 +5982,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Zentimeter = 1 cm“ bedeutet hier „一厘米“.",
-        "zh": "“ein Zentimeter = 1 cm”在这里表示“一厘米”。"
+        "de": "Ein Zentimeter ist kaum sichtbar.",
+        "zh": "一厘米几乎看不见。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6011,8 +6011,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mensch.",
-        "zh": "今天我们谈论人。"
+        "de": "Der Mensch braucht täglich Wasser.",
+        "zh": "人每天需要水。"
       }
     ],
     "sourceEntryType": "main"
@@ -6040,8 +6040,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Tomate.",
-        "zh": "今天我们谈论西红柿。"
+        "de": "Die Tomate schmeckt frisch.",
+        "zh": "番茄尝起来很新鲜。"
       }
     ],
     "sourceEntryType": "main"
@@ -6069,8 +6069,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Hotel.",
-        "zh": "今天我们谈论酒店。"
+        "de": "Das Hotel bietet kostenloses WLAN.",
+        "zh": "这家酒店提供免费无线网络。"
       }
     ],
     "sourceEntryType": "main"
@@ -6097,8 +6097,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Anmeldung.",
-        "zh": "今天我们谈论报名表。"
+        "de": "Die Anmeldung ist noch offen.",
+        "zh": "报名表仍然开放。"
       }
     ],
     "sourceEntryType": "derived"
@@ -6125,8 +6125,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Meter fünfzehn = 1“ bedeutet hier „一米十五“.",
-        "zh": "“ein Meter fünfzehn = 1”在这里表示“一米十五”。"
+        "de": "Ein Meter fünfzehn ist die Breite des Regals.",
+        "zh": "一米十五是书架的宽度。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6154,8 +6154,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Mutter.",
-        "zh": "今天我们谈论母亲。"
+        "de": "Die Mutter liest eine Geschichte vor.",
+        "zh": "妈妈在给孩子朗读故事。"
       }
     ],
     "sourceEntryType": "main"
@@ -6182,8 +6182,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Wein.",
-        "zh": "今天我们谈论葡萄酒。"
+        "de": "Der Wein schmeckt fruchtig.",
+        "zh": "这杯酒尝起来果香。"
       }
     ],
     "sourceEntryType": "main"
@@ -6211,8 +6211,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Koffer.",
-        "zh": "今天我们谈论行李箱。"
+        "de": "Der Koffer liegt im Schrank.",
+        "zh": "行李箱放在柜子里。"
       }
     ],
     "sourceEntryType": "main"
@@ -6239,8 +6239,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Anrede.",
-        "zh": "今天我们谈论称呼，称谓。"
+        "de": "Die Anrede im Brief ist förmlich.",
+        "zh": "信中的称呼是正式的。"
       }
     ],
     "sourceEntryType": "main"
@@ -6266,8 +6266,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „zweihundert Kilometer = 200 km“ bedeutet hier „二百公里“.",
-        "zh": "“zweihundert Kilometer = 200 km”在这里表示“二百公里”。"
+        "de": "Wir fahren zweihundert Kilometer nach Hamburg.",
+        "zh": "我们开车去汉堡，路程二百公里。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6295,8 +6295,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Name.",
-        "zh": "今天我们谈论名字。"
+        "de": "Mein Name ist Anna.",
+        "zh": "我的名字是安娜。"
       }
     ],
     "sourceEntryType": "main"
@@ -6324,8 +6324,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Pass.",
-        "zh": "今天我们谈论护照。"
+        "de": "Ich habe einen Pass.",
+        "zh": "我有一本护照。"
       }
     ],
     "sourceEntryType": "main"
@@ -6333,7 +6333,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0029",
     "german": "anrufen",
-    "translation": "给 … 打电话",
+    "translation": "打电话",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -6351,8 +6351,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute anrufen.",
-        "zh": "我们今天想给 … 打电话。"
+        "de": "Ich rufe dich an.",
+        "zh": "我给你打电话。"
       }
     ],
     "sourceEntryType": "main"
@@ -6378,8 +6378,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Quadratmeter = 1 m²“ bedeutet hier „一平方米“.",
-        "zh": "“ein Quadratmeter = 1 m²”在这里表示“一平方米”。"
+        "de": "Der Teppich ist ein Quadratmeter groß.",
+        "zh": "这块地毯有一平方米。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6407,8 +6407,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Partner.",
-        "zh": "今天我们谈论男性合作伙伴。"
+        "de": "Mein Partner arbeitet hier.",
+        "zh": "我的男性合作伙伴在这里工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -6434,8 +6434,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute Rad fahren.",
-        "zh": "我们今天想骑自行车。"
+        "de": "Ich gehe Rad fahren.",
+        "zh": "我去骑自行车。"
       }
     ],
     "sourceEntryType": "main"
@@ -6443,7 +6443,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0030",
     "german": "Anruf",
-    "translation": "电话，通话",
+    "translation": "来电",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -6463,8 +6463,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Anruf.",
-        "zh": "今天我们谈论电话，通话。"
+        "de": "Ich bekomme einen Anruf.",
+        "zh": "我收到一个来电。"
       }
     ],
     "sourceEntryType": "main"
@@ -6490,8 +6490,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Grad unter Null = -1°“ bedeutet hier „零下一度“.",
-        "zh": "“ein Grad unter Null = -1°”在这里表示“零下一度”。"
+        "de": "Es ist ein Grad unter Null.",
+        "zh": "气温是零下一度。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6499,7 +6499,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0476",
     "german": "Partnerin",
-    "translation": "女性合作伙伴",
+    "translation": "伴侣",
     "kind": "noun",
     "article": "die",
     "plural": "-nen",
@@ -6519,8 +6519,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Partnerin.",
-        "zh": "今天我们谈论女性合作伙伴。"
+        "de": "Meine Partnerin studiert Medizin.",
+        "zh": "我的伴侣在学医。"
       }
     ],
     "sourceEntryType": "main"
@@ -6546,8 +6546,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute reisen.",
-        "zh": "我们今天想旅游。"
+        "de": "Wir reisen nach Berlin.",
+        "zh": "我们去柏林旅行。"
       }
     ],
     "sourceEntryType": "main"
@@ -6574,8 +6574,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Anrufbeantworter.",
-        "zh": "今天我们谈论电话答录机。"
+        "de": "Der Anrufbeantworter ist voll.",
+        "zh": "电话答录机已满。"
       }
     ],
     "sourceEntryType": "derived"
@@ -6601,8 +6601,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „vier Grad über Null = +4°“ bedeutet hier „零上四度“.",
-        "zh": "“vier Grad über Null = +4°”在这里表示“零上四度”。"
+        "de": "Heute ist vier Grad über Null.",
+        "zh": "今天气温是零上四度。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6630,8 +6630,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Schwester.",
-        "zh": "今天我们谈论姐妹。"
+        "de": "Meine Schwester heißt Lisa.",
+        "zh": "我的姐妹叫莉萨。"
       }
     ],
     "sourceEntryType": "main"
@@ -6658,8 +6658,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Reise.",
-        "zh": "今天我们谈论旅行。"
+        "de": "Die Reise dauert drei Tage.",
+        "zh": "这次旅行持续三天。"
       }
     ],
     "sourceEntryType": "derived"
@@ -6687,8 +6687,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Ansage.",
-        "zh": "今天我们谈论广播通知。"
+        "de": "Die Ansage ist laut.",
+        "zh": "广播通知很响。"
       }
     ],
     "sourceEntryType": "main"
@@ -6714,8 +6714,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Prozent = 1 %“ bedeutet hier „百分之一“.",
-        "zh": "“ein Prozent = 1 %”在这里表示“百分之一”。"
+        "de": "Das ist ein Prozent Rabatt.",
+        "zh": "这是百分之一的折扣。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6743,8 +6743,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Sohn.",
-        "zh": "今天我们谈论儿子。"
+        "de": "Mein Sohn spielt im Garten.",
+        "zh": "我的儿子在花园里玩。"
       }
     ],
     "sourceEntryType": "main"
@@ -6772,8 +6772,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Reisebüro.",
-        "zh": "今天我们谈论旅行社。"
+        "de": "Das Reisebüro hat günstige Tickets.",
+        "zh": "旅行社有便宜的票。"
       }
     ],
     "sourceEntryType": "derived"
@@ -6781,7 +6781,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0033",
     "german": "Anschluss",
-    "translation": "连接；换乘衔接",
+    "translation": "换乘",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -6800,8 +6800,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Anschluss.",
-        "zh": "今天我们谈论连接；换乘衔接。"
+        "de": "Der Anschluss kommt in fünf Minuten.",
+        "zh": "换乘将在五分钟后到达。"
       }
     ],
     "sourceEntryType": "main"
@@ -6827,8 +6827,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Liter = 1 l“ bedeutet hier „一升“.",
-        "zh": "“ein Liter = 1 l”在这里表示“一升”。"
+        "de": "Ein Liter Wasser kostet zwei Euro.",
+        "zh": "一升水的价格是两欧元。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6856,8 +6856,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Tochter.",
-        "zh": "今天我们谈论女儿。"
+        "de": "Meine Tochter liest ein Buch.",
+        "zh": "我的女儿在读一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -6865,7 +6865,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0504",
     "german": "Reiseführer",
-    "translation": "旅行指南书",
+    "translation": "旅行指南",
     "kind": "noun",
     "article": "der",
     "topic": "旅行与交通",
@@ -6884,8 +6884,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Reiseführer.",
-        "zh": "今天我们谈论旅行指南书。"
+        "de": "Der Reiseführer zeigt die Stadtkarte.",
+        "zh": "旅行指南展示了城市地图。"
       }
     ],
     "sourceEntryType": "derived"
@@ -6911,8 +6911,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute an sein.",
-        "zh": "我们今天想开着。"
+        "de": "Bitte das Gerät an sein lassen.",
+        "zh": "请把设备保持开启。"
       }
     ],
     "sourceEntryType": "main"
@@ -6938,8 +6938,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Gramm = 1 g“ bedeutet hier „一克“.",
-        "zh": "“ein Gramm = 1 g”在这里表示“一克”。"
+        "de": "Ein Gramm Zucker kostet fünf Cent.",
+        "zh": "一克糖的价格是五分钱。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -6967,8 +6967,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Vater.",
-        "zh": "今天我们谈论父亲。"
+        "de": "Mein Vater kocht gern.",
+        "zh": "我的父亲喜欢做饭。"
       }
     ],
     "sourceEntryType": "main"
@@ -6976,7 +6976,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0517",
     "german": "S-Bahn",
-    "translation": "轻轨铁路",
+    "translation": "轻轨",
     "kind": "noun",
     "article": "die",
     "topic": "旅行与交通",
@@ -6995,8 +6995,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die S-Bahn.",
-        "zh": "今天我们谈论轻轨铁路。"
+        "de": "Ich fahre mit der S-Bahn.",
+        "zh": "我乘坐S-Bahn。"
       }
     ],
     "sourceEntryType": "main"
@@ -7022,8 +7022,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute antworten.",
-        "zh": "我们今天想回答。"
+        "de": "Er kann nicht sofort antworten.",
+        "zh": "他不能马上回答。"
       }
     ],
     "sourceEntryType": "main"
@@ -7049,8 +7049,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Pfund = 500 g“ bedeutet hier „一磅（五百克）“.",
-        "zh": "“ein Pfund = 500 g”在这里表示“一磅（五百克）”。"
+        "de": "Ein Pfund Äpfel kostet drei Euro.",
+        "zh": "一磅苹果的价格是三欧元。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -7078,8 +7078,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Verwandte.",
-        "zh": "今天我们谈论亲属。"
+        "de": "Meine Verwandte kommen morgen.",
+        "zh": "我的亲属明天来。"
       }
     ],
     "sourceEntryType": "main"
@@ -7087,7 +7087,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0549",
     "german": "weg sein",
-    "translation": "不在；离开了",
+    "translation": "不在",
     "kind": "verb",
     "topic": "旅行与交通",
     "topicIds": [
@@ -7105,8 +7105,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute weg sein.",
-        "zh": "我们今天想不在；离开了。"
+        "de": "Sie will nicht mehr weg sein.",
+        "zh": "她不想再离开。"
       }
     ],
     "sourceEntryType": "derived"
@@ -7114,7 +7114,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0036",
     "german": "Antwort",
-    "translation": "答案，回答",
+    "translation": "答案",
     "kind": "noun",
     "article": "die",
     "plural": "-en",
@@ -7134,8 +7134,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Antwort.",
-        "zh": "今天我们谈论答案，回答。"
+        "de": "Die Antwort ist richtig.",
+        "zh": "答案是正确的。"
       }
     ],
     "sourceEntryType": "derived"
@@ -7161,8 +7161,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Kilo(gramm) = 1 kg“ bedeutet hier „一千克“.",
-        "zh": "“ein Kilo(gramm) = 1 kg”在这里表示“一千克”。"
+        "de": "Ich kaufe ein Kilo Äpfel.",
+        "zh": "我买了一公斤苹果。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -7170,7 +7170,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0634",
     "german": "Vorname",
-    "translation": "名",
+    "translation": "名字",
     "kind": "noun",
     "article": "der",
     "plural": "-n",
@@ -7190,8 +7190,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Vorname.",
-        "zh": "今天我们谈论名。"
+        "de": "Mein Vorname ist Anna.",
+        "zh": "我的名字是安娜。"
       }
     ],
     "sourceEntryType": "main"
@@ -7219,8 +7219,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Straße.",
-        "zh": "今天我们谈论街道。"
+        "de": "Die Straße ist breit.",
+        "zh": "这条街道很宽。"
       }
     ],
     "sourceEntryType": "main"
@@ -7228,7 +7228,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0037",
     "german": "Anzeige",
-    "translation": "告示牌",
+    "translation": "告示",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -7248,8 +7248,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Anzeige.",
-        "zh": "今天我们谈论告示牌。"
+        "de": "Die Anzeige im Fenster ist neu.",
+        "zh": "窗户上的告示是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -7275,8 +7275,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „schwarz“ bedeutet hier „黑色“.",
-        "zh": "“schwarz”在这里表示“黑色”。"
+        "de": "Der Mantel ist schwarz.",
+        "zh": "这件外套是黑色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7291,19 +7291,19 @@ export const A1_WORDS = [
       "person"
     ],
     "distractors": [
-      "欧洲",
-      "桌子",
-      "椅子"
+      "你好",
+      "最喜欢的",
+      "再见"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-111",
-      "tisch",
-      "stuhl"
+      "a1-alpha-0304",
+      "a1-alpha-0410",
+      "a1-alpha-0603"
     ],
     "examples": [
       {
-        "de": "Das Wort „Deutschland“ bedeutet hier „德国“.",
-        "zh": "“Deutschland”在这里表示“德国”。"
+        "de": "Deutschland liegt in Europa.",
+        "zh": "德国位于欧洲。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7330,8 +7330,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Straßenbahn.",
-        "zh": "今天我们谈论有轨电车。"
+        "de": "Die Straßenbahn fährt heute pünktlich.",
+        "zh": "有轨电车今天准时。"
       }
     ],
     "sourceEntryType": "main"
@@ -7357,8 +7357,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns anziehen.",
-        "zh": "我们今天想穿上。"
+        "de": "Ich ziehe mich schnell an.",
+        "zh": "我快速穿好衣服。"
       }
     ],
     "sourceEntryType": "main"
@@ -7384,8 +7384,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „grau“ bedeutet hier „灰色“.",
-        "zh": "“grau”在这里表示“灰色”。"
+        "de": "Der Himmel ist grau.",
+        "zh": "天空是灰色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7412,8 +7412,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „der/die Deutsche“ bedeutet hier „德国人“.",
-        "zh": "“der/die Deutsche”在这里表示“德国人”。"
+        "de": "Der Deutsche trinkt Kaffee.",
+        "zh": "这位德国人喝咖啡。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7441,8 +7441,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Taxi.",
-        "zh": "今天我们谈论出租车。"
+        "de": "Das Taxi kommt gleich.",
+        "zh": "出租车马上就来。"
       }
     ],
     "sourceEntryType": "main"
@@ -7450,7 +7450,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0039",
     "german": "Apartment",
-    "translation": "公寓套间",
+    "translation": "公寓",
     "kind": "noun",
     "article": "das",
     "plural": "-s",
@@ -7470,8 +7470,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Apartment.",
-        "zh": "今天我们谈论公寓套间。"
+        "de": "Das Apartment ist klein.",
+        "zh": "这间公寓很小。"
       }
     ],
     "sourceEntryType": "main"
@@ -7497,8 +7497,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „blau“ bedeutet hier „蓝色“.",
-        "zh": "“blau”在这里表示“蓝色”。"
+        "de": "Das T-Shirt ist blau.",
+        "zh": "这件T恤是蓝色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7506,7 +7506,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-109",
     "german": "ein Deutscher",
-    "translation": "一个德国男性／女性；德国人",
+    "translation": "一个德国人",
     "kind": "phrase",
     "plural": "eine Deutsche, Deutsche",
     "topic": "个人与家庭",
@@ -7514,19 +7514,19 @@ export const A1_WORDS = [
       "person"
     ],
     "distractors": [
-      "说明自己的来源地或国籍",
-      "国家、居民、国籍",
-      "土耳其、土耳其人、土耳其的"
+      "说明自己的来源或国籍",
+      "例如",
+      "一米"
     ],
     "distractorIds": [
       "a1-group-countries-nationalities-114",
-      "a1-group-countries-nationalities-115",
-      "a1-group-countries-nationalities-116"
+      "a1-alpha-0096",
+      "a1-group-measurements-095"
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Deutscher“ bedeutet hier „一个德国男性／女性；德国人“.",
-        "zh": "“ein Deutscher”在这里表示“一个德国男性／女性；德国人”。"
+        "de": "Ein Deutscher spricht Englisch.",
+        "zh": "一个德国人说英语。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -7554,8 +7554,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Ticket.",
-        "zh": "今天我们谈论票。"
+        "de": "Das Ticket kostet fünf Euro.",
+        "zh": "这张票要五欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -7563,7 +7563,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0041",
     "german": "Appetit",
-    "translation": "胃口，食欲（单数形式）",
+    "translation": "食欲",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -7582,8 +7582,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Appetit.",
-        "zh": "今天我们谈论胃口，食欲（单数形式）。"
+        "de": "Ich habe keinen Appetit.",
+        "zh": "我没有食欲。"
       }
     ],
     "sourceEntryType": "main"
@@ -7609,8 +7609,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „grün“ bedeutet hier „绿色“.",
-        "zh": "“grün”在这里表示“绿色”。"
+        "de": "Der Apfel ist grün.",
+        "zh": "这个苹果是绿色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7618,7 +7618,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-110",
     "german": "deutsch",
-    "translation": "德国的；德语",
+    "translation": "德国的；德语的",
     "kind": "adjective",
     "topic": "个人与家庭",
     "topicIds": [
@@ -7636,8 +7636,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „deutsch“ bedeutet hier „德国的；德语“.",
-        "zh": "“deutsch”在这里表示“德国的；德语”。"
+        "de": "Ich bin deutsch.",
+        "zh": "我是德国人。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7645,7 +7645,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0618",
     "german": "Urlaub",
-    "translation": "假日，休假",
+    "translation": "假期",
     "kind": "noun",
     "article": "der",
     "topic": "旅行与交通",
@@ -7664,8 +7664,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Urlaub.",
-        "zh": "今天我们谈论假日，休假。"
+        "de": "Wir machen Urlaub.",
+        "zh": "我们去度假。"
       }
     ],
     "sourceEntryType": "main"
@@ -7681,18 +7681,18 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "独自",
-      "很快，即将",
-      "酒吧"
+      "打开（状态）",
+      "很快"
     ],
     "distractorIds": [
       "a1-alpha-0011",
-      "a1-alpha-0082",
-      "a1-alpha-0086"
+      "a1-alpha-0052",
+      "a1-alpha-0082"
     ],
     "examples": [
       {
-        "de": "Das Wort „auch“ bedeutet hier „也“.",
-        "zh": "“auch”在这里表示“也”。"
+        "de": "Ich habe auch Hunger.",
+        "zh": "我也饿。"
       }
     ],
     "sourceEntryType": "main"
@@ -7700,7 +7700,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-colors-123",
     "german": "weiß",
-    "translation": "白色",
+    "translation": "白色的",
     "kind": "adjective",
     "topic": "购物与日用品",
     "topicIds": [
@@ -7718,8 +7718,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „weiß“ bedeutet hier „白色“.",
-        "zh": "“weiß”在这里表示“白色”。"
+        "de": "Das T-Shirt ist weiß.",
+        "zh": "这件T恤是白色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7728,25 +7728,25 @@ export const A1_WORDS = [
     "id": "a1-group-countries-nationalities-111",
     "german": "Europa",
     "translation": "欧洲",
-    "kind": "other",
+    "kind": "noun",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "德国",
-      "桌子",
-      "椅子"
+      "家庭",
+      "朋友（男）",
+      "手臂"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-107",
-      "tisch",
-      "stuhl"
+      "familie",
+      "freund",
+      "a1-alpha-0046"
     ],
     "examples": [
       {
-        "de": "Das Wort „Europa“ bedeutet hier „欧洲“.",
-        "zh": "“Europa”在这里表示“欧洲”。"
+        "de": "Europa liegt im Westen.",
+        "zh": "欧洲在西边。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7774,8 +7774,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Zimmer.",
-        "zh": "今天我们谈论房间。"
+        "de": "Mein Zimmer ist klein.",
+        "zh": "我的房间很小。"
       }
     ],
     "sourceEntryType": "main"
@@ -7783,16 +7783,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0049",
     "german": "auf",
-    "translation": "在……上；到……上",
+    "translation": "在……上",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "来自从 ... 里出来"
+      "从……起",
+      "在…旁",
+      "来自"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -7801,8 +7801,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „auf“ bedeutet hier „在……上；到……上“.",
-        "zh": "“auf”在这里表示“在……上；到……上”。"
+        "de": "Die Tasche liegt auf dem Stuhl.",
+        "zh": "包放在椅子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -7810,7 +7810,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-colors-124",
     "german": "rot",
-    "translation": "红色",
+    "translation": "红色的",
     "kind": "adjective",
     "topic": "购物与日用品",
     "topicIds": [
@@ -7828,8 +7828,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „rot“ bedeutet hier „红色“.",
-        "zh": "“rot”在这里表示“红色”。"
+        "de": "Die Rose ist rot.",
+        "zh": "玫瑰是红色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7855,8 +7855,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „Europäer“ bedeutet hier „欧洲人“.",
-        "zh": "“Europäer”在这里表示“欧洲人”。"
+        "de": "Er ist ein Europäer.",
+        "zh": "他是欧洲人。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7884,8 +7884,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Zug.",
-        "zh": "今天我们谈论火车。"
+        "de": "Der Zug kommt pünktlich.",
+        "zh": "火车准时到达。"
       }
     ],
     "sourceEntryType": "main"
@@ -7913,8 +7913,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Aufgabe.",
-        "zh": "今天我们谈论任务。"
+        "de": "Die Aufgabe ist leicht.",
+        "zh": "这项任务很容易。"
       }
     ],
     "sourceEntryType": "main"
@@ -7922,7 +7922,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-colors-125",
     "german": "gelb",
-    "translation": "黄色",
+    "translation": "黄色的",
     "kind": "adjective",
     "topic": "购物与日用品",
     "topicIds": [
@@ -7940,8 +7940,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „gelb“ bedeutet hier „黄色“.",
-        "zh": "“gelb”在这里表示“黄色”。"
+        "de": "Der Ball ist gelb.",
+        "zh": "球是黄色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7956,7 +7956,7 @@ export const A1_WORDS = [
       "person"
     ],
     "distractors": [
-      "德国的；德语",
+      "德国的；德语的",
       "失业的",
       "自动的"
     ],
@@ -7967,8 +7967,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „europäisch“ bedeutet hier „欧洲的“.",
-        "zh": "“europäisch”在这里表示“欧洲的”。"
+        "de": "Das Essen ist europäisch.",
+        "zh": "这道菜是欧洲风味的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -7995,8 +7995,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Norden.",
-        "zh": "今天我们谈论北方。"
+        "de": "Wir fahren nach Norden.",
+        "zh": "我们向北行驶。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -8022,8 +8022,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute aufhören.",
-        "zh": "我们今天想停止。"
+        "de": "Hör auf zu reden.",
+        "zh": "请停止说话。"
       }
     ],
     "sourceEntryType": "main"
@@ -8031,7 +8031,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-colors-126",
     "german": "braun",
-    "translation": "棕色",
+    "translation": "棕色的",
     "kind": "adjective",
     "topic": "购物与日用品",
     "topicIds": [
@@ -8049,8 +8049,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „braun“ bedeutet hier „棕色“.",
-        "zh": "“braun”在这里表示“棕色”。"
+        "de": "Der Tisch ist braun.",
+        "zh": "桌子是棕色的。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -8058,26 +8058,26 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-114",
     "german": "Angabe der eigenen Herkunft oder Nationalität",
-    "translation": "说明自己的来源地或国籍",
+    "translation": "说明自己的来源或国籍",
     "kind": "phrase",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "一个德国男性／女性；德国人",
-      "国家、居民、国籍",
-      "土耳其、土耳其人、土耳其的"
+      "一个德国人",
+      "例如",
+      "一米"
     ],
     "distractorIds": [
       "a1-group-countries-nationalities-109",
-      "a1-group-countries-nationalities-115",
-      "a1-group-countries-nationalities-116"
+      "a1-alpha-0096",
+      "a1-group-measurements-095"
     ],
     "examples": [
       {
-        "de": "Das Wort „Angabe der eigenen Herkunft oder Nationalität“ bedeutet hier „说明自己的来源地或国籍“.",
-        "zh": "“Angabe der eigenen Herkunft oder Nationalität”在这里表示“说明自己的来源地或国籍”。"
+        "de": "Die Angabe der eigenen Herkunft oder Nationalität steht im Formular.",
+        "zh": "表格里有填写本人来源或国籍的栏目。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -8104,8 +8104,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Süden.",
-        "zh": "今天我们谈论南方。"
+        "de": "Im Süden ist es warm.",
+        "zh": "南方很暖。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -8113,26 +8113,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0052",
     "german": "auf sein",
-    "translation": "开着",
-    "kind": "verb",
+    "translation": "打开（状态）",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "很快"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0082"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute auf sein.",
-        "zh": "我们今天想开着。"
+        "de": "Der Herd ist auf.",
+        "zh": "炉子是开的。"
       }
     ],
     "sourceEntryType": "main"
@@ -8140,27 +8140,27 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-115",
     "german": "Land",
-    "translation": "国家、居民、国籍",
-    "kind": "phrase",
+    "translation": "国家",
+    "kind": "noun",
     "plural": "Bewohner, Nationalität",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "一个德国男性／女性；德国人",
-      "说明自己的来源地或国籍",
-      "土耳其、土耳其人、土耳其的"
+      "家庭",
+      "朋友（男）",
+      "手臂"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-109",
-      "a1-group-countries-nationalities-114",
-      "a1-group-countries-nationalities-116"
+      "familie",
+      "freund",
+      "a1-alpha-0046"
     ],
     "examples": [
       {
-        "de": "Das Wort „Land“ bedeutet hier „国家、居民、国籍“.",
-        "zh": "“Land”在这里表示“国家、居民、国籍”。"
+        "de": "Das Land ist klein.",
+        "zh": "这个国家很小。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -8187,8 +8187,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Westen.",
-        "zh": "今天我们谈论西方。"
+        "de": "Im Westen ist es kühl.",
+        "zh": "西方很凉。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -8214,8 +8214,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute aufstehen.",
-        "zh": "我们今天想起床。"
+        "de": "Ich stehe um sieben auf.",
+        "zh": "我七点起床。"
       }
     ],
     "sourceEntryType": "main"
@@ -8223,27 +8223,27 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-116",
     "german": "Türkei",
-    "translation": "土耳其、土耳其人、土耳其的",
-    "kind": "phrase",
+    "translation": "土耳其",
+    "kind": "noun",
     "plural": "Türke/Türkin, türkisch",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "一个德国男性／女性；德国人",
-      "说明自己的来源地或国籍",
-      "国家、居民、国籍"
+      "家庭",
+      "朋友（男）",
+      "手臂"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-109",
-      "a1-group-countries-nationalities-114",
-      "a1-group-countries-nationalities-115"
+      "familie",
+      "freund",
+      "a1-alpha-0046"
     ],
     "examples": [
       {
-        "de": "Das Wort „Türkei“ bedeutet hier „土耳其、土耳其人、土耳其的“.",
-        "zh": "“Türkei”在这里表示“土耳其、土耳其人、土耳其的”。"
+        "de": "Die Türkei liegt in Asien.",
+        "zh": "土耳其位于亚洲。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -8270,8 +8270,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Osten.",
-        "zh": "今天我们谈论东方。"
+        "de": "Im Osten ist es sonnig.",
+        "zh": "东方很阳光。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -8279,16 +8279,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0056",
     "german": "aus",
-    "translation": "来自从 ... 里出来",
+    "translation": "来自",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -8297,8 +8297,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „aus“ bedeutet hier „来自从 ... 里出来“.",
-        "zh": "“aus”在这里表示“来自从 ... 里出来”。"
+        "de": "Ich komme aus Berlin.",
+        "zh": "我来自柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -8306,27 +8306,27 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-117",
     "german": "Finnland",
-    "translation": "芬兰、芬兰人、芬兰的",
-    "kind": "phrase",
+    "translation": "芬兰",
+    "kind": "noun",
     "plural": "Finne/Finnin, finnisch",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "一个德国男性／女性；德国人",
-      "说明自己的来源地或国籍",
-      "国家、居民、国籍"
+      "家庭",
+      "朋友（男）",
+      "手臂"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-109",
-      "a1-group-countries-nationalities-114",
-      "a1-group-countries-nationalities-115"
+      "familie",
+      "freund",
+      "a1-alpha-0046"
     ],
     "examples": [
       {
-        "de": "Das Wort „Finnland“ bedeutet hier „芬兰、芬兰人、芬兰的“.",
-        "zh": "“Finnland”在这里表示“芬兰、芬兰人、芬兰的”。"
+        "de": "Finnland liegt im Norden.",
+        "zh": "芬兰位于北部。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -8352,8 +8352,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute ausfüllen.",
-        "zh": "我们今天想填写。"
+        "de": "Bitte das Formular ausfüllen.",
+        "zh": "请填写表格。"
       }
     ],
     "sourceEntryType": "main"
@@ -8361,27 +8361,27 @@ export const A1_WORDS = [
   {
     "id": "a1-group-countries-nationalities-118",
     "german": "Mexiko",
-    "translation": "墨西哥、墨西哥人、墨西哥的",
-    "kind": "phrase",
+    "translation": "墨西哥",
+    "kind": "noun",
     "plural": "Mexikaner/Mexikanerin, mexikanisch",
     "topic": "个人与家庭",
     "topicIds": [
       "person"
     ],
     "distractors": [
-      "一个德国男性／女性；德国人",
-      "说明自己的来源地或国籍",
-      "国家、居民、国籍"
+      "家庭",
+      "朋友（男）",
+      "手臂"
     ],
     "distractorIds": [
-      "a1-group-countries-nationalities-109",
-      "a1-group-countries-nationalities-114",
-      "a1-group-countries-nationalities-115"
+      "familie",
+      "freund",
+      "a1-alpha-0046"
     ],
     "examples": [
       {
-        "de": "Das Wort „Mexiko“ bedeutet hier „墨西哥、墨西哥人、墨西哥的“.",
-        "zh": "“Mexiko”在这里表示“墨西哥、墨西哥人、墨西哥的”。"
+        "de": "Mexiko hat warme Strände.",
+        "zh": "墨西哥有温暖的海滩。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -8408,8 +8408,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ausgang.",
-        "zh": "今天我们谈论出口。"
+        "de": "Der Ausgang ist rechts.",
+        "zh": "出口在右边。"
       }
     ],
     "sourceEntryType": "main"
@@ -8417,7 +8417,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0061",
     "german": "Ausland",
-    "translation": "外国",
+    "translation": "国外",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -8436,8 +8436,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Ausland.",
-        "zh": "今天我们谈论外国。"
+        "de": "Ich reise ins Ausland.",
+        "zh": "我去国外旅行。"
       }
     ],
     "sourceEntryType": "main"
@@ -8465,8 +8465,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ausländer.",
-        "zh": "今天我们谈论外国人。"
+        "de": "Der Ausländer spricht Deutsch.",
+        "zh": "这位外国人说德语。"
       }
     ],
     "sourceEntryType": "derived"
@@ -8482,8 +8482,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "老的旧的",
-      "出名的",
-      "占用的；忙线的"
+      "著名的",
+      "占用的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -8492,8 +8492,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ausländisch“ bedeutet hier „外国的“.",
-        "zh": "“ausländisch”在这里表示“外国的”。"
+        "de": "Das Essen ist ausländisch.",
+        "zh": "这食物是外国的。"
       }
     ],
     "sourceEntryType": "derived"
@@ -8501,7 +8501,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0064",
     "german": "ausmachen",
-    "translation": "关掉；约定",
+    "translation": "关掉",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8519,8 +8519,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute ausmachen.",
-        "zh": "我们今天想关掉；约定。"
+        "de": "Ich mache das Licht aus.",
+        "zh": "我把灯关掉。"
       }
     ],
     "sourceEntryType": "main"
@@ -8528,7 +8528,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0065",
     "german": "Aussage",
-    "translation": "陈述，说法，观点",
+    "translation": "陈述",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -8548,8 +8548,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Aussage.",
-        "zh": "今天我们谈论陈述，说法，观点。"
+        "de": "Seine Aussage war klar.",
+        "zh": "他的陈述很清楚。"
       }
     ],
     "sourceEntryType": "main"
@@ -8575,8 +8575,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute aussehen.",
-        "zh": "我们今天想看起来。"
+        "de": "Er sieht müde aus.",
+        "zh": "他看起来很累。"
       }
     ],
     "sourceEntryType": "main"
@@ -8584,26 +8584,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0067",
     "german": "aus sein",
-    "translation": "在关机（状态）",
+    "translation": "关机",
     "kind": "phrase",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "熟人",
       "大约",
-      "她的；给他；他（第四格）"
+      "多少",
+      "等等"
     ],
     "distractorIds": [
-      "a1-alpha-0098",
       "a1-alpha-0142",
-      "a1-alpha-0334"
+      "a1-alpha-0662",
+      "a1-group-numbers-039"
     ],
     "examples": [
       {
-        "de": "Das Wort „aus sein“ bedeutet hier „在关机（状态）“.",
-        "zh": "“aus sein”在这里表示“在关机（状态）”。"
+        "de": "Der Fernseher ist aus.",
+        "zh": "电视关机了。"
       }
     ],
     "sourceEntryType": "main"
@@ -8611,7 +8611,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0068",
     "german": "aussteigen",
-    "translation": "下车，下船",
+    "translation": "下车",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8629,8 +8629,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute aussteigen.",
-        "zh": "我们今天想下车，下船。"
+        "de": "Ich steige an der Haltestelle aus.",
+        "zh": "我在站台下车。"
       }
     ],
     "sourceEntryType": "main"
@@ -8657,8 +8657,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ausweis.",
-        "zh": "今天我们谈论证件。"
+        "de": "Ich zeige meinen Ausweis.",
+        "zh": "我出示我的证件。"
       }
     ],
     "sourceEntryType": "main"
@@ -8666,7 +8666,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0070",
     "german": "(sich) ausziehen",
-    "translation": "脱下；搬出",
+    "translation": "脱下",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8684,8 +8684,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns ausziehen.",
-        "zh": "我们今天想脱下；搬出。"
+        "de": "Ich ziehe mich zu Hause aus.",
+        "zh": "我在家里脱衣服。"
       }
     ],
     "sourceEntryType": "main"
@@ -8713,8 +8713,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Baby.",
-        "zh": "今天我们谈论婴儿。"
+        "de": "Das Baby schläft friedlich.",
+        "zh": "宝宝安静地睡着。"
       }
     ],
     "sourceEntryType": "main"
@@ -8741,8 +8741,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Bäckerei.",
-        "zh": "今天我们谈论面包店。"
+        "de": "Wir gehen in die Bäckerei.",
+        "zh": "我们去面包店。"
       }
     ],
     "sourceEntryType": "main"
@@ -8750,7 +8750,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0082",
     "german": "bald",
-    "translation": "很快，即将",
+    "translation": "很快",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8759,17 +8759,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "酒吧"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0086"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „bald“ bedeutet hier „很快，即将“.",
-        "zh": "“bald”在这里表示“很快，即将”。"
+        "de": "Wir kommen bald zurück.",
+        "zh": "我们很快回来。"
       }
     ],
     "sourceEntryType": "main"
@@ -8778,25 +8778,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0086",
     "german": "bar",
     "translation": "酒吧",
-    "kind": "adverb",
+    "kind": "noun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "独自",
-      "也",
-      "很快，即将"
+      "学校",
+      "书",
+      "城市"
     ],
     "distractorIds": [
-      "a1-alpha-0011",
-      "a1-alpha-0048",
-      "a1-alpha-0082"
+      "schule",
+      "buch",
+      "stadt"
     ],
     "examples": [
       {
-        "de": "Das Wort „bar“ bedeutet hier „酒吧“.",
-        "zh": "“bar”在这里表示“酒吧”。"
+        "de": "Wir treffen uns in der Bar.",
+        "zh": "我们在酒吧见面。"
       }
     ],
     "sourceEntryType": "main"
@@ -8823,8 +8823,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bauch.",
-        "zh": "今天我们谈论腹部。"
+        "de": "Mein Bauch tut weh.",
+        "zh": "我的肚子疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -8832,7 +8832,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0090",
     "german": "bedeuten",
-    "translation": "意味着，意思是",
+    "translation": "意味着",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8850,8 +8850,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bedeuten.",
-        "zh": "我们今天想意味着，意思是。"
+        "de": "Was bedeutet das Wort?",
+        "zh": "这个词是什么意思？"
       }
     ],
     "sourceEntryType": "main"
@@ -8859,7 +8859,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0091",
     "german": "beginnen",
-    "translation": "开始开始",
+    "translation": "开始",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -8877,8 +8877,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute beginnen.",
-        "zh": "我们今天想开始开始。"
+        "de": "Der Film beginnt um acht.",
+        "zh": "电影八点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -8886,16 +8886,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0092",
     "german": "bei",
-    "translation": "在 … 地点在 … 的时间",
+    "translation": "在…地点/时间",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -8904,8 +8904,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „bei“ bedeutet hier „在 … 地点在 … 的时间“.",
-        "zh": "“bei”在这里表示“在 … 地点在 … 的时间”。"
+        "de": "Ich warte bei der Schule.",
+        "zh": "我在学校等候。"
       }
     ],
     "sourceEntryType": "main"
@@ -8913,7 +8913,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0093",
     "german": "beide",
-    "translation": "两个（物，事）",
+    "translation": "两个",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -8921,18 +8921,18 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "最好的"
+      "其他的",
+      "你的"
     ],
     "distractorIds": [
       "a1-alpha-0010",
       "a1-alpha-0018",
-      "a1-alpha-0105"
+      "a1-alpha-0153"
     ],
     "examples": [
       {
-        "de": "Das Wort „beide“ bedeutet hier „两个（物，事）“.",
-        "zh": "“beide”在这里表示“两个（物，事）”。"
+        "de": "Beide Kinder lachen.",
+        "zh": "两个孩子在笑。"
       }
     ],
     "sourceEntryType": "main"
@@ -8940,7 +8940,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0097",
     "german": "bekannt",
-    "translation": "出名的",
+    "translation": "著名的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -8949,7 +8949,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "占用的；忙线的"
+      "占用的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -8958,8 +8958,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „bekannt“ bedeutet hier „出名的“.",
-        "zh": "“bekannt”在这里表示“出名的”。"
+        "de": "Der Sänger ist sehr bekannt.",
+        "zh": "这位歌手非常有名。"
       }
     ],
     "sourceEntryType": "main"
@@ -8968,26 +8968,26 @@ export const A1_WORDS = [
     "id": "a1-alpha-0098",
     "german": "der/die Bekannte",
     "translation": "熟人",
-    "kind": "phrase",
+    "kind": "noun",
     "plural": "-n",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "大约",
-      "她的；给他；他（第四格）"
+      "学校",
+      "书",
+      "城市"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0142",
-      "a1-alpha-0334"
+      "schule",
+      "buch",
+      "stadt"
     ],
     "examples": [
       {
-        "de": "Das Wort „der/die Bekannte“ bedeutet hier „熟人“.",
-        "zh": "“der/die Bekannte”在这里表示“熟人”。"
+        "de": "Ich treffe meine Bekannte heute.",
+        "zh": "我今天见我的熟人。"
       }
     ],
     "sourceEntryType": "main"
@@ -9013,8 +9013,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bekommen.",
-        "zh": "我们今天想得到得了（某种症状或疾病）。"
+        "de": "Ich habe eine Erkältung bekommen.",
+        "zh": "我得了感冒。"
       }
     ],
     "sourceEntryType": "main"
@@ -9040,8 +9040,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute benutzen.",
-        "zh": "我们今天想使用。"
+        "de": "Ich benutze das Handy.",
+        "zh": "我使用这部手机。"
       }
     ],
     "sourceEntryType": "main"
@@ -9049,7 +9049,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0102",
     "german": "besetzt",
-    "translation": "占用的；忙线的",
+    "translation": "占用的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -9058,7 +9058,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9067,8 +9067,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „besetzt“ bedeutet hier „占用的；忙线的“.",
-        "zh": "“besetzt”在这里表示“占用的；忙线的”。"
+        "de": "Das Büro ist besetzt.",
+        "zh": "办公室已被占用。"
       }
     ],
     "sourceEntryType": "main"
@@ -9094,8 +9094,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute besichtigen.",
-        "zh": "我们今天想参观。"
+        "de": "Wir wollen das Museum besichtigen.",
+        "zh": "我们想参观博物馆。"
       }
     ],
     "sourceEntryType": "main"
@@ -9112,7 +9112,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9121,8 +9121,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „besser“ bedeutet hier „更好“.",
-        "zh": "“besser”在这里表示“更好”。"
+        "de": "Dieses Buch ist besser.",
+        "zh": "这本书更好。"
       }
     ],
     "sourceEntryType": "main"
@@ -9131,25 +9131,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0105",
     "german": "best-",
     "translation": "最好的",
-    "kind": "determiner",
+    "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "老的旧的",
+      "外国的",
+      "著名的"
     ],
     "distractorIds": [
-      "a1-alpha-0010",
-      "a1-alpha-0018",
-      "a1-alpha-0093"
+      "a1-alpha-0013",
+      "a1-alpha-0063",
+      "a1-alpha-0097"
     ],
     "examples": [
       {
-        "de": "Das Wort „best-“ bedeutet hier „最好的“.",
-        "zh": "“best-”在这里表示“最好的”。"
+        "de": "Paul ist mein bester Freund.",
+        "zh": "保罗是我最好的朋友。"
       }
     ],
     "sourceEntryType": "main"
@@ -9157,7 +9157,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0107",
     "german": "besuchen",
-    "translation": "参观，拜访",
+    "translation": "拜访",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9175,8 +9175,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute besuchen.",
-        "zh": "我们今天想参观，拜访。"
+        "de": "Ich möchte meine Tante besuchen.",
+        "zh": "我想拜访我的阿姨。"
       }
     ],
     "sourceEntryType": "main"
@@ -9204,8 +9204,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Bild.",
-        "zh": "今天我们谈论图画。"
+        "de": "Das Bild ist schön.",
+        "zh": "这幅画很漂亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -9222,7 +9222,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9231,8 +9231,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „billig“ bedeutet hier „便宜的“.",
-        "zh": "“billig”在这里表示“便宜的”。"
+        "de": "Das T-Shirt ist billig.",
+        "zh": "这件 T 恤很便宜。"
       }
     ],
     "sourceEntryType": "main"
@@ -9240,16 +9240,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0114",
     "german": "bis",
-    "translation": "直到直到 … 为止",
+    "translation": "直到",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -9258,8 +9258,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „bis“ bedeutet hier „直到直到 … 为止“.",
-        "zh": "“bis”在这里表示“直到直到 … 为止”。"
+        "de": "Wir warten bis morgen.",
+        "zh": "我们等到明天。"
       }
     ],
     "sourceEntryType": "main"
@@ -9267,26 +9267,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0115",
     "german": "bisschen",
-    "translation": "一点点",
-    "kind": "verb",
+    "translation": "一点儿",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bisschen.",
-        "zh": "我们今天想一点点。"
+        "de": "Ich bin ein bisschen müde.",
+        "zh": "我有点儿累。"
       }
     ],
     "sourceEntryType": "main"
@@ -9302,7 +9302,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "谢谢",
-      "是的真的，的确",
+      "是的，真的，的确",
       "不是"
     ],
     "distractorIds": [
@@ -9312,8 +9312,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „bitte“ bedeutet hier „请“.",
-        "zh": "“bitte”在这里表示“请”。"
+        "de": "Bitte, setz dich hin.",
+        "zh": "请坐。"
       }
     ],
     "sourceEntryType": "main"
@@ -9321,7 +9321,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0117",
     "german": "Bitte",
-    "translation": "请",
+    "translation": "请求",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -9341,8 +9341,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Bitte.",
-        "zh": "今天我们谈论请。"
+        "de": "Ich habe eine Bitte.",
+        "zh": "我有一个请求。"
       }
     ],
     "sourceEntryType": "derived"
@@ -9350,7 +9350,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0118",
     "german": "bitten",
-    "translation": "请求，恳求",
+    "translation": "请求",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9368,8 +9368,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bitten.",
-        "zh": "我们今天想请求，恳求。"
+        "de": "Kann ich dich um Hilfe bitten?",
+        "zh": "我可以请你帮忙吗？"
       }
     ],
     "sourceEntryType": "derived"
@@ -9386,7 +9386,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9395,8 +9395,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „bitter“ bedeutet hier „苦的“.",
-        "zh": "“bitter”在这里表示“苦的”。"
+        "de": "Der Kaffee ist bitter.",
+        "zh": "咖啡是苦的。"
       }
     ],
     "sourceEntryType": "main"
@@ -9404,7 +9404,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0120",
     "german": "bleiben",
-    "translation": "停留，逗留",
+    "translation": "停留",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9422,8 +9422,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bleiben.",
-        "zh": "我们今天想停留，逗留。"
+        "de": "Ich bleibe zu Hause.",
+        "zh": "我待在家里。"
       }
     ],
     "sourceEntryType": "main"
@@ -9451,8 +9451,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bleistift.",
-        "zh": "今天我们谈论铅笔。"
+        "de": "Der Bleistift liegt auf dem Tisch.",
+        "zh": "铅笔在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -9460,7 +9460,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0122",
     "german": "Blick",
-    "translation": "目光；景色",
+    "translation": "目光",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -9479,8 +9479,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Blick.",
-        "zh": "今天我们谈论目光；景色。"
+        "de": "Ich habe einen kurzen Blick.",
+        "zh": "我扫了一眼。"
       }
     ],
     "sourceEntryType": "main"
@@ -9488,7 +9488,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0124",
     "german": "Bogen",
-    "translation": "表格；纸张",
+    "translation": "纸张",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -9507,8 +9507,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Bogen.",
-        "zh": "今天我们谈论表格；纸张。"
+        "de": "Der Bogen liegt auf dem Tisch.",
+        "zh": "这张纸在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -9516,7 +9516,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0125",
     "german": "böse",
-    "translation": "生气的；坏的",
+    "translation": "生气的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -9525,7 +9525,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9534,8 +9534,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „böse“ bedeutet hier „生气的；坏的“.",
-        "zh": "“böse”在这里表示“生气的；坏的”。"
+        "de": "Er ist heute böse.",
+        "zh": "他今天生气。"
       }
     ],
     "sourceEntryType": "main"
@@ -9543,7 +9543,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0126",
     "german": "brauchen",
-    "translation": "需要需要",
+    "translation": "需要",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9561,8 +9561,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute brauchen.",
-        "zh": "我们今天想需要需要。"
+        "de": "Ich brauche ein Buch.",
+        "zh": "我需要一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -9579,7 +9579,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -9588,8 +9588,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „breit“ bedeutet hier „宽阔的“.",
-        "zh": "“breit”在这里表示“宽阔的”。"
+        "de": "Der Weg ist breit.",
+        "zh": "道路很宽阔。"
       }
     ],
     "sourceEntryType": "main"
@@ -9615,8 +9615,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute bringen.",
-        "zh": "我们今天想带来。"
+        "de": "Ich bringe das Buch.",
+        "zh": "我把书带来。"
       }
     ],
     "sourceEntryType": "main"
@@ -9644,8 +9644,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Brötchen.",
-        "zh": "今天我们谈论小面包。"
+        "de": "Das Brötchen ist frisch.",
+        "zh": "小面包是新鲜的。"
       }
     ],
     "sourceEntryType": "main"
@@ -9673,8 +9673,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Buchstabe.",
-        "zh": "今天我们谈论字母。"
+        "de": "Der Buchstabe A ist groß.",
+        "zh": "字母A是大写的。"
       }
     ],
     "sourceEntryType": "main"
@@ -9702,8 +9702,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Café.",
-        "zh": "今天我们谈论咖啡馆。"
+        "de": "Das Café ist offen.",
+        "zh": "咖啡馆是开的。"
       }
     ],
     "sourceEntryType": "main"
@@ -9711,7 +9711,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0140",
     "german": "CD",
-    "translation": "CD",
+    "translation": "光盘",
     "kind": "noun",
     "article": "die",
     "plural": "-s",
@@ -9731,8 +9731,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die CD.",
-        "zh": "今天我们谈论CD。"
+        "de": "Die CD spielt Musik.",
+        "zh": "光盘播放音乐。"
       }
     ],
     "sourceEntryType": "main"
@@ -9747,19 +9747,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "她的；给他；他（第四格）"
+      "关机",
+      "多少",
+      "等等"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0334"
+      "a1-alpha-0662",
+      "a1-group-numbers-039"
     ],
     "examples": [
       {
-        "de": "Das Wort „circa/ca.“ bedeutet hier „大约“.",
-        "zh": "“circa/ca.”在这里表示“大约”。"
+        "de": "Das Buch kostet ca. 5 Euro.",
+        "zh": "这本书大约5欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -9787,8 +9787,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Computer.",
-        "zh": "今天我们谈论计算机。"
+        "de": "Der Computer ist neu.",
+        "zh": "计算机是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -9796,7 +9796,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0144",
     "german": "da",
-    "translation": "那儿，那里在这种情况下在那时",
+    "translation": "那里",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9805,17 +9805,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „da“ bedeutet hier „那儿，那里在这种情况下在那时“.",
-        "zh": "“da”在这里表示“那儿，那里在这种情况下在那时”。"
+        "de": "Ich bin jetzt da.",
+        "zh": "我现在在那里。"
       }
     ],
     "sourceEntryType": "main"
@@ -9843,8 +9843,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Dame.",
-        "zh": "今天我们谈论女士。"
+        "de": "Die Dame kauft Brot.",
+        "zh": "这位女士买面包。"
       }
     ],
     "sourceEntryType": "main"
@@ -9853,25 +9853,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0146",
     "german": "daneben",
     "translation": "在旁边",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute daneben.",
-        "zh": "我们今天想在旁边。"
+        "de": "Der Stuhl steht daneben.",
+        "zh": "椅子就在旁边。"
       }
     ],
     "sourceEntryType": "main"
@@ -9897,8 +9897,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute danken.",
-        "zh": "我们今天想感谢。"
+        "de": "Wir danken euch.",
+        "zh": "我们感谢你们。"
       }
     ],
     "sourceEntryType": "main"
@@ -9906,7 +9906,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0148",
     "german": "Dank",
-    "translation": "感谢",
+    "translation": "感谢（名词）",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -9925,8 +9925,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Dank.",
-        "zh": "今天我们谈论感谢。"
+        "de": "Vielen Dank für deine Hilfe.",
+        "zh": "非常感谢你的帮助。"
       }
     ],
     "sourceEntryType": "derived"
@@ -9942,7 +9942,7 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "请",
-      "是的真的，的确",
+      "是的，真的，的确",
       "不是"
     ],
     "distractorIds": [
@@ -9952,8 +9952,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „danke“ bedeutet hier „谢谢“.",
-        "zh": "“danke”在这里表示“谢谢”。"
+        "de": "Danke, das ist nett.",
+        "zh": "谢谢，这很好。"
       }
     ],
     "sourceEntryType": "derived"
@@ -9961,7 +9961,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0150",
     "german": "dann",
-    "translation": "此后、然后",
+    "translation": "然后",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -9970,17 +9970,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „dann“ bedeutet hier „此后、然后“.",
-        "zh": "“dann”在这里表示“此后、然后”。"
+        "de": "Wir gehen dann nach Hause.",
+        "zh": "我们随后回家。"
       }
     ],
     "sourceEntryType": "main"
@@ -10007,8 +10007,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Datum.",
-        "zh": "今天我们谈论日期。"
+        "de": "Welches Datum ist heute?",
+        "zh": "今天是哪一天？"
       }
     ],
     "sourceEntryType": "main"
@@ -10034,8 +10034,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute dauern.",
-        "zh": "我们今天想持续。"
+        "de": "Der Film wird zwei Stunden dauern.",
+        "zh": "电影将持续两个小时。"
       }
     ],
     "sourceEntryType": "main"
@@ -10044,25 +10044,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0153",
     "german": "dein-",
     "translation": "你的",
-    "kind": "pronoun",
+    "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你（第四格）",
-      "你（第三格）",
-      "他"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-alpha-0156",
-      "a1-alpha-0158",
-      "a1-alpha-0197"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „dein-“ bedeutet hier „你的“.",
-        "zh": "“dein-”在这里表示“你的”。"
+        "de": "Ist das dein Buch?",
+        "zh": "这是你的书吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -10070,7 +10070,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0154",
     "german": "denn",
-    "translation": "究竟因为",
+    "translation": "因为",
     "kind": "conjunction",
     "topic": "教育与学习",
     "topicIds": [
@@ -10088,8 +10088,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „denn“ bedeutet hier „究竟因为“.",
-        "zh": "“denn”在这里表示“究竟因为”。"
+        "de": "Ich bleibe zu Hause, denn es regnet.",
+        "zh": "我待在家里，因为下雨。"
       }
     ],
     "sourceEntryType": "main"
@@ -10097,27 +10097,27 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0155",
     "german": "der",
-    "translation": "这个（阳性，中性，阴性）",
-    "kind": "adverb",
+    "translation": "这个（定冠词）",
+    "kind": "determiner",
     "plural": "die, das",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "独自",
-      "也",
-      "很快，即将"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-alpha-0011",
-      "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „der“ bedeutet hier „这个（阳性，中性，阴性）“.",
-        "zh": "“der”在这里表示“这个（阳性，中性，阴性）”。"
+        "de": "Der Mann trägt einen Hut.",
+        "zh": "这位男士戴着帽子。"
       }
     ],
     "sourceEntryType": "main"
@@ -10125,26 +10125,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0156",
     "german": "dich",
-    "translation": "你（第四格）",
+    "translation": "你（宾格）",
     "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第三格）",
-      "他"
+      "你（与格）",
+      "他",
+      "它"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0158",
-      "a1-alpha-0197"
+      "a1-alpha-0197",
+      "a1-alpha-0203"
     ],
     "examples": [
       {
-        "de": "Das Wort „dich“ bedeutet hier „你（第四格）“.",
-        "zh": "“dich”在这里表示“你（第四格）”。"
+        "de": "Ich sehe dich.",
+        "zh": "我看见你。"
       }
     ],
     "sourceEntryType": "main"
@@ -10160,8 +10160,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -10170,8 +10170,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „dies-“ bedeutet hier „这个“.",
-        "zh": "“dies-”在这里表示“这个”。"
+        "de": "Dies ist mein Stift.",
+        "zh": "这是我的笔。"
       }
     ],
     "sourceEntryType": "main"
@@ -10179,26 +10179,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0158",
     "german": "dir",
-    "translation": "你（第三格）",
+    "translation": "你（与格）",
     "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "他"
+      "你（宾格）",
+      "他",
+      "它"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0197"
+      "a1-alpha-0197",
+      "a1-alpha-0203"
     ],
     "examples": [
       {
-        "de": "Das Wort „dir“ bedeutet hier „你（第三格）“.",
-        "zh": "“dir”在这里表示“你（第三格）”。"
+        "de": "Ich gebe dir das Buch.",
+        "zh": "我把书给你。"
       }
     ],
     "sourceEntryType": "main"
@@ -10225,8 +10225,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Doktor.",
-        "zh": "今天我们谈论男博士。"
+        "de": "Der Doktor kommt heute.",
+        "zh": "这位男博士今天来。"
       }
     ],
     "sourceEntryType": "main"
@@ -10254,8 +10254,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Dorf.",
-        "zh": "今天我们谈论乡村，村庄。"
+        "de": "Das Dorf liegt am Fluss.",
+        "zh": "这个村庄在河边。"
       }
     ],
     "sourceEntryType": "main"
@@ -10263,7 +10263,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0163",
     "german": "dort",
-    "translation": "那里，那儿",
+    "translation": "那里",
     "kind": "adverb",
     "plural": "-her, -hin",
     "topic": "教育与学习",
@@ -10273,17 +10273,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „dort“ bedeutet hier „那里，那儿“.",
-        "zh": "“dort”在这里表示“那里，那儿”。"
+        "de": "Das Buch liegt dort.",
+        "zh": "书在那儿。"
       }
     ],
     "sourceEntryType": "main"
@@ -10292,25 +10292,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0164",
     "german": "draußen",
     "translation": "在外面",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute draußen.",
-        "zh": "我们今天想在外面。"
+        "de": "Wir spielen draußen.",
+        "zh": "我们在外面玩。"
       }
     ],
     "sourceEntryType": "main"
@@ -10336,8 +10336,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute drucken.",
-        "zh": "我们今天想打印。"
+        "de": "Ich drucke das Bild.",
+        "zh": "我打印这张图片。"
       }
     ],
     "sourceEntryType": "main"
@@ -10365,8 +10365,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Drucker.",
-        "zh": "今天我们谈论打印机。"
+        "de": "Der Drucker ist neu.",
+        "zh": "这台打印机是新的。"
       }
     ],
     "sourceEntryType": "derived"
@@ -10374,7 +10374,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0167",
     "german": "drücken",
-    "translation": "压，按",
+    "translation": "按",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -10392,8 +10392,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute drücken.",
-        "zh": "我们今天想压，按。"
+        "de": "Bitte drücken Sie hier.",
+        "zh": "请在这里按。"
       }
     ],
     "sourceEntryType": "main"
@@ -10401,16 +10401,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0168",
     "german": "durch",
-    "translation": "穿过，经过通过",
+    "translation": "穿过",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -10419,8 +10419,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „durch“ bedeutet hier „穿过，经过通过“.",
-        "zh": "“durch”在这里表示“穿过，经过通过”。"
+        "de": "Wir gehen durch den Park.",
+        "zh": "我们穿过公园。"
       }
     ],
     "sourceEntryType": "main"
@@ -10448,8 +10448,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Durchsage.",
-        "zh": "今天我们谈论广播通知。"
+        "de": "Die Durchsage war laut.",
+        "zh": "广播通知很响。"
       }
     ],
     "sourceEntryType": "main"
@@ -10475,8 +10475,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute dürfen.",
-        "zh": "我们今天想允许。"
+        "de": "Du darfst hier sitzen.",
+        "zh": "你可以坐在这里。"
       }
     ],
     "sourceEntryType": "main"
@@ -10502,8 +10502,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns duschen.",
-        "zh": "我们今天想淋浴。"
+        "de": "Ich dusche jeden Morgen.",
+        "zh": "我每天早上洗澡。"
       }
     ],
     "sourceEntryType": "main"
@@ -10530,8 +10530,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Dusche.",
-        "zh": "今天我们谈论淋浴间。"
+        "de": "Die Dusche ist klein.",
+        "zh": "淋浴间很小。"
       }
     ],
     "sourceEntryType": "derived"
@@ -10539,7 +10539,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0174",
     "german": "Ecke",
-    "translation": "角落；街角",
+    "translation": "角落",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -10559,8 +10559,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Ecke.",
-        "zh": "今天我们谈论角落；街角。"
+        "de": "Wir treffen uns in der Ecke.",
+        "zh": "我们在角落见面。"
       }
     ],
     "sourceEntryType": "main"
@@ -10588,8 +10588,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Ei.",
-        "zh": "今天我们谈论鸡蛋。"
+        "de": "Das Ei ist frisch.",
+        "zh": "鸡蛋是新鲜的。"
       }
     ],
     "sourceEntryType": "main"
@@ -10606,7 +10606,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -10615,8 +10615,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „eilig“ bedeutet hier „匆忙的“.",
-        "zh": "“eilig”在这里表示“匆忙的”。"
+        "de": "Ich habe es heute eilig.",
+        "zh": "我今天赶时间。"
       }
     ],
     "sourceEntryType": "main"
@@ -10624,7 +10624,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0179",
     "german": "ein-",
-    "translation": "一个；某个",
+    "translation": "一个",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -10632,8 +10632,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -10642,8 +10642,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ein-“ bedeutet hier „一个；某个“.",
-        "zh": "“ein-”在这里表示“一个；某个”。"
+        "de": "Ein Mann kommt.",
+        "zh": "一个男人来了。"
       }
     ],
     "sourceEntryType": "main"
@@ -10651,7 +10651,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0180",
     "german": "einfach",
-    "translation": "简单的；单程的",
+    "translation": "简单的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -10660,7 +10660,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -10669,8 +10669,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „einfach“ bedeutet hier „简单的；单程的“.",
-        "zh": "“einfach”在这里表示“简单的；单程的”。"
+        "de": "Das ist einfach.",
+        "zh": "这很简单。"
       }
     ],
     "sourceEntryType": "main"
@@ -10697,8 +10697,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Eingang.",
-        "zh": "今天我们谈论入口。"
+        "de": "Der Eingang ist offen.",
+        "zh": "入口是开的。"
       }
     ],
     "sourceEntryType": "main"
@@ -10725,8 +10725,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Einladung.",
-        "zh": "今天我们谈论邀请信。"
+        "de": "Ich habe eine Einladung bekommen.",
+        "zh": "我收到了一个邀请函。"
       }
     ],
     "sourceEntryType": "derived"
@@ -10743,17 +10743,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „einmal“ bedeutet hier „一次“.",
-        "zh": "“einmal”在这里表示“一次”。"
+        "de": "Komm bitte einmal später.",
+        "zh": "请稍后再来一次。"
       }
     ],
     "sourceEntryType": "main"
@@ -10779,8 +10779,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute einsteigen.",
-        "zh": "我们今天想上车，上船。"
+        "de": "Ich steige jetzt ein.",
+        "zh": "我现在上车。"
       }
     ],
     "sourceEntryType": "main"
@@ -10807,8 +10807,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Eintritt.",
-        "zh": "今天我们谈论入场。"
+        "de": "Der Eintritt kostet fünf Euro.",
+        "zh": "入场费是五欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -10836,8 +10836,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die E-Mail.",
-        "zh": "今天我们谈论电子邮件。"
+        "de": "Ich schreibe eine E‑Mail.",
+        "zh": "我写一封电子邮件。"
       }
     ],
     "sourceEntryType": "main"
@@ -10865,8 +10865,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Empfänger.",
-        "zh": "今天我们谈论收件人。"
+        "de": "Der Empfänger liest die Nachricht.",
+        "zh": "收件人阅读信息。"
       }
     ],
     "sourceEntryType": "main"
@@ -10892,8 +10892,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute empfehlen.",
-        "zh": "我们今天想推荐。"
+        "de": "Ich empfehle dir das Buch.",
+        "zh": "我向你推荐这本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -10919,8 +10919,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute enden.",
-        "zh": "我们今天想结束。"
+        "de": "Der Film endet um acht.",
+        "zh": "电影在八点结束。"
       }
     ],
     "sourceEntryType": "main"
@@ -10947,8 +10947,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Ende.",
-        "zh": "今天我们谈论尽头，末尾。"
+        "de": "Das Ende ist sehr traurig.",
+        "zh": "结局非常悲伤。"
       }
     ],
     "sourceEntryType": "derived"
@@ -10974,8 +10974,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute entschuldigen.",
-        "zh": "我们今天想原谅。"
+        "de": "Entschuldige bitte das Geräusch.",
+        "zh": "请原谅这个噪音。"
       }
     ],
     "sourceEntryType": "main"
@@ -11002,8 +11002,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Entschuldigung.",
-        "zh": "今天我们谈论对不起。"
+        "de": "Entschuldigung, ich bin zu spät.",
+        "zh": "对不起，我迟到了。"
       }
     ],
     "sourceEntryType": "derived"
@@ -11018,19 +11018,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "它"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0203"
     ],
     "examples": [
       {
-        "de": "Das Wort „er“ bedeutet hier „他“.",
-        "zh": "“er”在这里表示“他”。"
+        "de": "Er kommt aus Berlin.",
+        "zh": "他来自柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -11058,8 +11058,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Ergebnis.",
-        "zh": "今天我们谈论结果。"
+        "de": "Das Ergebnis ist richtig.",
+        "zh": "结果是正确的。"
       }
     ],
     "sourceEntryType": "main"
@@ -11085,8 +11085,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute erklären.",
-        "zh": "我们今天想解释。"
+        "de": "Kannst du das bitte erklären?",
+        "zh": "你能解释一下吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -11112,8 +11112,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute erlauben.",
-        "zh": "我们今天想允许。"
+        "de": "Erlauben Sie das bitte?",
+        "zh": "您允许吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -11141,8 +11141,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Erwachsene.",
-        "zh": "今天我们谈论成年人。"
+        "de": "Erwachsene zahlen mehr.",
+        "zh": "成年人付得更多。"
       }
     ],
     "sourceEntryType": "main"
@@ -11168,8 +11168,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute erzählen.",
-        "zh": "我们今天想讲述。"
+        "de": "Ich erzähle dir eine Geschichte.",
+        "zh": "我给你讲一个故事。"
       }
     ],
     "sourceEntryType": "main"
@@ -11184,19 +11184,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „es“ bedeutet hier „它“.",
-        "zh": "“es”在这里表示“它”。"
+        "de": "Es ist kalt heute.",
+        "zh": "今天很冷。"
       }
     ],
     "sourceEntryType": "main"
@@ -11211,19 +11211,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „euer“ bedeutet hier „你们的“.",
-        "zh": "“euer”在这里表示“你们的”。"
+        "de": "Ist das euer Buch?",
+        "zh": "这是你们的书吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -11240,7 +11240,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -11249,8 +11249,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „falsch“ bedeutet hier „错误的“.",
-        "zh": "“falsch”在这里表示“错误的”。"
+        "de": "Die Antwort ist falsch.",
+        "zh": "答案是错误的。"
       }
     ],
     "sourceEntryType": "main"
@@ -11278,8 +11278,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Farbe.",
-        "zh": "今天我们谈论颜色。"
+        "de": "Welche Farbe hat das Auto?",
+        "zh": "这辆车是什么颜色？"
       }
     ],
     "sourceEntryType": "main"
@@ -11305,8 +11305,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute fehlen.",
-        "zh": "我们今天想缺少。"
+        "de": "Mir fehlt das Salz.",
+        "zh": "我缺盐。"
       }
     ],
     "sourceEntryType": "main"
@@ -11334,8 +11334,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Fehler.",
-        "zh": "今天我们谈论错误。"
+        "de": "Ich habe einen Fehler gemacht.",
+        "zh": "我犯了一个错误。"
       }
     ],
     "sourceEntryType": "main"
@@ -11343,7 +11343,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0222",
     "german": "fertig",
-    "translation": "完工的，完成的",
+    "translation": "完成的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -11352,7 +11352,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -11361,8 +11361,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „fertig“ bedeutet hier „完工的，完成的“.",
-        "zh": "“fertig”在这里表示“完工的，完成的”。"
+        "de": "Der Kuchen ist fertig.",
+        "zh": "蛋糕已经做好了。"
       }
     ],
     "sourceEntryType": "main"
@@ -11389,8 +11389,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Feuer.",
-        "zh": "今天我们谈论火。"
+        "de": "Das Feuer brennt im Kamin.",
+        "zh": "壁炉里的火在燃烧。"
       }
     ],
     "sourceEntryType": "main"
@@ -11398,7 +11398,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0224",
     "german": "Fieber",
-    "translation": "发烧（单数形式）",
+    "translation": "发烧",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -11417,8 +11417,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Fieber.",
-        "zh": "今天我们谈论发烧（单数形式）。"
+        "de": "Sie hat hohes Fieber.",
+        "zh": "她发高烧。"
       }
     ],
     "sourceEntryType": "main"
@@ -11426,7 +11426,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0225",
     "german": "Film",
-    "translation": "电影院",
+    "translation": "电影",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -11446,8 +11446,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Film.",
-        "zh": "今天我们谈论电影院。"
+        "de": "Wir sehen einen Film.",
+        "zh": "我们在看一部电影。"
       }
     ],
     "sourceEntryType": "main"
@@ -11455,7 +11455,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0226",
     "german": "finden",
-    "translation": "找到认为",
+    "translation": "找到",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -11473,8 +11473,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute finden.",
-        "zh": "我们今天想找到认为。"
+        "de": "Ich finde den Schlüssel.",
+        "zh": "我找到了钥匙。"
       }
     ],
     "sourceEntryType": "main"
@@ -11501,8 +11501,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Firma.",
-        "zh": "今天我们谈论公司。"
+        "de": "Meine Mutter arbeitet in einer Firma.",
+        "zh": "我妈妈在一家公司工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -11530,8 +11530,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Fisch.",
-        "zh": "今天我们谈论鱼。"
+        "de": "Der Fisch ist frisch.",
+        "zh": "这条鱼很新鲜。"
       }
     ],
     "sourceEntryType": "main"
@@ -11559,8 +11559,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Flasche.",
-        "zh": "今天我们谈论瓶子。"
+        "de": "Die Flasche ist leer.",
+        "zh": "瓶子是空的。"
       }
     ],
     "sourceEntryType": "main"
@@ -11568,7 +11568,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0231",
     "german": "fliegen",
-    "translation": "乘飞机",
+    "translation": "飞",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -11586,8 +11586,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute fliegen.",
-        "zh": "我们今天想乘飞机。"
+        "de": "Vögel fliegen im Himmel.",
+        "zh": "鸟在天空中飞。"
       }
     ],
     "sourceEntryType": "main"
@@ -11613,8 +11613,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute abfliegen.",
-        "zh": "我们今天想起飞。"
+        "de": "Der Flug fliegt um 10 Uhr ab.",
+        "zh": "航班在上午10点起飞。"
       }
     ],
     "sourceEntryType": "derived"
@@ -11642,8 +11642,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Formular.",
-        "zh": "今天我们谈论表格。"
+        "de": "Ich fülle das Formular aus.",
+        "zh": "我填写这张表格。"
       }
     ],
     "sourceEntryType": "main"
@@ -11669,8 +11669,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute fragen.",
-        "zh": "我们今天想问。"
+        "de": "Ich frage den Lehrer.",
+        "zh": "我向老师提问。"
       }
     ],
     "sourceEntryType": "main"
@@ -11698,8 +11698,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Frage.",
-        "zh": "今天我们谈论问题。"
+        "de": "Hast du eine Frage?",
+        "zh": "你有问题吗？"
       }
     ],
     "sourceEntryType": "derived"
@@ -11707,7 +11707,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0241",
     "german": "frei",
-    "translation": "空着的，无人占用的",
+    "translation": "空着的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -11716,7 +11716,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -11725,8 +11725,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „frei“ bedeutet hier „空着的，无人占用的“.",
-        "zh": "“frei”在这里表示“空着的，无人占用的”。"
+        "de": "Der Sitz ist frei.",
+        "zh": "座位是空的。"
       }
     ],
     "sourceEntryType": "main"
@@ -11734,7 +11734,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0243",
     "german": "fremd",
-    "translation": "陌生的；外来的",
+    "translation": "陌生的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -11743,7 +11743,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -11752,8 +11752,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „fremd“ bedeutet hier „陌生的；外来的“.",
-        "zh": "“fremd”在这里表示“陌生的；外来的”。"
+        "de": "Das ist ein fremdes Wort.",
+        "zh": "这是一个陌生的词。"
       }
     ],
     "sourceEntryType": "main"
@@ -11761,7 +11761,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0244",
     "german": "(sich) freuen",
-    "translation": "高兴；期待",
+    "translation": "高兴",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -11779,8 +11779,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns freuen.",
-        "zh": "我们今天想高兴；期待。"
+        "de": "Ich freue mich sehr.",
+        "zh": "我很高兴。"
       }
     ],
     "sourceEntryType": "main"
@@ -11788,7 +11788,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0246",
     "german": "früher",
-    "translation": "以前；更早",
+    "translation": "以前",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -11797,17 +11797,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „früher“ bedeutet hier „以前；更早“.",
-        "zh": "“früher”在这里表示“以前；更早”。"
+        "de": "Früher war ich Schüler.",
+        "zh": "以前我还是学生。"
       }
     ],
     "sourceEntryType": "main"
@@ -11834,8 +11834,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Führung.",
-        "zh": "今天我们谈论导游。"
+        "de": "Die Führung beginnt um neun.",
+        "zh": "导览在九点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -11843,16 +11843,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0250",
     "german": "für",
-    "translation": "为了为了，由于",
+    "translation": "为了",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -11861,8 +11861,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „für“ bedeutet hier „为了为了，由于“.",
-        "zh": "“für”在这里表示“为了为了，由于”。"
+        "de": "Das Geschenk ist für dich.",
+        "zh": "这份礼物是给你的。"
       }
     ],
     "sourceEntryType": "main"
@@ -11870,7 +11870,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0251",
     "german": "Fuß",
-    "translation": "足",
+    "translation": "脚",
     "kind": "noun",
     "article": "der",
     "plural": "-ü, e",
@@ -11890,8 +11890,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Fuß.",
-        "zh": "今天我们谈论足。"
+        "de": "Mein Fuß tut weh.",
+        "zh": "我的脚疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -11919,8 +11919,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Gast.",
-        "zh": "今天我们谈论客人。"
+        "de": "Der Gast kommt morgen.",
+        "zh": "客人明天来。"
       }
     ],
     "sourceEntryType": "main"
@@ -11928,7 +11928,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0255",
     "german": "geben",
-    "translation": "有，存在递给",
+    "translation": "给",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -11946,8 +11946,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute geben.",
-        "zh": "我们今天想有，存在递给。"
+        "de": "Ich gebe dir einen Stift.",
+        "zh": "我把笔给你。"
       }
     ],
     "sourceEntryType": "main"
@@ -11964,7 +11964,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -11973,8 +11973,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „geboren“ bedeutet hier „出生“.",
-        "zh": "“geboren”在这里表示“出生”。"
+        "de": "Ich bin 1990 geboren.",
+        "zh": "我1990年出生。"
       }
     ],
     "sourceEntryType": "main"
@@ -12000,8 +12000,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute gefallen.",
-        "zh": "我们今天想喜欢。"
+        "de": "Der Film gefällt mir.",
+        "zh": "这部电影我喜欢。"
       }
     ],
     "sourceEntryType": "main"
@@ -12009,16 +12009,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0261",
     "german": "gegen",
-    "translation": "防对，对阵",
+    "translation": "对抗",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -12027,8 +12027,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „gegen“ bedeutet hier „防对，对阵“.",
-        "zh": "“gegen”在这里表示“防对，对阵”。"
+        "de": "Der Ball fliegt gegen die Wand.",
+        "zh": "球撞向墙壁。"
       }
     ],
     "sourceEntryType": "main"
@@ -12054,8 +12054,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute gehören.",
-        "zh": "我们今天想属于。"
+        "de": "Wem gehören diese Stifte?",
+        "zh": "这些笔属于谁？"
       }
     ],
     "sourceEntryType": "main"
@@ -12063,7 +12063,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0265",
     "german": "Gemüse",
-    "translation": "蔬菜（单数形式）",
+    "translation": "蔬菜",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -12082,8 +12082,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Gemüse.",
-        "zh": "今天我们谈论蔬菜（单数形式）。"
+        "de": "Ich kaufe frisches Gemüse.",
+        "zh": "我买新鲜的蔬菜。"
       }
     ],
     "sourceEntryType": "main"
@@ -12091,61 +12091,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0267",
     "german": "gerade",
-    "translation": "恰巧，刚刚正立的，挺直的",
-    "kind": "adjective",
-    "topic": "教育与学习",
-    "topicIds": [
-      "education"
-    ],
-    "distractors": [
-      "老的旧的",
-      "外国的",
-      "出名的"
-    ],
-    "distractorIds": [
-      "a1-alpha-0013",
-      "a1-alpha-0063",
-      "a1-alpha-0097"
-    ],
-    "examples": [
-      {
-        "de": "Das Wort „gerade“ bedeutet hier „恰巧，刚刚正立的，挺直的“.",
-        "zh": "“gerade”在这里表示“恰巧，刚刚正立的，挺直的”。"
-      }
-    ],
-    "sourceEntryType": "main"
-  },
-  {
-    "id": "a1-alpha-0268",
-    "german": "geradeaus",
-    "translation": "一直向前的",
-    "kind": "adjective",
-    "topic": "教育与学习",
-    "topicIds": [
-      "education"
-    ],
-    "distractors": [
-      "老的旧的",
-      "外国的",
-      "出名的"
-    ],
-    "distractorIds": [
-      "a1-alpha-0013",
-      "a1-alpha-0063",
-      "a1-alpha-0097"
-    ],
-    "examples": [
-      {
-        "de": "Das Wort „geradeaus“ bedeutet hier „一直向前的“.",
-        "zh": "“geradeaus”在这里表示“一直向前的”。"
-      }
-    ],
-    "sourceEntryType": "main"
-  },
-  {
-    "id": "a1-alpha-0269",
-    "german": "gern(e)",
-    "translation": "乐意，喜欢",
+    "translation": "恰好",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -12154,17 +12100,71 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „gern(e)“ bedeutet hier „乐意，喜欢“.",
-        "zh": "“gern(e)”在这里表示“乐意，喜欢”。"
+        "de": "Ich komme gerade nach Hause.",
+        "zh": "我刚回家。"
+      }
+    ],
+    "sourceEntryType": "main"
+  },
+  {
+    "id": "a1-alpha-0268",
+    "german": "geradeaus",
+    "translation": "直走",
+    "kind": "adverb",
+    "topic": "教育与学习",
+    "topicIds": [
+      "education"
+    ],
+    "distractors": [
+      "独自",
+      "也",
+      "打开（状态）"
+    ],
+    "distractorIds": [
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
+    ],
+    "examples": [
+      {
+        "de": "Gehen Sie bitte geradeaus.",
+        "zh": "请直走。"
+      }
+    ],
+    "sourceEntryType": "main"
+  },
+  {
+    "id": "a1-alpha-0269",
+    "german": "gern(e)",
+    "translation": "喜欢",
+    "kind": "adverb",
+    "topic": "教育与学习",
+    "topicIds": [
+      "education"
+    ],
+    "distractors": [
+      "独自",
+      "也",
+      "打开（状态）"
+    ],
+    "distractorIds": [
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
+    ],
+    "examples": [
+      {
+        "de": "Ich trinke gern Tee.",
+        "zh": "我喜欢喝茶。"
       }
     ],
     "sourceEntryType": "main"
@@ -12192,8 +12192,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Geschenk.",
-        "zh": "今天我们谈论礼物。"
+        "de": "Das Geschenk ist schön.",
+        "zh": "这份礼物很漂亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -12220,8 +12220,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Geschwister (pl.).",
-        "zh": "今天我们谈论兄弟姐妹。"
+        "de": "Meine Geschwister wohnen in Berlin.",
+        "zh": "我的兄弟姐妹住在柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -12249,8 +12249,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Gespräch.",
-        "zh": "今天我们谈论谈话。"
+        "de": "Wir führen ein kurzes Gespräch.",
+        "zh": "我们进行一次简短的谈话。"
       }
     ],
     "sourceEntryType": "main"
@@ -12259,25 +12259,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0274",
     "german": "gestern",
     "translation": "昨天",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute gestern.",
-        "zh": "我们今天想昨天。"
+        "de": "Es regnete gestern stark.",
+        "zh": "昨天雨下得很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -12294,7 +12294,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12303,8 +12303,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „gestorben“ bedeutet hier „去世的“.",
-        "zh": "“gestorben”在这里表示“去世的”。"
+        "de": "Mein Opa ist gestorben.",
+        "zh": "我的爷爷去世了。"
       }
     ],
     "sourceEntryType": "main"
@@ -12332,8 +12332,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Getränk.",
-        "zh": "今天我们谈论饮料。"
+        "de": "Ein kaltes Getränk bitte.",
+        "zh": "请来一杯冰饮料。"
       }
     ],
     "sourceEntryType": "main"
@@ -12360,8 +12360,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Gewicht.",
-        "zh": "今天我们谈论重量。"
+        "de": "Das Gewicht ist fünf Kilo.",
+        "zh": "重量是五公斤。"
       }
     ],
     "sourceEntryType": "main"
@@ -12369,7 +12369,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0278",
     "german": "gewinnen",
-    "translation": "中奖",
+    "translation": "赢得",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -12387,8 +12387,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute gewinnen.",
-        "zh": "我们今天想中奖。"
+        "de": "Wir wollen im Spiel gewinnen.",
+        "zh": "我们想在游戏中获胜。"
       }
     ],
     "sourceEntryType": "main"
@@ -12416,8 +12416,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Glas.",
-        "zh": "今天我们谈论玻璃杯。"
+        "de": "Ein Glas Wasser bitte.",
+        "zh": "请来一杯水。"
       }
     ],
     "sourceEntryType": "main"
@@ -12443,8 +12443,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute glauben.",
-        "zh": "我们今天想相信。"
+        "de": "Ich will dir glauben.",
+        "zh": "我想相信你。"
       }
     ],
     "sourceEntryType": "main"
@@ -12452,7 +12452,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0281",
     "german": "gleich",
-    "translation": "立刻，马上同样，一样",
+    "translation": "马上",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -12461,17 +12461,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „gleich“ bedeutet hier „立刻，马上同样，一样“.",
-        "zh": "“gleich”在这里表示“立刻，马上同样，一样”。"
+        "de": "Ich komme gleich.",
+        "zh": "我马上来。"
       }
     ],
     "sourceEntryType": "main"
@@ -12499,8 +12499,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Gleis.",
-        "zh": "今天我们谈论站台。"
+        "de": "Der Zug steht am Gleis 3.",
+        "zh": "火车停在三号站台。"
       }
     ],
     "sourceEntryType": "main"
@@ -12508,7 +12508,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0283",
     "german": "Glück",
-    "translation": "运气，幸福",
+    "translation": "运气",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -12527,8 +12527,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Glück.",
-        "zh": "今天我们谈论运气，幸福。"
+        "de": "Ich habe heute Glück.",
+        "zh": "我今天运气好。"
       }
     ],
     "sourceEntryType": "main"
@@ -12545,7 +12545,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12554,8 +12554,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „glücklich“ bedeutet hier „幸福的“.",
-        "zh": "“glücklich”在这里表示“幸福的”。"
+        "de": "Ich bin heute glücklich.",
+        "zh": "我今天很幸福。"
       }
     ],
     "sourceEntryType": "main"
@@ -12563,7 +12563,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0285",
     "german": "Glückwunsch",
-    "translation": "祝贺，祝愿",
+    "translation": "祝贺",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -12582,8 +12582,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Glückwunsch.",
-        "zh": "今天我们谈论祝贺，祝愿。"
+        "de": "Herzlichen Glückwunsch zum Geburtstag!",
+        "zh": "衷心祝你生日快乐！"
       }
     ],
     "sourceEntryType": "main"
@@ -12609,8 +12609,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute gratulieren.",
-        "zh": "我们今天想祝贺。"
+        "de": "Wir gratulieren dir zum Erfolg.",
+        "zh": "我们祝贺你的成功。"
       }
     ],
     "sourceEntryType": "main"
@@ -12636,8 +12636,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute grillen.",
-        "zh": "我们今天想烧烤。"
+        "de": "Wir grillen am Samstag.",
+        "zh": "我们周六烧烤。"
       }
     ],
     "sourceEntryType": "main"
@@ -12654,7 +12654,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12663,8 +12663,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „groß“ bedeutet hier „大的“.",
-        "zh": "“groß”在这里表示“大的”。"
+        "de": "Das Haus ist sehr groß.",
+        "zh": "这座房子很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -12691,8 +12691,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Größe.",
-        "zh": "今天我们谈论尺码。"
+        "de": "Welche Größe passt dir?",
+        "zh": "哪个尺码适合你？"
       }
     ],
     "sourceEntryType": "derived"
@@ -12720,8 +12720,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Gruppe.",
-        "zh": "今天我们谈论团体。"
+        "de": "Wir sind eine kleine Gruppe.",
+        "zh": "我们是一小组。"
       }
     ],
     "sourceEntryType": "main"
@@ -12729,7 +12729,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0295",
     "german": "Gruß",
-    "translation": "问候，致意",
+    "translation": "问候",
     "kind": "noun",
     "article": "der",
     "plural": "-ü, e",
@@ -12749,8 +12749,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Gruß.",
-        "zh": "今天我们谈论问候，致意。"
+        "de": "Ein herzlicher Gruß an dich.",
+        "zh": "向你致以诚挚的问候。"
       }
     ],
     "sourceEntryType": "main"
@@ -12767,7 +12767,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12776,8 +12776,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „gültig“ bedeutet hier „有效的“.",
-        "zh": "“gültig”在这里表示“有效的”。"
+        "de": "Der Ausweis ist noch gültig.",
+        "zh": "这张证件仍然有效。"
       }
     ],
     "sourceEntryType": "main"
@@ -12794,7 +12794,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12803,8 +12803,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „günstig“ bedeutet hier „价廉的“.",
-        "zh": "“günstig”在这里表示“价廉的”。"
+        "de": "Das Angebot ist sehr günstig.",
+        "zh": "这个优惠非常便宜。"
       }
     ],
     "sourceEntryType": "main"
@@ -12812,7 +12812,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0298",
     "german": "gut",
-    "translation": "好的好的好的",
+    "translation": "好的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -12821,7 +12821,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -12830,8 +12830,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „gut“ bedeutet hier „好的好的好的“.",
-        "zh": "“gut”在这里表示“好的好的好的”。"
+        "de": "Das Essen schmeckt gut.",
+        "zh": "这道菜味道好。"
       }
     ],
     "sourceEntryType": "main"
@@ -12857,8 +12857,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute haben.",
-        "zh": "我们今天想有。"
+        "de": "Wir haben ein neues Auto.",
+        "zh": "我们有一辆新车。"
       }
     ],
     "sourceEntryType": "main"
@@ -12886,8 +12886,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Hähnchen.",
-        "zh": "今天我们谈论鸡肉。"
+        "de": "Ich kaufe frisches Hähnchen.",
+        "zh": "我买新鲜的鸡肉。"
       }
     ],
     "sourceEntryType": "main"
@@ -12914,8 +12914,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Halbpension.",
-        "zh": "今天我们谈论半膳住宿。"
+        "de": "Wir buchen Halbpension im Hotel.",
+        "zh": "我们在酒店预订半膳住宿。"
       }
     ],
     "sourceEntryType": "main"
@@ -12942,8 +12942,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Halle.",
-        "zh": "今天我们谈论大厅。"
+        "de": "Wir treffen uns in der Halle.",
+        "zh": "我们在大厅碰面。"
       }
     ],
     "sourceEntryType": "main"
@@ -12952,25 +12952,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0304",
     "german": "hallo",
     "translation": "你好",
-    "kind": "adverb",
+    "kind": "other",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "独自",
-      "也",
-      "很快，即将"
+      "最喜欢的",
+      "再见",
+      "德国"
     ],
     "distractorIds": [
-      "a1-alpha-0011",
-      "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0410",
+      "a1-alpha-0603",
+      "a1-group-countries-nationalities-107"
     ],
     "examples": [
       {
-        "de": "Das Wort „hallo“ bedeutet hier „你好“.",
-        "zh": "“hallo”在这里表示“你好”。"
+        "de": "Hallo, ich bin Anna.",
+        "zh": "你好，我是安娜。"
       }
     ],
     "sourceEntryType": "main"
@@ -12978,7 +12978,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0305",
     "german": "halten",
-    "translation": "保持 ... 状态",
+    "translation": "保持",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -12996,8 +12996,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute halten.",
-        "zh": "我们今天想保持 ... 状态。"
+        "de": "Bitte halten Sie die Tür offen.",
+        "zh": "请把门保持打开。"
       }
     ],
     "sourceEntryType": "main"
@@ -13005,7 +13005,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0306",
     "german": "Haltestelle",
-    "translation": "公车站，电车站",
+    "translation": "公交站",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -13024,8 +13024,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Haltestelle.",
-        "zh": "今天我们谈论公车站，电车站。"
+        "de": "Die Haltestelle ist gleich hier.",
+        "zh": "公交站就在这里。"
       }
     ],
     "sourceEntryType": "main"
@@ -13053,8 +13053,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Hand.",
-        "zh": "今天我们谈论手。"
+        "de": "Ich habe mir die Hand verletzt.",
+        "zh": "我的手受伤了。"
       }
     ],
     "sourceEntryType": "main"
@@ -13082,8 +13082,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Handy.",
-        "zh": "今天我们谈论手机。"
+        "de": "Mein Handy ist leer.",
+        "zh": "我的手机没电了。"
       }
     ],
     "sourceEntryType": "main"
@@ -13110,8 +13110,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Heimat.",
-        "zh": "今天我们谈论家乡。"
+        "de": "Meine Heimat ist Berlin.",
+        "zh": "我的家乡是柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -13137,8 +13137,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute heiraten.",
-        "zh": "我们今天想结婚。"
+        "de": "Wir heiraten im Juni.",
+        "zh": "我们在六月结婚。"
       }
     ],
     "sourceEntryType": "main"
@@ -13146,7 +13146,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0315",
     "german": "heißen",
-    "translation": "叫，名为称为，意味着",
+    "translation": "叫",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -13164,8 +13164,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute heißen.",
-        "zh": "我们今天想叫，名为称为，意味着。"
+        "de": "Wie heißen Sie?",
+        "zh": "您叫什么？"
       }
     ],
     "sourceEntryType": "main"
@@ -13191,8 +13191,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute helfen.",
-        "zh": "我们今天想帮助。"
+        "de": "Kannst du mir helfen?",
+        "zh": "你能帮我吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -13209,7 +13209,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -13218,8 +13218,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „hell“ bedeutet hier „明亮的“.",
-        "zh": "“hell”在这里表示“明亮的”。"
+        "de": "Das Zimmer ist hell.",
+        "zh": "房间很明亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -13246,8 +13246,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Herd.",
-        "zh": "今天我们谈论炉灶。"
+        "de": "Der Herd ist neu.",
+        "zh": "炉灶是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -13275,8 +13275,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Herr.",
-        "zh": "今天我们谈论先生。"
+        "de": "Guten Morgen, Herr Müller.",
+        "zh": "早上好，穆勒先生。"
       }
     ],
     "sourceEntryType": "main"
@@ -13284,26 +13284,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0320",
     "german": "herzlich",
-    "translation": "衷心的",
-    "kind": "adjective",
+    "translation": "衷心",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "老的旧的",
-      "外国的",
-      "出名的"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "a1-alpha-0013",
-      "a1-alpha-0063",
-      "a1-alpha-0097"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „herzlich“ bedeutet hier „衷心的“.",
-        "zh": "“herzlich”在这里表示“衷心的”。"
+        "de": "Wir danken Ihnen herzlich.",
+        "zh": "我们衷心感谢您。"
       }
     ],
     "sourceEntryType": "main"
@@ -13320,17 +13320,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „heute“ bedeutet hier „今天“.",
-        "zh": "“heute”在这里表示“今天”。"
+        "de": "Heute ist es warm.",
+        "zh": "今天很暖。"
       }
     ],
     "sourceEntryType": "main"
@@ -13338,7 +13338,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0322",
     "german": "hier",
-    "translation": "这里这里",
+    "translation": "这里",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -13347,17 +13347,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „hier“ bedeutet hier „这里这里“.",
-        "zh": "“hier”在这里表示“这里这里”。"
+        "de": "Hier ist das Buch.",
+        "zh": "书在这里。"
       }
     ],
     "sourceEntryType": "main"
@@ -13384,8 +13384,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Hilfe.",
-        "zh": "今天我们谈论帮助。"
+        "de": "Kannst du mir bitte Hilfe geben?",
+        "zh": "你能给我帮助吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -13394,25 +13394,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0324",
     "german": "hinten",
     "translation": "后面",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute hinten.",
-        "zh": "我们今天想后面。"
+        "de": "Der Ball liegt hinten.",
+        "zh": "球在后面。"
       }
     ],
     "sourceEntryType": "main"
@@ -13440,8 +13440,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Hobby.",
-        "zh": "今天我们谈论爱好。"
+        "de": "Mein Hobby ist Lesen.",
+        "zh": "我的爱好是阅读。"
       }
     ],
     "sourceEntryType": "main"
@@ -13458,7 +13458,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -13467,8 +13467,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „hoch“ bedeutet hier „高的“.",
-        "zh": "“hoch”在这里表示“高的”。"
+        "de": "Der Turm ist hoch.",
+        "zh": "这座塔很高。"
       }
     ],
     "sourceEntryType": "main"
@@ -13495,8 +13495,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Hochzeit.",
-        "zh": "今天我们谈论婚礼。"
+        "de": "Wir feiern die Hochzeit.",
+        "zh": "我们庆祝婚礼。"
       }
     ],
     "sourceEntryType": "main"
@@ -13522,8 +13522,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute holen.",
-        "zh": "我们今天想取来，拿来。"
+        "de": "Kannst du das Buch holen?",
+        "zh": "你能把书拿来吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -13531,7 +13531,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0329",
     "german": "hören",
-    "translation": "听听",
+    "translation": "听",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -13549,8 +13549,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute hören.",
-        "zh": "我们今天想听听。"
+        "de": "Kannst du mich hören?",
+        "zh": "你能听见我吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -13578,8 +13578,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Hund.",
-        "zh": "今天我们谈论狗。"
+        "de": "Der Hund schläft.",
+        "zh": "那只狗在睡觉。"
       }
     ],
     "sourceEntryType": "main"
@@ -13594,19 +13594,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „ich“ bedeutet hier „我“.",
-        "zh": "“ich”在这里表示“我”。"
+        "de": "Ich komme heute etwas später.",
+        "zh": "我今天会晚一点儿来。"
       }
     ],
     "sourceEntryType": "main"
@@ -13614,26 +13614,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0334",
     "german": "ihr/ihm/ihn",
-    "translation": "她的；给他；他（第四格）",
-    "kind": "phrase",
+    "translation": "她（属格）/他（与格）/他（宾格）",
+    "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0156",
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „ihr/ihm/ihn“ bedeutet hier „她的；给他；他（第四格）“.",
-        "zh": "“ihr/ihm/ihn”在这里表示“她的；给他；他（第四格）”。"
+        "de": "Ich gebe ihr das Buch.",
+        "zh": "我把书给她。"
       }
     ],
     "sourceEntryType": "main"
@@ -13650,17 +13650,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „immer“ bedeutet hier „总是“.",
-        "zh": "“immer”在这里表示“总是”。"
+        "de": "Er kommt immer pünktlich.",
+        "zh": "他总是准时来。"
       }
     ],
     "sourceEntryType": "main"
@@ -13675,9 +13675,9 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -13686,8 +13686,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „in“ bedeutet hier „在……里；进入“.",
-        "zh": "“in”在这里表示“在……里；进入”。"
+        "de": "Das Buch ist in der Tasche.",
+        "zh": "书在口袋里。"
       }
     ],
     "sourceEntryType": "main"
@@ -13715,8 +13715,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Information.",
-        "zh": "今天我们谈论信息。"
+        "de": "Die Information ist wichtig.",
+        "zh": "这条信息很重要。"
       }
     ],
     "sourceEntryType": "main"
@@ -13733,7 +13733,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -13742,8 +13742,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „international“ bedeutet hier „国际的“.",
-        "zh": "“international”在这里表示“国际的”。"
+        "de": "Die Schule organisiert ein internationales Fest.",
+        "zh": "学校组织了一场国际文化节。"
       }
     ],
     "sourceEntryType": "main"
@@ -13751,7 +13751,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0339",
     "german": "Internet",
-    "translation": "因特网（单数形式）",
+    "translation": "互联网",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -13770,8 +13770,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Internet.",
-        "zh": "今天我们谈论因特网（单数形式）。"
+        "de": "Ich nutze jeden Tag das Internet.",
+        "zh": "我每天都使用互联网。"
       }
     ],
     "sourceEntryType": "main"
@@ -13779,7 +13779,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0340",
     "german": "ja",
-    "translation": "是的真的，的确",
+    "translation": "是的，真的，的确",
     "kind": "particle",
     "topic": "教育与学习",
     "topicIds": [
@@ -13797,8 +13797,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ja“ bedeutet hier „是的真的，的确“.",
-        "zh": "“ja”在这里表示“是的真的，的确”。"
+        "de": "Das ist ja richtig.",
+        "zh": "是的，没错。"
       }
     ],
     "sourceEntryType": "main"
@@ -13806,7 +13806,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0341",
     "german": "Jacke",
-    "translation": "夹克",
+    "translation": "外套",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -13826,8 +13826,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Jacke.",
-        "zh": "今天我们谈论夹克。"
+        "de": "Ich trage eine warme Jacke.",
+        "zh": "我穿着一件暖和的外套。"
       }
     ],
     "sourceEntryType": "main"
@@ -13843,8 +13843,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -13853,8 +13853,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „jed-“ bedeutet hier „每个“.",
-        "zh": "“jed-”在这里表示“每个”。"
+        "de": "Jeder Schüler hat ein Buch.",
+        "zh": "每个学生都有一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -13871,17 +13871,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „jetzt“ bedeutet hier „现在“.",
-        "zh": "“jetzt”在这里表示“现在”。"
+        "de": "Ich komme jetzt gleich.",
+        "zh": "我现在马上来。"
       }
     ],
     "sourceEntryType": "main"
@@ -13889,7 +13889,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0344",
     "german": "Job",
-    "translation": "打工",
+    "translation": "工作",
     "kind": "noun",
     "article": "der",
     "plural": "-s",
@@ -13909,8 +13909,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Job.",
-        "zh": "今天我们谈论打工。"
+        "de": "Mein Vater hat einen neuen Job.",
+        "zh": "我父亲有一份新工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -13938,8 +13938,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Jugendliche.",
-        "zh": "今天我们谈论青少年。"
+        "de": "Jugendliche treffen sich im Park.",
+        "zh": "青少年在公园里相聚。"
       }
     ],
     "sourceEntryType": "main"
@@ -13956,7 +13956,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -13965,8 +13965,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „jung“ bedeutet hier „年轻的“.",
-        "zh": "“jung”在这里表示“年轻的”。"
+        "de": "Der Mann ist noch jung.",
+        "zh": "这个男人还很年轻。"
       }
     ],
     "sourceEntryType": "main"
@@ -13994,8 +13994,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Junge.",
-        "zh": "今天我们谈论男孩。"
+        "de": "Der Junge liest ein Buch.",
+        "zh": "男孩在读一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -14003,7 +14003,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0349",
     "german": "kaputt",
-    "translation": "损坏的",
+    "translation": "坏的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14012,7 +14012,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14021,8 +14021,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „kaputt“ bedeutet hier „损坏的“.",
-        "zh": "“kaputt”在这里表示“损坏的”。"
+        "de": "Der Stuhl ist kaputt.",
+        "zh": "这把椅子坏了。"
       }
     ],
     "sourceEntryType": "main"
@@ -14050,8 +14050,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Kartoffel.",
-        "zh": "今天我们谈论土豆。"
+        "de": "Die Kartoffel ist frisch.",
+        "zh": "这颗土豆是新鲜的。"
       }
     ],
     "sourceEntryType": "main"
@@ -14078,8 +14078,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Kasse.",
-        "zh": "今天我们谈论收银台。"
+        "de": "Ich bezahle an der Kasse.",
+        "zh": "我在收银台付款。"
       }
     ],
     "sourceEntryType": "main"
@@ -14087,7 +14087,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0355",
     "german": "kein",
-    "translation": "没有一个，没有",
+    "translation": "没有",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -14095,8 +14095,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -14105,8 +14105,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „kein“ bedeutet hier „没有一个，没有“.",
-        "zh": "“kein”在这里表示“没有一个，没有”。"
+        "de": "Ich habe kein Geld.",
+        "zh": "我没有钱。"
       }
     ],
     "sourceEntryType": "main"
@@ -14114,7 +14114,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0356",
     "german": "kennen",
-    "translation": "了解",
+    "translation": "认识，了解",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14132,8 +14132,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kennen.",
-        "zh": "我们今天想了解。"
+        "de": "Ich kenne Berlin gut.",
+        "zh": "我很了解柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -14141,7 +14141,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0357",
     "german": "kennenlernen",
-    "translation": "认识",
+    "translation": "认识（初次）",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14159,8 +14159,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kennenlernen.",
-        "zh": "我们今天想认识。"
+        "de": "Ich möchte dich kennenlernen.",
+        "zh": "我想认识你。"
       }
     ],
     "sourceEntryType": "derived"
@@ -14168,7 +14168,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0361",
     "german": "Kiosk",
-    "translation": "书报亭",
+    "translation": "报刊亭",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -14187,8 +14187,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kiosk.",
-        "zh": "今天我们谈论书报亭。"
+        "de": "Der Kiosk verkauft Zeitungen.",
+        "zh": "报刊亭卖报纸。"
       }
     ],
     "sourceEntryType": "main"
@@ -14205,17 +14205,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „klar“ bedeutet hier „当然，显然“.",
-        "zh": "“klar”在这里表示“当然，显然”。"
+        "de": "Das ist klar, ich helfe dir.",
+        "zh": "当然，我帮你。"
       }
     ],
     "sourceEntryType": "main"
@@ -14223,7 +14223,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0363",
     "german": "Klasse",
-    "translation": "年纪",
+    "translation": "班级",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -14242,8 +14242,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Klasse.",
-        "zh": "今天我们谈论年纪。"
+        "de": "Meine Klasse ist groß.",
+        "zh": "我的班级很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -14260,7 +14260,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14269,8 +14269,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „klein“ bedeutet hier „小的“.",
-        "zh": "“klein”在这里表示“小的”。"
+        "de": "Das Haus ist klein.",
+        "zh": "这座房子很小。"
       }
     ],
     "sourceEntryType": "main"
@@ -14278,7 +14278,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0366",
     "german": "kochen",
-    "translation": "烹饪",
+    "translation": "烹调",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14296,8 +14296,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kochen.",
-        "zh": "我们今天想烹饪。"
+        "de": "Ich koche Suppe.",
+        "zh": "我在煮汤。"
       }
     ],
     "sourceEntryType": "main"
@@ -14305,7 +14305,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0369",
     "german": "kommen",
-    "translation": "来来，来到",
+    "translation": "来到",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14323,8 +14323,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kommen.",
-        "zh": "我们今天想来来，来到。"
+        "de": "Er kommt nach Hause.",
+        "zh": "他回家。"
       }
     ],
     "sourceEntryType": "main"
@@ -14332,7 +14332,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0370",
     "german": "können",
-    "translation": "能够，会能够",
+    "translation": "能够",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14350,8 +14350,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute können.",
-        "zh": "我们今天想能够，会能够。"
+        "de": "Ich kann schwimmen.",
+        "zh": "我会游泳。"
       }
     ],
     "sourceEntryType": "main"
@@ -14377,8 +14377,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kosten.",
-        "zh": "我们今天想价值，价格为。"
+        "de": "Das Buch kostet fünf Euro.",
+        "zh": "这本书价值五欧元。"
       }
     ],
     "sourceEntryType": "main"
@@ -14386,7 +14386,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0374",
     "german": "krank",
-    "translation": "患病的",
+    "translation": "生病的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14395,7 +14395,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14404,8 +14404,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „krank“ bedeutet hier „患病的“.",
-        "zh": "“krank”在这里表示“患病的”。"
+        "de": "Er ist krank.",
+        "zh": "他生病了。"
       }
     ],
     "sourceEntryType": "main"
@@ -14431,8 +14431,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute kriegen.",
-        "zh": "我们今天想得到。"
+        "de": "Ich kriege ein Geschenk.",
+        "zh": "我得到一份礼物。"
       }
     ],
     "sourceEntryType": "main"
@@ -14440,7 +14440,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0377",
     "german": "Kuchen",
-    "translation": "糕点",
+    "translation": "蛋糕",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -14459,8 +14459,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kuchen.",
-        "zh": "今天我们谈论糕点。"
+        "de": "Der Kuchen ist süß.",
+        "zh": "这块蛋糕很甜。"
       }
     ],
     "sourceEntryType": "main"
@@ -14487,8 +14487,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kugelschreiber.",
-        "zh": "今天我们谈论圆珠笔。"
+        "de": "Der Kugelschreiber schreibt gut.",
+        "zh": "这支圆珠笔写得好。"
       }
     ],
     "sourceEntryType": "main"
@@ -14515,8 +14515,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kühlschrank.",
-        "zh": "今天我们谈论冰箱。"
+        "de": "Der Kühlschrank ist leer.",
+        "zh": "冰箱是空的。"
       }
     ],
     "sourceEntryType": "main"
@@ -14524,7 +14524,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0380",
     "german": "kulturell",
-    "translation": "文化方面的",
+    "translation": "文化的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14533,7 +14533,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14542,8 +14542,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „kulturell“ bedeutet hier „文化方面的“.",
-        "zh": "“kulturell”在这里表示“文化方面的”。"
+        "de": "Das Museum ist kulturell interessant.",
+        "zh": "这座博物馆在文化上很有趣。"
       }
     ],
     "sourceEntryType": "main"
@@ -14551,7 +14551,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0381",
     "german": "sich kümmern",
-    "translation": "照料；关心",
+    "translation": "照顾",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14569,8 +14569,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns kümmern.",
-        "zh": "我们今天想照料；关心。"
+        "de": "Ich will mich um das Kind kümmern.",
+        "zh": "我想照顾这个孩子。"
       }
     ],
     "sourceEntryType": "main"
@@ -14578,7 +14578,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0382",
     "german": "Kunde",
-    "translation": "男顾客",
+    "translation": "顾客",
     "kind": "noun",
     "article": "der",
     "plural": "-n",
@@ -14598,8 +14598,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kunde.",
-        "zh": "今天我们谈论男顾客。"
+        "de": "Der Kunde kauft Brot.",
+        "zh": "这位顾客买面包。"
       }
     ],
     "sourceEntryType": "main"
@@ -14627,8 +14627,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Kurs.",
-        "zh": "今天我们谈论课程。"
+        "de": "Der Kurs beginnt um neun.",
+        "zh": "课程在九点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -14636,7 +14636,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0384",
     "german": "kurz",
-    "translation": "简短的短的",
+    "translation": "短的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14645,7 +14645,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14654,8 +14654,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „kurz“ bedeutet hier „简短的短的“.",
-        "zh": "“kurz”在这里表示“简短的短的”。"
+        "de": "Der Film ist kurz.",
+        "zh": "这部电影很短。"
       }
     ],
     "sourceEntryType": "main"
@@ -14681,8 +14681,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute lachen.",
-        "zh": "我们今天想笑。"
+        "de": "Wir lachen zusammen.",
+        "zh": "我们一起笑。"
       }
     ],
     "sourceEntryType": "main"
@@ -14710,8 +14710,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Land.",
-        "zh": "今天我们谈论国家。"
+        "de": "Das Land ist schön.",
+        "zh": "这个国家很美。"
       }
     ],
     "sourceEntryType": "main"
@@ -14719,7 +14719,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0388",
     "german": "lang",
-    "translation": "长的长的",
+    "translation": "长的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14728,7 +14728,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14737,8 +14737,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „lang“ bedeutet hier „长的长的“.",
-        "zh": "“lang”在这里表示“长的长的”。"
+        "de": "Der Flur ist lang.",
+        "zh": "走廊很长。"
       }
     ],
     "sourceEntryType": "main"
@@ -14746,7 +14746,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0389",
     "german": "lange",
-    "translation": "长时间；很久",
+    "translation": "很久",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14755,17 +14755,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „lange“ bedeutet hier „长时间；很久“.",
-        "zh": "“lange”在这里表示“长时间；很久”。"
+        "de": "Ich warte lange.",
+        "zh": "我等很久。"
       }
     ],
     "sourceEntryType": "main"
@@ -14782,7 +14782,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14791,8 +14791,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „langsam“ bedeutet hier „缓慢的“.",
-        "zh": "“langsam”在这里表示“缓慢的”。"
+        "de": "Der Zug ist langsam.",
+        "zh": "火车很慢。"
       }
     ],
     "sourceEntryType": "main"
@@ -14800,7 +14800,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0391",
     "german": "laufen",
-    "translation": "走路，步行运转，进行",
+    "translation": "走路",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14818,8 +14818,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute laufen.",
-        "zh": "我们今天想走路，步行运转，进行。"
+        "de": "Ich laufe jeden Tag.",
+        "zh": "我每天走路。"
       }
     ],
     "sourceEntryType": "main"
@@ -14827,7 +14827,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0392",
     "german": "laut",
-    "translation": "喧闹的，响亮的...",
+    "translation": "响亮的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -14836,7 +14836,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14845,8 +14845,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „laut“ bedeutet hier „喧闹的，响亮的...“.",
-        "zh": "“laut”在这里表示“喧闹的，响亮的...”。"
+        "de": "Der Hund ist laut.",
+        "zh": "那只狗很响亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -14872,8 +14872,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute leben.",
-        "zh": "我们今天想生活。"
+        "de": "Ich lebe in Berlin.",
+        "zh": "我住在柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -14900,8 +14900,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Leben.",
-        "zh": "今天我们谈论生活。"
+        "de": "Das Leben ist kurz.",
+        "zh": "生活很短。"
       }
     ],
     "sourceEntryType": "derived"
@@ -14928,8 +14928,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Lebensmittel (pl.).",
-        "zh": "今天我们谈论食品。"
+        "de": "Die Lebensmittel sind frisch.",
+        "zh": "这些食品很新鲜。"
       }
     ],
     "sourceEntryType": "derived"
@@ -14946,7 +14946,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -14955,8 +14955,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ledig“ bedeutet hier „未婚的“.",
-        "zh": "“ledig”在这里表示“未婚的”。"
+        "de": "Sie ist ledig.",
+        "zh": "她未婚。"
       }
     ],
     "sourceEntryType": "main"
@@ -14964,7 +14964,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0397",
     "german": "legen",
-    "translation": "把 ... 平放",
+    "translation": "平放",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -14982,8 +14982,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute legen.",
-        "zh": "我们今天想把 ... 平放。"
+        "de": "Ich lege das Buch auf den Tisch.",
+        "zh": "我把书放在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -15011,8 +15011,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Lehrer.",
-        "zh": "今天我们谈论男老师。"
+        "de": "Der Lehrer erklärt das.",
+        "zh": "男老师解释这个。"
       }
     ],
     "sourceEntryType": "main"
@@ -15020,7 +15020,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0399",
     "german": "leicht",
-    "translation": "轻微的薄的",
+    "translation": "轻的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -15029,7 +15029,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15038,8 +15038,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „leicht“ bedeutet hier „轻微的薄的“.",
-        "zh": "“leicht”在这里表示“轻微的薄的”。"
+        "de": "Der Koffer ist leicht.",
+        "zh": "这个箱子很轻。"
       }
     ],
     "sourceEntryType": "main"
@@ -15056,17 +15056,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „leider“ bedeutet hier „可惜“.",
-        "zh": "“leider”在这里表示“可惜”。"
+        "de": "Leider regnet es.",
+        "zh": "可惜下雨了。"
       }
     ],
     "sourceEntryType": "main"
@@ -15083,7 +15083,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15092,8 +15092,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „leise“ bedeutet hier „低声的“.",
-        "zh": "“leise”在这里表示“低声的”。"
+        "de": "Bitte sprich leise.",
+        "zh": "请低声说话。"
       }
     ],
     "sourceEntryType": "main"
@@ -15119,8 +15119,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute lesen.",
-        "zh": "我们今天想读。"
+        "de": "Ich lese ein Buch.",
+        "zh": "我在读一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -15128,7 +15128,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0404",
     "german": "letzt-",
-    "translation": "最后的",
+    "translation": "上一个的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -15137,7 +15137,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15146,8 +15146,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „letzt-“ bedeutet hier „最后的“.",
-        "zh": "“letzt-”在这里表示“最后的”。"
+        "de": "Letzte Woche war ich krank.",
+        "zh": "我上周生病了。"
       }
     ],
     "sourceEntryType": "main"
@@ -15174,8 +15174,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Leute (pl.).",
-        "zh": "今天我们谈论人们。"
+        "de": "Die Leute trinken Kaffee.",
+        "zh": "人们喝咖啡。"
       }
     ],
     "sourceEntryType": "main"
@@ -15192,7 +15192,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15201,8 +15201,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „lieb-“ bedeutet hier „亲爱的“.",
-        "zh": "“lieb-”在这里表示“亲爱的”。"
+        "de": "Liebe Anna, wie geht es dir?",
+        "zh": "亲爱的安娜，你好吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -15228,8 +15228,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute lieben.",
-        "zh": "我们今天想热爱，喜爱。"
+        "de": "Ich will Deutsch lieben.",
+        "zh": "我想热爱德语。"
       }
     ],
     "sourceEntryType": "derived"
@@ -15246,17 +15246,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „lieber“ bedeutet hier „宁愿，更喜欢“.",
-        "zh": "“lieber”在这里表示“宁愿，更喜欢”。"
+        "de": "Ich trinke lieber Tee.",
+        "zh": "我宁愿喝茶。"
       }
     ],
     "sourceEntryType": "derived"
@@ -15265,25 +15265,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0410",
     "german": "Lieblings-",
     "translation": "最喜欢的",
-    "kind": "adjective",
+    "kind": "other",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "老的旧的",
-      "外国的",
-      "出名的"
+      "你好",
+      "再见",
+      "德国"
     ],
     "distractorIds": [
-      "a1-alpha-0013",
-      "a1-alpha-0063",
-      "a1-alpha-0097"
+      "a1-alpha-0304",
+      "a1-alpha-0603",
+      "a1-group-countries-nationalities-107"
     ],
     "examples": [
       {
-        "de": "Das Wort „Lieblings-“ bedeutet hier „最喜欢的“.",
-        "zh": "“Lieblings-”在这里表示“最喜欢的”。"
+        "de": "Mein Lieblingsbuch liegt auf dem Tisch.",
+        "zh": "我最喜欢的书放在桌上。"
       }
     ],
     "sourceEntryType": "main"
@@ -15291,7 +15291,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0412",
     "german": "liegen",
-    "translation": "位于躺，卧（指物）平放，横放位于",
+    "translation": "位于；躺着",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -15309,8 +15309,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute liegen.",
-        "zh": "我们今天想位于躺，卧（指物）平放，横放位于。"
+        "de": "Das Buch soll hier liegen.",
+        "zh": "书应该放在这里。"
       }
     ],
     "sourceEntryType": "main"
@@ -15327,17 +15327,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „links“ bedeutet hier „在左边“.",
-        "zh": "“links”在这里表示“在左边”。"
+        "de": "Der Stuhl steht links.",
+        "zh": "椅子在左边。"
       }
     ],
     "sourceEntryType": "main"
@@ -15365,8 +15365,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Lkw.",
-        "zh": "今天我们谈论卡车。"
+        "de": "Der Lkw fährt schnell.",
+        "zh": "卡车开得很快。"
       }
     ],
     "sourceEntryType": "main"
@@ -15393,8 +15393,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Lokal.",
-        "zh": "今天我们谈论餐馆；店铺。"
+        "de": "Das Lokal hat Pizza.",
+        "zh": "这家店有披萨。"
       }
     ],
     "sourceEntryType": "main"
@@ -15422,8 +15422,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Lösung.",
-        "zh": "今天我们谈论答案；解决办法。"
+        "de": "Die Lösung ist einfach.",
+        "zh": "答案很简单。"
       }
     ],
     "sourceEntryType": "main"
@@ -15440,7 +15440,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15449,8 +15449,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „lustig“ bedeutet hier „有趣的“.",
-        "zh": "“lustig”在这里表示“有趣的”。"
+        "de": "Der Film ist lustig.",
+        "zh": "这部电影很有趣。"
       }
     ],
     "sourceEntryType": "main"
@@ -15476,8 +15476,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute machen.",
-        "zh": "我们今天想做。"
+        "de": "Wir machen Hausaufgaben.",
+        "zh": "我们做作业。"
       }
     ],
     "sourceEntryType": "main"
@@ -15505,8 +15505,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Mädchen.",
-        "zh": "今天我们谈论女孩。"
+        "de": "Das Mädchen singt.",
+        "zh": "女孩在唱歌。"
       }
     ],
     "sourceEntryType": "main"
@@ -15521,19 +15521,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „man“ bedeutet hier „人们“.",
-        "zh": "“man”在这里表示“人们”。"
+        "de": "Man spricht hier Deutsch.",
+        "zh": "这里人们说德语。"
       }
     ],
     "sourceEntryType": "main"
@@ -15550,7 +15550,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15559,8 +15559,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „männlich“ bedeutet hier „男性的“.",
-        "zh": "“männlich”在这里表示“男性的”。"
+        "de": "Der Lehrer ist männlich.",
+        "zh": "老师是男性。"
       }
     ],
     "sourceEntryType": "derived"
@@ -15588,8 +15588,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Maschine.",
-        "zh": "今天我们谈论机器。"
+        "de": "Die Maschine ist neu.",
+        "zh": "这台机器是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -15606,17 +15606,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „mehr“ bedeutet hier „更多“.",
-        "zh": "“mehr”在这里表示“更多”。"
+        "de": "Ich habe mehr Äpfel.",
+        "zh": "我有更多的苹果。"
       }
     ],
     "sourceEntryType": "main"
@@ -15625,33 +15625,6 @@ export const A1_WORDS = [
     "id": "a1-alpha-0426",
     "german": "mein",
     "translation": "我的",
-    "kind": "pronoun",
-    "topic": "教育与学习",
-    "topicIds": [
-      "education"
-    ],
-    "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
-    ],
-    "distractorIds": [
-      "a1-alpha-0153",
-      "a1-alpha-0156",
-      "a1-alpha-0158"
-    ],
-    "examples": [
-      {
-        "de": "Das Wort „mein“ bedeutet hier „我的“.",
-        "zh": "“mein”在这里表示“我的”。"
-      }
-    ],
-    "sourceEntryType": "main"
-  },
-  {
-    "id": "a1-alpha-0427",
-    "german": "meist-",
-    "translation": "大多数的",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -15659,8 +15632,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -15669,8 +15642,35 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „meist-“ bedeutet hier „大多数的“.",
-        "zh": "“meist-”在这里表示“大多数的”。"
+        "de": "Das ist mein Buch.",
+        "zh": "这是我的书。"
+      }
+    ],
+    "sourceEntryType": "main"
+  },
+  {
+    "id": "a1-alpha-0427",
+    "german": "meist-",
+    "translation": "大多数的",
+    "kind": "adverb",
+    "topic": "教育与学习",
+    "topicIds": [
+      "education"
+    ],
+    "distractors": [
+      "独自",
+      "也",
+      "打开（状态）"
+    ],
+    "distractorIds": [
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
+    ],
+    "examples": [
+      {
+        "de": "Er kommt meist pünktlich.",
+        "zh": "他通常准时来。"
       }
     ],
     "sourceEntryType": "main"
@@ -15685,9 +15685,9 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -15696,8 +15696,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „mit“ bedeutet hier „和 … 一起，同在 … 的时候“.",
-        "zh": "“mit”在这里表示“和 … 一起，同在 … 的时候”。"
+        "de": "Ich gehe mit Anna.",
+        "zh": "我和安娜一起去。"
       }
     ],
     "sourceEntryType": "main"
@@ -15723,8 +15723,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mitbringen.",
-        "zh": "我们今天想带来。"
+        "de": "Ich bringe das Buch mit.",
+        "zh": "我把书带来。"
       }
     ],
     "sourceEntryType": "main"
@@ -15750,8 +15750,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mitkommen.",
-        "zh": "我们今天想同来，同去。"
+        "de": "Ich komme mit.",
+        "zh": "我一起去。"
       }
     ],
     "sourceEntryType": "main"
@@ -15777,8 +15777,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mitmachen.",
-        "zh": "我们今天想参加。"
+        "de": "Ich mache mit.",
+        "zh": "我参加。"
       }
     ],
     "sourceEntryType": "main"
@@ -15804,8 +15804,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mitnehmen.",
-        "zh": "我们今天想一起带走，顺便带走。"
+        "de": "Ich nehme den Regenschirm mit.",
+        "zh": "我把雨伞带走。"
       }
     ],
     "sourceEntryType": "main"
@@ -15832,8 +15832,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Mitte.",
-        "zh": "今天我们谈论中间。"
+        "de": "Die Bank steht in der Mitte.",
+        "zh": "这张长椅在中间。"
       }
     ],
     "sourceEntryType": "main"
@@ -15859,8 +15859,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute möchten.",
-        "zh": "我们今天想想要。"
+        "de": "Wir möchten ein Eis.",
+        "zh": "我们想要一个冰淇淋。"
       }
     ],
     "sourceEntryType": "main"
@@ -15886,8 +15886,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute mögen.",
-        "zh": "我们今天想喜欢。"
+        "de": "Wir mögen Musik.",
+        "zh": "我们喜欢音乐。"
       }
     ],
     "sourceEntryType": "main"
@@ -15895,7 +15895,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0441",
     "german": "möglich",
-    "translation": "可行的，可能的",
+    "translation": "可行的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -15904,7 +15904,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15913,8 +15913,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „möglich“ bedeutet hier „可行的，可能的“.",
-        "zh": "“möglich”在这里表示“可行的，可能的”。"
+        "de": "Ein Termin am Montag ist möglich.",
+        "zh": "可以约在星期一。"
       }
     ],
     "sourceEntryType": "main"
@@ -15941,8 +15941,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Moment.",
-        "zh": "今天我们谈论片刻，瞬间。"
+        "de": "Einen Moment bitte.",
+        "zh": "请稍等。"
       }
     ],
     "sourceEntryType": "main"
@@ -15951,25 +15951,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0443",
     "german": "morgen",
     "translation": "明天",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute morgen.",
-        "zh": "我们今天想明天。"
+        "de": "Morgen fahre ich nach Berlin.",
+        "zh": "明天我去柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -15986,7 +15986,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -15995,8 +15995,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „müde“ bedeutet hier „疲倦的“.",
-        "zh": "“müde”在这里表示“疲倦的”。"
+        "de": "Ich bin müde.",
+        "zh": "我很累。"
       }
     ],
     "sourceEntryType": "main"
@@ -16004,7 +16004,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0445",
     "german": "Mund",
-    "translation": "嘴",
+    "translation": "嘴巴",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -16023,8 +16023,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mund.",
-        "zh": "今天我们谈论嘴。"
+        "de": "Der Mund ist offen.",
+        "zh": "嘴巴是张开的。"
       }
     ],
     "sourceEntryType": "main"
@@ -16050,8 +16050,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute müssen.",
-        "zh": "我们今天想必须。"
+        "de": "Ich muss heute arbeiten.",
+        "zh": "我今天必须工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -16059,16 +16059,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0448",
     "german": "nach",
-    "translation": "在 … 之后在 … 之后到 … 去",
+    "translation": "…之后；去…",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -16077,8 +16077,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „nach“ bedeutet hier „在 … 之后在 … 之后到 … 去“.",
-        "zh": "“nach”在这里表示“在 … 之后在 … 之后到 … 去”。"
+        "de": "Wir fahren nach Berlin.",
+        "zh": "我们开车去柏林。"
       }
     ],
     "sourceEntryType": "main"
@@ -16094,8 +16094,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -16104,8 +16104,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „nächst-“ bedeutet hier „下一个“.",
-        "zh": "“nächst-”在这里表示“下一个”。"
+        "de": "Das ist das nächste Haus.",
+        "zh": "这是下一栋房子。"
       }
     ],
     "sourceEntryType": "main"
@@ -16113,7 +16113,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0451",
     "german": "nehmen",
-    "translation": "选择，选购乘，坐服用",
+    "translation": "拿，取，乘，服用",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -16131,8 +16131,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute nehmen.",
-        "zh": "我们今天想选择，选购乘，坐服用。"
+        "de": "Ich nehme den Bus.",
+        "zh": "我乘坐公交车。"
       }
     ],
     "sourceEntryType": "main"
@@ -16149,7 +16149,7 @@ export const A1_WORDS = [
     "distractors": [
       "请",
       "谢谢",
-      "是的真的，的确"
+      "是的，真的，的确"
     ],
     "distractorIds": [
       "a1-alpha-0116",
@@ -16158,8 +16158,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „nein“ bedeutet hier „不是“.",
-        "zh": "“nein”在这里表示“不是”。"
+        "de": "Nein, ich komme nicht.",
+        "zh": "不，我不来。"
       }
     ],
     "sourceEntryType": "main"
@@ -16176,7 +16176,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -16185,8 +16185,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „neu“ bedeutet hier „新的“.",
-        "zh": "“neu”在这里表示“新的”。"
+        "de": "Das Auto ist neu.",
+        "zh": "这辆车是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -16203,17 +16203,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „nicht“ bedeutet hier „不“.",
-        "zh": "“nicht”在这里表示“不”。"
+        "de": "Ich habe nicht genug.",
+        "zh": "我没有足够的。"
       }
     ],
     "sourceEntryType": "main"
@@ -16228,19 +16228,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „nichts“ bedeutet hier „什么也没有“.",
-        "zh": "“nichts”在这里表示“什么也没有”。"
+        "de": "Ich habe nichts.",
+        "zh": "我什么都没有。"
       }
     ],
     "sourceEntryType": "main"
@@ -16248,7 +16248,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0456",
     "german": "nie",
-    "translation": "从不，从未",
+    "translation": "从不",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -16257,17 +16257,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „nie“ bedeutet hier „从不，从未“.",
-        "zh": "“nie”在这里表示“从不，从未”。"
+        "de": "Ich esse nie Fleisch.",
+        "zh": "我从不吃肉。"
       }
     ],
     "sourceEntryType": "main"
@@ -16284,17 +16284,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „noch“ bedeutet hier „还“.",
-        "zh": "“noch”在这里表示“还”。"
+        "de": "Ich habe noch Zeit.",
+        "zh": "我还有时间。"
       }
     ],
     "sourceEntryType": "main"
@@ -16311,7 +16311,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -16320,8 +16320,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „normal“ bedeutet hier „正常的，普通的“.",
-        "zh": "“normal”在这里表示“正常的，普通的”。"
+        "de": "Das ist normal.",
+        "zh": "这很正常。"
       }
     ],
     "sourceEntryType": "main"
@@ -16349,8 +16349,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Nummer.",
-        "zh": "今天我们谈论号码。"
+        "de": "Meine Nummer ist fünf.",
+        "zh": "我的号码是五。"
       }
     ],
     "sourceEntryType": "main"
@@ -16367,17 +16367,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „nur“ bedeutet hier „只；仅仅“.",
-        "zh": "“nur”在这里表示“只；仅仅”。"
+        "de": "Ich habe nur ein Buch.",
+        "zh": "我只有一本书。"
       }
     ],
     "sourceEntryType": "main"
@@ -16386,25 +16386,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0461",
     "german": "oben",
     "translation": "在上面",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute oben.",
-        "zh": "我们今天想在上面。"
+        "de": "Das Bild hängt oben.",
+        "zh": "画挂在上面。"
       }
     ],
     "sourceEntryType": "main"
@@ -16421,7 +16421,7 @@ export const A1_WORDS = [
     "distractors": [
       "可是",
       "也就是说，可见",
-      "究竟因为"
+      "因为"
     ],
     "distractorIds": [
       "a1-alpha-0002",
@@ -16430,8 +16430,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „oder“ bedeutet hier „或者“.",
-        "zh": "“oder”在这里表示“或者”。"
+        "de": "Möchtest du Tee oder Kaffee?",
+        "zh": "你想喝茶还是咖啡？"
       }
     ],
     "sourceEntryType": "main"
@@ -16439,7 +16439,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0464",
     "german": "öffnen",
-    "translation": "开门",
+    "translation": "打开（门、窗等）",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -16457,8 +16457,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute öffnen.",
-        "zh": "我们今天想开门。"
+        "de": "Ich öffne die Tür.",
+        "zh": "我打开门。"
       }
     ],
     "sourceEntryType": "main"
@@ -16466,7 +16466,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0465",
     "german": "geöffnet",
-    "translation": "开门的，开放的",
+    "translation": "已打开的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -16475,7 +16475,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -16484,8 +16484,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „geöffnet“ bedeutet hier „开门的，开放的“.",
-        "zh": "“geöffnet”在这里表示“开门的，开放的”。"
+        "de": "Die Tür ist geöffnet.",
+        "zh": "门是打开的。"
       }
     ],
     "sourceEntryType": "derived"
@@ -16502,17 +16502,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „oft“ bedeutet hier „经常“.",
-        "zh": "“oft”在这里表示“经常”。"
+        "de": "Ich gehe oft spazieren.",
+        "zh": "我经常散步。"
       }
     ],
     "sourceEntryType": "main"
@@ -16520,16 +16520,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0467",
     "german": "ohne",
-    "translation": "没有，无",
+    "translation": "没有；不带",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -16538,8 +16538,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ohne“ bedeutet hier „没有，无“.",
-        "zh": "“ohne”在这里表示“没有，无”。"
+        "de": "Ich esse das Brot ohne Butter.",
+        "zh": "我吃面包不抹黄油。"
       }
     ],
     "sourceEntryType": "main"
@@ -16547,7 +16547,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0469",
     "german": "Oma",
-    "translation": "祖母，外祖母",
+    "translation": "祖母",
     "kind": "noun",
     "article": "die",
     "plural": "-s",
@@ -16567,8 +16567,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Oma.",
-        "zh": "今天我们谈论祖母，外祖母。"
+        "de": "Meine Oma kocht Suppe.",
+        "zh": "我的奶奶做汤。"
       }
     ],
     "sourceEntryType": "main"
@@ -16576,7 +16576,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0470",
     "german": "Opa",
-    "translation": "爷爷，姥爷",
+    "translation": "祖父",
     "kind": "noun",
     "article": "der",
     "plural": "-s",
@@ -16596,8 +16596,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Opa.",
-        "zh": "今天我们谈论爷爷，姥爷。"
+        "de": "Mein Opa liest die Zeitung.",
+        "zh": "我的爷爷读报纸。"
       }
     ],
     "sourceEntryType": "main"
@@ -16605,7 +16605,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0471",
     "german": "Ordnung",
-    "translation": "秩序；正常状态",
+    "translation": "秩序",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -16624,8 +16624,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Ordnung.",
-        "zh": "今天我们谈论秩序；正常状态。"
+        "de": "Bitte halte Ordnung im Zimmer.",
+        "zh": "请保持房间整洁。"
       }
     ],
     "sourceEntryType": "main"
@@ -16633,7 +16633,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0472",
     "german": "Ort",
-    "translation": "地方，地点",
+    "translation": "地点",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -16653,8 +16653,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Ort.",
-        "zh": "今天我们谈论地方，地点。"
+        "de": "Der Bahnhof ist ein Ort.",
+        "zh": "火车站是一个地点。"
       }
     ],
     "sourceEntryType": "main"
@@ -16681,8 +16681,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Papier.",
-        "zh": "今天我们谈论纸张。"
+        "de": "Ich schreibe auf Papier.",
+        "zh": "我在纸上写字。"
       }
     ],
     "sourceEntryType": "main"
@@ -16690,7 +16690,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0474",
     "german": "Papiere (pl.)",
-    "translation": "证件；文件",
+    "translation": "文件",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -16709,8 +16709,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Papiere (pl.).",
-        "zh": "今天我们谈论证件；文件。"
+        "de": "Ich bringe meine Papiere mit.",
+        "zh": "我把我的文件带上。"
       }
     ],
     "sourceEntryType": "main"
@@ -16738,8 +16738,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Pause.",
-        "zh": "今天我们谈论休息。"
+        "de": "Wir machen eine Pause.",
+        "zh": "我们稍作休息。"
       }
     ],
     "sourceEntryType": "main"
@@ -16747,7 +16747,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0480",
     "german": "Plan",
-    "translation": "规划，计划计划计划",
+    "translation": "计划",
     "kind": "noun",
     "article": "der",
     "plural": "-ä, e",
@@ -16767,8 +16767,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Plan.",
-        "zh": "今天我们谈论规划，计划计划计划。"
+        "de": "Ich habe einen Plan.",
+        "zh": "我有一个计划。"
       }
     ],
     "sourceEntryType": "main"
@@ -16776,7 +16776,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0481",
     "german": "Platz",
-    "translation": "空间（单数形式）",
+    "translation": "位置",
     "kind": "noun",
     "article": "der",
     "plural": "-ä, e",
@@ -16796,8 +16796,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Platz.",
-        "zh": "今天我们谈论空间（单数形式）。"
+        "de": "Gib mir einen Platz.",
+        "zh": "请给我一个座位。"
       }
     ],
     "sourceEntryType": "main"
@@ -16824,8 +16824,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Pommes frites (pl.).",
-        "zh": "今天我们谈论炸薯条。"
+        "de": "Ich bestelle Pommes frites.",
+        "zh": "我点炸薯条。"
       }
     ],
     "sourceEntryType": "main"
@@ -16852,8 +16852,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Praxis.",
-        "zh": "今天我们谈论诊所。"
+        "de": "Ich gehe zur Praxis.",
+        "zh": "我去诊所。"
       }
     ],
     "sourceEntryType": "main"
@@ -16881,8 +16881,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Problem.",
-        "zh": "今天我们谈论问题。"
+        "de": "Das ist ein Problem.",
+        "zh": "这是一个问题。"
       }
     ],
     "sourceEntryType": "main"
@@ -16890,7 +16890,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0490",
     "german": "Prospekt",
-    "translation": "宣传册，手册",
+    "translation": "宣传册",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -16910,8 +16910,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Prospekt.",
-        "zh": "今天我们谈论宣传册，手册。"
+        "de": "Ich nehme den Prospekt am Schalter.",
+        "zh": "我从柜台拿了宣传册。"
       }
     ],
     "sourceEntryType": "main"
@@ -16938,8 +16938,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Prüfung.",
-        "zh": "今天我们谈论考试。"
+        "de": "Morgen habe ich die Prüfung.",
+        "zh": "明天我有考试。"
       }
     ],
     "sourceEntryType": "main"
@@ -16956,7 +16956,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -16965,8 +16965,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „pünktlich“ bedeutet hier „准时的“.",
-        "zh": "“pünktlich”在这里表示“准时的”。"
+        "de": "Der Zug kommt pünktlich an.",
+        "zh": "火车准时到达。"
       }
     ],
     "sourceEntryType": "main"
@@ -16992,8 +16992,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute rauchen.",
-        "zh": "我们今天想吸烟。"
+        "de": "Er darf hier nicht rauchen.",
+        "zh": "他不能在这里吸烟。"
       }
     ],
     "sourceEntryType": "main"
@@ -17021,8 +17021,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Raum.",
-        "zh": "今天我们谈论房间。"
+        "de": "Der Raum ist leer.",
+        "zh": "房间是空的。"
       }
     ],
     "sourceEntryType": "main"
@@ -17050,8 +17050,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Rechnung.",
-        "zh": "今天我们谈论账单。"
+        "de": "Bitte geben Sie mir die Rechnung.",
+        "zh": "请把账单给我。"
       }
     ],
     "sourceEntryType": "main"
@@ -17059,7 +17059,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0497",
     "german": "rechts",
-    "translation": "在右边",
+    "translation": "右边",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17068,17 +17068,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „rechts“ bedeutet hier „在右边“.",
-        "zh": "“rechts”在这里表示“在右边”。"
+        "de": "Das Buch liegt rechts.",
+        "zh": "书在右边。"
       }
     ],
     "sourceEntryType": "main"
@@ -17104,8 +17104,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute regnen.",
-        "zh": "我们今天想下雨。"
+        "de": "Es wird heute regnen.",
+        "zh": "今天会下雨。"
       }
     ],
     "sourceEntryType": "main"
@@ -17131,8 +17131,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute reparieren.",
-        "zh": "我们今天想修理。"
+        "de": "Ich will das Fahrrad reparieren.",
+        "zh": "我想修理自行车。"
       }
     ],
     "sourceEntryType": "main"
@@ -17159,8 +17159,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Rezeption.",
-        "zh": "今天我们谈论前台。"
+        "de": "Ich warte an der Rezeption.",
+        "zh": "我在前台等候。"
       }
     ],
     "sourceEntryType": "main"
@@ -17168,7 +17168,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0509",
     "german": "richtig",
-    "translation": "正确的正确的",
+    "translation": "正确的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -17177,7 +17177,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17186,8 +17186,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „richtig“ bedeutet hier „正确的正确的“.",
-        "zh": "“richtig”在这里表示“正确的正确的”。"
+        "de": "Deine Antwort ist richtig.",
+        "zh": "你的答案是正确的。"
       }
     ],
     "sourceEntryType": "main"
@@ -17195,7 +17195,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0510",
     "german": "riechen",
-    "translation": "闻起来，发出气味",
+    "translation": "闻",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17213,8 +17213,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute riechen.",
-        "zh": "我们今天想闻起来，发出气味。"
+        "de": "Ich will das Parfüm riechen.",
+        "zh": "我想闻这个香水。"
       }
     ],
     "sourceEntryType": "main"
@@ -17231,7 +17231,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17240,8 +17240,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „ruhig“ bedeutet hier „安静的“.",
-        "zh": "“ruhig”在这里表示“安静的”。"
+        "de": "Bitte sei jetzt ruhig.",
+        "zh": "请现在保持安静。"
       }
     ],
     "sourceEntryType": "main"
@@ -17267,8 +17267,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute sagen.",
-        "zh": "我们今天想说。"
+        "de": "Kannst du das bitte sagen?",
+        "zh": "你能把它说出来吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -17296,8 +17296,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Satz.",
-        "zh": "今天我们谈论句子。"
+        "de": "Der Satz ist zu lang.",
+        "zh": "这句话太长了。"
       }
     ],
     "sourceEntryType": "main"
@@ -17323,8 +17323,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute scheinen.",
-        "zh": "我们今天想照耀。"
+        "de": "Ich hoffe, die Sonne wird scheinen.",
+        "zh": "我希望太阳会照耀。"
       }
     ],
     "sourceEntryType": "main"
@@ -17332,7 +17332,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0520",
     "german": "schicken",
-    "translation": "寄",
+    "translation": "寄送",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17350,8 +17350,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schicken.",
-        "zh": "我们今天想寄。"
+        "de": "Ich schicke dir das Paket.",
+        "zh": "我把包裹寄给你。"
       }
     ],
     "sourceEntryType": "main"
@@ -17359,7 +17359,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0521",
     "german": "Schild",
-    "translation": "牌子",
+    "translation": "标志牌",
     "kind": "noun",
     "article": "das",
     "plural": "-er",
@@ -17379,8 +17379,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Schild.",
-        "zh": "今天我们谈论牌子。"
+        "de": "Das Schild zeigt den Ausgang.",
+        "zh": "这个标志牌指示出口。"
       }
     ],
     "sourceEntryType": "main"
@@ -17408,8 +17408,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schinken.",
-        "zh": "今天我们谈论火腿。"
+        "de": "Ich esse Schinken zum Frühstück.",
+        "zh": "我早餐吃火腿。"
       }
     ],
     "sourceEntryType": "main"
@@ -17435,8 +17435,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schlafen.",
-        "zh": "我们今天想睡觉。"
+        "de": "Ich schlafe jetzt.",
+        "zh": "我现在睡觉。"
       }
     ],
     "sourceEntryType": "main"
@@ -17453,7 +17453,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17462,8 +17462,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „schlecht“ bedeutet hier „差的；不舒服的“.",
-        "zh": "“schlecht”在这里表示“差的；不舒服的”。"
+        "de": "Das Wetter ist schlecht.",
+        "zh": "天气很差。"
       }
     ],
     "sourceEntryType": "main"
@@ -17471,7 +17471,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0525",
     "german": "schließen",
-    "translation": "关门",
+    "translation": "关上",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17489,8 +17489,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schließen.",
-        "zh": "我们今天想关门。"
+        "de": "Ich schließe die Tür.",
+        "zh": "我把门关上。"
       }
     ],
     "sourceEntryType": "main"
@@ -17498,7 +17498,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0526",
     "german": "geschlossen",
-    "translation": "关门的，关闭的",
+    "translation": "关闭的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -17507,7 +17507,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17516,8 +17516,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „geschlossen“ bedeutet hier „关门的，关闭的“.",
-        "zh": "“geschlossen”在这里表示“关门的，关闭的”。"
+        "de": "Der Laden ist am Sonntag geschlossen.",
+        "zh": "商店星期日不营业。"
       }
     ],
     "sourceEntryType": "derived"
@@ -17525,7 +17525,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0527",
     "german": "Schluss",
-    "translation": "结束语（单数形式）结束",
+    "translation": "结束",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -17544,8 +17544,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schluss.",
-        "zh": "今天我们谈论结束语（单数形式）结束。"
+        "de": "Der Schluss ist kurz.",
+        "zh": "结尾很短。"
       }
     ],
     "sourceEntryType": "main"
@@ -17553,7 +17553,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0529",
     "german": "schmecken",
-    "translation": "觉得好吃，合口味",
+    "translation": "好吃",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17571,8 +17571,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schmecken.",
-        "zh": "我们今天想觉得好吃，合口味。"
+        "de": "Der Kuchen schmeckt gut.",
+        "zh": "蛋糕很好吃。"
       }
     ],
     "sourceEntryType": "main"
@@ -17589,7 +17589,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17598,8 +17598,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „schnell“ bedeutet hier „快的“.",
-        "zh": "“schnell”在这里表示“快的”。"
+        "de": "Der Zug ist schnell.",
+        "zh": "这列火车很快。"
       }
     ],
     "sourceEntryType": "main"
@@ -17616,17 +17616,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „schon“ bedeutet hier „已经“.",
-        "zh": "“schon”在这里表示“已经”。"
+        "de": "Ich bin schon zu Hause.",
+        "zh": "我已经在家了。"
       }
     ],
     "sourceEntryType": "main"
@@ -17634,7 +17634,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0532",
     "german": "schön",
-    "translation": "美丽的真好很，非常",
+    "translation": "美丽的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -17643,7 +17643,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17652,8 +17652,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „schön“ bedeutet hier „美丽的真好很，非常“.",
-        "zh": "“schön”在这里表示“美丽的真好很，非常”。"
+        "de": "Der Park ist schön.",
+        "zh": "公园很美丽。"
       }
     ],
     "sourceEntryType": "main"
@@ -17681,8 +17681,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schrank.",
-        "zh": "今天我们谈论柜子。"
+        "de": "Der Schrank ist voll.",
+        "zh": "柜子里装满了东西。"
       }
     ],
     "sourceEntryType": "main"
@@ -17708,8 +17708,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute schreiben.",
-        "zh": "我们今天想写。"
+        "de": "Ich schreibe jeden Tag im Tagebuch.",
+        "zh": "我每天在日记本里写字。"
       }
     ],
     "sourceEntryType": "main"
@@ -17737,8 +17737,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Schüler.",
-        "zh": "今天我们谈论男学生。"
+        "de": "Der Schüler liest ein Buch.",
+        "zh": "这位男学生在读一本书。"
       }
     ],
     "sourceEntryType": "derived"
@@ -17746,7 +17746,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0538",
     "german": "schwer",
-    "translation": "困难的沉重的",
+    "translation": "困难的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -17755,7 +17755,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17764,8 +17764,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „schwer“ bedeutet hier „困难的沉重的“.",
-        "zh": "“schwer”在这里表示“困难的沉重的”。"
+        "de": "Die Aufgabe ist schwer.",
+        "zh": "这道题很难。"
       }
     ],
     "sourceEntryType": "main"
@@ -17773,7 +17773,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0543",
     "german": "sehen",
-    "translation": "看，看见",
+    "translation": "看见",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17791,8 +17791,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute sehen.",
-        "zh": "我们今天想看，看见。"
+        "de": "Ich sehe den Hund.",
+        "zh": "我看到那只狗。"
       }
     ],
     "sourceEntryType": "main"
@@ -17800,7 +17800,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0544",
     "german": "Sehenswürdigkeit",
-    "translation": "景点，名胜古迹",
+    "translation": "名胜",
     "kind": "noun",
     "article": "die",
     "plural": "-en",
@@ -17820,8 +17820,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Sehenswürdigkeit.",
-        "zh": "今天我们谈论景点，名胜古迹。"
+        "de": "Die Sehenswürdigkeit ist schön.",
+        "zh": "这座名胜很漂亮。"
       }
     ],
     "sourceEntryType": "main"
@@ -17829,7 +17829,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0545",
     "german": "sehr",
-    "translation": "很",
+    "translation": "非常",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17838,17 +17838,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „sehr“ bedeutet hier „很“.",
-        "zh": "“sehr”在这里表示“很”。"
+        "de": "Das Essen ist sehr gut.",
+        "zh": "这道菜非常好。"
       }
     ],
     "sourceEntryType": "main"
@@ -17874,8 +17874,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute sein.",
-        "zh": "我们今天想是。"
+        "de": "Er ist mein Freund.",
+        "zh": "他是我的朋友。"
       }
     ],
     "sourceEntryType": "main"
@@ -17883,7 +17883,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0550",
     "german": "zu sein",
-    "translation": "关着",
+    "translation": "是",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -17901,8 +17901,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute zu sein.",
-        "zh": "我们今天想关着。"
+        "de": "Es ist schön, hier zu sein.",
+        "zh": "在这里很舒服。"
       }
     ],
     "sourceEntryType": "derived"
@@ -17910,16 +17910,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0551",
     "german": "seit",
-    "translation": "从 … 以来",
+    "translation": "自……以来",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -17928,8 +17928,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „seit“ bedeutet hier „从 … 以来“.",
-        "zh": "“seit”在这里表示“从 … 以来”。"
+        "de": "Ich wohne seit 2020 hier.",
+        "zh": "我自2020年以来住在这里。"
       }
     ],
     "sourceEntryType": "main"
@@ -17946,7 +17946,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -17955,8 +17955,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „selbstständig“ bedeutet hier „独立的“.",
-        "zh": "“selbstständig”在这里表示“独立的”。"
+        "de": "Sie arbeitet selbstständig.",
+        "zh": "她独立工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -17964,26 +17964,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0553",
     "german": "sich",
-    "translation": "自己；自身",
+    "translation": "自己",
     "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „sich“ bedeutet hier „自己；自身“.",
-        "zh": "“sich”在这里表示“自己；自身”。"
+        "de": "Er erinnert sich.",
+        "zh": "他记得了。"
       }
     ],
     "sourceEntryType": "main"
@@ -17991,26 +17991,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0554",
     "german": "sie",
-    "translation": "您，您们",
+    "translation": "她",
     "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „sie“ bedeutet hier „您，您们“.",
-        "zh": "“sie”在这里表示“您，您们”。"
+        "de": "Ich treffe sie morgen.",
+        "zh": "我明天会见她。"
       }
     ],
     "sourceEntryType": "main"
@@ -18018,26 +18018,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0555",
     "german": "Sie",
-    "translation": "您，您们",
+    "translation": "您",
     "kind": "pronoun",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „Sie“ bedeutet hier „您，您们“.",
-        "zh": "“Sie”在这里表示“您，您们”。"
+        "de": "Können Sie mir helfen?",
+        "zh": "您能帮我吗？"
       }
     ],
     "sourceEntryType": "main"
@@ -18063,8 +18063,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute sitzen.",
-        "zh": "我们今天想坐。"
+        "de": "Wir sitzen im Bus.",
+        "zh": "我们坐在公交车上。"
       }
     ],
     "sourceEntryType": "main"
@@ -18072,7 +18072,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0557",
     "german": "so",
-    "translation": "这么，这样如此",
+    "translation": "这样",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18081,17 +18081,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „so“ bedeutet hier „这么，这样如此“.",
-        "zh": "“so”在这里表示“这么，这样如此”。"
+        "de": "Das ist so.",
+        "zh": "就是这样。"
       }
     ],
     "sourceEntryType": "main"
@@ -18099,7 +18099,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0559",
     "german": "sofort",
-    "translation": "立刻，马上",
+    "translation": "马上",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18108,17 +18108,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „sofort“ bedeutet hier „立刻，马上“.",
-        "zh": "“sofort”在这里表示“立刻，马上”。"
+        "de": "Komm sofort hierher!",
+        "zh": "马上来这里！"
       }
     ],
     "sourceEntryType": "main"
@@ -18126,7 +18126,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0561",
     "german": "sollen",
-    "translation": "应该",
+    "translation": "应当",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18144,8 +18144,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute sollen.",
-        "zh": "我们今天想应该。"
+        "de": "Wir sollen lernen.",
+        "zh": "我们应该学习。"
       }
     ],
     "sourceEntryType": "main"
@@ -18153,7 +18153,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0563",
     "german": "spät",
-    "translation": "晚的",
+    "translation": "迟的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -18162,7 +18162,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -18171,8 +18171,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „spät“ bedeutet hier „晚的“.",
-        "zh": "“spät”在这里表示“晚的”。"
+        "de": "Der Zug ist spät.",
+        "zh": "火车晚点了。"
       }
     ],
     "sourceEntryType": "main"
@@ -18180,7 +18180,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0564",
     "german": "später",
-    "translation": "以后以后",
+    "translation": "以后",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18189,17 +18189,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „später“ bedeutet hier „以后以后“.",
-        "zh": "“später”在这里表示“以后以后”。"
+        "de": "Wir kommen später.",
+        "zh": "我们稍后到。"
       }
     ],
     "sourceEntryType": "main"
@@ -18207,7 +18207,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0568",
     "german": "Sprache",
-    "translation": "语音",
+    "translation": "语言",
     "kind": "noun",
     "article": "die",
     "plural": "-n",
@@ -18227,8 +18227,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Sprache.",
-        "zh": "今天我们谈论语音。"
+        "de": "Deutsch ist eine schöne Sprache.",
+        "zh": "德语是一门美丽的语言。"
       }
     ],
     "sourceEntryType": "main"
@@ -18236,7 +18236,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0571",
     "german": "stehen",
-    "translation": "处于某种情况站立适合（某人）---处于 的情况",
+    "translation": "站立；处于某种状态",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18254,8 +18254,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute stehen.",
-        "zh": "我们今天想处于某种情况站立适合（某人）---处于 的情况。"
+        "de": "Der Stuhl steht neben dem Tisch.",
+        "zh": "椅子在桌子旁边。"
       }
     ],
     "sourceEntryType": "main"
@@ -18283,8 +18283,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Stelle.",
-        "zh": "今天我们谈论职位。"
+        "de": "Ich habe eine neue Stelle gefunden.",
+        "zh": "我找到了一个新职位。"
       }
     ],
     "sourceEntryType": "main"
@@ -18292,7 +18292,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0573",
     "german": "stellen",
-    "translation": "放置；站立",
+    "translation": "放置",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18310,8 +18310,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute stellen.",
-        "zh": "我们今天想放置；站立。"
+        "de": "Bitte stell die Tasse auf den Tisch.",
+        "zh": "请把杯子放在桌子上。"
       }
     ],
     "sourceEntryType": "main"
@@ -18319,7 +18319,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0574",
     "german": "Stock",
-    "translation": "楼层（单数形式）",
+    "translation": "楼层",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -18338,8 +18338,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Stock.",
-        "zh": "今天我们谈论楼层（单数形式）。"
+        "de": "Wir wohnen im dritten Stock.",
+        "zh": "我们住在三楼。"
       }
     ],
     "sourceEntryType": "main"
@@ -18347,7 +18347,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0577",
     "german": "studieren",
-    "translation": "（在大学）攻读，学习",
+    "translation": "在大学学习",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18365,8 +18365,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute studieren.",
-        "zh": "我们今天想（在大学）攻读，学习。"
+        "de": "Anna studiert Biologie an der Uni.",
+        "zh": "安娜在大学学习生物。"
       }
     ],
     "sourceEntryType": "main"
@@ -18374,7 +18374,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0578",
     "german": "Studium",
-    "translation": "大学学习，学业",
+    "translation": "大学学习",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -18393,8 +18393,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Studium.",
-        "zh": "今天我们谈论大学学习，学业。"
+        "de": "Mein Studium dauert vier Jahre.",
+        "zh": "我的大学学习持续四年。"
       }
     ],
     "sourceEntryType": "main"
@@ -18402,7 +18402,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0579",
     "german": "Student",
-    "translation": "男大学生",
+    "translation": "大学生（男性）",
     "kind": "noun",
     "article": "der",
     "plural": "-en",
@@ -18422,8 +18422,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Student.",
-        "zh": "今天我们谈论男大学生。"
+        "de": "Der Student liest in der Bibliothek.",
+        "zh": "这位男大学生在图书馆阅读。"
       }
     ],
     "sourceEntryType": "derived"
@@ -18451,8 +18451,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Stunde.",
-        "zh": "今天我们谈论小时。"
+        "de": "Die Stunde beginnt um neun Uhr.",
+        "zh": "这节课在九点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -18478,8 +18478,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute suchen.",
-        "zh": "我们今天想寻找。"
+        "de": "Ich suche meine Schlüssel.",
+        "zh": "我在找我的钥匙。"
       }
     ],
     "sourceEntryType": "main"
@@ -18507,8 +18507,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Teil.",
-        "zh": "今天我们谈论部分。"
+        "de": "Ein Teil des Kuchens fehlt.",
+        "zh": "蛋糕的一块不见了。"
       }
     ],
     "sourceEntryType": "main"
@@ -18516,7 +18516,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0589",
     "german": "Termin",
-    "translation": "（约定的）日程，约会",
+    "translation": "约会；预约时间",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -18536,8 +18536,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Termin.",
-        "zh": "今天我们谈论（约定的）日程，约会。"
+        "de": "Wir haben einen Termin um zehn.",
+        "zh": "我们十点有一个约会。"
       }
     ],
     "sourceEntryType": "main"
@@ -18564,8 +18564,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Test.",
-        "zh": "今天我们谈论测验。"
+        "de": "Der Test ist morgen.",
+        "zh": "测验在明天。"
       }
     ],
     "sourceEntryType": "main"
@@ -18582,7 +18582,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -18591,8 +18591,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „teuer“ bedeutet hier „昂贵的“.",
-        "zh": "“teuer”在这里表示“昂贵的”。"
+        "de": "Das Buch ist sehr teuer.",
+        "zh": "这本书很贵。"
       }
     ],
     "sourceEntryType": "main"
@@ -18620,8 +18620,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Text.",
-        "zh": "今天我们谈论文章。"
+        "de": "Der Text ist leicht zu lesen.",
+        "zh": "这篇文章很容易阅读。"
       }
     ],
     "sourceEntryType": "main"
@@ -18629,7 +18629,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0593",
     "german": "Thema",
-    "translation": "主题，话题",
+    "translation": "主题；话题",
     "kind": "noun",
     "article": "das",
     "topic": "教育与学习",
@@ -18648,8 +18648,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Thema.",
-        "zh": "今天我们谈论主题，话题。"
+        "de": "Unser Thema ist Umweltschutz.",
+        "zh": "我们的主题是环境保护。"
       }
     ],
     "sourceEntryType": "main"
@@ -18657,7 +18657,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0597",
     "german": "Toilette",
-    "translation": "卫生间",
+    "translation": "厕所",
     "kind": "noun",
     "article": "die",
     "plural": "-en",
@@ -18677,8 +18677,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Toilette.",
-        "zh": "今天我们谈论卫生间。"
+        "de": "Wo ist die Toilette?",
+        "zh": "厕所在哪里？"
       }
     ],
     "sourceEntryType": "main"
@@ -18695,7 +18695,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -18704,8 +18704,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „tot“ bedeutet hier „死的“.",
-        "zh": "“tot”在这里表示“死的”。"
+        "de": "Der Fisch ist tot.",
+        "zh": "这条鱼死了。"
       }
     ],
     "sourceEntryType": "main"
@@ -18713,7 +18713,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0600",
     "german": "(sich) treffen",
-    "translation": "会面，会见",
+    "translation": "见面",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18731,8 +18731,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns treffen.",
-        "zh": "我们今天想会面，会见。"
+        "de": "Wir treffen uns um acht.",
+        "zh": "我们八点见面。"
       }
     ],
     "sourceEntryType": "main"
@@ -18741,25 +18741,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0603",
     "german": "tschüss",
     "translation": "再见",
-    "kind": "adverb",
+    "kind": "other",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "独自",
-      "也",
-      "很快，即将"
+      "你好",
+      "最喜欢的",
+      "德国"
     ],
     "distractorIds": [
-      "a1-alpha-0011",
-      "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0304",
+      "a1-alpha-0410",
+      "a1-group-countries-nationalities-107"
     ],
     "examples": [
       {
-        "de": "Das Wort „tschüss“ bedeutet hier „再见“.",
-        "zh": "“tschüss”在这里表示“再见”。"
+        "de": "Tschüss, bis morgen!",
+        "zh": "再见，明天见！"
       }
     ],
     "sourceEntryType": "main"
@@ -18767,7 +18767,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0604",
     "german": "tun",
-    "translation": "干，工作",
+    "translation": "做",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -18785,8 +18785,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute tun.",
-        "zh": "我们今天想干，工作。"
+        "de": "Was willst du tun?",
+        "zh": "你想做什么？"
       }
     ],
     "sourceEntryType": "main"
@@ -18794,16 +18794,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0605",
     "german": "über",
-    "translation": "在 … 期间超过对于在 … 上方通过",
+    "translation": "关于",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -18812,8 +18812,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „über“ bedeutet hier „在 … 期间超过对于在 … 上方通过“.",
-        "zh": "“über”在这里表示“在 … 期间超过对于在 … 上方通过”。"
+        "de": "Das Buch ist über Berlin.",
+        "zh": "这本书是关于柏林的。"
       }
     ],
     "sourceEntryType": "main"
@@ -18839,8 +18839,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute übernachten.",
-        "zh": "我们今天想过夜。"
+        "de": "Wir übernachten im Hotel.",
+        "zh": "我们在酒店过夜。"
       }
     ],
     "sourceEntryType": "main"
@@ -18866,8 +18866,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute überweisen.",
-        "zh": "我们今天想转账。"
+        "de": "Ich möchte Geld überweisen.",
+        "zh": "我想转账。"
       }
     ],
     "sourceEntryType": "main"
@@ -18875,7 +18875,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0608",
     "german": "Uhr",
-    "translation": "钟点",
+    "translation": "钟表",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -18894,8 +18894,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Uhr.",
-        "zh": "今天我们谈论钟点。"
+        "de": "Wie spät ist die Uhr?",
+        "zh": "现在几点？"
       }
     ],
     "sourceEntryType": "main"
@@ -18903,16 +18903,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0609",
     "german": "um",
-    "translation": "在 … 时刻",
+    "translation": "在…时",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -18921,8 +18921,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „um“ bedeutet hier „在 … 时刻“.",
-        "zh": "“um”在这里表示“在 … 时刻”。"
+        "de": "Wir treffen uns um neun.",
+        "zh": "我们九点见面。"
       }
     ],
     "sourceEntryType": "main"
@@ -18948,8 +18948,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute umziehen.",
-        "zh": "我们今天想搬家。"
+        "de": "Wir wollen umziehen.",
+        "zh": "我们想搬家。"
       }
     ],
     "sourceEntryType": "main"
@@ -18966,7 +18966,7 @@ export const A1_WORDS = [
     "distractors": [
       "可是",
       "也就是说，可见",
-      "究竟因为"
+      "因为"
     ],
     "distractorIds": [
       "a1-alpha-0002",
@@ -18975,8 +18975,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „und“ bedeutet hier „和“.",
-        "zh": "“und”在这里表示“和”。"
+        "de": "Anna und Ben kommen.",
+        "zh": "安娜和本来了。"
       }
     ],
     "sourceEntryType": "main"
@@ -18991,19 +18991,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „unser-“ bedeutet hier „我们的“.",
-        "zh": "“unser-”在这里表示“我们的”。"
+        "de": "Unser Haus ist groß.",
+        "zh": "我们的房子很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -19012,25 +19012,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0613",
     "german": "unten",
     "translation": "在下面",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute unten.",
-        "zh": "我们今天想在下面。"
+        "de": "Das Buch liegt unten.",
+        "zh": "书在下面。"
       }
     ],
     "sourceEntryType": "main"
@@ -19038,16 +19038,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0614",
     "german": "unter",
-    "translation": "在……下面",
+    "translation": "在…下面",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -19056,8 +19056,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „unter“ bedeutet hier „在……下面“.",
-        "zh": "“unter”在这里表示“在……下面”。"
+        "de": "Der Ball ist unter dem Tisch.",
+        "zh": "球在桌子下面。"
       }
     ],
     "sourceEntryType": "main"
@@ -19065,7 +19065,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0615",
     "german": "Unterricht",
-    "translation": "课程；课堂",
+    "translation": "课程",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -19084,8 +19084,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Unterricht.",
-        "zh": "今天我们谈论课程；课堂。"
+        "de": "Der Unterricht beginnt um acht.",
+        "zh": "课程在八点开始。"
       }
     ],
     "sourceEntryType": "main"
@@ -19093,7 +19093,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0616",
     "german": "unterschreiben",
-    "translation": "签名",
+    "translation": "签字",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -19111,8 +19111,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute unterschreiben.",
-        "zh": "我们今天想签名。"
+        "de": "Ich unterschreibe das Formular.",
+        "zh": "我在表格上签字。"
       }
     ],
     "sourceEntryType": "main"
@@ -19139,8 +19139,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Unterschrift.",
-        "zh": "今天我们谈论签名。"
+        "de": "Bitte geben Sie Ihre Unterschrift.",
+        "zh": "请您签名。"
       }
     ],
     "sourceEntryType": "derived"
@@ -19157,7 +19157,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19166,8 +19166,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „verboten“ bedeutet hier „禁止的“.",
-        "zh": "“verboten”在这里表示“禁止的”。"
+        "de": "Rauchen ist hier verboten.",
+        "zh": "这里禁止吸烟。"
       }
     ],
     "sourceEntryType": "main"
@@ -19184,7 +19184,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19193,8 +19193,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „verheiratet“ bedeutet hier „已婚的“.",
-        "zh": "“verheiratet”在这里表示“已婚的”。"
+        "de": "Sie ist verheiratet.",
+        "zh": "她已婚。"
       }
     ],
     "sourceEntryType": "main"
@@ -19202,7 +19202,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0630",
     "german": "viel",
-    "translation": "多",
+    "translation": "很多",
     "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
@@ -19210,8 +19210,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -19220,8 +19220,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „viel“ bedeutet hier „多“.",
-        "zh": "“viel”在这里表示“多”。"
+        "de": "Ich habe viel zu tun.",
+        "zh": "我有很多事要做。"
       }
     ],
     "sourceEntryType": "main"
@@ -19238,17 +19238,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „vielleicht“ bedeutet hier „也许“.",
-        "zh": "“vielleicht”在这里表示“也许”。"
+        "de": "Vielleicht kommt er später.",
+        "zh": "也许他稍后会来。"
       }
     ],
     "sourceEntryType": "main"
@@ -19256,16 +19256,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0632",
     "german": "von",
-    "translation": "（属于或来源于） 的关于",
+    "translation": "属于",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -19274,8 +19274,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „von“ bedeutet hier „（属于或来源于） 的关于“.",
-        "zh": "“von”在这里表示“（属于或来源于） 的关于”。"
+        "de": "Das Buch ist von Anna.",
+        "zh": "这本书是安娜的。"
       }
     ],
     "sourceEntryType": "main"
@@ -19283,16 +19283,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0633",
     "german": "vor",
-    "translation": "在 … 之前在 … 前面在 … 之前",
+    "translation": "在…之前",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -19301,8 +19301,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „vor“ bedeutet hier „在 … 之前在 … 前面在 … 之前“.",
-        "zh": "“vor”在这里表示“在 … 之前在 … 前面在 … 之前”。"
+        "de": "Wir treffen uns vor dem Kino.",
+        "zh": "我们在电影院前见面。"
       }
     ],
     "sourceEntryType": "main"
@@ -19329,8 +19329,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Vorsicht.",
-        "zh": "今天我们谈论小心。"
+        "de": "Vorsicht, das Wasser ist heiß!",
+        "zh": "小心，水很烫！"
       }
     ],
     "sourceEntryType": "main"
@@ -19338,7 +19338,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0636",
     "german": "(sich) vorstellen",
-    "translation": "介绍",
+    "translation": "自我介绍",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -19356,8 +19356,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns vorstellen.",
-        "zh": "我们今天想介绍。"
+        "de": "Ich stelle mich vor.",
+        "zh": "我自我介绍。"
       }
     ],
     "sourceEntryType": "main"
@@ -19383,8 +19383,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute wandern.",
-        "zh": "我们今天想徒步走。"
+        "de": "Wir wandern im Wald.",
+        "zh": "我们在森林里徒步走。"
       }
     ],
     "sourceEntryType": "main"
@@ -19401,17 +19401,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „wann“ bedeutet hier „什么时候“.",
-        "zh": "“wann”在这里表示“什么时候”。"
+        "de": "Wann beginnt der Film?",
+        "zh": "电影什么时候开始？"
       }
     ],
     "sourceEntryType": "main"
@@ -19437,8 +19437,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute warten.",
-        "zh": "我们今天想等待。"
+        "de": "Wir warten auf den Bus.",
+        "zh": "我们在等公交。"
       }
     ],
     "sourceEntryType": "main"
@@ -19455,17 +19455,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „warum“ bedeutet hier „为什么“.",
-        "zh": "“warum”在这里表示“为什么”。"
+        "de": "Warum bist du müde?",
+        "zh": "你为什么累？"
       }
     ],
     "sourceEntryType": "main"
@@ -19480,19 +19480,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „was“ bedeutet hier „什么“.",
-        "zh": "“was”在这里表示“什么”。"
+        "de": "Was kostet das?",
+        "zh": "这个多少钱？"
       }
     ],
     "sourceEntryType": "main"
@@ -19509,7 +19509,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19518,8 +19518,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „was für ein“ bedeutet hier „什么样的“.",
-        "zh": "“was für ein”在这里表示“什么样的”。"
+        "de": "Was für ein Buch hast du?",
+        "zh": "你有什么样的书？"
       }
     ],
     "sourceEntryType": "main"
@@ -19545,8 +19545,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute uns waschen.",
-        "zh": "我们今天想洗。"
+        "de": "Ich wasche mich.",
+        "zh": "我洗澡。"
       }
     ],
     "sourceEntryType": "main"
@@ -19554,26 +19554,26 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0646",
     "german": "weh tun",
-    "translation": "使 … 感到疼痛",
-    "kind": "phrase",
+    "translation": "疼痛",
+    "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "学习",
+      "居住",
+      "走；去"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "lernen",
+      "wohnen",
+      "gehen"
     ],
     "examples": [
       {
-        "de": "Das Wort „weh tun“ bedeutet hier „使 … 感到疼痛“.",
-        "zh": "“weh tun”在这里表示“使 … 感到疼痛”。"
+        "de": "Mein Rücken tut weh.",
+        "zh": "我的背疼。"
       }
     ],
     "sourceEntryType": "main"
@@ -19590,7 +19590,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19599,8 +19599,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „weiblich“ bedeutet hier „女性的“.",
-        "zh": "“weiblich”在这里表示“女性的”。"
+        "de": "Sie ist weiblich.",
+        "zh": "她是女性。"
       }
     ],
     "sourceEntryType": "main"
@@ -19608,7 +19608,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0649",
     "german": "weit",
-    "translation": "遥远的宽松的",
+    "translation": "遥远的",
     "kind": "adjective",
     "topic": "教育与学习",
     "topicIds": [
@@ -19617,7 +19617,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19626,8 +19626,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „weit“ bedeutet hier „遥远的宽松的“.",
-        "zh": "“weit”在这里表示“遥远的宽松的”。"
+        "de": "Der Bahnhof ist weit entfernt.",
+        "zh": "火车站很远。"
       }
     ],
     "sourceEntryType": "main"
@@ -19635,7 +19635,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0650",
     "german": "weiter",
-    "translation": "继续；更远",
+    "translation": "继续",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -19644,17 +19644,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „weiter“ bedeutet hier „继续；更远“.",
-        "zh": "“weiter”在这里表示“继续；更远”。"
+        "de": "Wir gehen weiter.",
+        "zh": "我们继续走。"
       }
     ],
     "sourceEntryType": "main"
@@ -19669,19 +19669,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „welch-“ bedeutet hier „哪个“.",
-        "zh": "“welch-”在这里表示“哪个”。"
+        "de": "Welcher Stift ist rot?",
+        "zh": "哪支笔是红色的？"
       }
     ],
     "sourceEntryType": "main"
@@ -19689,7 +19689,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0652",
     "german": "Welt",
-    "translation": "世界（单数形式）",
+    "translation": "世界",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -19708,8 +19708,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Welt.",
-        "zh": "今天我们谈论世界（单数形式）。"
+        "de": "Die Welt ist groß.",
+        "zh": "世界很大。"
       }
     ],
     "sourceEntryType": "main"
@@ -19725,8 +19725,8 @@ export const A1_WORDS = [
     ],
     "distractors": [
       "全部的；所有的",
-      "其它",
-      "两个（物，事）"
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
       "a1-alpha-0010",
@@ -19735,8 +19735,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „wenig“ bedeutet hier „少“.",
-        "zh": "“wenig”在这里表示“少”。"
+        "de": "Ich habe wenig Geld.",
+        "zh": "我钱很少。"
       }
     ],
     "sourceEntryType": "main"
@@ -19751,19 +19751,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „wer“ bedeutet hier „谁“.",
-        "zh": "“wer”在这里表示“谁”。"
+        "de": "Wer kommt?",
+        "zh": "谁来？"
       }
     ],
     "sourceEntryType": "main"
@@ -19771,7 +19771,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0655",
     "german": "werden",
-    "translation": "变成；将要",
+    "translation": "变成",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -19789,8 +19789,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute werden.",
-        "zh": "我们今天想变成；将要。"
+        "de": "Ich werde müde.",
+        "zh": "我变得很累。"
       }
     ],
     "sourceEntryType": "main"
@@ -19807,7 +19807,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19816,8 +19816,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „wichtig“ bedeutet hier „重要的“.",
-        "zh": "“wichtig”在这里表示“重要的”。"
+        "de": "Das ist wichtig.",
+        "zh": "这很重要。"
       }
     ],
     "sourceEntryType": "main"
@@ -19825,7 +19825,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0658",
     "german": "wie",
-    "translation": "怎样；如何",
+    "translation": "怎样",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -19834,17 +19834,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „wie“ bedeutet hier „怎样；如何“.",
-        "zh": "“wie”在这里表示“怎样；如何”。"
+        "de": "Wie heißt du?",
+        "zh": "你叫什么？"
       }
     ],
     "sourceEntryType": "main"
@@ -19870,8 +19870,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute wiederholen.",
-        "zh": "我们今天想重复。"
+        "de": "Ich wiederhole das Wort.",
+        "zh": "我重复这个词。"
       }
     ],
     "sourceEntryType": "main"
@@ -19898,8 +19898,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Wiederhören.",
-        "zh": "今天我们谈论再次通话。"
+        "de": "Das Wiederhören war gut.",
+        "zh": "再次通话很不错。"
       }
     ],
     "sourceEntryType": "main"
@@ -19926,8 +19926,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Wiedersehen.",
-        "zh": "今天我们谈论再次见面。"
+        "de": "Das Wiedersehen war schön.",
+        "zh": "再次见面很美好。"
       }
     ],
     "sourceEntryType": "main"
@@ -19942,19 +19942,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "等等"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-group-numbers-039"
     ],
     "examples": [
       {
-        "de": "Das Wort „wie viel“ bedeutet hier „多少“.",
-        "zh": "“wie viel”在这里表示“多少”。"
+        "de": "Wie viel kostet das?",
+        "zh": "这个多少钱？"
       }
     ],
     "sourceEntryType": "main"
@@ -19971,7 +19971,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -19980,8 +19980,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „willkommen“ bedeutet hier „欢迎“.",
-        "zh": "“willkommen”在这里表示“欢迎”。"
+        "de": "Willkommen in Berlin!",
+        "zh": "欢迎来柏林！"
       }
     ],
     "sourceEntryType": "main"
@@ -19996,19 +19996,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "你的",
-      "你（第四格）",
-      "你（第三格）"
+      "你（宾格）",
+      "你（与格）",
+      "他"
     ],
     "distractorIds": [
-      "a1-alpha-0153",
       "a1-alpha-0156",
-      "a1-alpha-0158"
+      "a1-alpha-0158",
+      "a1-alpha-0197"
     ],
     "examples": [
       {
-        "de": "Das Wort „wir“ bedeutet hier „我们“.",
-        "zh": "“wir”在这里表示“我们”。"
+        "de": "Wir gehen nach Hause.",
+        "zh": "我们回家。"
       }
     ],
     "sourceEntryType": "main"
@@ -20034,8 +20034,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute wissen.",
-        "zh": "我们今天想知道。"
+        "de": "Ich weiß die Antwort.",
+        "zh": "我知道答案。"
       }
     ],
     "sourceEntryType": "main"
@@ -20052,17 +20052,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „wo“ bedeutet hier „在哪里“.",
-        "zh": "“wo”在这里表示“在哪里”。"
+        "de": "Wo ist das Buch?",
+        "zh": "书在哪里？"
       }
     ],
     "sourceEntryType": "main"
@@ -20079,17 +20079,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „woher“ bedeutet hier „从哪里“.",
-        "zh": "“woher”在这里表示“从哪里”。"
+        "de": "Woher kommst du?",
+        "zh": "你从哪里来？"
       }
     ],
     "sourceEntryType": "main"
@@ -20106,17 +20106,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „wohin“ bedeutet hier „去哪里“.",
-        "zh": "“wohin”在这里表示“去哪里”。"
+        "de": "Wohin gehst du?",
+        "zh": "你去哪里？"
       }
     ],
     "sourceEntryType": "main"
@@ -20124,7 +20124,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0672",
     "german": "wollen",
-    "translation": "要，想，愿意，打算",
+    "translation": "想要",
     "kind": "verb",
     "topic": "教育与学习",
     "topicIds": [
@@ -20142,8 +20142,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Wir möchten heute wollen.",
-        "zh": "我们今天想要，想，愿意，打算。"
+        "de": "Ich will ein Eis.",
+        "zh": "我想要一个冰淇淋。"
       }
     ],
     "sourceEntryType": "main"
@@ -20151,7 +20151,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0673",
     "german": "Wort",
-    "translation": "单词；话语",
+    "translation": "单词",
     "kind": "noun",
     "article": "das",
     "plural": "-ö, er/-e",
@@ -20171,8 +20171,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Wort.",
-        "zh": "今天我们谈论单词；话语。"
+        "de": "Das Wort ist neu.",
+        "zh": "这个词是新的。"
       }
     ],
     "sourceEntryType": "main"
@@ -20189,7 +20189,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -20198,8 +20198,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „wunderbar“ bedeutet hier „好极了，了不起的“.",
-        "zh": "“wunderbar”在这里表示“好极了，了不起的”。"
+        "de": "Das Wetter ist wunderbar.",
+        "zh": "天气好极了。"
       }
     ],
     "sourceEntryType": "main"
@@ -20207,7 +20207,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0676",
     "german": "Zeit",
-    "translation": "时间（单数形式）",
+    "translation": "时间（单数）",
     "kind": "noun",
     "article": "die",
     "topic": "教育与学习",
@@ -20226,8 +20226,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Zeit.",
-        "zh": "今天我们谈论时间（单数形式）。"
+        "de": "Die Zeit ist kurz.",
+        "zh": "时间很短。"
       }
     ],
     "sourceEntryType": "main"
@@ -20244,17 +20244,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „zurzeit“ bedeutet hier „目前“.",
-        "zh": "“zurzeit”在这里表示“目前”。"
+        "de": "Ich lerne zurzeit Deutsch.",
+        "zh": "我目前在学德语。"
       }
     ],
     "sourceEntryType": "derived"
@@ -20262,7 +20262,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0678",
     "german": "Zeitung",
-    "translation": "报社",
+    "translation": "报纸",
     "kind": "noun",
     "article": "die",
     "plural": "-en",
@@ -20282,8 +20282,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Zeitung.",
-        "zh": "今天我们谈论报社。"
+        "de": "Ich lese die Zeitung.",
+        "zh": "我在读报纸。"
       }
     ],
     "sourceEntryType": "main"
@@ -20311,8 +20311,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Zigarette.",
-        "zh": "今天我们谈论香烟。"
+        "de": "Er raucht eine Zigarette.",
+        "zh": "他抽一支香烟。"
       }
     ],
     "sourceEntryType": "main"
@@ -20320,16 +20320,16 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0682",
     "german": "zu",
-    "translation": "太到 … 去，向",
+    "translation": "向，去",
     "kind": "preposition",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -20338,8 +20338,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „zu“ bedeutet hier „太到 … 去，向“.",
-        "zh": "“zu”在这里表示“太到 … 去，向”。"
+        "de": "Ich gehe zu dir.",
+        "zh": "我去你那里。"
       }
     ],
     "sourceEntryType": "main"
@@ -20356,7 +20356,7 @@ export const A1_WORDS = [
     "distractors": [
       "老的旧的",
       "外国的",
-      "出名的"
+      "著名的"
     ],
     "distractorIds": [
       "a1-alpha-0013",
@@ -20365,8 +20365,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „zufrieden“ bedeutet hier „满意的“.",
-        "zh": "“zufrieden”在这里表示“满意的”。"
+        "de": "Ich bin zufrieden.",
+        "zh": "我很满意。"
       }
     ],
     "sourceEntryType": "main"
@@ -20374,7 +20374,7 @@ export const A1_WORDS = [
   {
     "id": "a1-alpha-0685",
     "german": "zurück",
-    "translation": "退回",
+    "translation": "返回",
     "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
@@ -20383,17 +20383,17 @@ export const A1_WORDS = [
     "distractors": [
       "独自",
       "也",
-      "很快，即将"
+      "打开（状态）"
     ],
     "distractorIds": [
       "a1-alpha-0011",
       "a1-alpha-0048",
-      "a1-alpha-0082"
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Das Wort „zurück“ bedeutet hier „退回“.",
-        "zh": "“zurück”在这里表示“退回”。"
+        "de": "Ich komme zurück.",
+        "zh": "我回来。"
       }
     ],
     "sourceEntryType": "main"
@@ -20402,25 +20402,25 @@ export const A1_WORDS = [
     "id": "a1-alpha-0686",
     "german": "zusammen",
     "translation": "一起",
-    "kind": "verb",
+    "kind": "adverb",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "学习",
-      "居住",
-      "走；去"
+      "独自",
+      "也",
+      "打开（状态）"
     ],
     "distractorIds": [
-      "lernen",
-      "wohnen",
-      "gehen"
+      "a1-alpha-0011",
+      "a1-alpha-0048",
+      "a1-alpha-0052"
     ],
     "examples": [
       {
-        "de": "Wir möchten heute zusammen.",
-        "zh": "我们今天想一起。"
+        "de": "Wir arbeiten jeden Tag zusammen.",
+        "zh": "我们每天一起工作。"
       }
     ],
     "sourceEntryType": "main"
@@ -20435,9 +20435,9 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "从 … 起",
-      "在……旁；向",
-      "在……上；到……上"
+      "从……起",
+      "在…旁",
+      "在……上"
     ],
     "distractorIds": [
       "a1-alpha-0001",
@@ -20446,8 +20446,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „zwischen“ bedeutet hier „在 … 和 … 之间“.",
-        "zh": "“zwischen”在这里表示“在 … 和 … 之间”。"
+        "de": "Das Buch liegt zwischen den Stühlen.",
+        "zh": "书在椅子之间。"
       }
     ],
     "sourceEntryType": "main"
@@ -20473,8 +20473,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „1 = eins“ bedeutet hier „一“.",
-        "zh": "“1 = eins”在这里表示“一”。"
+        "de": "Ich habe eins gekauft.",
+        "zh": "我买了一个。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20500,8 +20500,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „2 = zwei“ bedeutet hier „二“.",
-        "zh": "“2 = zwei”在这里表示“二”。"
+        "de": "Wir sind zwei Personen.",
+        "zh": "我们是两个人。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20527,8 +20527,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „3 = drei“ bedeutet hier „三“.",
-        "zh": "“3 = drei”在这里表示“三”。"
+        "de": "Ich sehe drei Vögel.",
+        "zh": "我看到三只鸟。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20554,8 +20554,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „4 = vier“ bedeutet hier „四“.",
-        "zh": "“4 = vier”在这里表示“四”。"
+        "de": "Sie hat vier Bücher.",
+        "zh": "她有四本书。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20581,8 +20581,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „5 = fünf“ bedeutet hier „五“.",
-        "zh": "“5 = fünf”在这里表示“五”。"
+        "de": "Er kauft fünf Äpfel.",
+        "zh": "他买了五个苹果。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20608,8 +20608,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „6 = sechs“ bedeutet hier „六“.",
-        "zh": "“6 = sechs”在这里表示“六”。"
+        "de": "Wir treffen uns um sechs Uhr.",
+        "zh": "我们六点见面。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20635,8 +20635,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „7 = sieben“ bedeutet hier „七“.",
-        "zh": "“7 = sieben”在这里表示“七”。"
+        "de": "Der Zug kommt um sieben Uhr.",
+        "zh": "火车七点到。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20662,8 +20662,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „8 = acht“ bedeutet hier „八“.",
-        "zh": "“8 = acht”在这里表示“八”。"
+        "de": "Ich habe acht Stühle.",
+        "zh": "我有八把椅子。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20689,8 +20689,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „9 = neun“ bedeutet hier „九“.",
-        "zh": "“9 = neun”在这里表示“九”。"
+        "de": "Sie liest neun Seiten.",
+        "zh": "她读了九页。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20716,8 +20716,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „10 = zehn“ bedeutet hier „十“.",
-        "zh": "“10 = zehn”在这里表示“十”。"
+        "de": "Wir zählen bis zehn.",
+        "zh": "我们数到十。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20743,8 +20743,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „11 = elf“ bedeutet hier „十一“.",
-        "zh": "“11 = elf”在这里表示“十一”。"
+        "de": "Er ist elf Jahre alt.",
+        "zh": "他十一岁。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20770,8 +20770,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „12 = zwölf“ bedeutet hier „十二“.",
-        "zh": "“12 = zwölf”在这里表示“十二”。"
+        "de": "Der Film dauert zwölf Minuten.",
+        "zh": "电影十二分钟。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20797,8 +20797,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „13 = dreizehn“ bedeutet hier „十三“.",
-        "zh": "“13 = dreizehn”在这里表示“十三”。"
+        "de": "Der Zug fährt um dreizehn Uhr.",
+        "zh": "火车在十三点开。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20824,8 +20824,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „14 = vierzehn“ bedeutet hier „十四“.",
-        "zh": "“14 = vierzehn”在这里表示“十四”。"
+        "de": "Sie hat vierzehn Karten.",
+        "zh": "她有十四张卡片。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20851,8 +20851,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „15 = fünfzehn“ bedeutet hier „十五“.",
-        "zh": "“15 = fünfzehn”在这里表示“十五”。"
+        "de": "Ich habe fünfzehn Euro.",
+        "zh": "我有十五欧元。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20878,8 +20878,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „16 = sechzehn“ bedeutet hier „十六“.",
-        "zh": "“16 = sechzehn”在这里表示“十六”。"
+        "de": "Ich habe sechzehn Äpfel.",
+        "zh": "我有十六个苹果。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20905,8 +20905,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „17 = siebzehn“ bedeutet hier „十七“.",
-        "zh": "“17 = siebzehn”在这里表示“十七”。"
+        "de": "Wir brauchen siebzehn Stühle.",
+        "zh": "我们需要十七把椅子。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20932,8 +20932,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „18 = achtzehn“ bedeutet hier „十八“.",
-        "zh": "“18 = achtzehn”在这里表示“十八”。"
+        "de": "Sie kauft achtzehn Bananen.",
+        "zh": "她买了十八根香蕉。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20959,8 +20959,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „19 = neunzehn“ bedeutet hier „十九“.",
-        "zh": "“19 = neunzehn”在这里表示“十九”。"
+        "de": "Er hat neunzehn Bücher.",
+        "zh": "他有十九本书。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -20986,8 +20986,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „20 = zwanzig“ bedeutet hier „二十“.",
-        "zh": "“20 = zwanzig”在这里表示“二十”。"
+        "de": "Ich sehe zwanzig Vögel.",
+        "zh": "我看到二十只鸟。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21013,8 +21013,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „21 = einundzwanzig“ bedeutet hier „二十一“.",
-        "zh": "“21 = einundzwanzig”在这里表示“二十一”。"
+        "de": "Wir haben einundzwanzig Gäste.",
+        "zh": "我们有二十一位客人。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21040,8 +21040,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „30 = dreißig“ bedeutet hier „三十“.",
-        "zh": "“30 = dreißig”在这里表示“三十”。"
+        "de": "Sie zählt dreißig Karten.",
+        "zh": "她数了三十张卡片。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21067,8 +21067,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „40 = vierzig“ bedeutet hier „四十“.",
-        "zh": "“40 = vierzig”在这里表示“四十”。"
+        "de": "Er malt vierzig Bilder.",
+        "zh": "他画了四十幅画。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21094,8 +21094,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „50 = fünfzig“ bedeutet hier „五十“.",
-        "zh": "“50 = fünfzig”在这里表示“五十”。"
+        "de": "Ich bringe fünfzig Geschenke.",
+        "zh": "我带来五十件礼物。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21121,8 +21121,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „60 = sechzig“ bedeutet hier „六十“.",
-        "zh": "“60 = sechzig”在这里表示“六十”。"
+        "de": "Sie sammelt sechzig Muscheln.",
+        "zh": "她收集了六十只贝壳。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21148,8 +21148,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „70 = siebzig“ bedeutet hier „七十“.",
-        "zh": "“70 = siebzig”在这里表示“七十”。"
+        "de": "Wir sehen siebzig Sterne.",
+        "zh": "我们看到七十颗星星。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21175,8 +21175,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „80 = achtzig“ bedeutet hier „八十“.",
-        "zh": "“80 = achtzig”在这里表示“八十”。"
+        "de": "Er hat achtzig Punkte.",
+        "zh": "他得了八十分。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21202,8 +21202,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „90 = neunzig“ bedeutet hier „九十“.",
-        "zh": "“90 = neunzig”在这里表示“九十”。"
+        "de": "Ich lese neunzig Seiten.",
+        "zh": "我读了九十页。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21229,8 +21229,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „100 = (ein)hundert“ bedeutet hier „一百“.",
-        "zh": "“100 = (ein)hundert”在这里表示“一百”。"
+        "de": "Sie hat hundert Euro.",
+        "zh": "她有一百欧元。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21256,8 +21256,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „101 = hunderteins“ bedeutet hier „一百零一“.",
-        "zh": "“101 = hunderteins”在这里表示“一百零一”。"
+        "de": "Ich habe hunderteins Fragen.",
+        "zh": "我有一百零一个问题。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21283,8 +21283,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „200 = zweihundert“ bedeutet hier „二百“.",
-        "zh": "“200 = zweihundert”在这里表示“二百”。"
+        "de": "Ich habe zweihundert Euro gespart.",
+        "zh": "我已经存了两百欧元。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21310,8 +21310,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „1.000 = (ein)tausend“ bedeutet hier „一千“.",
-        "zh": "“1.000 = (ein)tausend”在这里表示“一千”。"
+        "de": "Wir haben tausend Karten verkauft.",
+        "zh": "我们卖出了一千张票。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21337,8 +21337,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „1.000.000 = eine Million“ bedeutet hier „一百万“.",
-        "zh": "“1.000.000 = eine Million”在这里表示“一百万”。"
+        "de": "Sie hat eine Million Euro gewonnen.",
+        "zh": "她赢得了一百万欧元。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21364,8 +21364,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Das Wort „1.000.000.000 = eine Milliarde“ bedeutet hier „十亿“.",
-        "zh": "“1.000.000.000 = eine Milliarde”在这里表示“十亿”。"
+        "de": "Die Erde hat eine Milliarde Menschen.",
+        "zh": "地球有十亿人。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21374,25 +21374,25 @@ export const A1_WORDS = [
     "id": "a1-group-numbers-035",
     "german": "das/der/die erste",
     "translation": "第一",
-    "kind": "numeral",
+    "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "一",
-      "二",
-      "三"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-group-numbers-001",
-      "a1-group-numbers-002",
-      "a1-group-numbers-003"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „das/der/die erste“ bedeutet hier „第一“.",
-        "zh": "“das/der/die erste”在这里表示“第一”。"
+        "de": "Das ist die erste Frage.",
+        "zh": "这是第一个问题。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21401,25 +21401,25 @@ export const A1_WORDS = [
     "id": "a1-group-numbers-036",
     "german": "zweite",
     "translation": "第二",
-    "kind": "numeral",
+    "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "一",
-      "二",
-      "三"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-group-numbers-001",
-      "a1-group-numbers-002",
-      "a1-group-numbers-003"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „zweite“ bedeutet hier „第二“.",
-        "zh": "“zweite”在这里表示“第二”。"
+        "de": "Nimm die zweite Straße.",
+        "zh": "请走第二条街。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21428,25 +21428,25 @@ export const A1_WORDS = [
     "id": "a1-group-numbers-037",
     "german": "dritte",
     "translation": "第三",
-    "kind": "numeral",
+    "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "一",
-      "二",
-      "三"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-group-numbers-001",
-      "a1-group-numbers-002",
-      "a1-group-numbers-003"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „dritte“ bedeutet hier „第三“.",
-        "zh": "“dritte”在这里表示“第三”。"
+        "de": "Er sitzt in der dritten Reihe.",
+        "zh": "他坐在第三排。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21455,25 +21455,25 @@ export const A1_WORDS = [
     "id": "a1-group-numbers-038",
     "german": "vierte",
     "translation": "第四",
-    "kind": "numeral",
+    "kind": "determiner",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "一",
-      "二",
-      "三"
+      "全部的；所有的",
+      "其他的",
+      "两个"
     ],
     "distractorIds": [
-      "a1-group-numbers-001",
-      "a1-group-numbers-002",
-      "a1-group-numbers-003"
+      "a1-alpha-0010",
+      "a1-alpha-0018",
+      "a1-alpha-0093"
     ],
     "examples": [
       {
-        "de": "Das Wort „vierte“ bedeutet hier „第四“.",
-        "zh": "“vierte”在这里表示“第四”。"
+        "de": "Wir treffen uns in der vierten Woche.",
+        "zh": "我们在第四周见面。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21488,19 +21488,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „usw.“ bedeutet hier „等等“.",
-        "zh": "“usw.”在这里表示“等等”。"
+        "de": "Kaufe Äpfel, Birnen, Pflaumen usw.",
+        "zh": "买苹果、梨、李子等等。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21515,19 +21515,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „1/2 = ein halb; halb ...“ bedeutet hier „二分之一；半“.",
-        "zh": "“1/2 = ein halb; halb ...”在这里表示“二分之一；半”。"
+        "de": "Ein halb ist mehr als ein Viertel.",
+        "zh": "半个比四分之一多。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21542,19 +21542,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „1/4 = ein Viertel; Viertel ...“ bedeutet hier „四分之一；一刻钟“.",
-        "zh": "“1/4 = ein Viertel; Viertel ...”在这里表示“四分之一；一刻钟”。"
+        "de": "Ich habe ein Viertel Kuchen gegessen.",
+        "zh": "我吃了四分之一块蛋糕。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21563,25 +21563,25 @@ export const A1_WORDS = [
     "id": "a1-group-dates-042",
     "german": "1999 = neunzehnhundertneunundneunzig",
     "translation": "1999 年",
-    "kind": "phrase",
+    "kind": "numeral",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "一",
+      "二",
+      "三"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-group-numbers-001",
+      "a1-group-numbers-002",
+      "a1-group-numbers-003"
     ],
     "examples": [
       {
-        "de": "Das Wort „1999 = neunzehnhundertneunundneunzig“ bedeutet hier „1999 年“.",
-        "zh": "“1999 = neunzehnhundertneunundneunzig”在这里表示“1999 年”。"
+        "de": "Ich wurde neunzehnhundertneunundneunzig geboren.",
+        "zh": "我出生于1999年。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21590,25 +21590,25 @@ export const A1_WORDS = [
     "id": "a1-group-dates-043",
     "german": "2014 = zweitausendvierzehn",
     "translation": "2014 年",
-    "kind": "phrase",
+    "kind": "numeral",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "一",
+      "二",
+      "三"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-group-numbers-001",
+      "a1-group-numbers-002",
+      "a1-group-numbers-003"
     ],
     "examples": [
       {
-        "de": "Das Wort „2014 = zweitausendvierzehn“ bedeutet hier „2014 年“.",
-        "zh": "“2014 = zweitausendvierzehn”在这里表示“2014 年”。"
+        "de": "Das Spiel begann im Jahr zweitausendvierzehn.",
+        "zh": "比赛在2014年开始。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21623,19 +21623,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „heute ist der 1. März“ bedeutet hier „今天是 3 月 1 日“.",
-        "zh": "“heute ist der 1. März”在这里表示“今天是 3 月 1 日”。"
+        "de": "Heute ist der 1. März.",
+        "zh": "今天是3月1日。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21643,27 +21643,27 @@ export const A1_WORDS = [
   {
     "id": "a1-group-dates-045",
     "german": "Berlin",
-    "translation": "柏林，2002 年 4 月 12 日",
-    "kind": "phrase",
+    "translation": "柏林",
+    "kind": "noun",
     "plural": "12. April 2002",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "学校",
+      "书",
+      "城市"
     ],
     "distractorIds": [
-      "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "schule",
+      "buch",
+      "stadt"
     ],
     "examples": [
       {
-        "de": "Das Wort „Berlin“ bedeutet hier „柏林，2002 年 4 月 12 日“.",
-        "zh": "“Berlin”在这里表示“柏林，2002 年 4 月 12 日”。"
+        "de": "Ich wohne in Berlin.",
+        "zh": "我住在柏林。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21678,19 +21678,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „0.03 Uhr = null Uhr drei“ bedeutet hier „零点零三分“.",
-        "zh": "“0.03 Uhr = null Uhr drei”在这里表示“零点零三分”。"
+        "de": "Der Zug fährt um null Uhr drei ab.",
+        "zh": "火车在零点零三分发车。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21705,19 +21705,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „7.15 Uhr = sieben Uhr fünfzehn“ bedeutet hier „七点十五分“.",
-        "zh": "“7.15 Uhr = sieben Uhr fünfzehn”在这里表示“七点十五分”。"
+        "de": "Der Zug fährt um sieben Uhr fünfzehn ab.",
+        "zh": "火车在七点十五分发车。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21732,19 +21732,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „13.17 Uhr = dreizehn Uhr siebzehn“ bedeutet hier „十三点十七分“.",
-        "zh": "“13.17 Uhr = dreizehn Uhr siebzehn”在这里表示“十三点十七分”。"
+        "de": "Der Film beginnt um dreizehn Uhr siebzehn.",
+        "zh": "电影在十三点十七分开始。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21759,19 +21759,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „24.00 Uhr = vierundzwanzig Uhr“ bedeutet hier „二十四点“.",
-        "zh": "“24.00 Uhr = vierundzwanzig Uhr”在这里表示“二十四点”。"
+        "de": "Der Supermarkt schließt um vierundzwanzig Uhr.",
+        "zh": "超市在二十四点关门。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21786,19 +21786,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „ein Uhr“ bedeutet hier „一点“.",
-        "zh": "“ein Uhr”在这里表示“一点”。"
+        "de": "Der Kurs beginnt um ein Uhr.",
+        "zh": "课程在一点开始。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21806,26 +21806,26 @@ export const A1_WORDS = [
   {
     "id": "a1-group-clock-time-051",
     "german": "fünf Minuten vor/nach eins",
-    "translation": "一点差五分／一点过五分",
+    "translation": "一点过五分",
     "kind": "phrase",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „fünf Minuten vor/nach eins“ bedeutet hier „一点差五分／一点过五分“.",
-        "zh": "“fünf Minuten vor/nach eins”在这里表示“一点差五分／一点过五分”。"
+        "de": "Der Zug kommt fünf Minuten nach eins.",
+        "zh": "火车在一点过五分到达。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21833,26 +21833,26 @@ export const A1_WORDS = [
   {
     "id": "a1-group-clock-time-052",
     "german": "Viertel vor/nach zwei",
-    "translation": "两点差一刻／两点一刻",
+    "translation": "两点一刻",
     "kind": "phrase",
     "topic": "教育与学习",
     "topicIds": [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „Viertel vor/nach zwei“ bedeutet hier „两点差一刻／两点一刻“.",
-        "zh": "“Viertel vor/nach zwei”在这里表示“两点差一刻／两点一刻”。"
+        "de": "Der Film startet um Viertel nach zwei.",
+        "zh": "电影在两点一刻开始。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21867,19 +21867,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „halb drei“ bedeutet hier „两点半“.",
-        "zh": "“halb drei”在这里表示“两点半”。"
+        "de": "Der Unterricht endet um halb drei.",
+        "zh": "课程在两点半结束。"
       }
     ],
     "sourceEntryType": "word-group-pattern"
@@ -21907,8 +21907,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Sekunde.",
-        "zh": "今天我们谈论秒。"
+        "de": "Eine Sekunde ist kurz.",
+        "zh": "一秒很短。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21936,8 +21936,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Minute.",
-        "zh": "今天我们谈论分钟。"
+        "de": "Eine Minute reicht.",
+        "zh": "一分钟足够。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21965,8 +21965,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Tag.",
-        "zh": "今天我们谈论天。"
+        "de": "Der Tag ist sonnig.",
+        "zh": "这天是晴天。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -21994,8 +21994,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Woche.",
-        "zh": "今天我们谈论周。"
+        "de": "Eine Woche hat sieben Tage.",
+        "zh": "一周有七天。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22023,8 +22023,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Jahr.",
-        "zh": "今天我们谈论年。"
+        "de": "Ein Jahr hat zwölf Monate.",
+        "zh": "一年有十二个月。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22032,7 +22032,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-weekdays-060",
     "german": "Wochentag",
-    "translation": "工作日；星期中的一天",
+    "translation": "工作日",
     "kind": "noun",
     "article": "der",
     "plural": "-e",
@@ -22052,8 +22052,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Wochentag.",
-        "zh": "今天我们谈论工作日；星期中的一天。"
+        "de": "Ein Wochentag ist Montag.",
+        "zh": "工作日是星期一。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22080,8 +22080,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Sonntag.",
-        "zh": "今天我们谈论星期日。"
+        "de": "Der Sonntag ist frei.",
+        "zh": "星期日是休息日。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22108,8 +22108,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Montag.",
-        "zh": "今天我们谈论星期一。"
+        "de": "Der Montag ist der erste Tag.",
+        "zh": "星期一是一周的第一天。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22136,8 +22136,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Dienstag.",
-        "zh": "今天我们谈论星期二。"
+        "de": "Der Dienstag folgt dem Montag.",
+        "zh": "星期二紧跟在星期一之后。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22164,8 +22164,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mittwoch.",
-        "zh": "今天我们谈论星期三。"
+        "de": "Am Mittwoch habe ich Deutschunterricht.",
+        "zh": "我在星期三有德语课。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22192,8 +22192,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Donnerstag.",
-        "zh": "今天我们谈论星期四。"
+        "de": "Am Donnerstag kommt meine Tante.",
+        "zh": "我的姑妈星期四来。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22220,8 +22220,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Freitag.",
-        "zh": "今天我们谈论星期五。"
+        "de": "Am Freitag essen wir Pizza.",
+        "zh": "我们星期五吃披萨。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22248,8 +22248,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Samstag/Sonnabend.",
-        "zh": "今天我们谈论星期六。"
+        "de": "Am Samstag gehen wir ins Kino.",
+        "zh": "我们星期六去电影院。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22276,8 +22276,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über das Wochenende.",
-        "zh": "今天我们谈论周末。"
+        "de": "Am Wochenende fahre ich nach Berlin.",
+        "zh": "我在周末去柏林。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22292,19 +22292,19 @@ export const A1_WORDS = [
       "education"
     ],
     "distractors": [
-      "在关机（状态）",
-      "熟人",
-      "大约"
+      "关机",
+      "大约",
+      "多少"
     ],
     "distractorIds": [
       "a1-alpha-0067",
-      "a1-alpha-0098",
-      "a1-alpha-0142"
+      "a1-alpha-0142",
+      "a1-alpha-0662"
     ],
     "examples": [
       {
-        "de": "Das Wort „am Wochenende“ bedeutet hier „在周末“.",
-        "zh": "“am Wochenende”在这里表示“在周末”。"
+        "de": "Wir treffen uns am Wochenende.",
+        "zh": "我们在周末见面。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22312,7 +22312,7 @@ export const A1_WORDS = [
   {
     "id": "a1-group-times-of-day-070",
     "german": "Tag",
-    "translation": "白天；一天",
+    "translation": "一天",
     "kind": "noun",
     "article": "der",
     "topic": "教育与学习",
@@ -22331,8 +22331,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Tag.",
-        "zh": "今天我们谈论白天；一天。"
+        "de": "Heute ist ein schöner Tag.",
+        "zh": "今天是美好的一天。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22359,8 +22359,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Morgen.",
-        "zh": "今天我们谈论早晨。"
+        "de": "Der Morgen ist kühl.",
+        "zh": "早晨很凉爽。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22387,8 +22387,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Vormittag.",
-        "zh": "今天我们谈论上午。"
+        "de": "Am Vormittag lese ich.",
+        "zh": "我在上午阅读。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22415,8 +22415,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mittag.",
-        "zh": "今天我们谈论中午。"
+        "de": "Mittag essen wir zusammen.",
+        "zh": "中午我们一起吃饭。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22443,8 +22443,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Nachmittag.",
-        "zh": "今天我们谈论下午。"
+        "de": "Am Nachmittag spiele ich Fußball.",
+        "zh": "下午我踢足球。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22471,8 +22471,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Abend.",
-        "zh": "今天我们谈论晚上。"
+        "de": "Am Abend sehe ich fern.",
+        "zh": "晚上我看电视。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22499,8 +22499,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über die Nacht.",
-        "zh": "今天我们谈论夜晚。"
+        "de": "In der Nacht schlafe ich gut.",
+        "zh": "夜晚我睡得好。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22527,8 +22527,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Januar.",
-        "zh": "今天我们谈论一月。"
+        "de": "Im Januar schneit es.",
+        "zh": "一月下雪。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22555,8 +22555,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Februar.",
-        "zh": "今天我们谈论二月。"
+        "de": "Im Februar ist es kalt.",
+        "zh": "二月很冷。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22583,8 +22583,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den März.",
-        "zh": "今天我们谈论三月。"
+        "de": "Im März blühen die Blumen.",
+        "zh": "三月花开。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22611,8 +22611,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den April.",
-        "zh": "今天我们谈论四月。"
+        "de": "Im April blühen die Bäume.",
+        "zh": "四月树木开花。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22639,8 +22639,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Mai.",
-        "zh": "今天我们谈论五月。"
+        "de": "Im Mai feiern wir den Muttertag.",
+        "zh": "五月我们庆祝母亲节。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22667,8 +22667,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Juni.",
-        "zh": "今天我们谈论六月。"
+        "de": "Im Juni ist das Wetter warm.",
+        "zh": "六月天气很暖。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22695,8 +22695,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Juli.",
-        "zh": "今天我们谈论七月。"
+        "de": "Im Juli gehen wir schwimmen.",
+        "zh": "七月我们去游泳。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22723,8 +22723,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den August.",
-        "zh": "今天我们谈论八月。"
+        "de": "Im August gibt es viele Ferien.",
+        "zh": "八月有很多假期。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22751,8 +22751,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den September.",
-        "zh": "今天我们谈论九月。"
+        "de": "Im September fällt das Laub.",
+        "zh": "九月树叶落下。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22779,8 +22779,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Oktober.",
-        "zh": "今天我们谈论十月。"
+        "de": "Im Oktober wird es kühler.",
+        "zh": "十月天气变凉。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22807,8 +22807,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den November.",
-        "zh": "今天我们谈论十一月。"
+        "de": "Im November regnet es oft.",
+        "zh": "十一月经常下雨。"
       }
     ],
     "sourceEntryType": "word-group-member"
@@ -22835,8 +22835,8 @@ export const A1_WORDS = [
     ],
     "examples": [
       {
-        "de": "Heute sprechen wir über den Dezember.",
-        "zh": "今天我们谈论十二月。"
+        "de": "Im Dezember schneit es.",
+        "zh": "十二月下雪。"
       }
     ],
     "sourceEntryType": "word-group-member"

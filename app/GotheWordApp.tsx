@@ -24,6 +24,7 @@ import {
   answerActiveSession,
   createActiveSession,
   DailyStats,
+  DEFAULT_FREE_STUDY_BATCH_SIZE,
   DEFAULT_REVIEW_BATCH_SIZE,
   EMPTY_DAILY_STATS,
   EMPTY_PROGRESS,
@@ -34,6 +35,7 @@ import {
   localDayKey,
   RandomSource,
   SessionMode,
+  StudyWordCount,
   settleActiveSession,
   takeReviewBatch,
 } from "./learning";
@@ -47,10 +49,13 @@ import {
   getDisplayWord,
   PART_OF_SPEECH_LABELS,
   WORD_BOOKS,
+  wordBookIdForLevel,
   type WordBookId,
   type Word,
 } from "./content/word-books.ts";
 import { getLevelCatalogEntry } from "./content/levels.ts";
+
+const CORRECT_FEEDBACK_DELAY_MS = 1_500;
 
 const SYNC_STATUS_META = {
   loading: { label: "读取中", color: "default" },
@@ -129,6 +134,17 @@ function formatPlural(plural: string) {
     return `词尾 +${normalized.slice(1)}（${plural}）`;
   }
   return plural;
+}
+
+function getLearningWordSizeClass(displayWord: string) {
+  const length = Array.from(displayWord).length;
+  if (length >= 40) return "text-[11px] sm:text-base";
+  if (length >= 32) return "text-[13px] sm:text-lg";
+  if (length >= 24) return "text-base sm:text-2xl";
+  if (length >= 18) return "text-xl sm:text-3xl";
+  if (length >= 14) return "text-2xl sm:text-4xl";
+  if (length >= 10) return "text-[2.125rem] sm:text-5xl lg:text-[2.5rem]";
+  return "text-[2.125rem] sm:text-[clamp(2.375rem,13vw,4.5rem)] lg:text-6xl";
 }
 
 function formatSyncTime(value: string) {
@@ -226,6 +242,8 @@ export default function GotheWordApp({
   const [resetOpen, setResetOpen] = useState(false);
   const lastActivityRef = useRef(0);
   const autoPronouncedAppearanceRef = useRef<string | null>(null);
+  const feedbackAdvanceKeyRef = useRef<string | null>(null);
+  const continueAfterFeedbackRef = useRef<() => void>(() => undefined);
   const resumePromptTrackedRef = useRef(new Set<string>());
   const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
@@ -286,7 +304,9 @@ export default function GotheWordApp({
   const todayKey = localDayKey();
   const todayStats = state.stats[todayKey] ?? EMPTY_DAILY_STATS;
   const dailyGoal = state.dailyGoal ?? goalChoice;
-  const wordBookId: WordBookId = state.activeLevel === "A2" ? "a2" : "a1";
+  const freeStudyBatchSize =
+    state.freeStudyBatchSize ?? DEFAULT_FREE_STUDY_BATCH_SIZE;
+  const wordBookId = wordBookIdForLevel(state.activeLevel);
   const wordBook = WORD_BOOKS[wordBookId];
   const WORDS = wordBook.words;
   const remainingGoal = Math.max(0, dailyGoal - todayStats.goalNewLearned);
@@ -354,6 +374,10 @@ export default function GotheWordApp({
             : session.queue[0]),
       )
     : undefined;
+  const correctFeedbackKey =
+    session?.feedback?.correct
+      ? `${session.id}:${session.answers}:${session.feedback.wordId}`
+      : null;
   const pronunciationAppearanceKey =
     session && currentWord && !session.feedback
       ? session.phase === "memory"
@@ -454,7 +478,10 @@ export default function GotheWordApp({
     const reviewSelection = takeReviewBatch(dueWords, reviewBatchSize);
     const selected = mode === "review"
       ? reviewSelection.batch
-      : availableNewWords.slice(0, mode === "new" ? remainingGoal : 5);
+      : availableNewWords.slice(
+          0,
+          mode === "new" ? remainingGoal : freeStudyBatchSize,
+        );
     if (selected.length === 0) return;
     const wordIds = selected.map((word) => word.id);
     const now = new Date();
@@ -647,7 +674,11 @@ export default function GotheWordApp({
   };
 
   const continueAfterFeedback = () => {
-    if (!session) return;
+    if (!session?.feedback) return;
+    const feedbackKey =
+      `${session.id}:${session.answers}:${session.feedback.wordId}`;
+    if (feedbackAdvanceKeyRef.current === feedbackKey) return;
+    feedbackAdvanceKeyRef.current = feedbackKey;
     if (session.queue.length === 0) {
       finishSession(session);
     } else {
@@ -658,6 +689,19 @@ export default function GotheWordApp({
       }));
     }
   };
+
+  useEffect(() => {
+    continueAfterFeedbackRef.current = continueAfterFeedback;
+  });
+
+  useEffect(() => {
+    if (!correctFeedbackKey) return;
+    const timer = window.setTimeout(
+      () => continueAfterFeedbackRef.current(),
+      CORRECT_FEEDBACK_DELAY_MS,
+    );
+    return () => window.clearTimeout(timer);
+  }, [correctFeedbackKey]);
 
   const syncMeta = SYNC_STATUS_META[syncStatus];
   const syncTag = (
@@ -739,12 +783,12 @@ export default function GotheWordApp({
   if (!state.dailyGoal) {
     return (
       <Cursor>
-        <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1120px] min-w-0 items-center gap-10 px-4 py-9 pb-[max(3rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-[clamp(2.5rem,8vw,6.25rem)]">
+        <main className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1120px] min-w-0 items-center gap-10 px-4 py-9 pb-[max(3rem,env(safe-area-inset-bottom))] text-sm sm:px-5 sm:py-14 sm:text-base lg:grid-cols-[1.1fr_0.9fr] lg:gap-[clamp(2.5rem,8vw,6.25rem)]">
           <section className="min-w-0" aria-labelledby="onboarding-title">
             <Tag color="app-teal" variant="outlined">德语 · A1 起步</Tag>
             <h1
               id="onboarding-title"
-              className="my-[1.375rem] max-w-[620px] text-[clamp(2.5rem,11vw,4.875rem)] leading-[1.06] font-black tracking-normal [overflow-wrap:anywhere]"
+              className="my-[1.375rem] max-w-[620px] text-[1.875rem] leading-[1.06] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(2.5rem,11vw,4.875rem)]"
             >
               把德语，慢慢种进记忆里。
             </h1>
@@ -811,11 +855,32 @@ export default function GotheWordApp({
         ? ((session.memoryIndex + 1) / session.wordIds.length) * 100
         : (session.completed.length / session.wordIds.length) * 100;
     const displayWord = getDisplayWord(currentWord);
+    const learningWordSizeClass = getLearningWordSizeClass(displayWord);
     return (
       <Cursor>
-        <main className="mx-auto min-h-svh w-full max-w-[960px] min-w-0 px-3 py-4 pb-[max(4.5rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-[1.375rem]">
-          <header className="mb-7 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:mb-11 lg:grid-cols-[1fr_minmax(220px,360px)_1fr] lg:gap-6">
-            <Button className="min-w-0 justify-self-start" type="text" onClick={leaveSession}>← 返回首页</Button>
+        <div
+          className={feedback?.correct ? "min-h-svh cursor-pointer" : "min-h-svh"}
+          onClickCapture={
+            feedback?.correct
+              ? (event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  continueAfterFeedback();
+                }
+              : undefined
+          }
+        >
+        <main className="mx-auto min-h-svh w-full max-w-[960px] min-w-0 px-3 py-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] text-sm sm:px-5 sm:py-[1.375rem] sm:pb-[max(4.5rem,env(safe-area-inset-bottom))] sm:text-base">
+          <header className="mb-3 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2 gap-y-1.5 sm:mb-11 sm:gap-3 lg:grid-cols-[1fr_minmax(220px,360px)_1fr] lg:gap-6">
+            <Button
+              className="min-w-0 justify-self-start"
+              type="text"
+              onClick={leaveSession}
+              aria-label="返回首页"
+            >
+              <span className="sm:hidden" aria-hidden="true">← 首页</span>
+              <span className="hidden sm:inline" aria-hidden="true">← 返回首页</span>
+            </Button>
             <div className="col-span-2 row-start-2 grid min-w-0 gap-1.5 text-center font-extrabold lg:col-span-1 lg:col-start-2 lg:row-start-1">
               <span>
                 {session.phase === "memory"
@@ -860,8 +925,8 @@ export default function GotheWordApp({
               <Tag color={feedback.correct ? "app-green" : "app-red"} variant="outlined">
                 {feedback.correct ? "回答正确" : "需要再巩固"}
               </Tag>
-              <h1 className="m-0 max-w-full text-[clamp(2.375rem,13vw,4.5rem)] leading-none font-black tracking-normal [overflow-wrap:anywhere]">{displayWord}</h1>
-              <p className="m-0 text-[clamp(1.25rem,7vw,1.625rem)] leading-tight font-extrabold">{currentWord.translation}</p>
+              <h1 className={`m-0 w-full max-w-full overflow-x-auto whitespace-nowrap leading-none font-black tracking-normal ${learningWordSizeClass}`}>{displayWord}</h1>
+              <p className="m-0 text-lg leading-tight font-extrabold sm:text-[clamp(1.25rem,7vw,1.625rem)]">{currentWord.translation}</p>
               {feedback.correct ? (
                 <>
                   <p className="m-0 text-lg leading-7 font-extrabold">
@@ -875,6 +940,9 @@ export default function GotheWordApp({
                     percent={(feedback.streak / feedback.target) * 100}
                     infoFormat={() => `${feedback.streak} / ${feedback.target}`}
                   />
+                  <p className="m-0 text-sm leading-6 font-bold" role="status">
+                    1.5 秒后自动继续 · 点击页面任意处可立即继续
+                  </p>
                 </>
               ) : (
                 <div className="w-full max-w-[520px] min-w-0">
@@ -895,35 +963,45 @@ export default function GotheWordApp({
                 </div>
               )}
               <div className="flex w-full flex-wrap justify-center gap-3 [&>*]:max-sm:w-full">
-                <Button
-                  type="text"
-                  onClick={() => speakGerman(displayWord)}
-                  aria-label={`朗读 ${displayWord}`}
-                >
-                  🔊 听发音
-                </Button>
+                {!feedback.correct && (
+                  <Button
+                    type="text"
+                    onClick={() => speakGerman(displayWord)}
+                    aria-label={`朗读 ${displayWord}`}
+                  >
+                    🔊 听发音
+                  </Button>
+                )}
                 <Button type="primary" size="large" onClick={continueAfterFeedback}>
-                  {session.queue.length === 0 ? "查看学习报告" : "继续"}
+                  {feedback.correct
+                    ? session.queue.length === 0
+                      ? "立即查看学习报告"
+                      : "立即继续"
+                    : session.queue.length === 0
+                      ? "查看学习报告"
+                      : "继续"}
                 </Button>
               </div>
             </Card>
           ) : session.phase === "memory" ? (
-            <article className="grid min-w-0 items-start gap-[1.375rem] lg:grid-cols-[0.86fr_1.14fr]">
-              <Card color="app-teal" pattern="app-yellow" className="flex min-h-[320px] min-w-0 flex-col justify-center gap-[1.125rem] lg:sticky lg:top-5 lg:min-h-[410px]">
-                <Tag color="app-yellow" variant="solid">
-                  {PART_OF_SPEECH_LABELS[currentWord.kind]}
-                </Tag>
-                <div className="flex min-w-0 flex-col items-start gap-3.5 sm:flex-row sm:items-center sm:justify-between">
-                  <h1 className="m-0 min-w-0 text-[clamp(2.375rem,13vw,4.5rem)] leading-none font-black tracking-normal [overflow-wrap:anywhere]">{displayWord}</h1>
+            <article className="grid min-w-0 items-start gap-3 sm:gap-[1.375rem] lg:grid-cols-[0.86fr_1.14fr]">
+              <Card color="app-teal" pattern="app-yellow" className="flex min-h-0 min-w-0 flex-col justify-center gap-3 sm:min-h-[320px] sm:gap-[1.125rem] lg:sticky lg:top-5 lg:min-h-[410px]">
+                <div className="flex min-w-0 items-center justify-between gap-2.5 sm:gap-3.5">
+                  <Tag color="app-yellow" variant="solid">
+                    {PART_OF_SPEECH_LABELS[currentWord.kind]}
+                  </Tag>
                   <Button
+                    className="shrink-0"
                     type="default"
                     aria-label={`朗读 ${displayWord}`}
                     onClick={() => speakGerman(displayWord)}
                   >
-                    🔊 发音
+                    <span className="sm:hidden" aria-hidden="true">🔊</span>
+                    <span className="hidden sm:inline" aria-hidden="true">🔊 发音</span>
                   </Button>
                 </div>
-                <p className="m-0 text-[clamp(1.25rem,7vw,1.625rem)] leading-tight font-extrabold">{currentWord.translation}</p>
+                <h1 className={`m-0 w-full max-w-full overflow-x-auto whitespace-nowrap leading-none font-black tracking-normal ${learningWordSizeClass}`}>{displayWord}</h1>
+                <p className="m-0 text-lg leading-tight font-extrabold sm:text-[clamp(1.25rem,7vw,1.625rem)]">{currentWord.translation}</p>
                 {currentWord.plural && (
                   <p className="m-0 flex flex-wrap gap-x-2 gap-y-1 text-sm leading-6 opacity-85">
                     <span>单数：{displayWord}</span>
@@ -932,14 +1010,14 @@ export default function GotheWordApp({
                   </p>
                 )}
               </Card>
-              <Card className="grid min-w-0 gap-6">
+              <Card className="grid min-w-0 gap-4 sm:gap-6">
                 <Title size="middle" color="app-yellow">在句子里认识它</Title>
                 <div className="grid min-w-0 gap-1">
                   {currentWord.examples.map((example, index) => (
-                    <div className="grid min-w-0 grid-cols-[1.75rem_minmax(0,1fr)_auto] items-center gap-2 border-b border-dashed border-[#5e4b3533] py-[0.9375rem] last:border-b-0 sm:grid-cols-[2.125rem_minmax(0,1fr)_auto] sm:gap-3" key={example.de}>
+                    <div className="grid min-w-0 grid-cols-[1.75rem_minmax(0,1fr)_auto] items-center gap-2 border-b border-dashed border-[#5e4b3533] py-2.5 last:border-b-0 sm:grid-cols-[2.125rem_minmax(0,1fr)_auto] sm:gap-3 sm:py-[0.9375rem]" key={example.de}>
                       <span className="font-[Nunito] text-[13px] leading-none font-black text-[#0ca89c]">0{index + 1}</span>
                       <div className="min-w-0">
-                        <p className="mb-1 min-w-0 text-base leading-6 font-extrabold [overflow-wrap:anywhere] sm:text-[17px]">{example.de}</p>
+                        <p className="mb-1 min-w-0 text-sm leading-5 font-extrabold [overflow-wrap:anywhere] sm:text-[17px] sm:leading-6">{example.de}</p>
                         <small className="text-[#8f7b63]">{example.zh}</small>
                       </div>
                       <Button
@@ -975,12 +1053,10 @@ export default function GotheWordApp({
             </article>
           ) : (
             <Card className="mx-auto flex min-h-0 w-full max-w-[680px] min-w-0 flex-col justify-center gap-5 sm:min-h-[570px] sm:gap-[1.375rem]">
-              <Tag color="app-blue" variant="outlined">
-                {session.mode === "review" ? "复习测试 · 连续答对 2 次" : "新词测试 · 连续答对 3 次"}
-              </Tag>
-              <p className="m-0 font-bold text-[#8f7b63]">请选择正确的中文释义</p>
               <div className="flex min-w-0 items-center justify-between gap-3.5">
-                <h1 className="m-0 min-w-0 text-[clamp(2.375rem,13vw,4.5rem)] leading-none font-black tracking-normal [overflow-wrap:anywhere]">{displayWord}</h1>
+                <Tag color="app-blue" variant="outlined">
+                  {session.mode === "review" ? "复习测试 · 连续答对 2 次" : "新词测试 · 连续答对 3 次"}
+                </Tag>
                 <Button
                   type="text"
                   aria-label={`朗读 ${displayWord}`}
@@ -989,6 +1065,8 @@ export default function GotheWordApp({
                   🔊
                 </Button>
               </div>
+              <p className="m-0 font-bold text-[#8f7b63]">请选择正确的中文释义</p>
+              <h1 className={`m-0 w-full max-w-full overflow-x-auto whitespace-nowrap leading-none font-black tracking-normal ${learningWordSizeClass}`}>{displayWord}</h1>
               <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2">
                 {quizOptions.map((option, index) => (
                   <Button
@@ -1011,6 +1089,7 @@ export default function GotheWordApp({
             </Card>
           )}
         </main>
+        </div>
         {syncModals}
       </Cursor>
     );
@@ -1026,7 +1105,7 @@ export default function GotheWordApp({
             <Tag color="app-green" variant="outlined">本轮完成</Tag>
             {syncTag}
           </div>
-          <h1 className="m-0 text-[clamp(2.375rem,10vw,3.875rem)] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere]">
+          <h1 className="m-0 text-[1.875rem] leading-[1.08] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(2.375rem,10vw,3.875rem)]">
             {report.mode === "review"
               ? report.remainingReviewCount > 0
                 ? "本批复习完成"
@@ -1041,10 +1120,10 @@ export default function GotheWordApp({
               : "这些单词已经进入你的复习计划，明天会在合适的时候再见。"}
           </p>
           <div className="grid w-full min-w-0 grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-4">
-            <Card pattern="app-teal" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[clamp(2.25rem,10vw,3.5rem)] leading-none font-black">{report.completed}</strong><span className="text-sm font-bold">{report.mode === "review" ? "完成复习" : "新学单词"}</span></Card>
-            <Card pattern="app-yellow" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[clamp(2.25rem,10vw,3.5rem)] leading-none font-black">{report.answers}</strong><span className="text-sm font-bold">答题次数</span></Card>
-            <Card pattern="app-blue" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[clamp(2.25rem,10vw,3.5rem)] leading-none font-black">{accuracy}%</strong><span className="text-sm font-bold">正确率</span></Card>
-            <Card pattern="purple" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[clamp(2.25rem,10vw,3.5rem)] leading-none font-black">{formatDuration(report.seconds)}</strong><span className="text-sm font-bold">学习时长</span></Card>
+            <Card pattern="app-teal" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.25rem,10vw,3.5rem)]">{report.completed}</strong><span className="text-sm font-bold">{report.mode === "review" ? "完成复习" : "新学单词"}</span></Card>
+            <Card pattern="app-yellow" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.25rem,10vw,3.5rem)]">{report.answers}</strong><span className="text-sm font-bold">答题次数</span></Card>
+            <Card pattern="app-blue" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.25rem,10vw,3.5rem)]">{accuracy}%</strong><span className="text-sm font-bold">正确率</span></Card>
+            <Card pattern="purple" className="grid min-w-0 justify-items-center gap-2"><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.25rem,10vw,3.5rem)]">{formatDuration(report.seconds)}</strong><span className="text-sm font-bold">学习时长</span></Card>
           </div>
           {weakWords.length > 0 && (
             <Card className="grid w-full min-w-0 gap-[1.125rem]">
@@ -1099,18 +1178,18 @@ export default function GotheWordApp({
       <section className="flex min-w-0 items-end justify-between gap-7">
         <div className="min-w-0">
           <Tag color="app-teal" variant="outlined">Heute · 今天</Tag>
-          <h1 className="my-4 max-w-[780px] text-[clamp(1.875rem,8vw,3rem)] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere]">Guten Tag！准备好今天的小进步了吗？</h1>
+          <h1 className="my-4 max-w-[780px] text-[1.625rem] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(1.875rem,8vw,3rem)]">Guten Tag！准备好今天的小进步了吗？</h1>
           <p className="m-0 leading-7 text-[#8f7b63]">先完成到期复习，再认识新的单词，记忆会更轻松。</p>
         </div>
         <div className="hidden sm:block"><Time /></div>
       </section>
 
       <section className="grid min-w-0 gap-[1.375rem] lg:grid-cols-[1.08fr_0.92fr]">
-        <Card color={dueWords.length > 0 ? "app-orange" : "app-green"} pattern="app-yellow" className="flex min-h-[260px] min-w-0 flex-col justify-between gap-6 sm:min-h-[300px]">
+        <Card color={dueWords.length > 0 ? "app-orange" : "app-green"} pattern="app-yellow" className="flex min-h-[220px] min-w-0 flex-col justify-between gap-5 sm:min-h-[300px] sm:gap-6">
           <div className="grid min-w-0 justify-items-start">
             <Tag color={dueWords.length > 0 ? "app-orange" : "app-green"} variant="outlined">优先任务</Tag>
             <span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">今日待复习</span>
-            <strong className="mt-2.5 font-[Nunito] text-[clamp(4.625rem,18vw,7.25rem)] leading-[0.9] font-black">{dueWords.length}</strong>
+            <strong className="mt-2.5 font-[Nunito] text-[3.75rem] leading-[0.9] font-black sm:text-[clamp(4.625rem,18vw,7.25rem)]">{dueWords.length}</strong>
             <p className="mt-3 mb-0 leading-7 font-bold">
               {dueWords.length === 0
                 ? "今天的记忆花园已经打理好"
@@ -1133,11 +1212,11 @@ export default function GotheWordApp({
           </Button>
         </Card>
 
-        <Card className="flex min-h-[260px] min-w-0 flex-col justify-between gap-6 sm:min-h-[300px]">
+        <Card className="flex min-h-[220px] min-w-0 flex-col justify-between gap-5 sm:min-h-[300px] sm:gap-6">
           <div className="flex min-w-0 flex-wrap items-start justify-between gap-4">
             <div className="min-w-0">
               <span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">今日新词目标</span>
-              <h2 className="m-0 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">{todayStats.goalNewLearned} / {dailyGoal} 个</h2>
+              <h2 className="m-0 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">{todayStats.goalNewLearned} / {dailyGoal} 个</h2>
             </div>
             <Tag color="app-yellow">每日计划</Tag>
           </div>
@@ -1162,22 +1241,22 @@ export default function GotheWordApp({
         <div className="mb-4 flex min-w-0 flex-wrap items-start justify-between gap-3 sm:gap-[1.125rem]">
           <div className="min-w-0">
             <span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">DAILY MOMENTUM</span>
-            <h2 id="today-data-title" className="m-0 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">今天的学习足迹</h2>
+            <h2 id="today-data-title" className="m-0 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">今天的学习足迹</h2>
           </div>
           <Button type="link" onClick={() => setActiveTab("stats")}>查看完整统计 →</Button>
         </div>
         <div className="grid min-w-0 grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-4">
-          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">新学单词</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{todayStats.newLearned}</strong><small className="pb-1 font-bold">个</small></Card>
-          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">完成复习</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{todayStats.reviewed}</strong><small className="pb-1 font-bold">个</small></Card>
-          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">学习时长</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{Math.floor(todayStats.seconds / 60)}</strong><small className="pb-1 font-bold">分钟</small></Card>
-          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">连续学习</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{calculateStreak(state.stats)}</strong><small className="pb-1 font-bold">天</small></Card>
+          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">新学单词</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{todayStats.newLearned}</strong><small className="pb-1 font-bold">个</small></Card>
+          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">完成复习</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{todayStats.reviewed}</strong><small className="pb-1 font-bold">个</small></Card>
+          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">学习时长</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{Math.floor(todayStats.seconds / 60)}</strong><small className="pb-1 font-bold">分钟</small></Card>
+          <Card className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold opacity-75">连续学习</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{calculateStreak(state.stats)}</strong><small className="pb-1 font-bold">天</small></Card>
         </div>
       </section>
 
       <Card type="dashed" className="flex min-w-0 flex-col items-stretch justify-between gap-6 sm:flex-row sm:items-center sm:gap-7">
         <div className="min-w-0">
           <Tag color="app-blue" variant="outlined">自由学习</Tag>
-          <h2 className="my-3 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">还有一点时间？再认识 5 个词</h2>
+          <h2 className="my-3 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">还有一点时间？再认识 {freeStudyBatchSize} 个词</h2>
           <p className="m-0 leading-7 text-[#8f7b63]">自由学习计入总学习数量，但不会改变今天的计划完成进度。</p>
         </div>
         <Button
@@ -1196,20 +1275,20 @@ export default function GotheWordApp({
       <section className="min-w-0">
         <div className="min-w-0">
           <Tag color="app-blue" variant="outlined">Lernstatistik · 学习统计</Tag>
-          <h1 className="my-4 max-w-[780px] text-[clamp(1.875rem,8vw,3rem)] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere]">看见每一天积累起来的力量。</h1>
+          <h1 className="my-4 max-w-[780px] text-[1.625rem] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(1.875rem,8vw,3rem)]">看见每一天积累起来的力量。</h1>
           <p className="m-0 leading-7 text-[#8f7b63]">统计以实际完成和有效互动时间为准。</p>
         </div>
       </section>
       <div className="grid min-w-0 grid-cols-1 gap-4 min-[360px]:grid-cols-2 md:grid-cols-4">
-        <Card pattern="app-teal" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">今日新词</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{todayStats.newLearned}</strong><small className="pb-1 font-bold">个</small></Card>
-        <Card pattern="app-blue" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">今日复习</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{todayStats.reviewed}</strong><small className="pb-1 font-bold">个</small></Card>
-        <Card pattern="app-yellow" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">已掌握</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{masteredCount}</strong><small className="pb-1 font-bold">个</small></Card>
-        <Card pattern="app-orange" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">薄弱单词</span><strong className="font-[Nunito] text-[clamp(2.375rem,11vw,3.5rem)] leading-none font-black">{weakCount}</strong><small className="pb-1 font-bold">个</small></Card>
+        <Card pattern="app-teal" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">今日新词</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{todayStats.newLearned}</strong><small className="pb-1 font-bold">个</small></Card>
+        <Card pattern="app-blue" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">今日复习</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{todayStats.reviewed}</strong><small className="pb-1 font-bold">个</small></Card>
+        <Card pattern="app-yellow" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">已掌握</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{masteredCount}</strong><small className="pb-1 font-bold">个</small></Card>
+        <Card pattern="app-orange" className="grid min-w-0 grid-cols-[auto_1fr] items-end gap-x-1.5 gap-y-2"><span className="col-span-2 text-sm font-bold">薄弱单词</span><strong className="font-[Nunito] text-[2rem] leading-none font-black sm:text-[clamp(2.375rem,11vw,3.5rem)]">{weakCount}</strong><small className="pb-1 font-bold">个</small></Card>
       </div>
       <div className="grid min-w-0 gap-[1.375rem] lg:grid-cols-[1.08fr_0.92fr]">
         <Card className="grid min-w-0 gap-[1.375rem]">
           <div className="flex min-w-0 flex-wrap items-start justify-between gap-3 sm:gap-[1.125rem]">
-            <div className="min-w-0"><span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">最近 7 天</span><h2 className="m-0 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">每日学习数量</h2></div>
+            <div className="min-w-0"><span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">最近 7 天</span><h2 className="m-0 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">每日学习数量</h2></div>
             <div className="flex flex-wrap gap-3 text-xs font-extrabold text-[#8f7b63]">
               <span className="before:mr-1.5 before:inline-block before:size-[9px] before:rounded-full before:bg-[#19c8b9]">新学</span>
               <span className="before:mr-1.5 before:inline-block before:size-[9px] before:rounded-full before:bg-[#889df0]">复习</span>
@@ -1233,7 +1312,7 @@ export default function GotheWordApp({
         </Card>
         <Card className="grid min-w-0 gap-[1.375rem]">
           <div className="flex min-w-0 flex-wrap items-start justify-between gap-3 sm:gap-[1.125rem]">
-            <div className="min-w-0"><span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">最近 7 天</span><h2 className="m-0 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">每日学习时长</h2></div>
+            <div className="min-w-0"><span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">最近 7 天</span><h2 className="m-0 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">每日学习时长</h2></div>
             <Tag color="app-pink" variant="outlined">分钟</Tag>
           </div>
           <div className="grid h-[250px] min-w-0 grid-cols-7 items-end gap-1 sm:gap-2.5" aria-label="最近七天学习时长柱状图">
@@ -1255,7 +1334,7 @@ export default function GotheWordApp({
       <Card className="flex min-w-0 flex-col items-stretch justify-between gap-6 sm:flex-row sm:items-center sm:gap-7">
         <div className="min-w-0 sm:basis-[54%]">
           <span className="mb-1.5 block text-xs font-extrabold tracking-[0.16em] uppercase opacity-70">累计答题表现</span>
-          <h2 className="my-3 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">{totalAnswers ? Math.round((totalCorrect / totalAnswers) * 100) : 0}% 正确率</h2>
+          <h2 className="my-3 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">{totalAnswers ? Math.round((totalCorrect / totalAnswers) * 100) : 0}% 正确率</h2>
           <p className="m-0 leading-7 text-[#8f7b63]">共完成 {totalAnswers} 次作答，历史记录不会因为答错而清除。</p>
         </div>
         <div className="min-w-0 flex-1"><Progress percent={totalAnswers ? (totalCorrect / totalAnswers) * 100 : 0} size="large" /></div>
@@ -1267,7 +1346,7 @@ export default function GotheWordApp({
     <div className="mx-auto grid w-full max-w-[820px] min-w-0 gap-6 pt-5 sm:pt-[1.875rem]">
       <section className="min-w-0">
         <Tag color="app-yellow" variant="outlined">Einstellungen · 设置</Tag>
-        <h1 className="my-4 max-w-[780px] text-[clamp(1.875rem,8vw,3rem)] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere]">让计划适合你，而不是反过来。</h1>
+        <h1 className="my-4 max-w-[780px] text-[1.625rem] leading-[1.12] font-black tracking-normal [overflow-wrap:anywhere] sm:text-[clamp(1.875rem,8vw,3rem)]">让计划适合你，而不是反过来。</h1>
         <p className="m-0 leading-7 text-[#8f7b63]">目标修改只影响之后的新词计划，已经进入复习流程的单词不会变化。</p>
       </section>
       <Card className="grid min-w-0 gap-[1.375rem]">
@@ -1335,9 +1414,33 @@ export default function GotheWordApp({
           ]}
         />
       </Card>
+      <Card className="grid min-w-0 gap-[1.375rem]">
+        <div className="min-w-0">
+          <Title size="middle" color="app-blue">每次自由学习词数</Title>
+          <p className="mt-2 mb-0 leading-7 text-[#8f7b63]">
+            只影响之后开启的自由学习，不会改变每日计划或当前学习。
+          </p>
+        </div>
+        <Radio
+          direction="vertical"
+          size="large"
+          value={freeStudyBatchSize}
+          onChange={(value) =>
+            setState((current) => ({
+              ...current,
+              freeStudyBatchSize: value as StudyWordCount,
+            }))
+          }
+          options={[
+            { label: "每次 5 个 · 短时练习", value: 5 },
+            { label: "每次 10 个 · 稳定加量", value: 10 },
+            { label: "每次 20 个 · 集中学习", value: 20 },
+          ]}
+        />
+      </Card>
       <Card type="dashed" className="flex min-w-0 flex-col items-stretch justify-between gap-6 sm:flex-row sm:items-center sm:gap-7">
         <div className="min-w-0">
-          <h2 className="my-3 text-[clamp(1.375rem,7vw,1.875rem)] leading-tight font-black tracking-normal">重新开始</h2>
+          <h2 className="my-3 text-xl leading-tight font-black tracking-normal sm:text-[clamp(1.375rem,7vw,1.875rem)]">重新开始</h2>
           <p className="m-0 leading-7 text-[#8f7b63]">清除当前账号的学习进度、复习计划和统计数据。</p>
         </div>
         <Button danger onClick={() => setResetOpen(true)}>清除学习记录</Button>
@@ -1347,13 +1450,13 @@ export default function GotheWordApp({
 
   return (
     <Cursor>
-      <div className="min-h-svh">
-        <header className="mx-auto flex w-full max-w-[1180px] min-w-0 flex-wrap items-center justify-between gap-3 px-3 py-4 sm:px-5 sm:pt-[1.375rem] sm:pb-3.5">
+      <div className="min-h-svh text-sm sm:text-base">
+        <header className="mx-auto flex w-full max-w-[1180px] min-w-0 flex-wrap items-center justify-between gap-2.5 px-3 py-3 sm:gap-3 sm:px-5 sm:pt-[1.375rem] sm:pb-3.5">
           <div className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="GotheWord 德语记忆花园">
-            <span className="grid size-11 shrink-0 -rotate-3 place-items-center rounded-[50%_43%_48%_45%] bg-[#19c8b9] font-[Nunito] text-2xl leading-none font-black text-white shadow-[inset_0_-4px_0_rgba(0,0,0,0.08)] sm:size-[46px] sm:text-[26px]">G</span>
+            <span className="grid size-10 shrink-0 -rotate-3 place-items-center rounded-[50%_43%_48%_45%] bg-[#19c8b9] font-[Nunito] text-xl leading-none font-black text-white shadow-[inset_0_-4px_0_rgba(0,0,0,0.08)] sm:size-[46px] sm:text-[26px]">G</span>
             <div className="grid min-w-0 gap-px">
-              <strong className="truncate font-[Nunito] text-xl leading-none font-black sm:text-[22px]">GotheWord</strong>
-              <small className="text-xs text-[#8f7b63]">德语记忆花园</small>
+              <strong className="truncate font-[Nunito] text-lg leading-none font-black sm:text-[22px]">GotheWord</strong>
+              <small className="text-[11px] text-[#8f7b63] sm:text-xs">德语记忆花园</small>
             </div>
           </div>
           <div className="flex min-w-0 flex-wrap items-center justify-end gap-1 sm:gap-2">
@@ -1363,7 +1466,7 @@ export default function GotheWordApp({
           </div>
         </header>
         <Divider type="wave-yellow" />
-        <main className="mx-auto mt-4 mb-20 w-full max-w-[1180px] min-w-0 px-3 pb-[env(safe-area-inset-bottom)] sm:mt-[1.625rem] sm:px-5">
+        <main className="mx-auto mt-2 mb-16 w-full max-w-[1180px] min-w-0 px-3 pb-[env(safe-area-inset-bottom)] sm:mt-[1.625rem] sm:mb-20 sm:px-5">
           <Tabs
             aria-label="主要页面"
             shadow
