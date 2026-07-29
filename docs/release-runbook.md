@@ -1,6 +1,11 @@
 # GotheWord 发布、监控与回滚 Runbook
 
-关联工单：POR-12。适用于 preview 和 production。
+关联工单：POR-12、POR-28。适用于 preview 和 production。
+
+> **当前硬阻塞（POR-28）**：POR-26 的真实邮箱状态机、POR-27 的原 user_id 迁移和
+> Chromium/WebKit 真实收信 smoke 全部完成前，production 不得发布。旧 `register`
+> Function 必须撤下或固定返回 `410`，且 GitHub environment variable
+> `AUTH_LEGACY_REGISTER_DISABLED=true`；该证明不替代线上 endpoint 负向测试。
 
 邮箱认证、SMTP、DNS、CAPTCHA、限流与故障回滚的专用门禁见
 [`auth-production-runbook.md`](./auth-production-runbook.md)；正式发布必须同时满足该清单。
@@ -37,6 +42,7 @@ Sites 使用用户可见版本号（例如 `v6`）；GitHub Pages 使用
 npm run lint
 npx tsc --noEmit
 npm run release:verify
+npm run auth:preflight
 npm run content:check-rights
 npm run test:unit
 npm run test:analytics
@@ -60,6 +66,10 @@ npm run test:pages
   关联保存版本 ID 与 Git SHA。
 - 核对 `NEXT_PUBLIC_SUPABASE_MIGRATION` 对应已执行并通过 SQL 验证的 migration，记录
   Sites env revision、Git SHA、目标 Sites version 与 Previous Sites version 后再发布。
+- `auth:preflight` 用 GitHub environment secret 中的 Management API token 读取实时 Auth
+  配置；要求 Confirm Email、自有非本地 SMTP、Captcha、正数邮件 rate limit、精确的
+  Pages `/GotheWord/` Site URL/redirect allowlist，且拒绝通配符。日志不得输出配置值。
+- 发布记录另存 Auth、邮件模板、Edge Function 和 Captcha 配置 revision；只存版本号。
 
 ## 3. 发布 smoke
 
@@ -68,14 +78,19 @@ npm run test:pages
 1. 打开站点，确认静态资源、Supabase 和 PostHog ingestion 没有配置错误。
    `/` 必须显示“欢迎回来”认证页，不得显示“配置 Supabase”；随后读取 `/release.json`，
    逐项比对发布记录中的 Git SHA、Sites version 和 migration。
-2. 注册 → 选择目标 5 → 开始并完成一个 new 会话。
-3. 退出再登录，确认用户 UUID 一致且没有额外 `login_completed`。
-4. 刷新一个进行中会话，分别验证“继续”和“结束”。
-5. 制造一次 load/save 失败，确认本地 fallback、归一化错误码及同步分母事件。
-6. 两个浏览器制造 revision 冲突，分别验证 use remote 与 keep local。
-7. 完成最后一批到期复习，确认 `due_review_completed` 仅一次。
-8. 在 Live Events 按 `release_sha` 过滤，确认 source/Sites/migration 三项都等于发布记录。
-9. 检查事件没有用户名、密码、email、答案/词句文本、raw error 或 state JSON。
+2. Chromium 使用唯一 smoke 邮箱注册；确认没有 session，从真实邮箱（含 spam）取 OTP；
+   验证前登录必须失败，且不能读写 `learning_states`。验证重发冷却与 429。
+3. 分别提交错误和过期 OTP，再使用最新 OTP；管理查询必须确认
+   `auth.users.email_confirmed_at` 非空。PostHog 不是权限事实来源。
+4. 首次学习、保存、刷新后，在独立 WebKit context 登录并恢复相同状态。
+5. 请求找回（存在/不存在邮箱均为通用成功态），用 recovery OTP 设置新密码；旧密码
+   失败，新密码成功，user UUID 不变。
+6. staging 受控注入 SMTP 拒收、供应商不可用和 429；UI、Auth log 与无 PII 监控均应
+   可观察。生产只做 provider health 检查。
+7. 管理 API 删除 smoke 用户并清空测试邮箱；确认关联学习状态被清理且不可再登录。
+8. 验证 load/save fallback 与双浏览器 revision 冲突的两种解决路径。
+9. Live Events 元数据必须匹配 release；不得出现 email、密码、OTP、token、邮件正文、
+   raw error 或 state JSON。
 10. 确认 [Production P0 event heartbeat](https://us.posthog.com/project/455530/insights/pKeGlTKG)
     已出现本次 release 的 production 事件，然后启用
     `POR-12 · Production P0 heartbeat below 1` 告警；该告警每小时检查最近一小时，
@@ -105,6 +120,20 @@ POR-12；没有基线时不得编造统计阈值。
 POR-12 production release 前保持 Disabled；发布 smoke 后启用是发布完成门禁。
 
 ## 5. 回滚
+
+### Auth 交付异常
+
+1. 关闭新 signup 并暂停 resend；保留已验证账号登录、token refresh 与同步。
+2. **不得**关闭 Confirm Email、启用 autoconfirm 或恢复旧 service-role `register`。
+   `email_confirmed_at IS NULL` 的用户仍不得获得学习权限。
+3. recovery 健康时保留；若同一 SMTP 故障影响 recovery，则暂停新请求并公告，不撤销
+   已验证 session。
+4. 按 release SHA 观察 signup/verification/recovery、SMTP 拒收、429 与 verification
+   failure。监控只含低基数 stage/error code，工单禁止粘贴地址、OTP、token 或正文。
+5. staging 重跑 Chromium/WebKit 全链路后，依次恢复 signup、resend；记录操作者、时间
+   与 Auth config revision。
+
+### 应用或数据异常
 
 1. 暂停继续发布，记录触发时间、release SHA、Sites version、migration 和症状。
 2. 在 Sites 将 production 部署指向发布记录中的 `Previous Sites version`；只部署已保存版本。
