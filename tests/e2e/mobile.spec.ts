@@ -16,6 +16,7 @@ type LearningState = {
   version: 2 | 3;
   activeLevel?: "A1" | "A2" | "B1";
   dailyGoal?: 5 | 10 | 20;
+  freeStudyBatchSize?: 5 | 10 | 20;
   wordBookId?: "a1" | "a2";
   progress: Record<string, unknown>;
   stats: Record<string, unknown>;
@@ -300,6 +301,14 @@ test("首次目标、Header、Tabs、统计、设置与 Modal 适配移动视口
   await expect(
     page.getByText("共 1038 词 · 已学 0 词", { exact: true }).first(),
   ).toBeVisible();
+  const b1Book = page.getByRole("radio", {
+    name: /Goethe B1.*共 3207 词.*已学 0 词/,
+  });
+  await b1Book.check();
+  await expect(b1Book).toBeChecked();
+  await expect(
+    page.getByText("共 3207 词 · 已学 0 词", { exact: true }).first(),
+  ).toBeVisible();
   await expectNoHorizontalOverflow(page);
   await page.getByRole("button", { name: "清除学习记录" }).click();
   await expect(page.getByText("确认清除学习记录？", { exact: true })).toBeVisible();
@@ -346,18 +355,101 @@ test("学习、反馈与报告流程在移动视口保持可见", async ({ page 
   await expect(page.getByText("继续上次的学习吗？", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "继续本次学习" }).click();
   await expect(page.getByText("回答正确", { exact: true })).toBeVisible();
+  await expect(
+    page.getByText("1.5 秒后自动继续 · 点击页面任意处可立即继续", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(page.getByText("今日复习完成", { exact: true })).toBeVisible({
+    timeout: 3_000,
+  });
   for (const viewport of VIEWPORTS) {
     await page.setViewportSize(viewport);
     await expectNoHorizontalOverflow(page);
   }
 
-  await page.getByRole("button", { name: "查看学习报告" }).click();
-  await expect(page.getByText("今日复习完成", { exact: true })).toBeVisible();
-  for (const viewport of VIEWPORTS) {
-    await page.setViewportSize(viewport);
-    await expectNoHorizontalOverflow(page);
-  }
   await capture(page, testInfo, "feedback-report");
+});
+
+test("正确反馈期间点击页面任意处会立即进入下一张", async ({ page }) => {
+  await openAuthenticated(page, {
+    version: 3,
+    activeLevel: "A1",
+    dailyGoal: 10,
+    progress: {},
+    stats: {},
+    activeSession: {
+      id: "mobile-click-to-continue-session",
+      levelId: "A1",
+      mode: "review",
+      phase: "quiz",
+      memoryIndex: 0,
+      wordIds: ["tisch", "brot"],
+      queue: ["brot"],
+      completed: ["tisch"],
+      weakIds: [],
+      reviewMistakes: {},
+      reviewStreaks: { tisch: 2 },
+      answers: 2,
+      correct: 2,
+      elapsedSeconds: 42,
+      remainingReviewCount: 0,
+      updatedAt: new Date().toISOString(),
+      feedback: {
+        wordId: "tisch",
+        correct: true,
+        selected: "桌子",
+        streak: 2,
+        target: 2,
+        completed: true,
+      },
+    },
+  });
+
+  await page.getByRole("button", { name: "继续本次学习" }).click();
+  await expect(page.getByText("回答正确", { exact: true })).toBeVisible();
+  await page.locator("main").click({ position: { x: 2, y: 2 } });
+  await expect(page.getByRole("heading", { name: "das Brot" })).toBeVisible();
+  await expect(page.getByText("回答正确", { exact: true })).toHaveCount(0);
+});
+
+test("自由学习词数设置会持久化并控制下一次学习", async ({ page }) => {
+  await openAuthenticated(page, {
+    version: 3,
+    activeLevel: "A1",
+    dailyGoal: 10,
+    freeStudyBatchSize: 20,
+    progress: {},
+    stats: {},
+    activeSession: null,
+  });
+
+  await expect(
+    page.getByRole("heading", { name: "还有一点时间？再认识 20 个词" }),
+  ).toBeVisible();
+  await page.getByRole("tab", { name: "设置" }).click();
+  await expect(
+    page.getByRole("radio", { name: "每次 20 个 · 集中学习" }),
+  ).toBeChecked();
+
+  await page.getByRole("radio", { name: "每次 10 个 · 稳定加量" }).check();
+  await expect
+    .poll(() =>
+      page.evaluate((stateKey) => {
+        const raw = window.localStorage.getItem(stateKey);
+        if (!raw) return null;
+        const value = JSON.parse(raw);
+        return value.state?.freeStudyBatchSize ?? value.freeStudyBatchSize;
+      }, STATE_KEY),
+    )
+    .toBe(10);
+
+  await page.getByRole("tab", { name: "今日学习" }).click();
+  await expect(
+    page.getByRole("heading", { name: "还有一点时间？再认识 10 个词" }),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "自由学习", exact: true }).click();
+  await expect(page.getByText("1 / 10", { exact: true })).toBeVisible();
 });
 
 test("并发 revision 冲突必须由用户选择本设备或云端", async ({ page }) => {

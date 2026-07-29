@@ -92,17 +92,41 @@ export async function validateProductionReleaseMetadata(
       "NEXT_PUBLIC_SUPABASE_MIGRATION must be a 14-digit migration version.",
     );
   } else {
-    const migrations = await readdir(
-      resolve(repositoryRoot, "supabase/migrations"),
+    const migrationsDirectory = resolve(repositoryRoot, "supabase/migrations");
+    const migrations = await readdir(migrationsDirectory);
+    const selectedMigrationExists = migrations.some((file) =>
+      file.startsWith(`${manifest.supabase_migration}_`),
     );
-    if (
-      !migrations.some((file) =>
-        file.startsWith(`${manifest.supabase_migration}_`),
-      )
-    ) {
+    if (!selectedMigrationExists) {
       failures.push(
         `No local migration starts with ${manifest.supabase_migration}_.`,
       );
+    } else {
+      const appliedMigrationSources = await Promise.all(
+        migrations
+          .filter((file) => {
+            const version = file.match(/^(\d{14})_/)?.[1];
+            return version && version <= manifest.supabase_migration;
+          })
+          .sort()
+          .map((file) => readFile(resolve(migrationsDirectory, file), "utf8")),
+      );
+      const acceptedStateVersions = appliedMigrationSources.flatMap((source) =>
+        Array.from(
+          source.matchAll(
+            /next_state\s*->>\s*'version'\s*<>\s*'(\d+)'/g,
+          ),
+          (match) => Number(match[1]),
+        ),
+      );
+      const databaseStateSchemaVersion = acceptedStateVersions.at(-1);
+      if (databaseStateSchemaVersion !== manifest.state_schema_version) {
+        failures.push(
+          `Supabase migration ${manifest.supabase_migration} supports state schema ` +
+            `${databaseStateSchemaVersion ?? "unknown"}, but the app requires ` +
+            `${manifest.state_schema_version}.`,
+        );
+      }
     }
   }
 

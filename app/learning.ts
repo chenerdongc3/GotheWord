@@ -29,6 +29,7 @@ export type DailyStats = {
 };
 
 export type SessionMode = "new" | "review" | "free";
+export type StudyWordCount = 5 | 10 | 20;
 
 export type SessionFeedback = {
   wordId: string;
@@ -63,7 +64,8 @@ export type ActiveSession = {
 export type AppState = {
   version: 3;
   activeLevel: LevelId;
-  dailyGoal?: 5 | 10 | 20;
+  dailyGoal?: StudyWordCount;
+  freeStudyBatchSize: StudyWordCount;
   progress: Record<string, WordProgress>;
   stats: Record<string, DailyStats>;
   activeSession: ActiveSession | null;
@@ -71,7 +73,7 @@ export type AppState = {
 
 type AppStateV1 = {
   version: 1;
-  dailyGoal?: 5 | 10 | 20;
+  dailyGoal?: StudyWordCount;
   progress: Record<string, WordProgress & { reviewMistakes?: number }>;
   stats: Record<string, DailyStats>;
 };
@@ -79,10 +81,12 @@ type AppStateV1 = {
 export type RandomSource = () => number;
 
 export const DEFAULT_REVIEW_BATCH_SIZE = 20;
+export const DEFAULT_FREE_STUDY_BATCH_SIZE: StudyWordCount = 5;
 
 export const EMPTY_STATE: AppState = {
   version: 3,
   activeLevel: "A1",
+  freeStudyBatchSize: DEFAULT_FREE_STUDY_BATCH_SIZE,
   progress: {},
   stats: {},
   activeSession: null,
@@ -310,6 +314,7 @@ export function migrateAppState(value: unknown): AppState | null {
       version: 3,
       activeLevel: "A1",
       dailyGoal: legacy.dailyGoal,
+      freeStudyBatchSize: DEFAULT_FREE_STUDY_BATCH_SIZE,
       progress: migrateProgress(legacy.progress, true),
       stats: legacy.stats,
       activeSession: null,
@@ -327,6 +332,10 @@ export function migrateAppState(value: unknown): AppState | null {
     version: 3,
     activeLevel,
     dailyGoal: current.dailyGoal,
+    freeStudyBatchSize:
+      current.freeStudyBatchSize === 10 || current.freeStudyBatchSize === 20
+        ? current.freeStudyBatchSize
+        : DEFAULT_FREE_STUDY_BATCH_SIZE,
     progress: migrateProgress(current.progress, false),
     stats: current.stats,
     activeSession: migrateActiveSession(
