@@ -59,7 +59,12 @@ test("keeps the learning rules and UI ownership explicit", async () => {
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.match(layout, /import "@gotheword\/pencil-pup-ui\/style"/);
   assert.match(layout, /import \{ Analytics \} from "@vercel\/analytics\/next"/);
+  assert.match(
+    layout,
+    /import \{ SpeedInsights \} from "@vercel\/speed-insights\/next"/,
+  );
   assert.match(layout, /<Analytics \/>/);
+  assert.match(layout, /<SpeedInsights \/>/);
   assert.match(layout, /lang="zh-CN"/);
   assert.match(page, /<GotheWordRoot \/>/);
   assert.doesNotMatch(app, /<(?:button|input|select|progress)\b/);

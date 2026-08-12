@@ -52,6 +52,7 @@
     "@gotheword/pencil-pup-ui": "file:packages/pencil-pup-ui",
     "@supabase/supabase-js": "^2.110.8",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "next": "16.2.6",
     "posthog-js": "^1.407.2",
     "react": "19.2.6",
