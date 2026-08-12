@@ -122,6 +122,13 @@ export type AnalyticsEventPropertiesMap = {
     fallback_to_local: boolean;
     retry_attempt: number;
     state_size_bytes: number;
+    sync_reason?: import("./learning-sync").SyncReason;
+    sync_urgency?: import("./learning-sync").SyncUrgency;
+    coalesced_mutation_count?: number;
+    dirty_age_ms?: number;
+    writer_role?: "writer" | "follower";
+    revision_before?: number;
+    revision_after?: number;
   };
   learning_state_conflict_detected: {
     conflict_id: string;

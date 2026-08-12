@@ -98,6 +98,28 @@ test("reports only state byte size and never serializes it into event fields", (
   assert.equal("state" in payload, false);
 });
 
+test("allows low-cardinality sync scheduling metadata without state content", () => {
+  const payload = buildAnalyticsProperties({
+    operation: "save",
+    outcome: "succeeded",
+    duration_ms: 12,
+    fallback_to_local: false,
+    retry_attempt: 0,
+    state_size_bytes: 1_024,
+    sync_reason: "answer",
+    sync_urgency: "normal",
+    coalesced_mutation_count: 10,
+    dirty_age_ms: 2_000,
+    writer_role: "writer",
+    revision_before: 4,
+    revision_after: 5,
+  });
+
+  assert.equal(payload.sync_reason, "answer");
+  assert.equal(payload.coalesced_mutation_count, 10);
+  assert.deepEqual(findProhibitedAnalyticsKeys(payload), []);
+});
+
 test("keeps server registration authoritative and disables unsafe automatic capture", async () => {
   const [root, edge, analytics, instrumentation] = await Promise.all([
     readFile(new URL("../app/GotheWordRoot.tsx", import.meta.url), "utf8"),

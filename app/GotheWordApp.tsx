@@ -14,7 +14,7 @@ import {
   Time,
   Title,
 } from "@gotheword/pencil-pup-ui";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   captureAnalyticsEvent,
   captureAnalyticsEventOnce,
@@ -43,6 +43,10 @@ import {
   useLearningStateSync,
   type SyncStatus,
 } from "./useLearningStateSync";
+import {
+  projectSessionElapsedSeconds,
+  shouldMaterializeTimerCheckpoint,
+} from "./learning-sync";
 import {
   ALL_WORDS_BY_ID,
   countLearnedWords,
@@ -221,7 +225,7 @@ export default function GotheWordApp({
 }: GotheWordAppProps) {
   const {
     state,
-    setState,
+    commitState,
     hydrated,
     syncStatus,
     syncError,
@@ -232,6 +236,12 @@ export default function GotheWordApp({
     keepLocalState,
     importLegacyState,
     dismissLegacyImport,
+    writerRole,
+    writerPromptOpen,
+    takingOverWriter,
+    dismissWriterPrompt,
+    takeOverWriter,
+    registerBeforeWriterYield,
   } = useLearningStateSync(userId);
   const [goalChoice, setGoalChoice] = useState<5 | 10 | 20>(10);
   const [activeTab, setActiveTab] = useState("today");
@@ -240,11 +250,15 @@ export default function GotheWordApp({
   const [resumeHandled, setResumeHandled] = useState(false);
   const [report, setReport] = useState<SessionReport | null>(null);
   const [resetOpen, setResetOpen] = useState(false);
+  const [displayedElapsedSeconds, setDisplayedElapsedSeconds] = useState(0);
   const lastActivityRef = useRef(0);
   const autoPronouncedAppearanceRef = useRef<string | null>(null);
   const feedbackAdvanceKeyRef = useRef<string | null>(null);
   const continueAfterFeedbackRef = useRef<() => void>(() => undefined);
   const resumePromptTrackedRef = useRef(new Set<string>());
+  const clockSessionIdRef = useRef<string | null>(null);
+  const clockBaseElapsedRef = useRef(0);
+  const clockRunningSinceRef = useRef<number | null>(null);
   const session = sessionResumed ? state.activeSession : null;
   const sessionActive = session !== null;
   const sessionPaused = Boolean(session?.pausedAt);
@@ -253,6 +267,117 @@ export default function GotheWordApp({
     !sessionResumed &&
     !resumeHandled &&
     Boolean(state.activeSession);
+
+  const readClockElapsed = useCallback((now = Date.now()) => {
+    return projectSessionElapsedSeconds({
+      baseElapsedSeconds: clockBaseElapsedRef.current,
+      runningSinceMs: clockRunningSinceRef.current,
+      now,
+    });
+  }, []);
+
+  const materializeClock = useCallback(
+    (
+      options: Parameters<typeof commitState>[1],
+      keepRunning: boolean,
+    ) => {
+      const sessionId = clockSessionIdRef.current;
+      if (!sessionId) return true;
+      const nowMs = Date.now();
+      const elapsedSeconds = readClockElapsed(nowMs);
+      const nowIso = new Date(nowMs).toISOString();
+      clockBaseElapsedRef.current = elapsedSeconds;
+      clockRunningSinceRef.current = keepRunning ? nowMs : null;
+      setDisplayedElapsedSeconds(elapsedSeconds);
+      return commitState(
+        (current) =>
+          current.activeSession?.id === sessionId
+            ? {
+                ...current,
+                activeSession: {
+                  ...current.activeSession,
+                  elapsedSeconds,
+                  updatedAt: nowIso,
+                },
+              }
+            : current,
+        options,
+      );
+    },
+    [commitState, readClockElapsed],
+  );
+
+  const clockIsRunning =
+    sessionActive &&
+    !sessionPaused &&
+    !sessionInactive &&
+    writerRole === "writer";
+
+  useEffect(() => {
+    if (!session) {
+      clockSessionIdRef.current = null;
+      clockBaseElapsedRef.current = 0;
+      clockRunningSinceRef.current = null;
+      window.setTimeout(() => setDisplayedElapsedSeconds(0), 0);
+      return;
+    }
+    if (clockSessionIdRef.current !== session.id) {
+      clockSessionIdRef.current = session.id;
+      clockBaseElapsedRef.current = session.elapsedSeconds;
+      clockRunningSinceRef.current = clockIsRunning ? Date.now() : null;
+      window.setTimeout(
+        () => setDisplayedElapsedSeconds(session.elapsedSeconds),
+        0,
+      );
+      return;
+    }
+    if (session.elapsedSeconds > clockBaseElapsedRef.current) {
+      clockBaseElapsedRef.current = session.elapsedSeconds;
+      window.setTimeout(
+        () => setDisplayedElapsedSeconds(session.elapsedSeconds),
+        0,
+      );
+    }
+  }, [clockIsRunning, session]);
+
+  useEffect(() => {
+    if (!session) return;
+    if (clockIsRunning && clockRunningSinceRef.current === null) {
+      clockRunningSinceRef.current = Date.now();
+    } else if (!clockIsRunning && clockRunningSinceRef.current !== null) {
+      const now = Date.now();
+      const elapsedSeconds = readClockElapsed(now);
+      clockBaseElapsedRef.current = elapsedSeconds;
+      clockRunningSinceRef.current = null;
+      setDisplayedElapsedSeconds(elapsedSeconds);
+    }
+  }, [clockIsRunning, readClockElapsed, session]);
+
+  useEffect(() => {
+    if (!clockIsRunning) return;
+    const timer = window.setInterval(() => {
+      setDisplayedElapsedSeconds(readClockElapsed());
+    }, 1_000);
+    return () => window.clearInterval(timer);
+  }, [clockIsRunning, readClockElapsed]);
+
+  useEffect(() => {
+    if (!clockIsRunning) return;
+    const checkpointTimer = window.setInterval(() => {
+      if (
+        shouldMaterializeTimerCheckpoint(
+          readClockElapsed(),
+          clockBaseElapsedRef.current,
+        )
+      ) {
+        materializeClock(
+          { reason: "timer_checkpoint", urgency: "checkpoint" },
+          true,
+        );
+      }
+    }, 1_000);
+    return () => window.clearInterval(checkpointTimer);
+  }, [clockIsRunning, materializeClock, readClockElapsed]);
 
   useEffect(() => {
     if (!sessionActive) return;
@@ -263,10 +388,23 @@ export default function GotheWordApp({
     };
     const handleVisibility = () => {
       if (document.visibilityState === "visible") markActive();
-      else setSessionInactive(true);
+      else {
+        materializeClock(
+          { reason: "session_pause", urgency: "flush" },
+          false,
+        );
+        setSessionInactive(true);
+      }
     };
     const inactivityTimer = window.setInterval(() => {
-      if (Date.now() - lastActivityRef.current >= 30_000) {
+      if (
+        !sessionInactive &&
+        Date.now() - lastActivityRef.current >= 30_000
+      ) {
+        materializeClock(
+          { reason: "session_pause", urgency: "flush" },
+          false,
+        );
         setSessionInactive(true);
       }
     }, 1_000);
@@ -280,26 +418,33 @@ export default function GotheWordApp({
       window.removeEventListener("keydown", markActive);
       document.removeEventListener("visibilitychange", handleVisibility);
     };
-  }, [sessionActive]);
+  }, [materializeClock, sessionActive, sessionInactive]);
 
   useEffect(() => {
-    if (!sessionActive || sessionPaused || sessionInactive) return;
-    const timer = window.setInterval(() => {
-      setState((current) =>
-        current.activeSession
-          ? {
-              ...current,
-              activeSession: {
-                ...current.activeSession,
-                elapsedSeconds: current.activeSession.elapsedSeconds + 1,
-                updatedAt: new Date().toISOString(),
-              },
-            }
-          : current,
-      );
-    }, 1_000);
-    return () => window.clearInterval(timer);
-  }, [sessionActive, sessionPaused, sessionInactive, setState]);
+    const handleBeforeUnload = () => {
+      if (clockSessionIdRef.current && writerRole === "writer") {
+        materializeClock(
+          { reason: "session_pause", urgency: "flush" },
+          false,
+        );
+      }
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [materializeClock, writerRole]);
+
+  useEffect(
+    () =>
+      registerBeforeWriterYield(async () => {
+        materializeClock(
+          { reason: "session_pause", urgency: "flush" },
+          false,
+        );
+        setSessionInactive(true);
+        setSessionResumed(false);
+      }),
+    [materializeClock, registerBeforeWriterYield],
+  );
 
   const todayKey = localDayKey();
   const todayStats = state.stats[todayKey] ?? EMPTY_DAILY_STATS;
@@ -494,22 +639,29 @@ export default function GotheWordApp({
       now,
     });
 
-    setState((current) => ({
-      ...current,
-      progress:
-        mode === "review"
-          ? current.progress
-          : {
-              ...current.progress,
-              ...Object.fromEntries(
-                wordIds.map((wordId) => [
-                  wordId,
-                  { ...(current.progress[wordId] ?? EMPTY_PROGRESS), state: "learning" },
-                ]),
-              ),
-            },
-      activeSession: nextSession,
-    }));
+    const committed = commitState(
+      (current) => ({
+        ...current,
+        progress:
+          mode === "review"
+            ? current.progress
+            : {
+                ...current.progress,
+                ...Object.fromEntries(
+                  wordIds.map((wordId) => [
+                    wordId,
+                    {
+                      ...(current.progress[wordId] ?? EMPTY_PROGRESS),
+                      state: "learning",
+                    },
+                  ]),
+                ),
+              },
+        activeSession: nextSession,
+      }),
+      { reason: "session_start", urgency: "normal" },
+    );
+    if (!committed) return;
     captureAnalyticsEvent("learning_session_started", {
       ...sessionAnalyticsProperties(nextSession, dailyGoal),
       planned_word_count: wordIds.length,
@@ -526,46 +678,61 @@ export default function GotheWordApp({
 
   const updateSession = (
     update: (current: ActiveSession) => ActiveSession,
+    options: Parameters<typeof commitState>[1],
   ) => {
-    setState((current) =>
-      current.activeSession
-        ? {
-            ...current,
-            activeSession: update(current.activeSession),
-          }
-        : current,
+    return commitState(
+      (current) =>
+        current.activeSession
+          ? {
+              ...current,
+              activeSession: update(current.activeSession),
+            }
+          : current,
+      options,
     );
   };
 
   const finishSession = (current: ActiveSession) => {
-    const accuracy = current.answers
-      ? Number((current.correct / current.answers).toFixed(4))
+    const completedSession = {
+      ...current,
+      elapsedSeconds: readClockElapsed(),
+      updatedAt: new Date().toISOString(),
+    };
+    materializeClock(
+      { reason: "session_finish", urgency: "flush" },
+      false,
+    );
+    const accuracy = completedSession.answers
+      ? Number((completedSession.correct / completedSession.answers).toFixed(4))
       : 0;
     captureAnalyticsEvent(
       "learning_session_completed",
       {
-        ...sessionAnalyticsProperties(current, dailyGoal),
-        planned_word_count: current.wordIds.length,
-        completed_word_count: current.completed.length,
-        answer_count: current.answers,
-        correct_count: current.correct,
+        ...sessionAnalyticsProperties(completedSession, dailyGoal),
+        planned_word_count: completedSession.wordIds.length,
+        completed_word_count: completedSession.completed.length,
+        answer_count: completedSession.answers,
+        correct_count: completedSession.correct,
         accuracy,
-        elapsed_seconds: current.elapsedSeconds,
-        weak_word_count: current.weakIds.length,
-        remaining_review_count: current.remainingReviewCount,
+        elapsed_seconds: completedSession.elapsedSeconds,
+        weak_word_count: completedSession.weakIds.length,
+        remaining_review_count: completedSession.remainingReviewCount,
       },
-      { insertId: `${current.id}:completed` },
+      { insertId: `${completedSession.id}:completed` },
     );
-    if (current.mode === "review" && current.remainingReviewCount === 0) {
+    if (
+      completedSession.mode === "review" &&
+      completedSession.remainingReviewCount === 0
+    ) {
       captureAnalyticsEventOnce(
         "due_review_completed",
         {
-          ...sessionAnalyticsProperties(current, dailyGoal),
-          reviewed_word_count_in_session: current.completed.length,
-          answer_count: current.answers,
+          ...sessionAnalyticsProperties(completedSession, dailyGoal),
+          reviewed_word_count_in_session: completedSession.completed.length,
+          answer_count: completedSession.answers,
           accuracy,
-          elapsed_seconds: current.elapsedSeconds,
-          weak_word_count: current.weakIds.length,
+          elapsed_seconds: completedSession.elapsedSeconds,
+          weak_word_count: completedSession.weakIds.length,
         },
         {
           dedupeKey: `${userId}:due_review_completed:${todayKey}`,
@@ -575,19 +742,21 @@ export default function GotheWordApp({
       );
     }
     setReport({
-      mode: current.mode,
-      total: current.wordIds.length,
-      completed: current.completed.length,
-      answers: current.answers,
-      correct: current.correct,
-      seconds: current.elapsedSeconds,
-      weakIds: current.weakIds,
-      remainingReviewCount: current.remainingReviewCount,
+      mode: completedSession.mode,
+      total: completedSession.wordIds.length,
+      completed: completedSession.completed.length,
+      answers: completedSession.answers,
+      correct: completedSession.correct,
+      seconds: completedSession.elapsedSeconds,
+      weakIds: completedSession.weakIds,
+      remainingReviewCount: completedSession.remainingReviewCount,
     });
-    setState((latest) =>
-      latest.activeSession?.id === current.id
-        ? settleActiveSession(latest)
-        : latest,
+    commitState(
+      (latest) =>
+        latest.activeSession?.id === completedSession.id
+          ? settleActiveSession(latest)
+          : latest,
+      { reason: "session_finish", urgency: "flush" },
     );
     setSessionResumed(false);
     setSessionInactive(true);
@@ -595,23 +764,34 @@ export default function GotheWordApp({
 
   const leaveSession = () => {
     if (!session) return;
+    const abandonedSession = {
+      ...session,
+      elapsedSeconds: readClockElapsed(),
+      updatedAt: new Date().toISOString(),
+    };
+    materializeClock(
+      { reason: "session_finish", urgency: "flush" },
+      false,
+    );
     captureAnalyticsEvent(
       "learning_session_abandoned",
       {
-        ...sessionAnalyticsProperties(session, dailyGoal),
+        ...sessionAnalyticsProperties(abandonedSession, dailyGoal),
         abandon_reason: "return_home",
-        phase: session.phase,
-        completed_word_count: session.completed.length,
-        queue_word_count: session.queue.length,
-        answer_count: session.answers,
-        elapsed_seconds: session.elapsedSeconds,
+        phase: abandonedSession.phase,
+        completed_word_count: abandonedSession.completed.length,
+        queue_word_count: abandonedSession.queue.length,
+        answer_count: abandonedSession.answers,
+        elapsed_seconds: abandonedSession.elapsedSeconds,
       },
-      { insertId: `${session.id}:abandoned:return_home` },
+      { insertId: `${abandonedSession.id}:abandoned:return_home` },
     );
-    setState((current) =>
-      current.activeSession?.id === session.id
-        ? settleActiveSession(current)
-        : current,
+    commitState(
+      (current) =>
+        current.activeSession?.id === abandonedSession.id
+          ? settleActiveSession(current)
+          : current,
+      { reason: "session_finish", urgency: "flush" },
     );
     setSessionResumed(false);
     setSessionInactive(true);
@@ -621,7 +801,8 @@ export default function GotheWordApp({
   const answerWord = (selected: string | null) => {
     if (!session || !currentWord || session.feedback) return;
     const correct = selected === currentWord.translation;
-    setState((current) => {
+    materializeClock({ reason: "answer", urgency: "normal" }, true);
+    commitState((current) => {
       const previousProgress = current.progress[currentWord.id] ?? EMPTY_PROGRESS;
       const previousGoalCount =
         current.stats[todayKey]?.goalNewLearned ?? 0;
@@ -670,7 +851,7 @@ export default function GotheWordApp({
         );
       }
       return next;
-    });
+    }, { reason: "answer", urgency: "normal" });
   };
 
   const continueAfterFeedback = () => {
@@ -682,11 +863,18 @@ export default function GotheWordApp({
     if (session.queue.length === 0) {
       finishSession(session);
     } else {
-      updateSession((current) => ({
-        ...current,
-        feedback: undefined,
-        updatedAt: new Date().toISOString(),
-      }));
+      materializeClock(
+        { reason: "phase_transition", urgency: "normal" },
+        true,
+      );
+      updateSession(
+        (current) => ({
+          ...current,
+          feedback: undefined,
+          updatedAt: new Date().toISOString(),
+        }),
+        { reason: "phase_transition", urgency: "normal" },
+      );
     }
   };
 
@@ -706,8 +894,12 @@ export default function GotheWordApp({
   const syncMeta = SYNC_STATUS_META[syncStatus];
   const syncTag = (
     <span aria-live="polite">
-      <Tag size="small" color={syncMeta.color} variant="outlined">
-        {syncMeta.label}
+      <Tag
+        size="small"
+        color={writerRole === "follower" ? "app-orange" : syncMeta.color}
+        variant="outlined"
+      >
+        {writerRole === "follower" ? "其他标签正在学习" : syncMeta.label}
       </Tag>
     </span>
   );
@@ -777,6 +969,40 @@ export default function GotheWordApp({
           </p>
         </div>
       </Modal>
+      <Modal
+        open={writerPromptOpen}
+        title="另一个标签正在学习"
+        typewriter={false}
+        maskClosable={false}
+        onClose={dismissWriterPrompt}
+        footer={
+          <>
+            <Button
+              disabled={takingOverWriter}
+              onClick={dismissWriterPrompt}
+            >
+              返回查看
+            </Button>
+            <Button
+              type="primary"
+              loading={takingOverWriter}
+              onClick={() => void takeOverWriter()}
+            >
+              接管此标签
+            </Button>
+          </>
+        }
+      >
+        <div className="grid gap-3 leading-7">
+          <ModalInitialFocus label="请选择返回查看或接管当前标签。" />
+          <p className="m-0">
+            为避免两个标签同时覆盖学习进度，当前标签只显示已同步的状态。
+          </p>
+          <p className="m-0 text-sm font-bold">
+            接管后，原标签会暂停计时和云端保存，本标签会从最新 revision 继续。
+          </p>
+        </div>
+      </Modal>
     </>
   );
 
@@ -832,7 +1058,10 @@ export default function GotheWordApp({
                     insertId: `${userId}:onboarding_completed`,
                   },
                 );
-                setState({ ...EMPTY_STATE, dailyGoal: goalChoice });
+                commitState(
+                  { ...EMPTY_STATE, dailyGoal: goalChoice },
+                  { reason: "settings", urgency: "normal" },
+                );
               }}
             >
               开始我的德语旅程
@@ -897,19 +1126,36 @@ export default function GotheWordApp({
               <span className="hidden text-xs text-[#8f7b63] sm:inline" aria-live="polite">
                 {sessionInactive ? "已因无操作暂停" : sessionPaused ? "已暂停" : "本次学习"}
               </span>
-              <strong className="font-[Nunito] text-[17px] leading-none font-extrabold" aria-label={`本次学习 ${formatDuration(session.elapsedSeconds)}`}>
-                {formatDuration(session.elapsedSeconds)}
+              <strong className="font-[Nunito] text-[17px] leading-none font-extrabold" aria-label={`本次学习 ${formatDuration(displayedElapsedSeconds)}`}>
+                {formatDuration(displayedElapsedSeconds)}
               </strong>
               <Button
                 size="small"
                 type="default"
                 onClick={() => {
+                  const resuming = Boolean(session.pausedAt);
                   const now = new Date().toISOString();
-                  updateSession((current) => ({
-                    ...current,
-                    pausedAt: current.pausedAt ? undefined : now,
-                    updatedAt: now,
-                  }));
+                  if (!resuming) {
+                    materializeClock(
+                      { reason: "session_pause", urgency: "flush" },
+                      false,
+                    );
+                  }
+                  const committed = updateSession(
+                    (current) => ({
+                      ...current,
+                      pausedAt: current.pausedAt ? undefined : now,
+                      updatedAt: now,
+                    }),
+                    {
+                      reason: resuming ? "session_resume" : "session_pause",
+                      urgency: resuming ? "normal" : "flush",
+                    },
+                  );
+                  if (committed && resuming) {
+                    lastActivityRef.current = Date.now();
+                    setSessionInactive(false);
+                  }
                 }}
               >
                 {sessionPaused ? "继续" : "暂停"}
@@ -1040,12 +1286,22 @@ export default function GotheWordApp({
                   block
                   onClick={() => {
                     const nextIndex = session.memoryIndex + 1;
-                    updateSession((current) => ({
-                      ...current,
-                      memoryIndex: nextIndex,
-                      phase: nextIndex >= current.wordIds.length ? "quiz" : "memory",
-                      updatedAt: new Date().toISOString(),
-                    }));
+                    materializeClock(
+                      { reason: "phase_transition", urgency: "normal" },
+                      true,
+                    );
+                    updateSession(
+                      (current) => ({
+                        ...current,
+                        memoryIndex: nextIndex,
+                        phase:
+                          nextIndex >= current.wordIds.length
+                            ? "quiz"
+                            : "memory",
+                        updatedAt: new Date().toISOString(),
+                      }),
+                      { reason: "phase_transition", urgency: "normal" },
+                    );
                   }}
                 >
                   {session.memoryIndex + 1 >= session.wordIds.length
@@ -1369,10 +1625,13 @@ export default function GotheWordApp({
           size="large"
           value={wordBookId}
           onChange={(value) =>
-            setState((current) => ({
-              ...current,
-              activeLevel: WORD_BOOKS[value as WordBookId].level,
-            }))
+            commitState(
+              (current) => ({
+                ...current,
+                activeLevel: WORD_BOOKS[value as WordBookId].level,
+              }),
+              { reason: "settings", urgency: "normal" },
+            )
           }
           options={(Object.keys(WORD_BOOKS) as WordBookId[]).map((bookId) => {
             const book = WORD_BOOKS[bookId];
@@ -1408,7 +1667,13 @@ export default function GotheWordApp({
           size="large"
           value={dailyGoal}
           onChange={(value) =>
-            setState((current) => ({ ...current, dailyGoal: value as 5 | 10 | 20 }))
+            commitState(
+              (current) => ({
+                ...current,
+                dailyGoal: value as 5 | 10 | 20,
+              }),
+              { reason: "settings", urgency: "normal" },
+            )
           }
           options={[
             { label: "每天 5 个 · 轻松保持", value: 5 },
@@ -1429,10 +1694,13 @@ export default function GotheWordApp({
           size="large"
           value={freeStudyBatchSize}
           onChange={(value) =>
-            setState((current) => ({
-              ...current,
-              freeStudyBatchSize: value as StudyWordCount,
-            }))
+            commitState(
+              (current) => ({
+                ...current,
+                freeStudyBatchSize: value as StudyWordCount,
+              }),
+              { reason: "settings", urgency: "normal" },
+            )
           }
           options={[
             { label: "每次 5 个 · 短时练习", value: 5 },
@@ -1465,7 +1733,19 @@ export default function GotheWordApp({
           <div className="flex min-w-0 flex-wrap items-center justify-end gap-1 sm:gap-2">
             {syncTag}
             <Tag color="app-teal">{username}</Tag>
-            <Button type="text" size="small" onClick={onSignOut}>退出</Button>
+            <Button
+              type="text"
+              size="small"
+              onClick={() => {
+                materializeClock(
+                  { reason: "session_pause", urgency: "flush" },
+                  false,
+                );
+                onSignOut();
+              }}
+            >
+              退出
+            </Button>
           </div>
         </header>
         <Divider type="wave-yellow" />
@@ -1517,7 +1797,11 @@ export default function GotheWordApp({
                     },
                   );
                 }
-                setState((current) => settleActiveSession(current));
+                const committed = commitState(
+                  (current) => settleActiveSession(current),
+                  { reason: "session_finish", urgency: "flush" },
+                );
+                if (!committed) return;
                 setResumeHandled(true);
                 setSessionResumed(false);
                 setSessionInactive(true);
@@ -1530,6 +1814,22 @@ export default function GotheWordApp({
               type="primary"
               onClick={() => {
                 const persistedSession = state.activeSession;
+                const now = new Date().toISOString();
+                const committed = commitState(
+                  (current) =>
+                    current.activeSession
+                      ? {
+                          ...current,
+                          activeSession: {
+                            ...current.activeSession,
+                            pausedAt: undefined,
+                            updatedAt: now,
+                          },
+                        }
+                      : current,
+                  { reason: "session_resume", urgency: "normal" },
+                );
+                if (!committed) return;
                 if (persistedSession) {
                   captureAnalyticsEvent("learning_session_resumed", {
                     ...sessionResumeProperties(
@@ -1539,19 +1839,6 @@ export default function GotheWordApp({
                     resume_source: "persisted_session_modal",
                   });
                 }
-                const now = new Date().toISOString();
-                setState((current) =>
-                  current.activeSession
-                    ? {
-                        ...current,
-                        activeSession: {
-                          ...current.activeSession,
-                          pausedAt: undefined,
-                          updatedAt: now,
-                        },
-                      }
-                    : current,
-                );
                 lastActivityRef.current = Date.now();
                 setSessionInactive(false);
                 setSessionResumed(true);
@@ -1580,7 +1867,11 @@ export default function GotheWordApp({
               type="primary"
               danger
               onClick={() => {
-                setState({ ...EMPTY_STATE });
+                const committed = commitState(
+                  { ...EMPTY_STATE },
+                  { reason: "reset", urgency: "flush" },
+                );
+                if (!committed) return;
                 setSessionResumed(false);
                 setSessionInactive(true);
                 setResumeHandled(true);

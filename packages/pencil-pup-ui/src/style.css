@@ -52,7 +52,6 @@
 }
 
 .pui-button:focus-visible,
-.pui-input:focus-visible,
 .pui-radio input:focus-visible + .pui-radio__mark,
 .pui-tabs__tab:focus-visible,
 .pui-tag[role="button"]:focus-visible {

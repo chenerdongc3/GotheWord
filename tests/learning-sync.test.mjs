@@ -5,13 +5,23 @@ import { EMPTY_STATE } from "../app/learning.ts";
 import {
   APP_STATE_SCHEMA_VERSION,
   acceptRemoteState,
+  canAcquireWriterLease,
   createCachedState,
+  isWriterLeaseActive,
+  mergeSyncMutation,
   parseCachedState,
+  parseWriterLease,
+  projectSessionElapsedSeconds,
   rebaseLocalState,
+  renewWriterLease,
   resolveHydration,
   resolveSuccessfulSave,
   retryDelay,
+  shouldMaterializeTimerCheckpoint,
   statesEqual,
+  syncDueAt,
+  syncErrorDisposition,
+  WRITER_LEASE_DURATION_MS,
 } from "../app/learning-sync.ts";
 
 const USER_ID = "11111111-1111-1111-1111-111111111111";
@@ -214,6 +224,118 @@ test("uses bounded exponential retry delays", () => {
   assert.deepEqual(
     [0, 1, 2, 3, 4, 5, 6, 20].map(retryDelay),
     [1_000, 2_000, 4_000, 8_000, 16_000, 30_000, 30_000, 30_000],
+  );
+});
+
+test("projects one-second UI ticks without mutating AppState", () => {
+  const original = state(10);
+  const before = structuredClone(original);
+
+  assert.equal(
+    projectSessionElapsedSeconds({
+      baseElapsedSeconds: 12,
+      runningSinceMs: 1_000,
+      now: 4_999,
+    }),
+    15,
+  );
+  assert.deepEqual(original, before);
+});
+
+test("materializes a timer checkpoint once per 30 accumulated seconds", () => {
+  assert.equal(shouldMaterializeTimerCheckpoint(29, 0), false);
+  assert.equal(shouldMaterializeTimerCheckpoint(30, 0), true);
+  assert.equal(shouldMaterializeTimerCheckpoint(30, 30), false);
+  assert.equal(shouldMaterializeTimerCheckpoint(60, 30), true);
+});
+
+test("normal mutations use trailing debounce with a ten-second max wait", () => {
+  let queued = mergeSyncMutation(
+    null,
+    { reason: "answer", urgency: "normal" },
+    0,
+  );
+  assert.equal(syncDueAt(queued, { now: 0 }), 2_000);
+
+  queued = mergeSyncMutation(
+    queued,
+    { reason: "answer", urgency: "normal" },
+    9_000,
+  );
+  assert.equal(queued.coalescedMutationCount, 2);
+  assert.equal(syncDueAt(queued, { now: 9_000 }), 10_000);
+});
+
+test("flush promotes the queue while retaining only latest snapshot metadata", () => {
+  const normal = mergeSyncMutation(
+    null,
+    { reason: "answer", urgency: "normal" },
+    1_000,
+  );
+  const flush = mergeSyncMutation(
+    normal,
+    { reason: "session_pause", urgency: "flush" },
+    1_500,
+  );
+
+  assert.equal(flush.urgency, "flush");
+  assert.equal(flush.reason, "session_pause");
+  assert.equal(flush.coalescedMutationCount, 2);
+  assert.equal(syncDueAt(flush, { now: 1_500 }), 1_500);
+});
+
+test("classifies offline, transient, auth, invalid and conflict failures", () => {
+  assert.equal(syncErrorDisposition("network_error", true), "offline");
+  assert.equal(syncErrorDisposition("rate_limited"), "retry");
+  assert.equal(syncErrorDisposition("provider_error"), "retry");
+  assert.equal(syncErrorDisposition("unauthorized"), "auth");
+  assert.equal(syncErrorDisposition("forbidden"), "auth");
+  assert.equal(syncErrorDisposition("invalid_state"), "invalid");
+  assert.equal(syncErrorDisposition("revision_conflict"), "conflict");
+});
+
+test("writer lease supports acquire, expiry, renewal and generation fencing", () => {
+  const now = 10_000;
+  const lease = {
+    tabId: "tab-a",
+    generation: "generation-a",
+    expiresAt: now + WRITER_LEASE_DURATION_MS,
+  };
+
+  assert.deepEqual(parseWriterLease(JSON.stringify(lease)), lease);
+  assert.equal(isWriterLeaseActive(lease, now), true);
+  assert.equal(
+    canAcquireWriterLease({ lease, tabId: "tab-b", now }),
+    false,
+  );
+  assert.equal(
+    canAcquireWriterLease({
+      lease,
+      tabId: "tab-b",
+      now: lease.expiresAt,
+    }),
+    true,
+  );
+  assert.equal(
+    canAcquireWriterLease({ lease, tabId: "tab-b", now, force: true }),
+    true,
+  );
+
+  const renewed = renewWriterLease({
+    lease,
+    tabId: "tab-a",
+    generation: "generation-a",
+    now,
+  });
+  assert.equal(renewed?.expiresAt, now + WRITER_LEASE_DURATION_MS);
+  assert.equal(
+    renewWriterLease({
+      lease,
+      tabId: "tab-a",
+      generation: "stale-generation",
+      now,
+    }),
+    null,
   );
 });
 
