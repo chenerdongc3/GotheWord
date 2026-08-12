@@ -940,9 +940,12 @@ export default function GotheWordApp({
                     percent={(feedback.streak / feedback.target) * 100}
                     infoFormat={() => `${feedback.streak} / ${feedback.target}`}
                   />
-                  <p className="m-0 text-sm leading-6 font-bold" role="status">
-                    1.5 秒后自动继续 · 点击页面任意处可立即继续
-                  </p>
+                  <div className="grid w-full max-w-[520px] min-w-0 rounded-[18px] border border-dashed border-white/55 px-4 py-3.5 text-left">
+                    <span className="min-w-0 font-extrabold [overflow-wrap:anywhere]">
+                      {currentWord.examples[0].de}
+                    </span>
+                    <small className="mt-1">{currentWord.examples[0].zh}</small>
+                  </div>
                 </>
               ) : (
                 <div className="w-full max-w-[520px] min-w-0">

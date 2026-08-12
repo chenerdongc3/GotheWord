@@ -355,11 +355,9 @@ test("学习、反馈与报告流程在移动视口保持可见", async ({ page 
   await expect(page.getByText("继续上次的学习吗？", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "继续本次学习" }).click();
   await expect(page.getByText("回答正确", { exact: true })).toBeVisible();
-  await expect(
-    page.getByText("1.5 秒后自动继续 · 点击页面任意处可立即继续", {
-      exact: true,
-    }),
-  ).toBeVisible();
+  await expect(page.getByText("Der Tisch ist aus Holz.", { exact: true })).toBeVisible();
+  await expect(page.getByText("这张桌子是木制的。", { exact: true })).toBeVisible();
+  await expect(page.getByText(/1\.5 秒后自动继续/)).toHaveCount(0);
   await expect(page.getByText("今日复习完成", { exact: true })).toBeVisible({
     timeout: 3_000,
   });
