@@ -247,6 +247,20 @@ test("登录与注册在 320–430px 无横向溢出或标题重叠", async ({ p
   await capture(page, testInfo, "auth-register-320-430");
 });
 
+test("登录输入框聚焦时不出现内部蓝色框", async ({ page }) => {
+  await page.goto("/");
+
+  const username = page.getByRole("textbox", { name: "用户名" });
+  await username.focus();
+
+  await expect(username).toBeFocused();
+  await expect(username).toHaveCSS("outline-style", "none");
+  await expect(username.locator("..")).toHaveCSS(
+    "box-shadow",
+    "rgb(36, 99, 235) 3px 4px 0px 0px",
+  );
+});
+
 test("首次目标、Header、Tabs、统计、设置与 Modal 适配移动视口", async ({
   page,
 }, testInfo) => {
