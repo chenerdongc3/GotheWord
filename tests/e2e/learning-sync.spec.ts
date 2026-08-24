@@ -30,6 +30,7 @@ type SyncServer = {
   activeSaves: number;
   maxActiveSaves: number;
   failNextSaveWithConflict: boolean;
+  failNextSaveWithTransientError: boolean;
 };
 
 function emptyState(): LearningState {
@@ -159,6 +160,21 @@ async function handleSyncRoute(route: Route, server: SyncServer) {
       });
       return;
     }
+    if (server.failNextSaveWithTransientError) {
+      server.failNextSaveWithTransientError = false;
+      server.activeSaves -= 1;
+      await route.fulfill({
+        status: 503,
+        contentType: "application/json",
+        body: JSON.stringify({
+          code: "PGRST000",
+          message: "temporary provider failure",
+          details: null,
+          hint: null,
+        }),
+      });
+      return;
+    }
 
     const body = request.postDataJSON() as {
       expected_revision: number;
@@ -207,6 +223,7 @@ async function prepare(
     activeSaves: 0,
     maxActiveSaves: 0,
     failNextSaveWithConflict: false,
+    failNextSaveWithTransientError: false,
   };
   await installAuthenticatedState(context, state);
   await context.route("**/rest/v1/**", (route) =>
@@ -348,6 +365,106 @@ test("同浏览器双标签只有 writer 保存，接管后原标签停止", asy
   await expect.poll(() => server.saveCount).toBeGreaterThanOrEqual(1);
   expect(server.conflictCount).toBe(0);
   expect(server.maxActiveSaves).toBe(1);
+});
+
+test("原 writer 异常关闭后新 writer 接管并保存 dirty 缓存", async ({
+  context,
+  page,
+}) => {
+  await page.clock.install();
+  const server = await prepare(context);
+  await openWriter(page);
+
+  const follower = await context.newPage();
+  await follower.clock.install();
+  await follower.goto("/");
+  await expect(
+    follower.getByText("其他标签正在学习", { exact: true }),
+  ).toBeVisible();
+
+  await page.getByRole("tab", { name: "设置" }).click();
+  await page.getByRole("radio", { name: /每天 20 个/ }).check();
+  await expect
+    .poll(() =>
+      page.evaluate((key) => {
+        const raw = window.localStorage.getItem(key);
+        if (!raw) return null;
+        const cache = JSON.parse(raw);
+        return { dirty: cache.dirty, dailyGoal: cache.state.dailyGoal };
+      }, STATE_KEY),
+    )
+    .toEqual({ dirty: true, dailyGoal: 20 });
+  expect(server.saveCount).toBe(0);
+
+  await page.close({ runBeforeUnload: false });
+  await follower.clock.runFor(15_100);
+  await expect(
+    follower.getByText("其他标签正在学习", { exact: true }),
+  ).toBeHidden();
+  await follower.clock.runFor(2_100);
+
+  await expect.poll(() => server.state.dailyGoal).toBe(20);
+  await expect
+    .poll(() =>
+      follower.evaluate((key) => {
+        const raw = window.localStorage.getItem(key);
+        if (!raw) return null;
+        const cache = JSON.parse(raw);
+        return { dirty: cache.dirty, dailyGoal: cache.state.dailyGoal };
+      }, STATE_KEY),
+    )
+    .toEqual({ dirty: false, dailyGoal: 20 });
+});
+
+test("原 writer 交接保存失败后新 writer 继续保存 dirty 缓存", async ({
+  context,
+  page,
+}) => {
+  await page.clock.install();
+  const server = await prepare(context);
+  await openWriter(page);
+
+  const follower = await context.newPage();
+  await follower.goto("/");
+  await expect(
+    follower.getByText("其他标签正在学习", { exact: true }),
+  ).toBeVisible();
+
+  await page.getByRole("tab", { name: "设置" }).click();
+  await page.getByRole("radio", { name: /每天 20 个/ }).check();
+  await expect
+    .poll(() =>
+      page.evaluate((key) => {
+        const raw = window.localStorage.getItem(key);
+        return raw ? JSON.parse(raw).dirty : null;
+      }, STATE_KEY),
+    )
+    .toBe(true);
+  server.failNextSaveWithTransientError = true;
+
+  await follower
+    .getByRole("button", { name: "自由学习", exact: true })
+    .click();
+  await expect(
+    follower.getByText("另一个标签正在学习", { exact: true }),
+  ).toBeVisible();
+  await follower.getByRole("button", { name: "接管此标签" }).click();
+  await expect(
+    follower.getByText("其他标签正在学习", { exact: true }),
+  ).toBeHidden();
+
+  await expect.poll(() => server.saveCount).toBe(2);
+  expect(server.state.dailyGoal).toBe(20);
+  await expect
+    .poll(() =>
+      follower.evaluate((key) => {
+        const raw = window.localStorage.getItem(key);
+        if (!raw) return null;
+        const cache = JSON.parse(raw);
+        return { dirty: cache.dirty, dailyGoal: cache.state.dailyGoal };
+      }, STATE_KEY),
+    )
+    .toEqual({ dirty: false, dailyGoal: 20 });
 });
 
 test("CAS 冲突后只读取一次远端，用户选择前不再保存", async ({

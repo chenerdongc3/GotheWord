@@ -226,6 +226,34 @@ export function useLearningStateSync(userId: string) {
     [userId],
   );
 
+  const adoptDirtyCacheForWriter = useCallback(() => {
+    if (!hydratedRef.current) return;
+    const latest = parseCachedState(
+      window.localStorage.getItem(userStorageKey(userId)),
+      userId,
+    );
+    if (!latest?.cache.dirty) return;
+
+    const cache = latest.cache;
+    stateRef.current = cache.state;
+    revisionRef.current = cache.revision;
+    dirtyRef.current = true;
+    pendingMutationRef.current = mergeSyncMutation(
+      pendingMutationRef.current,
+      {
+        reason: "recovery",
+        urgency: "normal",
+      },
+    );
+    setStateInternal(cache.state);
+    if (!conflictRef.current) {
+      setSyncStatus(isOffline() ? "offline" : "pending");
+      setSyncError(
+        isOffline() ? "当前离线，最新学习记录已保存在本设备" : "",
+      );
+    }
+  }, [userId]);
+
   const queueMutation = useCallback(
     (options: CommitStateOptions) => {
       pendingMutationRef.current = mergeSyncMutation(
@@ -686,6 +714,7 @@ export function useLearningStateSync(userId: string) {
         ) {
           leaseGenerationRef.current = generation;
           yieldingWriterRef.current = false;
+          adoptDirtyCacheForWriter();
           setCurrentWriterRole("writer");
           writerChannelRef.current?.postMessage({
             type: "writer-acquired",
@@ -697,7 +726,13 @@ export function useLearningStateSync(userId: string) {
         setCurrentWriterRole("follower");
         return false;
       }),
-    [setCurrentWriterRole, tabId, userId, withLeaseLock],
+    [
+      adoptDirtyCacheForWriter,
+      setCurrentWriterRole,
+      tabId,
+      userId,
+      withLeaseLock,
+    ],
   );
 
   const releaseWriterLease = useCallback(() => {
