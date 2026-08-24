@@ -342,7 +342,7 @@ test("writer lease supports acquire, expiry, renewal and generation fencing", ()
 test("migration enforces CAS-only writes and database-owned timestamps", async () => {
   const sql = await readFile(
     new URL(
-      "../supabase/migrations/20260726100000_add_learning_state_revision.sql",
+      "../supabase/migrations/20260727160823_add_learning_state_revision.sql",
       import.meta.url,
     ),
     "utf8",

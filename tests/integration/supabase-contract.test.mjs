@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const migrationUrl = new URL(
-  "../../supabase/migrations/20260726000000_create_learning_states.sql",
+  "../../supabase/migrations/20260726065817_create_learning_states.sql",
   import.meta.url,
 );
 
@@ -23,7 +23,7 @@ test("client loads by user and saves through the authenticated CAS function", as
     readFile(new URL("../../app/learning-state-api.ts", import.meta.url), "utf8"),
     readFile(
       new URL(
-        "../../supabase/migrations/20260726100000_add_learning_state_revision.sql",
+        "../../supabase/migrations/20260727160823_add_learning_state_revision.sql",
         import.meta.url,
       ),
       "utf8",

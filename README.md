@@ -50,7 +50,7 @@ npm run dev
 ```
 
 将 `.env.local` 中的地址和 Publishable Key 替换为 Supabase 项目的实际值。
-数据库结构位于 `supabase/migrations/20260726000000_create_learning_states.sql`。
+数据库结构位于 `supabase/migrations/20260726065817_create_learning_states.sql`。
 免邮箱确认的注册入口位于 `supabase/functions/register/index.ts`。
 PostHog 项目、事件契约、隐私边界和 dashboard 定义见
 [`docs/analytics.md`](docs/analytics.md)；发布 smoke 与回滚流程见

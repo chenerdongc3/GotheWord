@@ -13,7 +13,7 @@ const completeEnvironment = {
   }).trim(),
   NEXT_PUBLIC_DEPLOYMENT_ENV: "production",
   NEXT_PUBLIC_SITES_VERSION: "v6",
-  NEXT_PUBLIC_SUPABASE_MIGRATION: "20260727000000",
+  NEXT_PUBLIC_SUPABASE_MIGRATION: "20260728164354",
   NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: "phc_test_only",
   NEXT_PUBLIC_POSTHOG_HOST: "https://us.i.posthog.com",
   NEXT_PUBLIC_SUPABASE_URL: "https://test-project.supabase.co",
@@ -87,7 +87,7 @@ test("rejects metadata for a commit other than the checked-out source", async ()
 test("rejects a database migration older than the app state schema", async () => {
   const environment = {
     ...completeEnvironment,
-    NEXT_PUBLIC_SUPABASE_MIGRATION: "20260726100000",
+    NEXT_PUBLIC_SUPABASE_MIGRATION: "20260727160823",
   };
   const manifest = await buildReleaseManifest(environment);
 
